@@ -21,12 +21,28 @@ $(document).ready(function() {  //start ready
 
 $(".card-frame").click(function() {  // flips card and changed text
     $(this).slideToggle("slow", function() {
-    //    $(this).hasClass("card-img-even").removeClass("card-img-even");
         $(this).children().children().text("boologa");
+        
+        if ($(this).hasClass("card-img-even")) {
+            $(this).addClass("even");
+            $(this).removeClass("card-img-even");
+        } else if ($(this).hasClass("even")) {
+            $(this).addClass("card-img-even");
+            $(this).removeClass("even");    
+        };
+        
+        if ($(this).hasClass("card-img-odd")) {
+            $(this).addClass("odd")
+            $(this).removeClass("card-img-odd");
+        } else if ($(this).hasClass("odd")) {
+            $(this).addClass("card-img-odd");
+            $(this).removeClass("odd");
+        };
+        
     });
+
     $(this).slideToggle();
 });
-
 
 
 
