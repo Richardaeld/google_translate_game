@@ -15,6 +15,21 @@ body {
     color: #010203;
     font-size: 1.5rem;
     height: 7rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;   
+}
+
+.card-img-even {
+    background-image: url("../images/odd-background.jpg");
+}
+
+.card-img-odd{
+    background-image: url("../images/even-background.jpg");
+}
+
+.card-frame img {
+    max-width: 100%;
+    max-height: 100%
 }
 
 .card-word {
