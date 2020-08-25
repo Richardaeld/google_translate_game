@@ -7,17 +7,18 @@ $(document).ready(function() {
     times = $(".card-frame").length;        //counts amount of card-frames for numbering
     
     $(".card-frame").first().children().children().addClass("card-text-" + cardLabel)       //labels start div card-text-* 
-
+    $(".card-frame").first().addClass("ml-3");
     for (cardLabel = 1; cardLabel < times; cardLabel++ ) {   //labels divs for remaining card-text-*
-        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + cardLabel);              
+        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + cardLabel);  //adds card specific targets
+        $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");      //spaces (margins) cards
     };
 
 });
 
-$(".card-frame").click(function() {
-    $(this).slideToggle("slow", function() {
-        $(this).children().children().text("boologa");
-    });
+$(".card-frame").click(function() {  // flips card and changed text
+//    $(this).slideToggle("slow", function() {
+ //       $(this).children().children().text("boologa");
+ //   });
     $(this).slideToggle();
 });
 
