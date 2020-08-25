@@ -1,24 +1,25 @@
 
 
 $(document).ready(function() {  
-    var times;
-    var cardLabel = 0;
+    var cardCount;
+    var cardUniqueLabel = 0;
 
-    times = $(".card-frame").length;        //counts amount of card-frames for numbering
+    cardCount = $(".card-frame").length;                                                                                //counts amount of card-frames for numbering
     
-    $(".card-frame").first().children().children().addClass("card-text-" + cardLabel)       //labels start div card-text-* 
-    $(".card-frame").first().addClass("ml-3");
-    for (cardLabel = 1; cardLabel < times; cardLabel++ ) {   //labels divs for remaining card-text-*
-        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + cardLabel);  //adds card specific targets
-        $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");      //spaces (margins) cards
-    };
+    $(".card-frame").first().children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-word");       //labels start div card-text-* 
+    $(".card-frame").first().addClass("ml-3");                                                                          //labels start div for space (margin)
 
+    for (cardUniqueLabel = 1; cardUniqueLabel < cardCount; cardUniqueLabel++ ) {                                         //labels divs for remaining card-text-*
+        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-word");  //adds card specific targets and text spacing
+        $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");                                        //spaces (margins) cards
+        
+    };
 });
 
 $(".card-frame").click(function() {  // flips card and changed text
-//    $(this).slideToggle("slow", function() {
- //       $(this).children().children().text("boologa");
- //   });
+    $(this).slideToggle("slow", function() {
+        $(this).children().children().text("boologa");
+    });
     $(this).slideToggle();
 });
 
@@ -34,41 +35,3 @@ $(".card-frame").click(function() {  // flips card and changed text
 
 
 
-
-
-
-
-
-
-//$(document).ready(function(){
-//    var content;
-//    for (content=0; content < words.length; content++) {
-//      //  console.log("hey listen" + content);
- //       $(".card-text-" + content).text(words[content]);
-//    };
-//    $(".card-frame").children().children().addClass("card-word");
-//});
-
-//$(document).ready(function() {
-//    var cardContent =0;
-
-//    for (cardContent = 0; cardContent < words.length; cardContent++ ) {
- //       $(".card-frame").children().children().first().text(words[cardContent]);
-  //      for (cardContent = 1; cardContent < words.length; cardContent++ ) {
-//        $(".card-frame").children().children().first().sibling().text(words[cardContent]);
-
-//        };
-//    };
-
-//});
-
-//$(".card-frame").click(function() { //hard setting with dissappearing cards
-
-//    $(this).toggle("slow");
-//    $(this).toggle("slow").text("Im different");
-
-//    $(this).animate({height: "200px"}, 1000);
-
-//    $(this).css("transition-duration", "2s");
-//    $(this).css("transform", "rotateY(360deg)");
-//});
