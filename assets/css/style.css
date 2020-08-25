@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body {
+    background-color: #747474;
+    padding: 1rem 4rem;
+}
+
+
+.card-frame {
+    font-family: "Special Elite", sans-serif;
+    text-align: center;
+    padding: 1rem 0rem 1rem 1rem;
+    margin-top: 1rem;
+    background-color: #fff;
+    color: #010203;
+    font-size: 1.5rem;
+    height: 7rem;
+}
+
+.card-word {
+    position: relative;
+    top: 1.5rem;
+}

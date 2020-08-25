@@ -1,0 +1,54 @@
+Idea: ------   card flipping memory game
+Sub-Idea: -------- learn basic words in a new language
+Languages: -------- 
+            
+            html{
+                        basic frame
+                        Framework -bootstrap
+            }
+
+            css{
+                        basic styling
+                        Framework -bootstrap
+            }
+
+            Javascript{
+                        flip cards
+                        auto fill cards with imported text from a text file
+                        load apis
+                        Framework-jquery
+            }
+
+Class requirments:------- 
+            api{
+                google translate-------to translate english into another language, 
+                (5 total languages to start)
+                (https://cloud.google.com/translate/docs/languages)
+            }
+            
+            api{
+                google or alexa--------- to speak foreign and/or english words as they are paired
+                (https://developers.google.com/assistant/surfaces/speakers)**possible start**
+            }
+
+Extra thoughts: -------------
+
+-random number generator
+way to "pop" out words from list
+-run number generator again .... until game list is filled
+
+-----------------------------
+
+--have two lists
+link both words though a same class then change to display none
+
+--multiple levels of difficulty
+    one with disappearing blocks that rows collapse
+    one with block that stay in the same place
+    one with blocks that cause the row to reshape
+    
+
+
+    timer to complete the level
+
+    put in own words or have auto fill
