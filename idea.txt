@@ -52,3 +52,10 @@ link both words though a same class then change to display none
     timer to complete the level
 
     put in own words or have auto fill
+
+
+
+
+---------------------------
+------------bugs----------
+Understanding Event Delegation
