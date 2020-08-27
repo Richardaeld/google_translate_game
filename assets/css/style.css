@@ -27,6 +27,12 @@ body {
     border: solid 1px rgb(233, 140, 140);
 }
 
+@media (max-width: 991.98px) { 
+    .card-frame {
+        font-size: .75rem;
+    } 
+}
+
 .card-img-even {
     background-image: url("../images/odd-background-1.jpg");
 }
