@@ -52,5 +52,5 @@ body {
 .faceUp {
     transform: scale(1.05);
     box-shadow: .4rem .4rem .4rem .4rem rgba(0, 0, 0, .5);
-    background-image: linear-gradient( rgb(233, 140, 140), rgb(249, 255, 46), rgb(233, 140, 140) );
+    background-image: linear-gradient(rgb(233, 140, 140), rgb(249, 255, 46), rgb(233, 140, 140));
  }
