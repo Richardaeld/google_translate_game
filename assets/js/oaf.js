@@ -1,31 +1,37 @@
 let words = ["she", "look", "time", "could", "people", "part", "long", "did", "on", "they", "i", "these", "said", "so", "number", "no", "yes"];
 
-function flipEven() {
-    $(".card-text-12").parent().parent() 
-    .slideToggle(2000, function() {
+var userInput = null;
+
+function flipEven(userInput) {
+    $(".card-Id-"+userInput).parent().parent() 
+    .slideToggle(200, function() {
         $(this).addClass("even").removeClass("card-img-even").children().children().removeClass("invisible")
     })
-    .slideToggle("slow");
+    .slideToggle(1000);
 }
 
-function flipOdd() {
-    $(".card-text-13").parent().parent() 
-    .slideToggle(2000, function() {
+function flipOdd(userInput) {
+    $(".card-Id-"+userInput).parent().parent() 
+    .slideToggle(200, function() {
         $(this).addClass("odd").removeClass("card-img-odd").children().children().removeClass("invisible")
     })
-    .slideToggle("slow");
+    .slideToggle(1000);
 }
 
-function coverEven() {
-
-
-
+function coverEven(userInput) {
+    $(".card-Id-"+userInput).parent().parent() 
+    .slideToggle(200, function() {
+        $(this).removeClass("even").addClass("card-img-even").children().children().addClass("invisible")
+    })
+    .slideToggle(1000);
 }
 
-function coverOdd() {
-
-
-
+function coverOdd(userInput) {
+    $(".card-Id-"+userInput).parent().parent() 
+    .slideToggle(200, function() {
+        $(this).removeClass("odd").addClass("card-img-odd").children().children().addClass("invisible")
+    })
+    .slideToggle(1000);
 }
 
 
