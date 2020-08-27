@@ -23,7 +23,8 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 5%;
-    box-shadow: .1rem .1rem .1rem .1rem #747474;
+    box-shadow: .1rem .1rem .1rem .1rem rgba(0,0,0, .5);
+    border: solid 1px rgb(233, 140, 140);
 }
 
 .card-img-even {
@@ -50,5 +51,6 @@ body {
 
 .faceUp {
     transform: scale(1.05);
-    box-shadow: .4rem .4rem .4rem .4rem rgb(102, 102, 102);
+    box-shadow: .4rem .4rem .4rem .4rem rgba(0, 0, 0, .5);
+    background-image: linear-gradient( rgb(233, 140, 140), rgb(249, 255, 46), rgb(233, 140, 140) );
  }
