@@ -37,41 +37,30 @@ $(document).ready(function() {  //start creation ready for card population and b
 
 $(document).ready(function() {
 
-        $(".card-frame").click(function() {
-            console.log("click"); //works
-            console.log($(this).hasClass("card-frame")); //works
-            console.log(($(this).hasClass("card-img-odd")));//works
 
-            if ($(this).hasClass("card-img-even") && !$(this).hasClass("card-matched")) {        //flip illusion to even cards
-                $(this).slideToggle("slow", function() {
-                    $(this).addClass("even").removeClass("card-img-even");
-                    $(this).children().children().removeClass("invisible");
-                    $(this).slideToggle();
-                });
-            }
+    $(".card-frame").click(function() {
+        console.log("click"); // just to break console input up 
 
-            if ($(this).hasClass("card-img-odd") && (!$(this).hasClass("card-matched"))) {         //flip illusion to odd cards
-                $(this).slideToggle("slow", function () {
-                    $(this).addClass("odd").removeClass("card-img-odd");
-                    $(this).children().children().removeClass("invisible");
-                    $(this).slideToggle();
-                });
-            } 
-
-        });  
-});
-
-
-
-$(document).ready(function() {        // flips card and hides/reveals text
-
-    $(".card-frame").click(function() {  //captures user selection and only allows two cards to be flipped
-         
-//        if(gameMatchingPair === 2) {
-//            return;
+        if (gameMatchingPair === 2 ){
+            return;
+        } //else if ($(this).hasClass("card-img-even") && !$(this).hasClass("card-matched")) {        //flip illusion to even cards
+//            $(this).slideToggle("slow", function() {
+  //              $(this).addClass("even").removeClass("card-img-even");
+    //            $(this).children().children().removeClass("invisible");
+//                $(this).slideToggle();
+                                    //     console.log($(this) + "flip even");
+//        });
+  //      } else if ($(this).hasClass("card-img-odd") && (!$(this).hasClass("card-matched"))) {         //flip illusion to odd cards
+    //        $(this).slideToggle("slow", function () {
+//                $(this).addClass("odd").removeClass("card-img-odd");
+  //              $(this).children().children().removeClass("invisible");
+    //            $(this).slideToggle();
+                                      //  console.log($(this) + "flip odd");
+  //          });
 //        } 
+
         if(gameMatchingPair === 0) {
-            chosenIndex1 = $(this).index(); // catches index where card is
+            chosenIndex1 = $(this).index(); // catches index where click is
             gameMatchingPair++;
         } else if (gameMatchingPair === 1) {
             chosenIndex2 = $(this).index();
@@ -81,21 +70,38 @@ $(document).ready(function() {        // flips card and hides/reveals text
      
 
         if (gameMatchingPair === 2) {
-            
             if(chosenIndex1 >= 15){     //makes chosenIndex's comparable
-            chosenIndex1 = chosenIndex1 - 15;
+                chosenIndex1 = chosenIndex1 - 15;
             } else if (chosenIndex2 >= 15) {
-            chosenIndex2 = chosenIndex2 -15;
+                chosenIndex2 = chosenIndex2 -15;
             }
-        
+
             if(chosenIndex1 === chosenIndex2) {
-                $(".card-text-"+chosenIndex1).parent().parent().fadeIn(2000).addClass("card-matched");
+                $(".card-text-"+chosenIndex1).parent().parent().addClass("card-matched");
+            } else {
+                    setTimeout(function() {
+                    console.log("Pair!!")
+                    console.log($(this));
+                if ($(this).hasClass("even")) {
+                        console.log("even");
+                    $(this).addClass("card-img-even").removeClass("even");
+                    $(this).children().children().addClass("invisible");  
+                } else if ($(this).hasClass("odd")) {
+                        console.log("odd");
+                    $(this).addClass("card-img-odd").removeClass("odd");
+                    $(this).children().children().addClass("invisible");  
+                }
+            
+
+},200);//timeout
+
             }
-            console.log(chosenIndex1);
-            gameMatchingPair = 0;
+            gameMatchingPair = 0;   // after two cards reset
             chosenIndex1 = null;
             chosenIndex2 = null;
-            console.log(chosenIndex1);
+        
         } 
-    });
-}); 
+    }); //closes click
+}); //closes doc ready
+
+$(document).ready(flipEven);
