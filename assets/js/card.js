@@ -34,9 +34,6 @@ $(document).ready(function() {  //start creation ready for card population and b
 
 });                             //end creation ready DONT FORGET Event Delegation
 
-
-
-
 $(document).ready(function() {
 
     $(".card-frame").click(function() {
@@ -50,18 +47,12 @@ $(document).ready(function() {
             gameMatchingPair++;
         }
 
-
         console.log("click"); // just to break console input up 
         console.log(gameMatchingPair);
         console.log(chosenIndex1);
         console.log(chosenIndex2);
         console.log("");
 
-
-
-//        if (gameMatchingPair === 2 ){
-  //          return;
-    //    } else 
         if ($(this).hasClass("card-img-even") && !$(this).hasClass("card-matched")) {
             flipEven ($(this).index());
             console.log(chosenIndex1 + " " + chosenIndex2 );
@@ -69,36 +60,30 @@ $(document).ready(function() {
             flipOdd ($(this).index());
             console.log(chosenIndex1 + " " + chosenIndex2 );
         }
-     
 
         if (gameMatchingPair === 2) {
-//            if(chosenIndex1 >= 15){     //makes chosenIndex's comparable
-  //              chosenIndex1 = chosenIndex1 - 15;
-    //        } else if (chosenIndex2 >= 15) {
-      //          chosenIndex2 = chosenIndex2 -15;
-        //    }
+            if(chosenIndex1 >= 15){     //makes chosenIndex's comparable
+                chosenIndex1 = chosenIndex1 - 15;
+            } else if (chosenIndex2 >= 15) {
+                chosenIndex2 = chosenIndex2 -15;
+            }
 
             if(chosenIndex1 === chosenIndex2) {
-                $(".card-text-"+chosenIndex1).parent().parent().addClass("card-matched");
+            //    $(".card-text-"+chosenIndex1).parent().parent().addClass("card-matched");
+                matchedPair(chosenId1);
+                matchedPair(chosenId2);
             } else {
-                    console.log("Pair!!");
-                    console.log($(this));
-                    console.log(chosenId2);
+//                    console.log("Pair!!");
                     if (chosenId1 % 2 === 0) {
                         coverEven(chosenId1);
                     } else {
-                        coverOdd(chosenId2);
+                        coverOdd(chosenId1);
                     }
                     if (chosenId2 % 2 === 0) {
-                        coverEven(chosenId1);
+                        coverEven(chosenId2);
                     } else {
                         coverOdd(chosenId2);
                     }
-
-
-
-
-
 
             }
             gameMatchingPair = 0;   // after two cards reset

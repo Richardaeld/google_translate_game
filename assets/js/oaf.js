@@ -7,7 +7,7 @@ function flipEven(userInput) {
     .slideToggle(200, function() {
         $(this).addClass("even").removeClass("card-img-even").children().children().removeClass("invisible")
     })
-    .slideToggle(1000);
+    .slideToggle(200);
 }
 
 function flipOdd(userInput) {
@@ -15,7 +15,7 @@ function flipOdd(userInput) {
     .slideToggle(200, function() {
         $(this).addClass("odd").removeClass("card-img-odd").children().children().removeClass("invisible")
     })
-    .slideToggle(1000);
+    .slideToggle(200);
 }
 
 function coverEven(userInput) {
@@ -23,7 +23,7 @@ function coverEven(userInput) {
     .slideToggle(200, function() {
         $(this).removeClass("even").addClass("card-img-even").children().children().addClass("invisible")
     })
-    .slideToggle(1000);
+    .slideToggle(200);
 }
 
 function coverOdd(userInput) {
@@ -31,7 +31,14 @@ function coverOdd(userInput) {
     .slideToggle(200, function() {
         $(this).removeClass("odd").addClass("card-img-odd").children().children().addClass("invisible")
     })
-    .slideToggle(1000);
+    .slideToggle(200);
+}
+
+function matchedPair (userInput){
+    $(".card-Id-"+userInput).parent().parent()
+    .animate({
+        opacity: 0
+    }, 500);
 }
 
 
