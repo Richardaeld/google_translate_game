@@ -1,10 +1,11 @@
  
  //--------------  global variables
+    var maxPoints = 0;
     var playerPoints = 0;
     var gameMatchingPair = 0;          //max ceiling for pickable cards
-    var chosenIndex1 = null;             //for index matching
+    var chosenIndex1 = null;             //for card pairing 
     var chosenIndex2 = null;
-    var chosenId1 = null;
+    var chosenId1 = null;       // for each card index 
     var chosenId2 = null;
 //---------------- end global variables
 
@@ -13,7 +14,8 @@ $(document).ready(function() {  //start creation ready for card population and b
     var cardCount;              //helps count total cards
     var cardUniqueLabel = 0;    //creates unique labels for cards
 
-    cardCount = $(".card-frame").length;                                                                                //counts amount of card-frames for numbering
+    cardCount = $(".card-frame").length;                                                                    //counts amount of card-frames for numbering
+    maxPoints = cardCount;                                                                                
     
     $(".card-frame").first().children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);       //labels start div card-text-* 
     $(".card-frame").first().addClass("ml-3");                                                                          //labels start div for space (margin)
@@ -37,43 +39,35 @@ $(document).ready(function() {  //start creation ready for card population and b
 $(document).ready(function() {
 
     $(".card-frame").click(function() {
-        if(gameMatchingPair === 0) {
+        if(gameMatchingPair === 0 && !$(this).hasClass("card-matched")) {
             chosenIndex1 = $(this).index(); // catches index where click is
-            chosenId1 = chosenIndex1;
+            chosenId1 = chosenIndex1;       
             gameMatchingPair++;
-        } else if (gameMatchingPair === 1) {
+        } else if (gameMatchingPair === 1 && chosenId1 !== $(this).index() && !$(this).hasClass("card-matched")) { // prevents same selections
             chosenIndex2 = $(this).index();
             chosenId2 = chosenIndex2;
             gameMatchingPair++;
         }
 
-        console.log("click"); // just to break console input up 
-        console.log(gameMatchingPair);
-        console.log(chosenIndex1);
-        console.log(chosenIndex2);
-        console.log("");
+        console.log("click"); // Error testing and console readability  
 
-        if ($(this).hasClass("card-img-even") && !$(this).hasClass("card-matched")) {
+        if ($(this).hasClass("card-img-even") && (!$(this).hasClass("clicked"))) {
             flipEven ($(this).index());
-  //          console.log(chosenIndex1 + " " + chosenIndex2 );
-        } else if ($(this).hasClass("card-img-odd") && !$(this).hasClass("card-matched")) {
+        } else if ($(this).hasClass("card-img-odd") && !$(this).hasClass("clicked")) {
             flipOdd ($(this).index());
-  //          console.log(chosenIndex1 + " " + chosenIndex2 );
         }
 
         if (gameMatchingPair === 2) {
-            if(chosenIndex1 >= 15){     //makes chosenIndex's comparable
+            if(chosenIndex1 >= 15){     //makes chosenIndex's comparable for matching
                 chosenIndex1 = chosenIndex1 - 15;
             } else if (chosenIndex2 >= 15) {
                 chosenIndex2 = chosenIndex2 -15;
             }
 
             if(chosenIndex1 === chosenIndex2) {
-            //    $(".card-text-"+chosenIndex1).parent().parent().addClass("card-matched");
                 matchedPair(chosenId1);
                 matchedPair(chosenId2);
             } else {
-//                    console.log("Pair!!");
                     if (chosenId1 % 2 === 0) {
                         coverEven(chosenId1);
                     } else {
@@ -86,12 +80,9 @@ $(document).ready(function() {
                     }
 
             }
-            gameMatchingPair = 0;   // after two cards reset
-            chosenIndex1 = null;
-            chosenIndex2 = null;
-            chosenId1 = null;
-            chosenId2 = null;
-        
+            
+            resetRound() //removes user input per round
+
         } 
     }); //closes click
 }); //closes doc ready

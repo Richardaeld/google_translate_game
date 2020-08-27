@@ -6,7 +6,7 @@ body {
 }
 
 .playing-board {
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -18,18 +18,20 @@ body {
     margin-top: 1rem;
     background-color: #fff;
     color: #010203;
-    font-size: 1.5rem;
+    font-size: 2rem;
     height: 7rem;
     background-repeat: no-repeat;
-    background-size: 100% 100%;   
+    background-size: 100% 100%;
+    border-radius: 5%;
+    box-shadow: .1rem .1rem .1rem .1rem #747474;
 }
 
 .card-img-even {
-    background-image: url("../images/odd-background.jpg");
+    background-image: url("../images/odd-background-1.jpg");
 }
 
 .card-img-odd{
-    background-image: url("../images/even-background.jpg");
+    background-image: url("../images/even-background-1.jpg");
 }
 
 .card-frame img {
@@ -43,6 +45,10 @@ body {
 }
 
 .card-matched {
-    background-color: rgb(0, 255, 128);
+    transition: 5s;
 }
 
+.faceUp {
+    transform: scale(1.05);
+    box-shadow: .4rem .4rem .4rem .4rem rgb(102, 102, 102);
+ }

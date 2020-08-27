@@ -59,3 +59,15 @@ link both words though a same class then change to display none
 ---------------------------
 ------------bugs----------
 Understanding Event Delegation
+
+
+-----------------------
+27th ----
+make matched cards unclickable
+push entire deck down to make room for player point count and timer
+tweak transition times to make cards flow better and jerk less
+add a card shadow to cards when "picked up"
+ ---- extra idea make cards appear at bottom of screen when choosen to help force a delay timer
+ increase size of words
+ add border to flipped over cards when word is showing
+ 

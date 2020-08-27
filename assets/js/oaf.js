@@ -1,3 +1,5 @@
+// -------------------------- Objects, Arrays, and Functions ----------------------
+
 let words = ["she", "look", "time", "could", "people", "part", "long", "did", "on", "they", "i", "these", "said", "so", "number", "no", "yes"];
 
 var userInput = null;
@@ -5,7 +7,7 @@ var userInput = null;
 function flipEven(userInput) {
     $(".card-Id-"+userInput).parent().parent() 
     .slideToggle(200, function() {
-        $(this).addClass("even").removeClass("card-img-even").children().children().removeClass("invisible")
+        $(this).addClass("even").addClass("clicked").removeClass("card-img-even").addClass("faceUp").children().children().removeClass("invisible")
     })
     .slideToggle(200);
 }
@@ -13,7 +15,7 @@ function flipEven(userInput) {
 function flipOdd(userInput) {
     $(".card-Id-"+userInput).parent().parent() 
     .slideToggle(200, function() {
-        $(this).addClass("odd").removeClass("card-img-odd").children().children().removeClass("invisible")
+        $(this).addClass("odd").addClass("clicked").removeClass("card-img-odd").addClass("faceUp").children().children().removeClass("invisible")
     })
     .slideToggle(200);
 }
@@ -21,7 +23,7 @@ function flipOdd(userInput) {
 function coverEven(userInput) {
     $(".card-Id-"+userInput).parent().parent() 
     .slideToggle(200, function() {
-        $(this).removeClass("even").addClass("card-img-even").children().children().addClass("invisible")
+        $(this).removeClass("even").removeClass("clicked").addClass("card-img-even").removeClass("faceUp").children().children().addClass("invisible")
     })
     .slideToggle(200);
 }
@@ -29,7 +31,7 @@ function coverEven(userInput) {
 function coverOdd(userInput) {
     $(".card-Id-"+userInput).parent().parent() 
     .slideToggle(200, function() {
-        $(this).removeClass("odd").addClass("card-img-odd").children().children().addClass("invisible")
+        $(this).removeClass("odd").removeClass("clicked").addClass("card-img-odd").removeClass("faceUp").children().children().addClass("invisible")
     })
     .slideToggle(200);
 }
@@ -38,9 +40,17 @@ function matchedPair (userInput){
     $(".card-Id-"+userInput).parent().parent()
     .animate({
         opacity: 0
-    }, 500);
+    }, 500)
+    .addClass("card-matched");
 }
 
+function resetRound (){
+    gameMatchingPair = 0   
+    chosenIndex1 = null
+    chosenIndex2 = null
+    chosenId1 = null
+    chosenId2 = null;
+}
 
 var cardFrame = {
 
