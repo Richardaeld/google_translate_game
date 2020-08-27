@@ -15,7 +15,7 @@ $(document).ready(function() {  //start creation ready for card population and b
 
     cardCount = $(".card-frame").length;                                                                                //counts amount of card-frames for numbering
     
-    $(".card-frame").first().children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);       //labels start div card-text-* 
+    $(".card-frame").first().children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);       //labels start div card-text-* 
     $(".card-frame").first().addClass("ml-3");                                                                          //labels start div for space (margin)
 
     for (cardUniqueLabel = 1; cardUniqueLabel < cardCount; cardUniqueLabel++ ) {                                         //labels divs for remaining card-text-*
@@ -55,10 +55,10 @@ $(document).ready(function() {
 
         if ($(this).hasClass("card-img-even") && !$(this).hasClass("card-matched")) {
             flipEven ($(this).index());
-            console.log(chosenIndex1 + " " + chosenIndex2 );
+  //          console.log(chosenIndex1 + " " + chosenIndex2 );
         } else if ($(this).hasClass("card-img-odd") && !$(this).hasClass("card-matched")) {
             flipOdd ($(this).index());
-            console.log(chosenIndex1 + " " + chosenIndex2 );
+  //          console.log(chosenIndex1 + " " + chosenIndex2 );
         }
 
         if (gameMatchingPair === 2) {
