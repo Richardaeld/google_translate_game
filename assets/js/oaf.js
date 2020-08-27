@@ -40,9 +40,16 @@ function matchedPair (userInput){
     $(".card-Id-"+userInput).parent().parent()
     .animate({
         opacity: 0
-    }, 500)
+    }, 200)
     .addClass("card-matched");
 }
+
+function timeDelay (userInput) {
+    setTimeout(function() {
+        matchedPair(userInput)
+    },500)
+}
+
 
 function resetRound (){
     gameMatchingPair = 0   

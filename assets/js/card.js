@@ -26,7 +26,7 @@ $(document).ready(function() {  //start creation ready for card population and b
     }
 
      for (cardUniqueLabel = cardCount; cardUniqueLabel < cardCount + cardCount; cardUniqueLabel++ ) {                   //creates pair for matching
-        $("#game-board").append("<div class='col-4 col-md-2 card-frame'><div class='row no-gutters'><div class='col-12'><span></span></div></div></div>");
+        $("#game-board").append("<div class='col-3 col-md-2 card-frame'><div class='row no-gutters'><div class='col-12'><span></span></div></div></div>");
         $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + (cardUniqueLabel - cardCount)).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel - cardCount]);  //adds card specific targets and text spacing
         $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");                                        //spaces (margins) cards
      }
@@ -65,8 +65,10 @@ $(document).ready(function() {
             }
 
             if(chosenIndex1 === chosenIndex2) {
-                matchedPair(chosenId1);
-                matchedPair(chosenId2);
+                timeDelay(chosenId1);
+        //        flipEven(chosenIndex2);
+          //      flipOdd(chosenIndex2);
+                timeDelay(chosenId2);
             } else {
                     if (chosenId1 % 2 === 0) {
                         coverEven(chosenId1);
