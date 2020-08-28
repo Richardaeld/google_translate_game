@@ -100,6 +100,32 @@ function resetRound (){
     chosenId2 = null;
 }
 
+//-------------------------------- start modal-----------------------------------
+
+function startScreen (timer= 0, difficulty = 0) {
+    $("#game-board").prev().addClass("start-screen") 
+    $(".start-screen")
+    .css("display", "block")
+    .append("<h1>Romancing The Cards</h1>") //header
+    .append("<p>Game Mode(all)</p>")
+    .append("<select id='mode'><option>Campaign</option><option>Quick</option><option>Custom</option></select>")  //select
+    .append("<p>Difficulty(for quick)</p>")
+    .append("<select id='difficulty'><option>Easy</option><option>Medium</option><option>Hard</option></select>") //select
+    .append("<p>Number Of Cards(custom)</p>")
+    .append("<select id='numberCards'><option>5</option><option>10</option><option>15</option></select>")//select
+    .append("<p>Language(all)</p>")
+    .append("<select id='language'><option>Spanish</option><option>Portuguese</option><option>French</option><option>Italian</option><option>Romanian</option></select>")//select
+    .append("<p>Time On Clock(custom)</p>")
+    .append("<select id='timeOnClock'><option>1 minute</option><option>2 minutes</option><option>3 minutes</option><option>4 minutes</option><option>5 minutes</option></select>")//select
+    $(".start-screen").children().filter("p").addClass("start-screen-description")
+    $(".start-screen").children().filter("select").addClass("start-screen-choice")
+    $(".start-screen").append("<button class='start-button'>Start Game</button>")
+    ;
+}
+
+//--------------------------------------------------------------------------------
+
+
 var cardFrame = {
 
 };

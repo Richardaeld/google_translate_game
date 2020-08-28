@@ -3,6 +3,8 @@
 body {
     background-color: #747474;
     padding: 1rem 1rem;
+    font-family: "Special Elite", sans-serif;
+    text-align: center;
 }
 
 .playing-board {
@@ -13,8 +15,6 @@ body {
 }
 
 .card-frame {
-    font-family: "Special Elite", sans-serif;
-    text-align: center;
     padding: 1rem 0rem 1rem 1rem;
     margin-top: 1rem;
     background-color: #fff;
@@ -65,9 +65,7 @@ body {
     color: rgb(0, 255, 21);
     text-shadow: 0rem 0rem .5rem rgb(0, 204, 255);
     height: 5rem;
-    text-align: center;
     margin: 2rem 0rem;
-    font-family: "Special Elite", sans-serif;
     font-size: 1rem;
     font-weight: 500;
     background-color: rgba(0, 0, 0, .5);
@@ -77,3 +75,61 @@ body {
     position: relative;
     top: .5rem;
  }
+
+ .start-screen {
+    display: none;
+    position: absolute;
+    left: 0;
+    right:0;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 80vh;
+    width: 80vw;
+    background-color: rgba(0, 0, 0, .5);
+    color: rgb(0, 255, 21);
+    z-index: 1;
+    font-size: 1.5rem;
+ }
+.start-screen h1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+ .start-screen p,
+ .start-screen select,
+ .start-button{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: rgb(0, 255, 21);
+    text-shadow: 0rem 0rem .5rem rgb(0, 204, 255);
+ }
+
+.start-screen-description {
+    display: inline-block;
+    margin: 0;
+    text-align: left;
+    width: 40%;
+}
+
+.start-screen-choice {
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    width: 40%;
+    background-color: rgba(0, 0, 0, .25)
+}
+
+.start-button {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    display: block;
+    background-color: rgba(0, 0, 0, .25);
+    transition: 1s;
+}
+
+.start-button:hover {
+    background-color: rgba(0, 0, 0, .75);
+    transform: scale(1.1);
+}

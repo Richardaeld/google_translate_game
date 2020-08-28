@@ -37,6 +37,7 @@ $(document).ready(function() {  //start creation ready for card population and b
 
     timerPerRound (120000); //calls timer and sets time
 
+    startScreen();
 
 });                             //end creation ready DONT FORGET Event Delegation
 
