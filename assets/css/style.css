@@ -9,6 +9,7 @@ body {
     background-image: url("../images/background-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 5rem;
 }
 
 .card-frame {
@@ -20,7 +21,6 @@ body {
     color: #010203;
     font-size: 1.5rem;
     height: 7rem;
-    background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 5%;
     box-shadow: .1rem .1rem .1rem .1rem rgba(0,0,0, .5);
@@ -59,4 +59,21 @@ body {
     transform: scale(1.05);
     box-shadow: .4rem .4rem .4rem .4rem rgba(0, 0, 0, .5);
     background-image: linear-gradient(rgb(233, 140, 140), rgb(249, 255, 46), rgb(233, 140, 140));
+ }
+
+ .timer-frame {
+    color: rgb(0, 255, 21);
+    text-shadow: 0rem 0rem .5rem rgb(0, 204, 255);
+    height: 5rem;
+    text-align: center;
+    margin: 2rem 0rem;
+    font-family: "Special Elite", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, .5);
+ }
+
+ .timer-frame p {
+    position: relative;
+    top: 1.5rem;
  }

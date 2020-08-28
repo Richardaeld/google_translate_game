@@ -34,9 +34,13 @@ $(document).ready(function() {  //start creation ready for card population and b
     $(".card-frame").odd().addClass("card-img-odd");                                                                    //adds background to odd cards
     $(".card-frame").even().addClass("card-img-even");                                                                  //adds background to even cards
 
+    timerPerRound (120000); //calls timer and sets time
+
+
 });                             //end creation ready DONT FORGET Event Delegation
 
 $(document).ready(function() {
+
 
     $(".card-frame").click(function() {
         if(gameMatchingPair === 0 && !$(this).hasClass("card-matched")) {
@@ -70,6 +74,7 @@ $(document).ready(function() {
           //      flipOdd(chosenIndex2);
                 timeDelay(chosenId2);
             } else {
+
                     if (chosenId1 % 2 === 0) {
                         coverEven(chosenId1);
                     } else {
@@ -80,7 +85,6 @@ $(document).ready(function() {
                     } else {
                         coverOdd(chosenId2);
                     }
-
             }
             
             resetRound() //removes user input per round
