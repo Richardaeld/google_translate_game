@@ -7,11 +7,12 @@
     var chosenIndex2 = null;
     var chosenId1 = null;       // for each card index 
     var chosenId2 = null;
+    var cardCount;
 //---------------- end global variables
 
 
 $(document).ready(function() {  //start creation ready for card population and background adding
-    var cardCount;              //helps count total cards
+  //  var cardCount;              //helps count total cards
     var cardUniqueLabel = 0;    //creates unique labels for cards
 
     cardCount = $(".card-frame").length;                                                                    //counts amount of card-frames for numbering
@@ -73,6 +74,7 @@ $(document).ready(function() {
         //        flipEven(chosenIndex2);
           //      flipOdd(chosenIndex2);
                 timeDelay(chosenId2);
+                playerScored();
             } else {
 
                     if (chosenId1 % 2 === 0) {

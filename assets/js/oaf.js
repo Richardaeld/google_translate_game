@@ -73,11 +73,23 @@ function timerPerRound (userInput) { //Round timer
         } else {
             $(".timer-frame").children().first().text("You have " + minutes + " minutes and " + seconds + " seconds remaining")
         }
-        
+        if (playerPoints === cardCount) {
+            return;
+
+        }
         roundTimer = roundTimer - 1000
         timerPerRound(roundTimer);
     },1000)
     
+}
+
+function playerScored(){
+    playerPoints++
+    $(".timer-frame").children().last().text("Player has "+ playerPoints  +" Point(s)");
+    if (playerPoints === cardCount) {
+            $(".timer-frame").children().last().text("Player wins against timer!!");
+
+    }
 }
 
 function resetRound (){
