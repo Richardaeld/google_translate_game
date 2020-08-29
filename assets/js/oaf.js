@@ -102,13 +102,13 @@ function resetRound (){
 
 //-------------------------------- start modal-----------------------------------
 
-function startScreen (timer= 0, difficulty = 0) {
+function startScreen (mode= 0, difficulty = 0, numberCards=0, language=0, timeOnClock=0) {
     $("#game-board").prev().addClass("start-screen") 
     $(".start-screen")
     .css("display", "block")
     .append("<h1>Romancing The Cards</h1>") //header
     .append("<p>Game Mode(all)</p>")
-    .append("<select id='mode'><option>Campaign</option><option>Quick</option><option>Custom</option></select>")  //select
+    .append("<select id='mode'><option selected='selected'>Campaign</option><option>Quick</option><option>Custom</option></select>")  //select
     .append("<p>Difficulty(for quick)</p>")
     .append("<select id='difficulty'><option>Easy</option><option>Medium</option><option>Hard</option></select>") //select
     .append("<p>Number Of Cards(custom)</p>")
@@ -123,7 +123,48 @@ function startScreen (timer= 0, difficulty = 0) {
     ;
 }
 
-//--------------------------------------------------------------------------------
+//----;---------------------------populate screen------------------------------------
+function cardPopulate (cardCount = 15, timeOnClock = 60000) {  //start creation ready for card population and background adding
+  //  var cardCount;              //helps count total cards
+    var cardUniqueLabel = 0;    //creates unique labels for cards
+
+    cardCount = $(".card-frame").length;                                                                    //counts amount of card-frames for numbering
+    maxPoints = cardCount;
+    
+    $(".card-frame").first().children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);       //labels start div card-text-* 
+    $(".card-frame").first().addClass("ml-3");                                                                          //labels start div for space (margin)
+
+    for (cardUniqueLabel = 1; cardUniqueLabel < cardCount; cardUniqueLabel++ ) {                                         //labels divs for remaining card-text-*
+        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);  //adds card specific targets and text spacing
+        $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");                                        //spaces (margins) cards
+    }
+
+     for (cardUniqueLabel = cardCount; cardUniqueLabel < cardCount + cardCount; cardUniqueLabel++ ) {                   //creates pair for matching
+        $("#game-board").append("<div class='col-3 col-md-2 card-frame'><div class='row no-gutters'><div class='col-12'><span></span></div></div></div>");
+        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + (cardUniqueLabel - cardCount)).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel - cardCount]);  //adds card specific targets and text spacing
+        $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");                                        //spaces (margins) cards
+     }
+    
+    $(".card-frame").odd().addClass("card-img-odd");                                                                    //adds background to odd cards
+    $(".card-frame").even().addClass("card-img-even");                                                                  //adds background to even cards
+
+    timerPerRound (timeOnClock); //calls timer and sets time
+
+    startScreen();
+
+    $("#mode").change(function() { // arrays users settings
+        var playerModeSelection = "";
+        // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
+        $(".start-screen option:selected").each(function() {
+            playerModeSelection = $(this).index();
+            $(".start-button").append(playerModeSelection);
+        });
+    })
+
+
+};                             //end creation ready DONT FORGET Event Delegation
+
+
 
 
 var cardFrame = {

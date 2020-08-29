@@ -8,43 +8,34 @@
     var chosenId1 = null;       // for each card index 
     var chosenId2 = null;
     var cardCount;
+    var playerModeSelection= [];
 //---------------- end global variables
 
 
 $(document).ready(function() {  //start creation ready for card population and background adding
-  //  var cardCount;              //helps count total cards
-    var cardUniqueLabel = 0;    //creates unique labels for cards
-
-    cardCount = $(".card-frame").length;                                                                    //counts amount of card-frames for numbering
-    maxPoints = cardCount;                                                                                
-    
-    $(".card-frame").first().children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);       //labels start div card-text-* 
-    $(".card-frame").first().addClass("ml-3");                                                                          //labels start div for space (margin)
-
-    for (cardUniqueLabel = 1; cardUniqueLabel < cardCount; cardUniqueLabel++ ) {                                         //labels divs for remaining card-text-*
-        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);  //adds card specific targets and text spacing
-        $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");                                        //spaces (margins) cards
-    }
-
-     for (cardUniqueLabel = cardCount; cardUniqueLabel < cardCount + cardCount; cardUniqueLabel++ ) {                   //creates pair for matching
-        $("#game-board").append("<div class='col-3 col-md-2 card-frame'><div class='row no-gutters'><div class='col-12'><span></span></div></div></div>");
-        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + (cardUniqueLabel - cardCount)).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel - cardCount]);  //adds card specific targets and text spacing
-        $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");                                        //spaces (margins) cards
-     }
-    
-    $(".card-frame").odd().addClass("card-img-odd");                                                                    //adds background to odd cards
-    $(".card-frame").even().addClass("card-img-even");                                                                  //adds background to even cards
-
-    timerPerRound (120000); //calls timer and sets time
 
     startScreen();
 
+    $("#mode").change(function() { // arrays users settings
+        // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
+        $(".start-screen option:selected").each(function() {
+            playerModeSelection = $(this).index();
+            $(".start-button").append(playerModeSelection);
+        });
+
+    })
+            $(".start-button").click(function() {
+            cardPopulate();
+            $(".start-screen").css("display", "none");
+            $(".start-screen").css("z-index", "0");
+        });
+
+        playGame();
 });                             //end creation ready DONT FORGET Event Delegation
 
-$(document).ready(function() {
+function playGame() {
 
-
-    $(".card-frame").click(function() {
+    $(document).on("click", ".card-frame", function() {
         if(gameMatchingPair === 0 && !$(this).hasClass("card-matched")) {
             chosenIndex1 = $(this).index(); // catches index where click is
             chosenId1 = chosenIndex1;       
@@ -72,8 +63,6 @@ $(document).ready(function() {
 
             if(chosenIndex1 === chosenIndex2) {
                 timeDelay(chosenId1);
-        //        flipEven(chosenIndex2);
-          //      flipOdd(chosenIndex2);
                 timeDelay(chosenId2);
                 playerScored();
             } else {
@@ -94,5 +83,11 @@ $(document).ready(function() {
 
         } 
     }); //closes click
-}); //closes doc ready
+
+
+
+
+
+}
+
 
