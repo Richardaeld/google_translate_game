@@ -143,24 +143,38 @@ function resetRound (){
 //-------------------------------- start screen modal-----------------------------------
 
 function startScreen (mode= 0, difficulty = 0, numberCards=0, language=0, timeOnClock=0) {
+    var screenHeight;
+
     $("#game-board").prev().addClass("start-screen") 
     $(".start-screen")
     .css("display", "block")
     .append("<h1>Romancing The Cards</h1>") //header
     .append("<p>Game Mode</p>") //all
-    .append("<select id='mode'><option selected='selected'>Campaign</option><option>Quick</option><option>Custom</option></select>")  //select
+    .append("<select id='mode'><option selected='selected' disabled>Campaign</option><option disabled>Quick</option><option disabled>Custom</option></select>")  //select
     .append("<p>Difficulty</p>")  //for quick
-    .append("<select id='difficulty'><option>Easy</option><option>Medium</option><option>Hard</option></select>") //select
+    .append("<select id='difficulty'><option disabled>Easy</option><option disabled>Medium</option><option disabled>Hard</option></select>") //select
     .append("<p>Number Of Pairs</p>") //custom
     .append("<select id='numberCards'><option>5</option><option>10</option><option>15</option></select>")//select
-    .append("<p>Language(all)</p>")  //all
-    .append("<select id='language'><option>Spanish</option><option>Portuguese</option><option>French</option><option>Italian</option><option>Romanian</option></select>")//select
+    .append("<p>Language</p>")  //all
+    .append("<select id='language'><option>English</option><option disabled>Spanish</option><option disabled>Portuguese</option><option disabled>French</option><option disabled>Italian</option><option disabled>Romanian</option></select>")//select
     .append("<p>Time On Clock</p>")  //custom
-    .append("<select id='timeOnClock'><option>1 minute</option><option>2 minutes</option><option>3 minutes</option><option>4 minutes</option><option>5 minutes</option></select>")//select
+    .append("<select id='timeOnClock'><option>1 minute</option><option selected='selected'>2 minutes</option><option>3 minutes</option><option>4 minutes</option><option>5 minutes</option></select>")//select
     $(".start-screen").children().filter("p").addClass("start-screen-description")
     $(".start-screen").children().filter("select").addClass("start-screen-choice")
     $(".start-screen").append("<button class='start-button'>Start Game</button>");
     
+    screenHeight = document.documentElement.scrollHeight;       // makes background take up entire screen
+    $(".playing-board").css("min-height", screenHeight);
+
+
+    $(".start-button").mouseenter(function() {
+        $(this).addClass("start-button-hover");
+    });
+
+    $(".start-button").mouseleave(function() {
+        $(this).removeClass("start-button-hover");
+    });
+
     $(".start-button").click(function() {  
     // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
         $(".start-screen option:selected").each(function() {

@@ -90,11 +90,24 @@ body {
     color: rgb(0, 255, 21);
     z-index: 1;
     font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
  }
+
+.start-screen select {
+    border: outset 2px rgba(61, 177, 67, 0.534);
+    padding-left: 1rem;
+}
+
+.start-screen option {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
 .start-screen h1 {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+
  .start-screen p,
  .start-screen select,
  .start-button{
@@ -130,7 +143,9 @@ body {
     transition: 1s;
 }
 
-.start-button:hover {
+.start-button-hover {
+    position: relative;
     background-color: rgba(0, 0, 0, .75);
     transform: scale(1.1);
+    padding: .5rem;
 }

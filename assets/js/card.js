@@ -13,6 +13,11 @@
 
 $(document).ready(function() {  //start creation ready for card population and background adding
     startScreen();              //creats the start screen
+
+
+
+
+
 });                             //end creation ready DONT FORGET Event Delegation
 
 
