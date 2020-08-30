@@ -145,24 +145,28 @@ function resetRound (){
 function startScreen (mode= 0, difficulty = 0, numberCards=0, language=0, timeOnClock=0) {
     var screenHeight;
 
+    $(".timer-frame h1").text("Romancing The Cards") //header
+
+
     $("#game-board").prev().addClass("start-screen") 
     $(".start-screen")
     .css("display", "block")
-    .append("<h1>Romancing The Cards</h1>") //header
     .append("<p>Game Mode</p>") //all
-    .append("<select id='mode'><option selected='selected' disabled>Campaign</option><option disabled>Quick</option><option disabled>Custom</option></select>")  //select
+    .append("<select id='mode'><option value='1' disabled>Campaign</option><option value='2' disabled>Quick</option><option value='3' selected='selected'>Custom</option></select>")  //select
     .append("<p>Difficulty</p>")  //for quick
-    .append("<select id='difficulty'><option disabled>Easy</option><option disabled>Medium</option><option disabled>Hard</option></select>") //select
+    .append("<select id='difficulty'><option value='1' selected='selected'>Easy</option><option value='2' disabled>Medium</option><option value='3' disabled>Hard</option></select>") //select
     .append("<p>Number Of Pairs</p>") //custom
-    .append("<select id='numberCards'><option>5</option><option>10</option><option>15</option></select>")//select
+    .append("<select id='numberCards'><optionvalue='5'>5</option><option value='10' selected='selected'>10</option><optionvalue='15'>15</option></select>")//select
     .append("<p>Language</p>")  //all
-    .append("<select id='language'><option>English</option><option disabled>Spanish</option><option disabled>Portuguese</option><option disabled>French</option><option disabled>Italian</option><option disabled>Romanian</option></select>")//select
+    .append("<select id='language'><option value='1'>English</option><option value='2' disabled>Spanish</option><option value='3' disabled>Portuguese</option><option value='4' disabled>French</option><option value='5' disabled>Italian</option><option value='6' disabled>Romanian</option></select>")//select
     .append("<p>Time On Clock</p>")  //custom
-    .append("<select id='timeOnClock'><option>1 minute</option><option selected='selected'>2 minutes</option><option>3 minutes</option><option>4 minutes</option><option>5 minutes</option></select>")//select
+    .append("<select id='timeOnClock'><option value='1'>1 minute</option><option value='2' selected='selected'>2 minutes</option><option value='3'>3 minutes</option><option value='4'>4 minutes</option><option value='5'>5 minutes</option></select>")//select
     $(".start-screen").children().filter("p").addClass("start-screen-description")
     $(".start-screen").children().filter("select").addClass("start-screen-choice")
     $(".start-screen").append("<button class='start-button'>Start Game</button>");
     
+
+    // ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height
     screenHeight = document.documentElement.scrollHeight;       // makes background take up entire screen
     $(".playing-board").css("min-height", screenHeight);
 
@@ -179,7 +183,9 @@ function startScreen (mode= 0, difficulty = 0, numberCards=0, language=0, timeOn
     // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
         $(".start-screen option:selected").each(function() {
             playerModeSelection.push($(this).index());
-            $(".start-button").append(playerModeSelection);
+          //  $(".start-button").append(playerModeSelection);
+   //       console.log(playerModeSelection);
+ //           console.log($("#timeOnClock").children().value);
         });
 
             cardPopulate();
@@ -187,15 +193,16 @@ function startScreen (mode= 0, difficulty = 0, numberCards=0, language=0, timeOn
     });
 
 
-
 }
 
 //----;---------------------------populate screen with cards------------------------------------
 
-function cardPopulate ( timeOnClock = 60000) {  //start creation ready for card population and background adding
+function cardPopulate () {  //start creation ready for card population and background adding
     var cardUniqueLabel = 0;    //creates unique labels for cards
 
     cardCount = (playerModeSelection[2] +1) *5;
+    timeOnClock = (playerModeSelection[4]+1 )*60000;
+    console.log(timeOnClock);
 //    console.log(playerModeSelection[2]);
     maxPoints = cardCount;
 

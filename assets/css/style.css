@@ -99,11 +99,15 @@ body {
     padding-left: 1rem;
 }
 
+.start-screen option:focus {
+    border-color: red;
+}
+
 .start-screen option {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-.start-screen h1 {
+.timer-frame h1 {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
