@@ -5,6 +5,12 @@ let words = ["she", "look", "time", "could", "people", "part", "long", "did", "o
 var userInput = null;
 var roundTimer = 500;
 var viewClock;
+var mode; 
+var difficulty = [[easy],[medium],[hard]]; 
+var numberCards = [5,10,15];
+var language; 
+var timeOnClock;
+var cardCount;
 
 
 function flipEven(userInput) {      //flips even cards face up
@@ -100,7 +106,7 @@ function resetRound (){
     chosenId2 = null;
 }
 
-//-------------------------------- start modal-----------------------------------
+//-------------------------------- start screen modal-----------------------------------
 
 function startScreen (mode= 0, difficulty = 0, numberCards=0, language=0, timeOnClock=0) {
     $("#game-board").prev().addClass("start-screen") 
@@ -120,21 +126,26 @@ function startScreen (mode= 0, difficulty = 0, numberCards=0, language=0, timeOn
     $(".start-screen").children().filter("p").addClass("start-screen-description")
     $(".start-screen").children().filter("select").addClass("start-screen-choice")
     $(".start-screen").append("<button class='start-button'>Start Game</button>")
+    
+    
     ;
 }
 
-//----;---------------------------populate screen------------------------------------
-function cardPopulate (cardCount = 15, timeOnClock = 60000) {  //start creation ready for card population and background adding
-  //  var cardCount;              //helps count total cards
+//----;---------------------------populate screen with cards------------------------------------
+
+function cardPopulate ( timeOnClock = 60000) {  //start creation ready for card population and background adding
     var cardUniqueLabel = 0;    //creates unique labels for cards
 
-    cardCount = $(".card-frame").length;                                                                    //counts amount of card-frames for numbering
+    cardCount = (playerModeSelection[2] +1) *5;
+    console.log(playerModeSelection[2]);
     maxPoints = cardCount;
-    
-    $(".card-frame").first().children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);       //labels start div card-text-* 
-    $(".card-frame").first().addClass("ml-3");                                                                          //labels start div for space (margin)
+
+    $("#game-board").append("<div class='col-3 col-md-2 card-frame'><div class='row no-gutters'><div class='col-12'><span></span></div></div></div>");
+    $("#game-board").children().children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);       //labels start div card-text-* 
+    $("#game-board").children().addClass("ml-3");                                                                          //labels start div for space (margin)
 
     for (cardUniqueLabel = 1; cardUniqueLabel < cardCount; cardUniqueLabel++ ) {                                         //labels divs for remaining card-text-*
+        $("#game-board").append("<div class='col-3 col-md-2 card-frame'><div class='row no-gutters'><div class='col-12'><span></span></div></div></div>");
         $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);  //adds card specific targets and text spacing
         $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");                                        //spaces (margins) cards
     }
@@ -151,21 +162,7 @@ function cardPopulate (cardCount = 15, timeOnClock = 60000) {  //start creation 
     timerPerRound (timeOnClock); //calls timer and sets time
 
     startScreen();
-
-    $("#mode").change(function() { // arrays users settings
-        var playerModeSelection = "";
-        // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
-        $(".start-screen option:selected").each(function() {
-            playerModeSelection = $(this).index();
-            $(".start-button").append(playerModeSelection);
-        });
-    })
-
-
-};                             //end creation ready DONT FORGET Event Delegation
-
-
-
+    }
 
 var cardFrame = {
 

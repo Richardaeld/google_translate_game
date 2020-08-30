@@ -7,31 +7,40 @@
     var chosenIndex2 = null;
     var chosenId1 = null;       // for each card index 
     var chosenId2 = null;
-    var cardCount;
+    var cardCount = null;
     var playerModeSelection= [];
 //---------------- end global variables
 
 
 $(document).ready(function() {  //start creation ready for card population and background adding
 
-    startScreen();
+    startScreen();              //creats the start screen
 
-    $("#mode").change(function() { // arrays users settings
+$(".start-button").click(function() {  
+
         // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
         $(".start-screen option:selected").each(function() {
-            playerModeSelection = $(this).index();
+            playerModeSelection.push($(this).index());
             $(".start-button").append(playerModeSelection);
         });
 
-    })
-            $(".start-button").click(function() {
             cardPopulate();
             $(".start-screen").css("display", "none");
             $(".start-screen").css("z-index", "0");
+            console.log(playerModeSelection);
         });
 
         playGame();
+
 });                             //end creation ready DONT FORGET Event Delegation
+
+
+
+
+
+
+
+
 
 function playGame() {
 
@@ -55,13 +64,13 @@ function playGame() {
         }
 
         if (gameMatchingPair === 2) {
-            if(chosenIndex1 >= 15){     //makes chosenIndex's comparable for matching
-                chosenIndex1 = chosenIndex1 - 15;
-            } else if (chosenIndex2 >= 15) {
-                chosenIndex2 = chosenIndex2 -15;
+            if(chosenIndex1 >= cardCount){     //makes chosenIndex's comparable for matching
+                chosenIndex1 = chosenIndex1 - cardCount;
+            } else if (chosenIndex2 >= cardCount) {
+                chosenIndex2 = chosenIndex2 -cardCount;
             }
 
-            if(chosenIndex1 === chosenIndex2) {
+            if(chosenIndex1 === chosenIndex2) {     //removes correct cards and reflips wrong
                 timeDelay(chosenId1);
                 timeDelay(chosenId2);
                 playerScored();
@@ -83,9 +92,6 @@ function playGame() {
 
         } 
     }); //closes click
-
-
-
 
 
 }
