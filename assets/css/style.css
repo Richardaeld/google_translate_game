@@ -28,9 +28,11 @@ body {
 }
 
 @media (max-width: 991.98px) { 
+    .start-screen,
     .card-frame {
         font-size: 1rem;
     } 
+    
 }
 
 .card-img-even {
@@ -81,10 +83,8 @@ body {
     position: absolute;
     left: 0;
     right:0;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    height: 80vh;
-    width: 80vw;
+
+    width: 100%;
     background-color: rgba(0, 0, 0, .5);
     color: rgb(0, 255, 21);
     z-index: 1;
