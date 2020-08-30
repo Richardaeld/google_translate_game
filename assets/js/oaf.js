@@ -96,8 +96,10 @@ function timerPerRound (userInput) { //Round timer
     var seconds = 0
     var minutes = 0
     roundTimer = userInput
+    $(".timer-frame h1").css("display", "none");
 
     setTimeout(function() {
+
         
         seconds = ((roundTimer % 60000) / 1000)
         minutes = Math.floor(roundTimer / 60000)
@@ -156,7 +158,7 @@ function startScreen (mode= 0, difficulty = 0, numberCards=0, language=0, timeOn
     .append("<p>Difficulty</p>")  //for quick
     .append("<select id='difficulty'><option value='1' selected='selected'>Easy</option><option value='2' disabled>Medium</option><option value='3' disabled>Hard</option></select>") //select
     .append("<p>Number Of Pairs</p>") //custom
-    .append("<select id='numberCards'><optionvalue='5'>5</option><option value='10' selected='selected'>10</option><optionvalue='15'>15</option></select>")//select
+    .append("<select id='numberCards'><option value='5'>5</option><option value='10' selected='selected'>10</option><option value='15'>15</option></select>")//select
     .append("<p>Language</p>")  //all
     .append("<select id='language'><option value='1'>English</option><option value='2' disabled>Spanish</option><option value='3' disabled>Portuguese</option><option value='4' disabled>French</option><option value='5' disabled>Italian</option><option value='6' disabled>Romanian</option></select>")//select
     .append("<p>Time On Clock</p>")  //custom
