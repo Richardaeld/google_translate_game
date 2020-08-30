@@ -5,6 +5,7 @@ body {
     padding: 1rem 1rem;
     font-family: "Special Elite", sans-serif;
     text-align: center;
+
 }
 
 .playing-board {
@@ -12,6 +13,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 5rem;
+    min-height: 100vh;
 }
 
 .card-frame {
@@ -83,7 +85,6 @@ body {
     position: absolute;
     left: 0;
     right:0;
-
     width: 100%;
     background-color: rgba(0, 0, 0, .5);
     color: rgb(0, 255, 21);
