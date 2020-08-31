@@ -12,7 +12,7 @@ var language;
 var timeOnClock;
 var cardCount;
 
-
+//------------------------------------------------- card flipping and card match functions
 function flipEven(idNumber) {      //flips even cards face up
     $(".card-Id-"+idNumber).parent().parent() 
         .slideToggle(200, function() {
@@ -86,12 +86,13 @@ function matchedPair (idNumber){   //fades out matched cards
     .addClass("card-matched");
 }
 
-function timeDelay (userInput) {    //delays to prevent instant card disappear
+function timeDelay (idNumber) {    //delays to prevent instant card disappear
     setTimeout(function() {
-        matchedPair(userInput)
+        matchedPair(idNumber)
     },500)
 }
 
+//--------------------------------------------------- creates and runs timer
 function timerPerRound (userInput) { //Round timer
     var seconds = 0
     var minutes = 0
@@ -104,18 +105,51 @@ function timerPerRound (userInput) { //Round timer
         seconds = ((roundTimer % 60000) / 1000)
         minutes = Math.floor(roundTimer / 60000)
         
-        if (roundTimer <= -1 ){  //timer done break
-            return $(".timer-frame")
+        if (roundTimer <= -1 ){  //timer lose condition 
+            $(".timer-frame")
                 .children()
                 .first()
                 .text("Your Time is up!!");
-        } else {
+
+            gameOver();
+
+            setTimeout(function() {        
+                $("#game-over").children().text("You Lose!");
+                $("#game-over").css("display", "block").css("z-index", "1");
+            },500);
+
+            setTimeout(function() {
+                $("#game-over").css("display", "none").css("z-index", "0");
+                $(".start-screen")
+                    .css("display", "block")
+                    .css("z-index", "1");
+                timerReset();
+                },5000);
+            return;
+
+        } else {                //timer continue condition
             $(".timer-frame")
                 .children()
                 .first()
                 .text("You have " + minutes + " minutes and " + seconds + " seconds remaining")
         }
         if (playerPoints === cardCount) {
+
+            gameOver();
+
+            setTimeout(function() {        
+                $("#game-over").children().text("You Win!");
+                $("#game-over").css("display", "block").css("z-index", "1");
+            },500);
+
+            setTimeout(function() {
+                $("#game-over").css("display", "none").css("z-index", "0");
+                $(".start-screen")
+                    .css("display", "block")
+                    .css("z-index", "1");
+                    timerReset();
+                },5000);
+                
             return;
 
         }
@@ -130,11 +164,10 @@ function playerScored(){
     $(".timer-frame").children().last().text("Player has "+ playerPoints  +" Point(s)");
     if (playerPoints === cardCount) {
             $(".timer-frame").children().last().text("Player wins against timer!!");
-
     }
 }
 
-function resetRound (){
+function resetRound (){ // ------------resets values between selection pairs
     gameMatchingPair = 0   
     chosenIndex1 = null
     chosenIndex2 = null
@@ -148,7 +181,6 @@ function startScreen (mode= 0, difficulty = 0, numberCards=0, language=0, timeOn
     var screenHeight;
 
     $(".timer-frame h1").text("Romancing The Cards") //header
-
 
     $("#game-board").prev().addClass("start-screen") 
     $(".start-screen")
@@ -166,12 +198,10 @@ function startScreen (mode= 0, difficulty = 0, numberCards=0, language=0, timeOn
     $(".start-screen").children().filter("p").addClass("start-screen-description")
     $(".start-screen").children().filter("select").addClass("start-screen-choice")
     $(".start-screen").append("<button class='start-button'>Start Game</button>");
-    
 
     // ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height
     screenHeight = document.documentElement.scrollHeight;       // makes background take up entire screen
     $(".playing-board").css("min-height", screenHeight);
-
 
     $(".start-button").mouseenter(function() {
         $(this).addClass("start-button-hover");
@@ -185,13 +215,15 @@ function startScreen (mode= 0, difficulty = 0, numberCards=0, language=0, timeOn
     // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
         $(".start-screen option:selected").each(function() {
             playerModeSelection.push($(this).index());
-          //  $(".start-button").append(playerModeSelection);
-   //       console.log(playerModeSelection);
- //           console.log($("#timeOnClock").children().value);
         });
-
-            cardPopulate();
-            playGame();
+            if (newGamePlus === 0){
+                cardPopulate();
+                playGame();
+                newGamePlus = 1;
+            } else {
+                cardPopulate();
+                console.log(newGamePlus);
+            }
     });
 
 
@@ -264,10 +296,6 @@ function cardPopulate () {  //start creation ready for card population and backg
     timerPerRound (timeOnClock); //calls timer and sets time
 }
 
-
-
-
-
 function playGame() {
 
     $(document).on("click", ".card-frame", function() {
@@ -317,17 +345,40 @@ function playGame() {
             resetRound() //removes user input per round
 
         } 
+
+
+
     }); //closes click
 
 
+//----------------------add return
+
+
+}   // end function playGame
+
+ function timerReset() {
+    $(".timer-frame")
+        .children()
+        .last()
+        .text("Timer will start shortly");
+ }
+
+
+//----------------------------------remove cards from game (restart)
+
+function gameOver() {
+    $("#game-board").children().remove("div");
+    maxPoints = 0;
+    playerPoints = 0;
+    gameMatchingPair = 0;
+    cardCount = 0;
 }
 
 
 
 
 
-
-
+//------------------------- ideas for objects
 var cardFrame = {
 
 };
