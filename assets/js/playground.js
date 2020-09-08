@@ -1,12 +1,21 @@
 let words = ["she", "look", "time", "could", "people", "part", "long", "did", "on", "they", "i", "these", "said", "so", "number", "no", "yes"];
 var clickRecord = [];   //two cards player currently selected
-var playerPoints;   //total matched pairs by player
-var MaxPlayerPoints; // pair from start screen for wingame
+var playerPoints = 0;   //total matched pairs by player
+var MaxPlayerPoints = 0; // pair from start screen for wingame
 
-function unflipWrongPair(selectedPairOfCards) {
+
+function removingCorrectPair(clickRecord){
+    setTimeout(function() {
+        document.getElementById(clickRecord[0]).parentElement.classList.add("cardRemove");
+        document.getElementById(clickRecord[1]).parentElement.classList.add("cardRemove");
+        playerPoints++;
+    },2000);
+}
+
+function unflipWrongPair(clickRecord) {
     setTimeout(function(){
-        document.getElementById(selectedPairOfCards[0]).parentElement.classList.remove("flipCard");
-        document.getElementById(selectedPairOfCards[1]).parentElement.classList.remove("flipCard");
+        document.getElementById(clickRecord[0]).parentElement.classList.remove("flipCard");
+        document.getElementById(clickRecord[1]).parentElement.classList.remove("flipCard");
     },2000);
 }
 
@@ -24,8 +33,10 @@ function makeCardFunctional(index, cardNumber, target){
     target.lastChild.appendChild(createParagraph);      //adds word to card
 
     target.firstChild.onclick = function() {        //makes cards flippable
-        this.parentElement.classList.add("flipCard");
-        clickRecord.push(this.id);
+        if( this.parentElement.parentElement.getElementsByClassName("cardRemove")[0] === undefined ){
+            this.parentElement.classList.add("flipCard");
+            clickRecord.push(this.id);
+        }
     }
 }
 
@@ -63,8 +74,8 @@ function checkCardPair() {                //finds ID #
         }
         if (selectedCardIds[0] === selectedCardIds[1]){
             console.log("You have the shot! Take the shot!!")
+            removingCorrectPair(clickRecord);
             clickRecord = [];
-
         } else {
             unflipWrongPair(clickRecord);
             clickRecord = [];
