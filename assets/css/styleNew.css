@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body {
+    background-color: #747474;
+    padding: 1rem 1rem;
+    color: #010203;
+    font-family: "Special Elite", sans-serif;
+    text-align: center;
+}
+.playing-board {
+    background-image: url("../images/background-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 5rem;
+    min-height: 100vh;
+}
+
+.card-frame {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    height: 7rem;
+    border-radius: 5%;
+    border: solid 1px rgb(233, 140, 140);
+}
+
+.cardRotate {
+    height: 100%;
+    width: 100%;
+    transition-duration: 2s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/*.cardRotate:hover {
+    transform: rotateX(180deg);
+}*/
+
+.card {
+    backface-visibility: hidden;
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+
+.cardFace {
+    background-image: url("../images/odd-background-1.jpg");
+    background-repeat: none;
+    background-size: 100% 100%;
+}
+
+.cardBack {
+    background-image: linear-gradient(rgb(233, 140, 140), rgb(249, 255, 46), rgb(233, 140, 140));
+    transform: rotateX(180deg);
+}
+
+.cardBack p {
+    position: relative;
+    top: 2rem;
+}
+
+.flipCard {
+    transform: rotateX(180deg);
+
+}
