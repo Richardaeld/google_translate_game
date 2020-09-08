@@ -30,10 +30,6 @@ body {
     position: relative;
 }
 
-/*.cardRotate:hover {
-    transform: rotateX(180deg);
-}*/
-
 .card {
     backface-visibility: hidden;
     height:100%;
@@ -59,21 +55,9 @@ body {
 
 .flipCard {
     transform: rotateX(180deg);
-
-}
-
-.cardspin {
-
-}
-
-.cardRemove {
-   /* transition: ease-in;*/
-   /* transition-duration: 3s;*/
-   /* transform: rotateX(3690deg);*/
 }
 
 .cardRemove div {
     transition-duration: 7s;
     opacity: 0;
-
 }
