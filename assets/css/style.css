@@ -78,6 +78,10 @@ body {
     font-weight: 500;
 }
 
+#timer-frame p {
+    font-size: 2rem;
+}
+
 #start-screen {
     /*display: none; */
     position: absolute;
@@ -140,3 +144,6 @@ body {
     color: #fff;
 }
 
+.hiddenEl {
+    display: none;
+}

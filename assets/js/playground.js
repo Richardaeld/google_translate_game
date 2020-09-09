@@ -5,10 +5,11 @@ var MaxPlayerPoints = 0; // pair from start screen for wingame
 
 
 function removingCorrectPair(clickRecord){
+        playerPoints++;
+        document.getElementById("timer-frame").getElementsByTagName("p")[1].textContent = "Player has " + playerPoints + " points";
     setTimeout(function() {
         document.getElementById(clickRecord[0]).parentElement.classList.add("cardRemove");
         document.getElementById(clickRecord[1]).parentElement.classList.add("cardRemove");
-        playerPoints++;
     },2000);
 }
 
@@ -101,6 +102,7 @@ function startGame() {      //collect user selected information
     }
     console.log(userSelection);
     populateGame(userSelection[0],userSelection[1],userSelection[2],userSelection[3],userSelection[4])
+    document.getElementById("timer-frame").getElementsByTagName("h1")[0].setAttribute("style", "display: none");
 }
 
 function populateGame(mode, difficulty, numberOfCards, language, time ) {      //create game for play
@@ -109,18 +111,24 @@ function populateGame(mode, difficulty, numberOfCards, language, time ) {      /
     constructCard(numberOfCards, "col-12 card cardFace", "middle", 1, true);     //cardFace
     constructCard(numberOfCards, "col-12 card cardBack", "middle", 1, false, true);     //cardBack
 
+    document.getElementById("timer-frame").getElementsByTagName("p")[0].classList.remove("hiddenEl");
+    document.getElementById("timer-frame").getElementsByTagName("p")[1].classList.remove("hiddenEl");
+    document.getElementById("start-screen").classList.add("hiddenEl");
+
     console.log(numberOfCards[2]);
-    timer(time*60000);
+    timer(parseInt((time)*60000)+1000);
 }
 
 function timer(time) {
-    var seconds;
-    var minutes;
-    seconds = ((timeRemaining % 60000) / 1000)
-    minutes = Math.floor(timeRemaining / 60000)
+    var setTimeElement = document.getElementById("timer-frame").getElementsByTagName("p")[0];
     setTimeout(function() {
-        
-
-
+        time -= 1000;
+        setTimeElement.textContent = "Time remainging is " + Math.floor(time / 60000)  + " minute(s) and " + (time%60000)/1000 + " second(s)";
+        console.log(time/1000);
+        if(time === 0 ) { //lose condition
+            return;
+        }
+        timer(time);
     },1000)
+
 }
