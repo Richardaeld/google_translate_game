@@ -1,4 +1,219 @@
-// -------------------------- Objects, Arrays, and Functions ----------------------
+$(document).ready(function() {        // flips card and hides/reveals text
+    $(".card-frame").click(function() {  
+        $(this).slideToggle("slow", function() {
+        
+            if ($(this).hasClass("card-img-even")) {        //flip illusion to even cards
+                $(this).addClass("even").removeClass("card-img-even");
+                $(this).children().children().removeClass("invisible");
+            } else if ($(this).hasClass("even")) {
+                $(this).addClass("card-img-even").removeClass("even");
+                $(this).children().children().addClass("invisible");  
+            }
+        
+            if ($(this).hasClass("card-img-odd")) {         //flip illusion to odd cards
+                $(this).addClass("odd").removeClass("card-img-odd");
+                $(this).children().children().removeClass("invisible");
+            } else if ($(this).hasClass("odd")) {
+                $(this).addClass("card-img-odd").removeClass("odd");
+                $(this).children().children().addClass("invisible");  
+            }
+            
+        $(this).slideToggle();
+        });
+
+    });
+
+});
+
+
+
+         //else if ($(this).hasClass("card-img-even") && !$(this).hasClass("card-matched")) {        //flip illusion to even cards
+//            $(this).slideToggle("slow", function() {
+  //              $(this).addClass("even").removeClass("card-img-even");
+    //            $(this).children().children().removeClass("invisible");
+//                $(this).slideToggle();
+                                    //     console.log($(this) + "flip even");
+//        });
+  //      } else if ($(this).hasClass("card-img-odd") && (!$(this).hasClass("card-matched"))) {         //flip illusion to odd cards
+    //        $(this).slideToggle("slow", function () {
+//                $(this).addClass("odd").removeClass("card-img-odd");
+  //              $(this).children().children().removeClass("invisible");
+    //            $(this).slideToggle();
+                                      //  console.log($(this) + "flip odd");
+  //          });
+//        } 
+
+
+
+
+
+//-----------------------------------------------------------
+
+
+
+
+ //       if (gameMatchingPair == 2) {
+   //         $("#card-board").filter("chosen")
+     //       $("div:contains('chosen')") ///looks for chosen //
+       // }
+
+
+//       for (cardUniqueLabel = 0; cardUniqueLabel < cardCount + cardCount; cardUniqueLabel++ ) {
+  //          if ($("div:[class$='cardCount']"))
+    //    }
+
+
+                    if ($().hasClass("even")) {
+                        console.log("even");
+                    $(this).addClass("card-img-even").removeClass("even");
+                    $(this).children().children().addClass("invisible");  
+                } else if ($(this).hasClass("odd")) {
+                        console.log("odd");
+                    $(this).addClass("card-img-odd").removeClass("odd");
+                    $(this).children().children().addClass("invisible");  
+                }
+
+
+///----selection grabber
+
+    $(".start-screen option:selected").each(function() {
+        mode1 = $(this).text();
+        $(".start-button").append(mode1);
+
+        ////-------------------------------- start expeiment
+$("#mode").change(function() { // arrays users settings
+    var playerModeSelection = "";
+    // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
+    $(".start-screen option:selected").each(function() {
+        playerModeSelection = $(this).index();
+        $(".start-button").append(playerModeSelection);
+    });
+})
+//----------------------------------   end experiment
+
+
+//--------------------------------original start fill
+
+$(document).ready(function() {  //start creation ready for card population and background adding
+  //  var cardCount;              //helps count total cards
+    var cardUniqueLabel = 0;    //creates unique labels for cards
+
+    cardCount = $(".card-frame").length;                                                                    //counts amount of card-frames for numbering
+    maxPoints = cardCount;
+    
+    $(".card-frame").first().children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);       //labels start div card-text-* 
+    $(".card-frame").first().addClass("ml-3");                                                                          //labels start div for space (margin)
+
+    for (cardUniqueLabel = 1; cardUniqueLabel < cardCount; cardUniqueLabel++ ) {                                         //labels divs for remaining card-text-*
+        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);  //adds card specific targets and text spacing
+        $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");                                        //spaces (margins) cards
+    }
+
+     for (cardUniqueLabel = cardCount; cardUniqueLabel < cardCount + cardCount; cardUniqueLabel++ ) {                   //creates pair for matching
+        $("#game-board").append("<div class='col-3 col-md-2 card-frame'><div class='row no-gutters'><div class='col-12'><span></span></div></div></div>");
+        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + (cardUniqueLabel - cardCount)).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel - cardCount]);  //adds card specific targets and text spacing
+        $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");                                        //spaces (margins) cards
+     }
+    
+    $(".card-frame").odd().addClass("card-img-odd");                                                                    //adds background to odd cards
+    $(".card-frame").even().addClass("card-img-even");                                                                  //adds background to even cards
+
+    timerPerRound (120000); //calls timer and sets time
+
+    startScreen();
+
+    $("#mode").change(function() { // arrays users settings
+        var playerModeSelection = "";
+        // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
+        $(".start-screen option:selected").each(function() {
+            playerModeSelection = $(this).index();
+            $(".start-button").append(playerModeSelection);
+        });
+    })
+
+
+});                             //end creation ready DONT FORGET Event Delegation
+
+
+
+//----;---------------------------populate screen with cards------------------------------------
+function cardPopulate (cardCount = 5, timeOnClock = 60000) {  //start creation ready for card population and background adding
+  //  var cardCount;              //helps count total cards
+    var cardUniqueLabel = 0;    //creates unique labels for cards
+
+    
+    //cardCount = $(".card-frame").length;                                                                    //counts amount of card-frames for numbering
+    maxPoints = cardCount;
+
+
+    $(".card-frame").first().children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);       //labels start div card-text-* 
+    $(".card-frame").first().addClass("ml-3");                                                                          //labels start div for space (margin)
+
+    for (cardUniqueLabel = 1; cardUniqueLabel < cardCount; cardUniqueLabel++ ) {                                         //labels divs for remaining card-text-*
+        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + cardUniqueLabel).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel]);  //adds card specific targets and text spacing
+        $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");                                        //spaces (margins) cards
+    }
+
+     for (cardUniqueLabel = cardCount; cardUniqueLabel < cardCount + cardCount; cardUniqueLabel++ ) {                   //creates pair for matching
+        $("#game-board").append("<div class='col-3 col-md-2 card-frame'><div class='row no-gutters'><div class='col-12'><span></span></div></div></div>");
+        $("div[class*='card-text-']").last().parent().parent().next("div").children().children().addClass("card-text-" + (cardUniqueLabel - cardCount)).addClass("card-Id-"+cardUniqueLabel).addClass("card-word").addClass("invisible").text(words[cardUniqueLabel - cardCount]);  //adds card specific targets and text spacing
+        $("div[class*='card-text-']").last().parent().parent().addClass("ml-3");                                        //spaces (margins) cards
+     }
+    
+    $(".card-frame").odd().addClass("card-img-odd");                                                                    //adds background to odd cards
+    $(".card-frame").even().addClass("card-img-even");                                                                  //adds background to even cards
+
+    timerPerRound (timeOnClock); //calls timer and sets time
+
+    startScreen();
+
+    $("#mode").change(function() { // arrays users settings
+        var playerModeSelection = "";
+        // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
+        $(".start-screen option:selected").each(function() {
+            playerModeSelection = $(this).index();
+            $(".start-button").append(playerModeSelection);
+        });
+
+    })
+
+
+};                             //end creation ready DONT FORGET Event Delegation
+
+
+
+    $("#mode").change(function() { // arrays users settings
+        var playerModeSelection = [];
+        // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
+        $(".start-screen option:selected").each(function() {
+            playerModeSelection.push($(this).index());
+            //playerModeSelection = $(this).index();
+            $(".start-button").append(playerModeSelection);
+        });
+
+    })
+
+
+
+    $(".start-button").click(function() {
+
+ //   $("#mode").change(function() {                                                // arrays users settings
+        // {[0]mode, [1]difficulty, [2]#cards, [3]language, [4]time }
+        $(".start-screen option:selected").each(function() {
+            playerModeSelection.push($(this).index());
+//            playerModeSelection += $(this).index();
+            $(".start-button").append(playerModeSelection);
+        });
+
+    })
+
+
+
+
+    //---------------------------------------------entire save-------------------------------------
+
+
+    // -------------------------- Objects, Arrays, and Functions ----------------------
 //-------------------------set arrays
 let words = ["she", "look", "time", "could", "people", "part", "long", "did", "on", "they", "i", "these", "said", "so", "number", "no", "yes"];
 
@@ -270,57 +485,17 @@ function cardPopulate () {  //start creation ready for card population and backg
         .css("display", "none")
         .css("z-index", "0");
 
-var cardStructure = `
-    <div class="col-3 col-md-2 card-frame ml-3 card-Id-0 lookAtMe"> 
-        <div class="row no-gutters">
-            <div class="col-12 card-text-0  card-word">
-            </div>
-        </div>
-    </div>
-`;
-
-var loc1 = document.getElementById("game-board");
-//var loc2 = document.getElementById("game-board").
-loc1.innerHTML = cardStructure;
-
-
-for (i=0; i<4; i++){
-    var loc2 = document.getElementsByClassName("card-Id-0");
-    loc2.nextSibling.innerHTML = cardStructure;
-}
-
-
-var createDivOut = document.createElement("div");
-var createDivMid = document.createElement("div");
-var createDivInner = document.createElement("div");
-var loc1 = document.getElementById("game-board");
-
-
-function createCardSkeleton() {
-var createDiv = document.createElement("div");
-//var createClass = document.className("laksjdfklashd;jfkhaskdjfhas");
-var garbageText = document.createTextNode("alksdjflkasjfhasg;klhasdkf");
-createDiv.appendChild(garbageText);
-var injectLoc = document.getElementById("game-board");
-injectLoc.insertBefore(createDiv, injectLoc.childNodes[0]);
-//injectLoc.insertBefore(createClass, injectLoc.childNodes[0]);
-
-}
-
-
-
-
-//    $("#game-board")    //------------   Creates initial 0 index 
-//        .append("<div class='col-3 col-md-2 card-frame'><div class='row no-gutters'><div class='col-12'><span></span></div></div></div>")
-//        .children()
-//        .addClass("ml-3")
-//        .children()
-//        .children()
-//        .addClass("card-text-" + cardUniqueLabel)
-//        .addClass("card-Id-"+cardUniqueLabel)
-//        .addClass("card-word")
-//        .addClass("invisible")
-//       .text(words[cardUniqueLabel]);       //labels start div card-text-* 
+    $("#game-board")    //------------   Creates initial 0 index 
+        .append("<div class='col-3 col-md-2 card-frame'><div class='row no-gutters'><div class='col-12'><span></span></div></div></div>")
+        .children()
+        .addClass("ml-3")
+        .children()
+        .children()
+        .addClass("card-text-" + cardUniqueLabel)
+        .addClass("card-Id-"+cardUniqueLabel)
+        .addClass("card-word")
+        .addClass("invisible")
+        .text(words[cardUniqueLabel]);       //labels start div card-text-* 
 
     for (cardUniqueLabel = 1; cardUniqueLabel < cardCount; cardUniqueLabel++ ) { //labels divs for  first half of cards card-text-*
         $("#game-board").append("<div class='col-3 col-md-2 card-frame'><div class='row no-gutters'><div class='col-12'><span></span></div></div></div>");
@@ -465,3 +640,30 @@ var cardMedium = {
 var cardDifficult = {
 
 };
+
+
+
+//------------------------------------------endc entire save------------------------------------
+
+
+function insertWord(index, card){     //inserts a word on each cardBack
+    var loc2 = document.getElementsByClassName("cardBack")[index];
+    para = document.createElement("p");
+    node1 = document.createTextNode(words[index]);
+    para.appendChild(node1);
+    loc2.appendChild(para);
+}
+
+function createCardIdAndMakeFlip(index, cardNumber, target) {      //creates a card ID for unique card selection, a matching pair id, makes card flipable
+    if (index < cardNumber){ // makes a unique card id and a matching pair id
+        target.firstChild.id = "cardId-" + index + "-" + index;
+    } else {
+        target.firstChild.id = "cardId-" + index + "-" + (index-cardNumber);
+    }
+
+    target.firstChild.onclick = function() {        //makes cards flippable
+        this.parentElement.classList.add("flipCard");
+        clickRecord.push(this.id);
+    }
+}
+//----------------------------------------------------------------------------------
