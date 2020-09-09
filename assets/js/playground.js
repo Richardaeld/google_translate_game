@@ -5,12 +5,12 @@ var MaxPlayerPoints = 0; // pair from start screen for wingame
 
 
 function removingCorrectPair(clickRecord){
-        playerPoints++;
-        document.getElementById("timer-frame").getElementsByTagName("p")[1].textContent = "Player has " + playerPoints + " points";
     setTimeout(function() {
         document.getElementById(clickRecord[0]).parentElement.classList.add("cardRemove");
         document.getElementById(clickRecord[1]).parentElement.classList.add("cardRemove");
     },2000);
+    playerPoints++;
+    document.getElementById("timer-frame").getElementsByTagName("p")[1].textContent = "Player has " + playerPoints + " points";
 }
 
 function unflipWrongPair(clickRecord) {
