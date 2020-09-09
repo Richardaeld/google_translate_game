@@ -4,6 +4,8 @@ var playerPoints = 0;   //total matched pairs by player
 var MaxPlayerPoints = 0; // pair from start screen for wingame
 
 
+
+
 function removingCorrectPair(clickRecord){
     setTimeout(function() {
         document.getElementById(clickRecord[0]).parentElement.classList.add("cardRemove");
@@ -47,22 +49,19 @@ function constructCard (cardNumber, classValues, className=null, matchingPair = 
         var cardInternal = document.getElementsByClassName(className)[index];
         var setClasses = document.createAttribute("class");
         setClasses.value = classValues;
+        
         if (className === null){ //card container
             CardContainer.appendChild(document.createElement("div")).setAttributeNode(setClasses);
             continue;
         }
 
         cardInternal.appendChild(document.createElement("div")).setAttributeNode(setClasses) //adds elements for cardRotate cardFace and cardBack
+        
         if (isCardBack){        //calls word adding function
             makeCardFunctional(index, cardNumber, cardInternal);
         }
     }
 }
-
-//constructCard(5, "col-3 col-md-2 card-frame ml-3");  //container
-//constructCard(5, "row no-gutters middle cardRotate", "col-3"); //cardRotate
-//constructCard(5, "col-12 card cardFace", "middle", 1, true);     //cardFace
-//constructCard(5, "col-12 card cardBack", "middle", 1, false, true);     //cardBack
 
 function checkCardPair() {                //finds ID #
     if (clickRecord.length === 2){
@@ -77,6 +76,7 @@ function checkCardPair() {                //finds ID #
             console.log("You have the shot! Take the shot!!")
             removingCorrectPair(clickRecord);
             clickRecord = [];
+            
         } else {
             unflipWrongPair(clickRecord);
             clickRecord = [];
@@ -92,17 +92,15 @@ document.getElementById("play").onclick = function() {
     startGame();
 }
 
-function startGame() {      //collect user selected information
+function startGame() {      //---------------------------------------collect user selected information---------------------------------------------
     startButton = document.getElementById("start-screen").getElementsByTagName("option");
     var userSelection = [];
-    for(i=0; i<startButton.length; i++){
+    for(i=0; i<startButton.length; i++){ //gets user selection and parse into Int
        if( startButton[i].selected) {
            userSelection.push(parseInt(startButton[i].value));
        }
     }
-    console.log(userSelection);
     populateGame(userSelection[0],userSelection[1],userSelection[2],userSelection[3],userSelection[4])
-    document.getElementById("timer-frame").getElementsByTagName("h1")[0].setAttribute("style", "display: none");
 }
 
 function populateGame(mode, difficulty, numberOfCards, language, time ) {      //create game for play
@@ -111,24 +109,72 @@ function populateGame(mode, difficulty, numberOfCards, language, time ) {      /
     constructCard(numberOfCards, "col-12 card cardFace", "middle", 1, true);     //cardFace
     constructCard(numberOfCards, "col-12 card cardBack", "middle", 1, false, true);     //cardBack
 
-    document.getElementById("timer-frame").getElementsByTagName("p")[0].classList.remove("hiddenEl");
-    document.getElementById("timer-frame").getElementsByTagName("p")[1].classList.remove("hiddenEl");
-    document.getElementById("start-screen").classList.add("hiddenEl");
+    MaxPlayerPoints = numberOfCards;
+    gameHeader(2);
 
     console.log(numberOfCards[2]);
-    timer(parseInt((time)*60000)+1000);
+    timer((time*60000)+1000); //change time into minutes and add 1 second so user sees full time minute value
 }
 
 function timer(time) {
     var setTimeElement = document.getElementById("timer-frame").getElementsByTagName("p")[0];
     setTimeout(function() {
         time -= 1000;
-        setTimeElement.textContent = "Time remainging is " + Math.floor(time / 60000)  + " minute(s) and " + (time%60000)/1000 + " second(s)";
+        setTimeElement.textContent = "Time remainging is " + Math.floor(time / 60000)  + " minute(s) and " + (time%60000)/1000 + " second(s)"; //changes time into a user display with minutes and seconds
         console.log(time/1000);
-        if(time === 0 ) { //lose condition
+
+        if(MaxPlayerPoints === playerPoints) { //win condition
+            gameHeader(3)
+            return;
+        } else if(time === 0 ){ //lose condition
+            gameHeader(4);
             return;
         }
+
         timer(time);
     },1000)
+}
 
+function hideTimer(targetP, targetH1) {
+    targetP[0].classList.add("hiddenEl");
+    targetP[1].classList.add("hiddenEl");
+    targetH1.classList.remove("hiddenEl");
+}
+
+function restartGame() {
+    var targetGame  = document.getElementById("game").getElementsByClassName("card-frame");
+    var totalLength = targetGame.length;
+    setTimeout(function(){
+        for (i=0; i < totalLength; i++){
+            targetGame[0].remove();
+        }
+        playerPoints = 0;
+            document.getElementById("timer-frame").getElementsByTagName("p")[0].textContent = "Timer will start shortly";
+            document.getElementById("timer-frame").getElementsByTagName("p")[1].textContent = "Player has 0 points";
+        gameHeader(1);
+    }, 4000);
+}
+
+function gameHeader (condition) { // 1-gamestartscreen ----- 2-gameplayscreen ------ 3-game win ------- 4-game lose
+    var targetP = document.getElementById("timer-frame").getElementsByTagName("p");
+    var targetH1 = document.getElementById("timer-frame").getElementsByTagName("h1")[0];
+    var targetStart = document.getElementById("start-screen")
+    if(condition === 1){
+        hideTimer(targetP, targetH1);
+        targetH1.textContent = "Romancing The Cards";
+        targetStart.classList.remove("hiddenEl");
+    } else if (condition === 2){
+        targetP[0].classList.remove("hiddenEl");
+        targetP[1].classList.remove("hiddenEl");
+        targetH1.classList.add("hiddenEl");
+        targetStart.classList.add("hiddenEl");
+    } else if (condition === 3){
+        hideTimer(targetP, targetH1);
+        targetH1.textContent = "You Win!";
+        restartGame();
+    } else if (condition === 4){
+        hideTimer(targetP, targetH1);
+        targetH1.textContent = "You Lose!";
+        restartGame();   
+    }
 }

@@ -58,7 +58,7 @@ body {
 }
 
 .cardRemove div {
-    transition-duration: 7s;
+    transition-duration: 5s;
     opacity: 0;
 }
 
