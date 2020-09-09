@@ -7,7 +7,7 @@ body {
     font-family: "Special Elite", sans-serif;
     text-align: center;
 }
-.playing-board {
+#playing-board {
     background-image: url("../images/background-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,3 +61,82 @@ body {
     transition-duration: 7s;
     opacity: 0;
 }
+
+@media (max-width: 991.98px) { 
+    #start-screen,
+    .card-frame {
+        font-size: .75rem;
+    } 
+    
+}
+
+#timer-frame {
+    text-shadow: 0rem 0rem .5rem rgb(30, 255, 0);
+    height: 5rem;
+    margin: 2rem 0rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#start-screen {
+    /*display: none; */
+    position: absolute;
+
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    color: rgb(0, 255, 21);
+    z-index: 1;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+}
+
+#start-screen select {
+    border: outset 2px rgba(61, 177, 67, 0.534);
+    padding-left: 1rem;
+}
+
+#start-screen option {
+    background-color: rgba(0, 0, 0, .9)
+}
+
+#start-screen p,
+#start-screen select,
+.start-button {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: rgb(0, 255, 21);
+    text-shadow: 0rem 0rem .5rem rgb(0, 204, 255);
+}
+
+.start-screen-description,
+.start-screen-choice {
+    display: inline-block;
+    width: 40%;
+}
+
+.start-screen-description {
+    text-align: left;
+} 
+
+
+.start-screen-choice {
+    text-align: right;
+    background-color: rgba(0, 0, 0, .25);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.start-button {
+    z-index: 1;
+    width: 20%;
+    padding: 1rem 0;
+    background-color: rgba(0, 0, 0, .5);
+    transition-duration: 1s;
+    font-size: 1.75rem;
+}
+
+.start-button:hover {
+    background-color: rgba(0, 0, 0, .95);
+    color: #fff;
+}
+

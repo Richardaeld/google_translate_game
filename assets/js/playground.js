@@ -58,10 +58,10 @@ function constructCard (cardNumber, classValues, className=null, matchingPair = 
     }
 }
 
-constructCard(5, "col-3 col-md-2 card-frame ml-3");  //container
-constructCard(5, "row no-gutters middle cardRotate", "col-3"); //cardRotate
-constructCard(5, "col-12 card cardFace", "middle", 1, true);     //cardFace
-constructCard(5, "col-12 card cardBack", "middle", 1, false, true);     //cardBack
+//constructCard(5, "col-3 col-md-2 card-frame ml-3");  //container
+//constructCard(5, "row no-gutters middle cardRotate", "col-3"); //cardRotate
+//constructCard(5, "col-12 card cardFace", "middle", 1, true);     //cardFace
+//constructCard(5, "col-12 card cardBack", "middle", 1, false, true);     //cardBack
 
 function checkCardPair() {                //finds ID #
     if (clickRecord.length === 2){
@@ -86,3 +86,41 @@ function checkCardPair() {                //finds ID #
 document.onclick = function() {         //prints on mouse click
    checkCardPair(); 
 } 
+
+document.getElementById("play").onclick = function() {
+    startGame();
+}
+
+function startGame() {      //collect user selected information
+    startButton = document.getElementById("start-screen").getElementsByTagName("option");
+    var userSelection = [];
+    for(i=0; i<startButton.length; i++){
+       if( startButton[i].selected) {
+           userSelection.push(parseInt(startButton[i].value));
+       }
+    }
+    console.log(userSelection);
+    populateGame(userSelection[0],userSelection[1],userSelection[2],userSelection[3],userSelection[4])
+}
+
+function populateGame(mode, difficulty, numberOfCards, language, time ) {      //create game for play
+    constructCard(numberOfCards, "col-3 col-md-2 card-frame ml-3");  //container
+    constructCard(numberOfCards, "row no-gutters middle cardRotate", "col-3"); //cardRotate
+    constructCard(numberOfCards, "col-12 card cardFace", "middle", 1, true);     //cardFace
+    constructCard(numberOfCards, "col-12 card cardBack", "middle", 1, false, true);     //cardBack
+
+    console.log(numberOfCards[2]);
+    timer(time*60000);
+}
+
+function timer(time) {
+    var seconds;
+    var minutes;
+    seconds = ((timeRemaining % 60000) / 1000)
+    minutes = Math.floor(timeRemaining / 60000)
+    setTimeout(function() {
+        
+
+
+    },1000)
+}
