@@ -232,12 +232,12 @@ function gameHeader (condition) { // 1-gamestartscreen ----- 2-gameplayscreen --
     var targetP = document.getElementById("timer-frame").getElementsByTagName("p");
     var targetH1 = document.getElementById("timer-frame").getElementsByTagName("h1")[0];
     var targetStart = document.getElementById("start-screen")
-    var rngList_0 = [];
-    var indexList_0 = [];
-    var final_0 = [];
-    var rngList_1 = [];
-    var indexList_1 = [];
-    var final_1 = []; 
+     rngList_0 = [];
+     indexList_0 = [];
+     final_0 = [];
+     rngList_1 = [];
+     indexList_1 = [];
+     final_1 = []; 
     if(condition === 1){
         hideTimer(targetP, targetH1);
         targetH1.textContent = "Romancing The Cards";
