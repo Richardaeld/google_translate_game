@@ -54,6 +54,15 @@ link both words though a same class then change to display none
     put in own words or have auto fill
 
 
+--------------------------------romancing the cards ----- all the romance languages---------------------------
+----------start modal------------
+name
+game mode        champaign, quick, custom
+difficulty      --champaign (easy, medium, hard)
+card numbers    --cards on screen
+language       --languages offered
+timer       --timer set
+
 
 
 ---------------------------
@@ -71,3 +80,200 @@ add a card shadow to cards when "picked up"
  increase size of words
  add border to flipped over cards when word is showing
  
+
+
+
+----------------  ** not game project, part of real life project *** remove*** ** -----------------
+48 hours no rain with direct sun to dry deck out
+avoid direct hot sun while painting to prevent bubbling
+24 hour after painting no rain
+1 week before heavy objects can be put on deck
+
+----------------- party night---------------------
+1 social -- quest recieved
+1 encounter ** optional if recieving quest went to fast** -- traveling ambush
+1 social/encounter -- monologue and fight
+1 social -- question completion
+1 social/encounter -- quest giver is evil and attacks
+
+-----------------camera-----------------------------
+-- aisle behind officiant
+-- tight shot of two at alter
+-- wide shot of entire party at alter
+--
+
+
+-----------------  mailing and email list   -----------------------------------
+kevin -- check
+andrea -- check
+chris c  -- check
+paul haley -- check
+brad hood  -- check
+nathen malon--v check
+steven hatcher-- need email
+eric schofield-- check
+justin libby-- check
+tony monachese*-- check
+tyler zimmerly--
+taylor daniels*--
+jorden --
+sam and jess --
+bob hatcher--
+renee and richard conti 
+pelham -- 
+travis wheeler --
+
+-----------------------------------------------------------------------------
+-------------------------------felipe----------------------------------------
+how complicated should fuctions be? 
+Is a function worth naming for 1 - 3 lines of code within?
+is there a to complicated function?
+is there a cleaner way of using .append for adding divs, etc...
+    -should I use literal "`" marks instead of """ marks
+Is having a start file a common idea? (card.js)
+Global variables vs local variables
+    -if a global variable is called in local setting with var does teh function create a "local" version
+
+
+Structure of a js file should be?
+    -------mine ex--------
+    -variables at top
+    -named functions following
+    -a "start file" consisting of the initial function and essential must load variables
+
+--  pair an language with english counter part
+-- pair two of same language
+
+
+object key value pair
+
+(Not needed for testing)***
+-where can I find argument/call descriptions for jasmine?***
+-is there a place I can view a better description of jasmine and its use?***
+
+**PEP 8**
+    --**Class** -- **methods**
+
+**Limit jquery
+
+    BUBBLE -- ** more relavent in jquery**
+
+
+
+var spanish = [
+{
+    "eng" : "she",
+    "esp": "ella",
+    "exp" "this means she and is a romane word"
+},
+
+{
+    "eng" : "she",
+    "esp": "ella",
+    "exp" "this means she and is a romane word"
+},
+
+{
+    "eng" : "she",
+    "esp": "ella",
+    "exp" "this means she and is a romane word"
+}
+
+]
+**--look here for speaking language api--**
+**public-apis/public-apis
+github.com/public-apis/public-apis
+
+
+
+----vanilla js-------
+
+var html = `
+        <h1></h1>
+        <p></p>
+        `
+
+
+addEventListener  \\click, keyup, keydown //--look in MDN
+innerHTML
+getElementById
+getElementByTagName
+
+
+.random **syntax**
+
+
+
+function constructCard (cardNumber, classValues, className=null, matchingPair = 0)
+for (index = 0; index < cardNumber*2; index++)
+
+var CardContainer = document.getElementById("game");
+var CardInternal = document.getElementsByClassName(className)[index];
+var setClasses = document.createAttribute("class");
+setClasses.value = classValues;
+
+if (className === null){
+CardContainer.appendChild(document.createElement("div")).setAttributeNode(setClass);
+continue
+}
+if (i<cardNumber){
+cardInternal.appendChild(document.createElement("div")).setAttributeNode(setClass)
+}
+
+makeInnerLayer(5, "col-3 col-md-2 card-frame ml-3");
+makeInnerLayers(10, "row no-gutters middle cardRotate", "col-3"); 
+makeInnerLayers(10, "col-12 card cardFace", "middle", 1); 
+makeInnerLayers(10, "col-12 card cardBack", "middle", 1); 
+
+
+
+
+
+function makeInnerLayers(cardNumber, className, classValues, classTarget = null){
+    for (i=0; i<cardNumber; i++){  
+        var loc1 = document.getElementsByClassName(className)[i];                       //creates parent target
+        var class1 = document.createAttribute("class");                                 //creates a empty variable to place
+        class1.value = classValues;                                                     //adds value to empty class
+        loc1.appendChild(document.createElement("div")).setAttributeNode(class1);       //creates div with class
+        
+        if(classValues === "col-12 card cardBack"){
+            insertWord(i)
+        } else if (classValues === "col-12 card cardFace"){
+            var loc2 = document.getElementsByClassName("col-12 card cardFace")[i];
+            loc2.id = "card-Id-" + i 
+        }
+    }
+}
+
+function makeCardsOuter(cardNumber, matchingPair = 0){
+
+    for (i=0; i<cardNumber + cardNumber; i++){  
+        var loc1 = document.getElementById("game");                                     //creates parent target
+        var class1 = document.createAttribute("class");                                 //creates a empty variable to place
+        class1.value = "col-3 col-md-2 card-frame ml-3";                                //adds value to empty class
+        loc1.appendChild(document.createElement("div")).setAttributeNode(class1);       //creates div with class
+        var loc2 = document.getElementById("game").getElementsByTagName("div")[i];      //creates location to add class to
+      //  loc2.id = "card-Id-" + i;                                                       //creates class to add 
+
+        if ( i >= cardNumber){                                                          //labels cards for matching pairs
+            loc2.className += " card-text-" + matchingPair;
+            matchingPair++
+        } else {
+            loc2.className += " card-text-" + i;
+        }
+    };        
+}
+
+makeCardsOuter(5);                                                      //makes outside frame for card
+makeInnerLayers(10, "col-3", "row no-gutters middle cardRotate");                   //makes middle layer of card
+makeInnerLayers(10, "middle", "col-12 card cardFace", 1);          //makes inner most layer of card
+makeInnerLayers(10, "middle", "col-12 card cardBack", 1);          //makes inner most layer of card
+
+
+
+
+
+
+
+
+Card flip taken from two places, MDN and w3schools
