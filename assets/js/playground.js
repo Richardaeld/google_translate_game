@@ -1,10 +1,10 @@
 let words = ["she", "look", "time", "could", "people", "part", "long", "did", "on", "they", "i", "these", "said", "so", "number", "no", "yes"];
 var clickRecord = [];   //two cards player currently selected
+var rNG = [];  //first half is indexes that need to be used -- second half is randomized index list to pull first half with  
 var playerPoints = 0;   //total matched pairs by player
 var MaxPlayerPoints = 0; // pair from start screen for wingame
-var rngArray = [];
-
-
+var timeDelay = null;
+var globalDifficulty;
 
 function removingCorrectPair(clickRecord){
     setTimeout(function() {
@@ -22,26 +22,17 @@ function unflipWrongPair(clickRecord) {
     },2000);
 }
 //-------------------------------------------------------------------------
-    var rngList = [];
-    var indexList = [];
-    var final = [];
-    
 function createRNG(cardNumber){
-    for(i=0; i<cardNumber*2; i++){
-            indexList.push(i);
-    }
     for(i=((cardNumber*2)); i>0; i-- ){
-        rngList.push(Math.floor((Math.random()*i)));
+        rNG.push(Math.floor((Math.random()*i))); //adds random number at end of array     
+        rNG.unshift(i-1);       //adds index list at beginning of array
     }
 }
-
-
 //-------------------------------------------------------------------------
 function makeCardFunctional(index, cardNumber, target){
-        var rngIndex = 0;
+        var rngIndex = null;
         createParagraph = document.createElement("p");      //creates text node
-        final.push(indexList.splice((rngList[index]), 1));        //pulls number from randomized list
-        rngIndex = final[index];                                         //puts pulled RNG number into a variable
+        rngIndex = rNG.splice((rNG[index + (cardNumber*2)]), 1);    // uses random index call to splice out availiable card index and places it in variable
 
     if (rngIndex < cardNumber){ // makes a unique card id and a matching pair id and creates word for text node
         target.firstChild.id = "cardId-" + index + "-" + rngIndex;
@@ -54,12 +45,13 @@ function makeCardFunctional(index, cardNumber, target){
     target.lastChild.appendChild(createParagraph);      //adds word to card
 
     target.firstChild.onclick = function() {        //makes cards flippable
-        if( this.parentElement.parentElement.getElementsByClassName("cardRemove")[0] === undefined ){
+        if( this.parentElement.parentElement.getElementsByClassName("cardRemove")[0] === undefined && timeDelay === null){
             this.parentElement.classList.add("flipCard");
             clickRecord.push(this.id);
         }
     }
 }
+
 function constructCard (cardNumber, classValues, className=null, matchingPair = 0, isCardFace = false, isCardBack = false){         //Creates the cards
     for (index = 0; index < cardNumber*2; index++){
         var CardContainer = document.getElementById("game");
@@ -78,13 +70,18 @@ function constructCard (cardNumber, classValues, className=null, matchingPair = 
     }
 }
 
+
+
 function checkCardPair() {                //finds ID #
-    if (clickRecord.length === 2){
+    if (clickRecord.length === 2 && timeDelay === null){
         var selectedCardIds = [];
         var match;
+        timeDelay = 1;
+        setTimeout(function() {
+            timeDelay = null;
+        }, globalDifficulty);
         for (i=0; i<2; i++){    //check matching pair
-            match = clickRecord[i];
-            match = parseInt(match.split("-")[2]);
+            match = parseInt((clickRecord[i]).split("-")[2]);
             selectedCardIds.unshift(match);
         }
         if (selectedCardIds[0] === selectedCardIds[1]){
@@ -118,6 +115,7 @@ function startGame() {      //---------------------------------------collect use
 }
 
 function populateGame(mode, difficulty, numberOfCards, language, time ) {      //create game for play
+    globalDifficulty = difficulty;
     createRNG(numberOfCards);//-------------------------------------RNG---------------------------------------------------------    
     constructCard(numberOfCards, "col-3 col-md-2 card-frame ml-3");  //container
     constructCard(numberOfCards, "row no-gutters middle cardRotate", "col-3"); //cardRotate
@@ -169,9 +167,7 @@ function gameHeader (condition) { // 1-gamestartscreen ----- 2-gameplayscreen --
     var targetP = document.getElementById("timer-frame").getElementsByTagName("p");
     var targetH1 = document.getElementById("timer-frame").getElementsByTagName("h1")[0];
     var targetStart = document.getElementById("start-screen")
-     rngList = [];
-     indexList = [];
-     final = []; 
+    rNG = [];   // dumps RNG (random number generator) memory-----------------------------------------------------------------------------
     if(condition === 1){
         hideTimer(targetP, targetH1);
         targetH1.textContent = "Romancing The Cards";
