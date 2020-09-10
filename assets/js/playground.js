@@ -28,14 +28,10 @@ function unflipWrongPair(clickRecord) {
     
 function createRNG(cardNumber){
     for(i=0; i<cardNumber*2; i++){
-        if(indexList===0){
             indexList.push(i);
-        } 
     }
     for(i=((cardNumber*2)); i>0; i-- ){
-        if (rngList===0){
         rngList.push(Math.floor((Math.random()*i)));
-        }
     }
 }
 
