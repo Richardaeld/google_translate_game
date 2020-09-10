@@ -118,7 +118,6 @@ function makeCardFunctional(index, cardNumber, target){
         }
     }
 }
-
 function constructCard (cardNumber, classValues, className=null, matchingPair = 0, isCardFace = false, isCardBack = false){         //Creates the cards
     for (index = 0; index < cardNumber*2; index++){
         var CardContainer = document.getElementById("game");
@@ -233,6 +232,12 @@ function gameHeader (condition) { // 1-gamestartscreen ----- 2-gameplayscreen --
     var targetP = document.getElementById("timer-frame").getElementsByTagName("p");
     var targetH1 = document.getElementById("timer-frame").getElementsByTagName("h1")[0];
     var targetStart = document.getElementById("start-screen")
+    var rngList_0 = [];
+    var indexList_0 = [];
+    var final_0 = [];
+    var rngList_1 = [];
+    var indexList_1 = [];
+    var final_1 = []; 
     if(condition === 1){
         hideTimer(targetP, targetH1);
         targetH1.textContent = "Romancing The Cards";
