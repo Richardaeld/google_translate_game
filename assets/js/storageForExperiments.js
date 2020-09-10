@@ -667,3 +667,76 @@ function createCardIdAndMakeFlip(index, cardNumber, target) {      //creates a c
     }
 }
 //----------------------------------------------------------------------------------
+
+
+
+
+function constructCard (cardNumber, classValues, className=null, matchingPair = 0)
+for (index = 0; index < cardNumber*2; index++)
+
+var CardContainer = document.getElementById("game");
+var CardInternal = document.getElementsByClassName(className)[index];
+var setClasses = document.createAttribute("class");
+setClasses.value = classValues;
+
+if (className === null){
+CardContainer.appendChild(document.createElement("div")).setAttributeNode(setClass);
+continue
+}
+if (i<cardNumber){
+cardInternal.appendChild(document.createElement("div")).setAttributeNode(setClass)
+}
+
+makeInnerLayer(5, "col-3 col-md-2 card-frame ml-3");
+makeInnerLayers(10, "row no-gutters middle cardRotate", "col-3"); 
+makeInnerLayers(10, "col-12 card cardFace", "middle", 1); 
+makeInnerLayers(10, "col-12 card cardBack", "middle", 1); 
+
+
+
+
+
+function makeInnerLayers(cardNumber, className, classValues, classTarget = null){
+    for (i=0; i<cardNumber; i++){  
+        var loc1 = document.getElementsByClassName(className)[i];                       //creates parent target
+        var class1 = document.createAttribute("class");                                 //creates a empty variable to place
+        class1.value = classValues;                                                     //adds value to empty class
+        loc1.appendChild(document.createElement("div")).setAttributeNode(class1);       //creates div with class
+        
+        if(classValues === "col-12 card cardBack"){
+            insertWord(i)
+        } else if (classValues === "col-12 card cardFace"){
+            var loc2 = document.getElementsByClassName("col-12 card cardFace")[i];
+            loc2.id = "card-Id-" + i 
+        }
+    }
+}
+
+function makeCardsOuter(cardNumber, matchingPair = 0){
+
+    for (i=0; i<cardNumber + cardNumber; i++){  
+        var loc1 = document.getElementById("game");                                     //creates parent target
+        var class1 = document.createAttribute("class");                                 //creates a empty variable to place
+        class1.value = "col-3 col-md-2 card-frame ml-3";                                //adds value to empty class
+        loc1.appendChild(document.createElement("div")).setAttributeNode(class1);       //creates div with class
+        var loc2 = document.getElementById("game").getElementsByTagName("div")[i];      //creates location to add class to
+      //  loc2.id = "card-Id-" + i;                                                       //creates class to add 
+
+        if ( i >= cardNumber){                                                          //labels cards for matching pairs
+            loc2.className += " card-text-" + matchingPair;
+            matchingPair++
+        } else {
+            loc2.className += " card-text-" + i;
+        }
+    };        
+}
+
+makeCardsOuter(5);                                                      //makes outside frame for card
+makeInnerLayers(10, "col-3", "row no-gutters middle cardRotate");                   //makes middle layer of card
+makeInnerLayers(10, "middle", "col-12 card cardFace", 1);          //makes inner most layer of card
+makeInnerLayers(10, "middle", "col-12 card cardBack", 1);          //makes inner most layer of card
+
+
+
+
+
