@@ -6,7 +6,7 @@ let words4 = ["elle", "Regardez", "temps", "pourrait", "gens", "partie", "longue
 let words5 = ["lei", "Guarda", "tempo", "poteva", "persone", "parte", "lunga/lungo", "fatta/fatto", "spora", "esse/essi", "io", "queste/questi", "disse", "così", "numero", "no", "sì"]; //italian
 let words6 = ["sie", "aussenhen", "Zeit", "könnten", "Menschen", "Teil", "lange", "tat", "auf", "Sie", "ich", "diese", "sagte", "so", "Nummer", "Nein", "Ja"]; //german
 
-function Language(english, spanish, portuguese, french, italian, german) {
+function Language(english, spanish, portuguese, french, italian, german) {  //object constructor for foreign word calling
     this.english = english;
     this.spanish = spanish;
     this.portuguese = portuguese;
@@ -14,41 +14,39 @@ function Language(english, spanish, portuguese, french, italian, german) {
     this.italian = italian;
     this.german = german;
 }
-
-let fLanguage = new Language(words1, words2, words3, words4, words5, words6);
-
+let fLanguage = new Language(words1, words2, words3, words4, words5, words6);   //builds foreign language object for string calling
 var clickRecord = [];   //two cards player currently selected
 var rNG = [];  //first half is indexes that need to be used -- second half is randomized index list to pull first half with  
 var playerPoints = 0;   //total matched pairs by player
 var MaxPlayerPoints = 0; // pair from start screen for wingame
-var timeDelay = null;
-var globalDifficulty;
-var globalLanguage;
+var timeDelay = null; // for difficulty adjustment -- addes a click delay between card selection
+var globalDifficulty;   // user selection for difficulty
+var globalLanguage;     //user selection for foriegn langauge
 
-function removingCorrectPair(clickRecord){
+function removingCorrectPair(clickRecord){  //removed correctly paired cards from gameboard
     setTimeout(function() {
         document.getElementById(clickRecord[0]).parentElement.classList.add("cardRemove");
         document.getElementById(clickRecord[1]).parentElement.classList.add("cardRemove");
-    },2000);
+    },1500);
     playerPoints++;
     document.getElementById("timer-frame").getElementsByTagName("p")[1].textContent = "Player has " + playerPoints + " points";
 }
 
-function unflipWrongPair(clickRecord) {
+function unflipWrongPair(clickRecord) {     //flips incorrectly paired cards back over
     setTimeout(function(){
         document.getElementById(clickRecord[0]).parentElement.classList.remove("flipCard");
         document.getElementById(clickRecord[1]).parentElement.classList.remove("flipCard");
-    },2000);
+    },1500);
 }
 //-------------------------------------------------------------------------
-function createRNG(cardNumber){
+function createRNG(cardNumber){     // generates total indexes needed and a random list to index with
     for(i=((cardNumber*2)); i>0; i-- ){
         rNG.push(Math.floor((Math.random()*i))); //adds random number at end of array     
         rNG.unshift(i-1);       //adds index list at beginning of array
     }
 }
 //-------------------------------------------------------------------------
-function makeCardFunctional(index, cardNumber, target){
+function makeCardFunctional(index, cardNumber, target){     // gives cards functionality by adding index numbers, words, and makes card flipable
         var rngIndex = null;
         createParagraph = document.createElement("p");      //creates text node
         rngIndex = rNG.splice((rNG[index + (cardNumber*2)]), 1);    // uses random index call to splice out availiable card index and places it in variable
@@ -89,8 +87,8 @@ function constructCard (cardNumber, classValues, className=null, isCardBack = fa
     }
 }
 
-function checkCardPair() {                //finds ID #
-    if (clickRecord.length === 2 && timeDelay === null){
+function checkCardPair() {                //flips cards over and removes matching pairs
+    if (clickRecord.length === 2){
         var selectedCardIds = [];
         var match;
         timeDelay = 1;
@@ -112,11 +110,11 @@ function checkCardPair() {                //finds ID #
     }
 }
 
-document.onclick = function() {         //prints on mouse click
+document.onclick = function() {         //allows game to track user clicks
    checkCardPair(); 
 } 
 
-document.getElementById("play").onclick = function() {
+document.getElementById("play").onclick = function() {  //allows game to start by clicking start button
     startGame();
 }
 
@@ -133,7 +131,7 @@ function startGame() {      //---------------------------------------collect use
     populateGame(userSelection[0],userSelection[1],userSelection[2],userSelection[3])
 }
 
-function populateGame(difficulty, numberOfCards, time, language ) {      //create game for play
+function populateGame(difficulty, numberOfCards, time, language ) {      //creates game for play by using user selections 
     globalLanguage = language;
     globalDifficulty = difficulty;
     createRNG(numberOfCards);//-------------------------------------RNG---------------------------------------------------------    
@@ -146,7 +144,7 @@ function populateGame(difficulty, numberOfCards, time, language ) {      //creat
     timer((time*60000)+1000); //change time into minutes and add 1 second so user sees full time minute value
 }
 
-function timer(time) {
+function timer(time) {  //in game round timer
     var setTimeElement = document.getElementById("timer-frame").getElementsByTagName("p")[0];
     setTimeout(function() {
         time -= 1000;
@@ -163,13 +161,13 @@ function timer(time) {
     },1000)
 }
 
-function hideTimer(targetP, targetH1) {
+function hideTimer(targetP, targetH1) {     //hides timer and allows header to be seen
     targetP[0].classList.add("hiddenEl");
     targetP[1].classList.add("hiddenEl");
     targetH1.classList.remove("hiddenEl");
 }
 
-function restartGame() {
+function restartGame() {        //start reset screen the flashing before game start screen runs
     var targetGame  = document.getElementById("game").getElementsByClassName("card-frame");
     var totalLength = targetGame.length;
     setTimeout(function(){
@@ -183,7 +181,7 @@ function restartGame() {
     }, 4000);
 }
 
-function gameHeader (condition) { // 1-gamestartscreen ----- 2-gameplayscreen ------ 3-game win ------- 4-game lose
+function gameHeader (condition) { // 1-gamestartscreen ----- 2-gameplayscreen ------ 3-game win ------- 4-game lose //-----changes header and game start visibility
     var targetP = document.getElementById("timer-frame").getElementsByTagName("p");
     var targetH1 = document.getElementById("timer-frame").getElementsByTagName("h1")[0];
     var targetStart = document.getElementById("start-screen")
