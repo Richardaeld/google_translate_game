@@ -67,25 +67,28 @@ body {
     .card-frame {
         font-size: .75rem;
     } 
-    
 }
 
 #timer-frame {
-    text-shadow: 0rem 0rem .5rem rgb(30, 255, 0);
+    text-shadow: 0rem 0rem .5rem rgba(0, 0, 0, 1);
     height: 5rem;
     margin: 2rem 0rem;
     font-size: 1rem;
     font-weight: 500;
+    color: rgb(0, 255, 21);
 }
 
 #timer-frame p {
     font-size: 2rem;
 }
 
-#start-screen {
-    /*display: none; */
-    position: absolute;
+#timer-frame h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+}
 
+#start-screen {
+    position: absolute;
     width: 100%;
     background-color: rgba(0, 0, 0, .5);
     color: rgb(0, 255, 21);
@@ -121,7 +124,6 @@ body {
 .start-screen-description {
     text-align: left;
 } 
-
 
 .start-screen-choice {
     text-align: right;

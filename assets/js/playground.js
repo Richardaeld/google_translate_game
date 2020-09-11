@@ -28,6 +28,7 @@ function removingCorrectPair(clickRecord){  //removed correctly paired cards fro
         document.getElementById(clickRecord[0]).parentElement.classList.add("cardRemove");
         document.getElementById(clickRecord[1]).parentElement.classList.add("cardRemove");
     },1500);
+
     playerPoints++;
     document.getElementById("timer-frame").getElementsByTagName("p")[1].textContent = "Player has " + playerPoints + " points";
 }
@@ -58,6 +59,7 @@ function makeCardFunctional(index, cardNumber, target){     // gives cards funct
         target.firstChild.id = "cardId-" + index + "-" + (rngIndex-cardNumber);
         ParagraphNode = document.createTextNode(fLanguage[globalLanguage][rngIndex-cardNumber]);
     }
+
     createParagraph.appendChild(ParagraphNode);
     target.lastChild.appendChild(createParagraph);      //adds word to card
 
@@ -75,10 +77,12 @@ function constructCard (cardNumber, classValues, className=null, isCardBack = fa
         var cardInternal = document.getElementsByClassName(className)[index];
         var setClasses = document.createAttribute("class");
         setClasses.value = classValues;
+
         if (className === null){ //card container
             CardContainer.appendChild(document.createElement("div")).setAttributeNode(setClasses);
             continue;
         }
+
         cardInternal.appendChild(document.createElement("div")).setAttributeNode(setClasses) //adds elements for cardRotate cardFace and cardBack
         
         if (isCardBack){        //calls word adding function
@@ -92,13 +96,16 @@ function checkCardPair() {                //flips cards over and removes matchin
         var selectedCardIds = [];
         var match;
         timeDelay = 1;
+
         setTimeout(function() {
             timeDelay = null;
         }, globalDifficulty);
+
         for (i=0; i<2; i++){    //check matching pair
             match = parseInt((clickRecord[i]).split("-")[2]);
             selectedCardIds.unshift(match);
         }
+        
         if (selectedCardIds[0] === selectedCardIds[1]){
             console.log("You have the shot! Take the shot!!")
             removingCorrectPair(clickRecord);
@@ -121,6 +128,7 @@ document.getElementById("play").onclick = function() {  //allows game to start b
 function startGame() {      //---------------------------------------collect user selected information---------------------------------------------
     startButton = document.getElementById("start-screen").getElementsByTagName("option");
     var userSelection = [];
+    
     for(i=0; i<((startButton.length)); i++){ //gets user selection and parse into Int
         if(startButton[i].selected && userSelection.length === 3){
             userSelection.push(startButton[i].value);     //pull selected string
@@ -128,6 +136,7 @@ function startGame() {      //---------------------------------------collect use
            userSelection.push(parseInt(startButton[i].value));     //pull selected number(int)
         }
     }
+
     populateGame(userSelection[0],userSelection[1],userSelection[2],userSelection[3])
 }
 
@@ -146,9 +155,11 @@ function populateGame(difficulty, numberOfCards, time, language ) {      //creat
 
 function timer(time) {  //in game round timer
     var setTimeElement = document.getElementById("timer-frame").getElementsByTagName("p")[0];
+    
     setTimeout(function() {
         time -= 1000;
         setTimeElement.textContent = "Time remainging is " + Math.floor(time / 60000)  + " minute(s) and " + (time%60000)/1000 + " second(s)"; //changes time into a user display with minutes and seconds
+        
         if(MaxPlayerPoints === playerPoints) { //win condition
             gameHeader(3)
             return;
@@ -170,10 +181,12 @@ function hideTimer(targetP, targetH1) {     //hides timer and allows header to b
 function restartGame() {        //start reset screen the flashing before game start screen runs
     var targetGame  = document.getElementById("game").getElementsByClassName("card-frame");
     var totalLength = targetGame.length;
+    
     setTimeout(function(){
         for (i=0; i < totalLength; i++){
             targetGame[0].remove();
         }
+
         playerPoints = 0;
             document.getElementById("timer-frame").getElementsByTagName("p")[0].textContent = "Timer will start shortly";
             document.getElementById("timer-frame").getElementsByTagName("p")[1].textContent = "Player has 0 points";
@@ -186,6 +199,7 @@ function gameHeader (condition) { // 1-gamestartscreen ----- 2-gameplayscreen --
     var targetH1 = document.getElementById("timer-frame").getElementsByTagName("h1")[0];
     var targetStart = document.getElementById("start-screen")
     rNG = [];   // dumps RNG (random number generator) memory-----------------------------------------------------------------------------
+    
     if(condition === 1){
         hideTimer(targetP, targetH1);
         targetH1.textContent = "Romancing The Cards";
@@ -205,5 +219,3 @@ function gameHeader (condition) { // 1-gamestartscreen ----- 2-gameplayscreen --
         restartGame();   
     }
 }
-
-
