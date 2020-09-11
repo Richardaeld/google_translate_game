@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Architects+Daughter&display=swap');
+
 
 body {
     background-color: #747474;
@@ -6,9 +9,10 @@ body {
     color: #010203;
     font-family: "Special Elite", sans-serif;
     text-align: center;
+    letter-spacing: 1px;
 }
 #playing-board {
-    background-image: url("../images/background-1.jpg");
+    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 5rem;
@@ -20,6 +24,7 @@ body {
     font-size: 1.5rem;
     height: 7rem;
     border-radius: 5%;
+    transform: scale(.90);
 }
 
 .cardRotate {
@@ -35,16 +40,27 @@ body {
     height:100%;
     width:100%;
     position: absolute;
+    border: groove 4px #fff;
+    border-radius: 5%;
+    box-shadow: .25rem .25rem .25rem .25rem rgba(0, 0, 0, .5);
 }
 
 .cardFace {
-    background-image: url("../images/odd-background-1.jpg");
+    background-image: url("../images/card-back-BW.jpg");
     background-repeat: none;
     background-size: 100% 100%;
 }
 
 .cardBack {
-    background-image: linear-gradient(rgb(233, 140, 140), rgb(249, 255, 46), rgb(233, 140, 140));
+    font-family: "Architects Daughter", sans-serif;
+    color: #FF00EA;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: .1rem .1rem .09rem #010203;
+    background-image: linear-gradient(to top left, #010203, #494949, #787878, #525252, #fff, #373737, #494949, #787878,  #494949, #373737, #fff, #525252, #787878, #494949, #010203 );
+    /*background-image: linear-gradient(to top left, #000, #494949, #787878, #b1b0b0, #fff);*/
+    /*background-image: linear-gradient(rgb(233, 140, 140), rgb(249, 255, 46), rgb(233, 140, 140));*/
     transform: rotateX(180deg);
 }
 
@@ -54,7 +70,12 @@ body {
 }
 
 .flipCard {
-    transform: rotateX(180deg);
+    transform: rotateX(180deg) scale(1.1);
+    box-shadow: .5rem .5rem .5rem .5rem rgba(0, 0, 0, .5);
+}
+
+.cardRemove {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.0);
 }
 
 .cardRemove div {
@@ -70,16 +91,13 @@ body {
 }
 
 #timer-frame {
-    text-shadow: 0rem 0rem .5rem rgba(0, 0, 0, 1);
+   /* text-shadow: 0rem 0rem .5rem rgba(0, 0, 0, 1);*/
+    text-shadow: .1rem .1rem .09rem #010203;
     height: 5rem;
     margin: 2rem 0rem;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 500;
     color: rgb(0, 255, 21);
-}
-
-#timer-frame p {
-    font-size: 2rem;
 }
 
 #timer-frame h1 {
@@ -112,7 +130,8 @@ body {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     color: rgb(0, 255, 21);
-    text-shadow: 0rem 0rem .5rem rgb(0, 204, 255);
+    text-shadow: .1rem .1rem .09rem rgb(0, 56, 19);
+    /*text-shadow: 0rem 0rem .5rem rgb(0, 204, 255);*/
 }
 
 .start-screen-description,
@@ -149,3 +168,4 @@ body {
 .hiddenEl {
     display: none;
 }
+
