@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Architects+Daughter&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Special+Elite&display=swap');
 
 body {
     background-color: #747474;
@@ -16,7 +13,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 5rem;
-    /*min-height: 100vh;*/
+    min-height: 100vh;
 }
 
 .card-frame {
@@ -59,8 +56,6 @@ body {
     font-weight: 700;
     text-shadow: .1rem .1rem .09rem #010203;
     background-image: linear-gradient(to top left, #010203, #494949, #787878, #525252, #fff, #373737, #494949, #787878,  #494949, #373737, #fff, #525252, #787878, #494949, #010203 );
-    /*background-image: linear-gradient(to top left, #000, #494949, #787878, #b1b0b0, #fff);*/
-    /*background-image: linear-gradient(rgb(233, 140, 140), rgb(249, 255, 46), rgb(233, 140, 140));*/
     transform: rotateX(180deg);
 }
 
@@ -91,7 +86,6 @@ body {
 }
 
 #timer-frame {
-   /* text-shadow: 0rem 0rem .5rem rgba(0, 0, 0, 1);*/
     text-shadow: .1rem .1rem .09rem #010203;
     height: 5rem;
     margin: 2rem 0rem;
@@ -131,7 +125,6 @@ body {
     margin-bottom: 1.5rem;
     color: rgb(0, 255, 21);
     text-shadow: .1rem .1rem .09rem rgb(0, 56, 19);
-    /*text-shadow: 0rem 0rem .5rem rgb(0, 204, 255);*/
 }
 
 .start-screen-description,
