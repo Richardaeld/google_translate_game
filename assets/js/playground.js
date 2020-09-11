@@ -1,10 +1,29 @@
 let words = ["she", "look", "time", "could", "people", "part", "long", "did", "on", "they", "i", "these", "said", "so", "number", "no", "yes"];
+let words1 = ["she", "look", "time", "could", "people", "part", "long", "did", "on", "they", "i", "these", "said", "so", "number", "no", "yes"]; //english
+let words2 = ["ella", "Mira", "hora", "podría", "personas", "parte", "larga/largo", "hizo", "en", "ellas/ellos", "yo", "estas/estos", "dijo", "entonces", "número", "No", "si"]; //spanish
+let words3 = ["ela", "Veja", "Tempo", "poderia", "pessoas", "parte", "longa/longo", "fez", "em", "eles", "Eu", "estes", "disse", "tão", "número", "não", "sim"]; //portuguese
+let words4 = ["elle", "Regardez", "temps", "pourrait", "gens", "partie", "longue/long", "fait", "sur", "elles/ils", "je", "celles-ci/ceux-ci", "m'a dit", "alors", "nombre", "non", "Oui"];//french
+let words5 = ["lei", "Guarda", "tempo", "poteva", "persone", "parte", "lunga/lungo", "fatta/fatto", "spora", "esse/essi", "io", "queste/questi", "disse", "così", "numero", "no", "sì"]; //italian
+let words6 = ["sie", "aussenhen", "Zeit", "könnten", "Menschen", "Teil", "lange", "tat", "auf", "Sie", "ich", "diese", "sagte", "so", "Nummer", "Nein", "Ja"]; //german
+
+function Language(english, spanish, portuguese, french, italian, german) {
+    this.english = english;
+    this.spanish = spanish;
+    this.portuguese = portuguese;
+    this.french = french;
+    this.italian = italian;
+    this.german = german;
+}
+
+let fLanguage = new Language(words1, words2, words3, words4, words5, words6);
+
 var clickRecord = [];   //two cards player currently selected
 var rNG = [];  //first half is indexes that need to be used -- second half is randomized index list to pull first half with  
 var playerPoints = 0;   //total matched pairs by player
 var MaxPlayerPoints = 0; // pair from start screen for wingame
 var timeDelay = null;
 var globalDifficulty;
+var globalLanguage;
 
 function removingCorrectPair(clickRecord){
     setTimeout(function() {
@@ -39,7 +58,7 @@ function makeCardFunctional(index, cardNumber, target){
         ParagraphNode = document.createTextNode(words[rngIndex]);
     } else {
         target.firstChild.id = "cardId-" + index + "-" + (rngIndex-cardNumber);
-        ParagraphNode = document.createTextNode(words[rngIndex-cardNumber]);
+        ParagraphNode = document.createTextNode(fLanguage[globalLanguage][rngIndex-cardNumber]);
     }
     createParagraph.appendChild(ParagraphNode);
     target.lastChild.appendChild(createParagraph);      //adds word to card
@@ -52,7 +71,7 @@ function makeCardFunctional(index, cardNumber, target){
     }
 }
 
-function constructCard (cardNumber, classValues, className=null, matchingPair = 0, isCardFace = false, isCardBack = false){         //Creates the cards
+function constructCard (cardNumber, classValues, className=null, isCardBack = false){         //Creates the cards
     for (index = 0; index < cardNumber*2; index++){
         var CardContainer = document.getElementById("game");
         var cardInternal = document.getElementsByClassName(className)[index];
@@ -69,8 +88,6 @@ function constructCard (cardNumber, classValues, className=null, matchingPair = 
         }
     }
 }
-
-
 
 function checkCardPair() {                //finds ID #
     if (clickRecord.length === 2 && timeDelay === null){
@@ -106,21 +123,24 @@ document.getElementById("play").onclick = function() {
 function startGame() {      //---------------------------------------collect user selected information---------------------------------------------
     startButton = document.getElementById("start-screen").getElementsByTagName("option");
     var userSelection = [];
-    for(i=0; i<startButton.length; i++){ //gets user selection and parse into Int
-       if( startButton[i].selected) {
-           userSelection.push(parseInt(startButton[i].value));
-       }
+    for(i=0; i<((startButton.length)); i++){ //gets user selection and parse into Int
+        if(startButton[i].selected && userSelection.length === 3){
+            userSelection.push(startButton[i].value);     //pull selected string
+        } else if( startButton[i].selected) {
+           userSelection.push(parseInt(startButton[i].value));     //pull selected number(int)
+        }
     }
-    populateGame(userSelection[0],userSelection[1],userSelection[2],userSelection[3],userSelection[4])
+    populateGame(userSelection[0],userSelection[1],userSelection[2],userSelection[3])
 }
 
-function populateGame(mode, difficulty, numberOfCards, language, time ) {      //create game for play
+function populateGame(difficulty, numberOfCards, time, language ) {      //create game for play
+    globalLanguage = language;
     globalDifficulty = difficulty;
     createRNG(numberOfCards);//-------------------------------------RNG---------------------------------------------------------    
     constructCard(numberOfCards, "col-3 col-md-2 card-frame ml-3");  //container
     constructCard(numberOfCards, "row no-gutters middle cardRotate", "col-3"); //cardRotate
-    constructCard(numberOfCards, "col-12 card cardFace", "middle", 1, true);     //cardFace
-    constructCard(numberOfCards, "col-12 card cardBack", "middle", 1, false, true);     //cardBack
+    constructCard(numberOfCards, "col-12 card cardFace", "middle");     //cardFace
+    constructCard(numberOfCards, "col-12 card cardBack", "middle", true);     //cardBack
     MaxPlayerPoints = numberOfCards;
     gameHeader(2);
     timer((time*60000)+1000); //change time into minutes and add 1 second so user sees full time minute value

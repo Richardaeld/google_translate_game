@@ -21,12 +21,6 @@
                 <h1></h1>
             </div>
             <div id="start-screen">
-                <p class="start-screen-description">Game Mode</p>
-                <select name="mode" id="mode" class="start-screen-choice">
-                    <option value="1" disabled>Campaign</option>
-                    <option value="2" disabled>Quick</option>
-                    <option value="3" selected="selected">Custom</option>
-                </select>
                 <p class="start-screen-description">Difficulty</p>
                 <select name="difficulty" id="difficulty" class="start-screen-choice">
                     <option value="500" selected="selected">Easy</option>
@@ -40,21 +34,22 @@
                     <option value="10">10 Pair</option>
                     <option value="15">15 Pair</option>
                 </select>
-                <p class="start-screen-description">Language</p>
-                <select name="language" id="language" class="start-screen-choice">
-                    <option value="1">English</option>
-                    <option value="2" disabled>Spanish</option>
-                    <option value="3" disabled>Portuguese</option>
-                    <option value="4" disabled>French</option>
-                    <option value="5" disabled>Italian</option>
-                </select>
                 <p class="start-screen-description">Time on Clock</p>
                 <select name="time-on-clock" id="time-on-clock" class="start-screen-choice">
-                    <option value="1">1 Minute</option>
+                    <option value="1" selected="selected">1 Minute</option>
                     <option value="2">2 Minutes</option>
                     <option value="3">3 Minutes</option>
                     <option value="4">4 Minutes</option>
                     <option value="5">5 Minutes</option>
+                </select>
+                <p class="start-screen-description">Language</p>
+                <select name="language" id="language" class="start-screen-choice">
+                    <option value="english" selected="selected">English</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="portuguese">Portuguese</option>
+                    <option value="french">French</option>
+                    <option value="italian">Italian</option>
+                    <option value="german">German</option>
                 </select>
                 <button id="play" class="start-button">Start Game</button>
             </div>
