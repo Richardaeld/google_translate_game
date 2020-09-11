@@ -14,6 +14,11 @@ function Language(english, spanish, portuguese, french, italian, german) {  //ob
     this.italian = italian;
     this.german = german;
 }
+
+// ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height
+fullScreenHeight = document.documentElement.scrollHeight;       // makes background take up entire screen
+document.getElementById("playing-board").style.minHeight = fullScreenHeight + "px";
+
 let fLanguage = new Language(words1, words2, words3, words4, words5, words6);   //builds foreign language object for string calling
 var clickRecord = [];   //two cards player currently selected
 var rNG = [];  //first half is indexes that need to be used -- second half is randomized index list to pull first half with  

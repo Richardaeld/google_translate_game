@@ -16,7 +16,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 5rem;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
 }
 
 .card-frame {
@@ -66,7 +66,7 @@ body {
 
 .cardBack p {
     position: relative;
-    top: 2rem;
+    top: 1.5rem;
 }
 
 .flipCard {
