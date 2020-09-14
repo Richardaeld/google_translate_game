@@ -98,7 +98,8 @@ paired with a bright text font to give the illusion of home made flash cards.
 
 ## Scaleability
 + Add an api that would read out the foreign word of a matched card
-+ Add the selection of different card background to give the user a different visual experience according to what they like.
++ Add a greater selection of different card backgrounds to give the user a different visual experience according to their preference.
++ Add a game board background selector for a different visual experience for returning users
 
 # Tools, References, and Code used
 ## Tools

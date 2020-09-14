@@ -121,7 +121,7 @@ body {
     font-weight: 400;
 }
 
-/*-----------------------------  hides game header*/
+/*-----------------------------  hides game header elements*/
 .hiddenEl {
     display: none;
 }
