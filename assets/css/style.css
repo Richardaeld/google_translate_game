@@ -69,7 +69,7 @@ body {
 
 .cardFaceTypeFun {
     background-image: url("../images/card-back-BW.jpg");
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 

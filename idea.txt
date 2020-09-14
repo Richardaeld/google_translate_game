@@ -164,3 +164,10 @@ getElementByTagName
 .random **syntax**
 
 Card flip idea and partial code taken from two places, MDN and w3schools
+
+
+
+Current bugs ------------
+w3c css says linear gradient has --- "Value Error : background-image is an incorrect operator )"
+is there an easy way of seeing rem value outside of using different interfaces, ex phone
+is there a value of anything that will shrink text instead of allowing it to move to a different line AND stay in the same box, div, etc....
