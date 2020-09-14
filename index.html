@@ -11,14 +11,17 @@
 
     
 </head>
-<body id="playing-board">
+<!--  Creates game board background  -->
+<body id="playing-board">       
     <div class="row no-gutters">
         <div class="col-12">
+            <!--  Creates game Header -->
             <header id="timer-frame">
                 <p class="hiddenEl">Time remaining is 0 minute(s) and 0 second(s)</p>
                 <h1>Romancing The Cards</h1>
                 <p class="hiddenEl">Player has 0 points</p>
             </header>
+            <!--  Creates game start screen where user inputs game options-->
             <aside id="start-screen">
                 <p class="start-screen-description">Difficulty *Matching Delay</p>
                 <select name="difficulty" id="difficulty" class="start-screen-choice">
@@ -66,6 +69,8 @@
                 </select>
                 <button id="play" class="start-button">Start Game</button>
             </aside>
+
+            <!--  area where JavaScript will place dynamic content, ex. playing cards-->
             <section id="game" class="start row no-gutters justify-content-center">
 
             </section>

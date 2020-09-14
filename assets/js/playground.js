@@ -64,14 +64,14 @@ function unflipWrongPair(clickRecord) {
 function createRNG(cardNumber){     
     for(i=((cardNumber*2)); i>0; i-- ){
         rNG.push(Math.floor((Math.random()*i))); //adds random number at end of array     
-        rNG.unshift(i-1);       //adds index list at beginning of array
+        rNG.unshift(i-1);                        //adds index list at beginning of array
     }
 }
 
 // gives cards functionality by adding index numbers, words, and makes card flipable
 function makeCardFunctional(index, cardNumber, target){     
         var rngIndex = null;
-        createParagraph = document.createElement("p");      //creates text node
+        createParagraph = document.createElement("p");              //creates text node
         rngIndex = rNG.splice((rNG[index + (cardNumber*2)]), 1);    // uses random index call to splice out availiable card index and places it in variable
 
     // makes a unique card id, a random matching pair, and creates word for text node
@@ -174,7 +174,7 @@ function startGame() {
         if(startButton[i].selected && userSelection.length >= 3){
             userSelection.push(startButton[i].value);               //pull selected string
         } else if( startButton[i].selected) {
-           userSelection.push(parseInt(startButton[i].value));     //pull selected number(int)
+           userSelection.push(parseInt(startButton[i].value));      //pull selected number(int)
         }
     }
 
