@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Special+Elite&display=swap');
 
+/*-----------------------------  basic container structure for games most basic appearance*/
 body {
     background-color: #747474;
     padding: 1rem 1rem;
@@ -8,6 +9,7 @@ body {
     text-align: center;
     letter-spacing: 1px;
 }
+
 #playing-board {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
@@ -16,13 +18,14 @@ body {
     min-height: 100vh;
 }
 
+/*----------------------------- outer most container of individual cards  */
 .card-frame {
     margin-top: 1rem;
     font-size: 1.5rem;
     height: 7rem;
     transform: scale(.90);
 }
-
+/*----------------------------- container that holds rotating card faces, front and back */
 .cardRotate {
     height: 100%;
     width: 100%;
@@ -39,6 +42,7 @@ body {
     box-shadow: .25rem .25rem .25rem .25rem rgba(0, 0, 0, .5);
 }
 
+/*-----------------------------  card faces, front and back, also holds variations of card backgrounds*/
 .cardBack {
     font-family: "Architects Daughter", sans-serif;
     letter-spacing: 2px;
@@ -79,6 +83,7 @@ body {
     top: 1.5rem;
 }
 
+/*-----------------------------  "flips" cards over and removes them from game board*/
 .flipCard {
     transform: rotateX(180deg) scale(1.1);
     box-shadow: .5rem .5rem .5rem .5rem rgba(0, 0, 0, .5);
@@ -93,6 +98,7 @@ body {
     opacity: 0;
 }
 
+/*-----------------------------  modification for screen size*/
 @media (max-width: 991.98px) { 
     #start-screen,
     .card-frame {
@@ -100,6 +106,7 @@ body {
     } 
 }
 
+/*-----------------------------  game header, houses, game title, win/lose header, timer, and player points earned*/
 #timer-frame {
     text-shadow: .1rem .1rem .09rem #010203;
     height: 5rem;
@@ -114,6 +121,12 @@ body {
     font-weight: 400;
 }
 
+/*-----------------------------  hides game header*/
+.hiddenEl {
+    display: none;
+}
+
+/*-----------------------------  start screen of game with all user input selectable options*/
 #start-screen {
     position: absolute;
     width: 100%;
@@ -142,6 +155,7 @@ body {
     text-shadow: .1rem .1rem .09rem rgb(0, 56, 19);
 }
 
+/*-----------------------------  allows start screen to have column alignment for name of select/option and its values*/
 .start-screen-description,
 .start-screen-choice {
     display: inline-block;
@@ -159,6 +173,7 @@ body {
     padding-bottom: .5rem;
 }
 
+/*-----------------------------  start button on start screen*/
 .start-button {
     z-index: 1;
     width: 20%;
@@ -172,8 +187,3 @@ body {
     background-color: rgba(0, 0, 0, .95);
     color: #fff;
 }
-
-.hiddenEl {
-    display: none;
-}
-
