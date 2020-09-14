@@ -14,8 +14,8 @@ function Language(english, spanish, portuguese, french, italian, german) {  //ob
     this.german = german;
 }
 
-let cardFun = ["linear-gradient(to top left, #010203, #494949, #787878, #525252, #fff, #373737, #494949, #787878, #494949, #373737, #fff, #525252, #787878, #494949, #010203)", "#FF00EA" ]
-let cardIndex = ["linear-gradient(#fff 10%, #F015A7 10% 15%, #fff 15% 25%, #3172BB 25% 30%, #fff 30% 40%, #3172BB 40% 45%, #fff 45% 55%, #3172BB 55% 60%, #fff 60% 70%, #3172BB 70% 75%, #fff 75% 85%, #3172BB 85% 90%, #fff 90% 100%)", "#FF00EA" ]
+let cardIndex = ["cardFaceTypeIndex", "cardBackTypeIndex", "textColor"]
+let cardFun = ["cardFaceTypeFun", "cardBackTypeFun", "textColor"]
 function CardStyle(index, fun) {
     this.index = index;
     this.fun = fun;
@@ -25,7 +25,7 @@ function CardStyle(index, fun) {
 fullScreenHeight = document.documentElement.scrollHeight;       // makes background take up entire screen
 document.getElementById("playing-board").style.minHeight = fullScreenHeight + "px";
 
-let importCardStyle = new CardStyle (cardFun, cardIndex)
+let importCardStyle = new CardStyle (cardIndex, cardFun)
 let fLanguage = new Language(wordsEnglish, wordsSpanish, wordsPortuguese, wordsFrench, wordsItalian, wordsGerman);   //builds foreign language object for string calling
 var clickRecord = [];   //two cards player currently selected
 var rNG = [];  //first half is indexes that need to be used -- second half is randomized index list to pull first half with  
@@ -85,7 +85,7 @@ function makeCardFunctional(index, cardNumber, target){     // gives cards funct
     }
 }
 
-function constructCard (cardNumber, classValues, className = null, cardType = null, isCardBack = false ){         //Creates the cards
+function constructCard (cardNumber, classValues, className = null, cardType = null, isCardBack = false, isCardFace = false){         //Creates the cards
     for (index = 0; index < cardNumber*2; index++){
         var CardContainer = document.getElementById("game");
         var cardInternal = document.getElementsByClassName(className)[index];
@@ -98,19 +98,14 @@ function constructCard (cardNumber, classValues, className = null, cardType = nu
         }
 
         cardInternal.appendChild(document.createElement("div")).setAttributeNode(setClasses) //adds elements for cardRotate cardFace and cardBack
-        if (cardType !== null){
-            cardInternal.lastChild.style.backgroundImage = importCardStyle[globalCardType][0];
-            cardInternal.lastChild.style.color = importCardStyle[globalCardType][1];
+        if (cardType !== null && isCardFace){
+            cardInternal.lastChild.classList.add(importCardStyle[globalCardType][0]);
         }
-
-
-//document.getElementById("playing-board").style.minHeight = fullScreenHeight + "px";
-
-
-
-
+        
         if (isCardBack){        //calls word adding function
             makeCardFunctional(index, cardNumber, cardInternal);
+            cardInternal.lastChild.classList.add(importCardStyle[globalCardType][1]);
+            cardInternal.lastChild.classList.add(importCardStyle[globalCardType][2]);
         }
     }
 }
@@ -172,7 +167,7 @@ function populateGame(difficulty, numberOfCards, time, language0, language1, car
     createRNG(numberOfCards);//-------------------------------------RNG---------------------------------------------------------    
     constructCard(numberOfCards, "col-3 col-md-2 card-frame ml-3");  //container
     constructCard(numberOfCards, "row no-gutters middle cardRotate", "col-3"); //cardRotate
-    constructCard(numberOfCards, "col-12 card cardFace", "middle", cardType);     //cardFace
+    constructCard(numberOfCards, "col-12 card cardFace", "middle", cardType, false, true);     //cardFace
     constructCard(numberOfCards, "col-12 card cardBack", "middle", cardType, true);     //cardBack
     MaxPlayerPoints = numberOfCards;
     gameHeader(2);

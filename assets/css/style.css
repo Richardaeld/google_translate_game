@@ -20,7 +20,7 @@ body {
     margin-top: 1rem;
     font-size: 1.5rem;
     height: 7rem;
-    border-radius: 5%;
+    /*border-radius: 5%;*/
     transform: scale(.90);
 }
 
@@ -37,16 +37,16 @@ body {
     height:100%;
     width:100%;
     position: absolute;
-    border: groove 4px #fff;
-    border-radius: 5%;
+    /*border: groove 4px #fff;*/
+    /*border-radius: 5%;*/
     box-shadow: .25rem .25rem .25rem .25rem rgba(0, 0, 0, .5);
 }
 
-.cardFace {
+/*.cardFace {
     background-image: url("../images/card-back-BW.jpg");
     background-repeat: none;
     background-size: 100% 100%;
-}
+}*/
 
 .cardBack {
     font-family: "Architects Daughter", sans-serif;
@@ -58,6 +58,32 @@ body {
   /*  background-image: linear-gradient( #fff 10%, #F015A7 10% 15%, #fff 15% 25%, #3172BB 25% 30%, #fff 30% 40%, #3172BB 40% 45%, #fff 45% 55%, #3172BB 55% 60%, #fff 60% 70%, #3172BB 70% 75%, #fff 75% 85%, #3172BB 85% 90%, #fff 90% 100%);
     /*background-image: linear-gradient(to top left, #010203, #494949, #787878, #525252, #fff, #373737, #494949, #787878,  #494949, #373737, #fff, #525252, #787878, #494949, #010203 );*/
     transform: rotateX(180deg);
+}
+
+.cardFaceTypeIndex {
+    background-image: linear-gradient(#fff 10%, #F015A7 10% 12%, #fff 12% 22%, #3172BB 22% 24%, #fff 24% 34%, #3172BB 34% 36%, #fff 36% 46%, #3172BB 46% 48%, #fff 48% 58%, #3172BB 58% 60%, #fff 60% 70%, #3172BB 70% 72%, #fff 72% 82%, #3172BB 82% 84%, #fff 84% 94%, #3172BB 94% 96%, #fff 96% 100%);
+}
+
+.cardBackTypeIndex {
+    background-image: linear-gradient(#fff 4%, #3172BB 4% 6%, #fff 6% 16%, #3172BB 16% 18%, #fff 18% 28%, #3172BB 28% 30%, #fff 30% 40%, #3172BB 40% 42%, #fff 42% 52%, #3172BB 52% 54%, #fff 54% 64%, #3172BB 64% 66%, #fff 66% 76%, #3172BB 76% 78%, #fff 78% 88%, #F015A7 88% 90%, #fff 90% 100%);
+    color: #FF00EA;
+}
+
+.cardFaceTypeFun,
+.cardBackTypeFun {
+    border: groove 4px #fff;
+    border-radius: 5%;
+}
+
+.cardFaceTypeFun {
+    background-image: url("../images/card-back-BW.jpg");
+    background-repeat: none;
+    background-size: 100% 100%;
+}
+
+.cardBackTypeFun  {
+    background-image: linear-gradient(to top left, #010203, #494949, #787878, #525252, #fff, #373737, #494949, #787878,  #494949, #373737, #fff, #525252, #787878, #494949, #010203);
+    color: #FF00EA;
 }
 
 .cardBack p {
