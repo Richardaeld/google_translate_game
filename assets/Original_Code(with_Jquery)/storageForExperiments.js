@@ -739,4 +739,10 @@ makeInnerLayers(10, "middle", "col-12 card cardBack", 1);          //makes inner
 
 
 
+//let wordsEnglish = ["she", "look", "time", "could", "people", "part", "long", "did", "on", "they", "i", "these", "said", "so", "number", "no", "yes"]; //english
+//let wordsSpanish = ["ella", "Mira", "hora", "podría", "personas", "parte", "larga/largo", "hizo", "en", "ellas/ellos", "yo", "estas/estos", "dijo", "entonces", "número", "No", "si"]; //spanish
+//let wordsPortuguese = ["ela", "Veja", "Tempo", "poderia", "pessoas", "parte", "longa/longo", "fez", "em", "eles", "Eu", "estes", "disse", "tão", "número", "não", "sim"]; //portuguese
+//let wordsFrench = ["elle", "Regardez", "temps", "pourrait", "gens", "partie", "longue/long", "fait", "sur", "elles/ils", "je", "celles-ci/ceux-ci", "m'a dit", "alors", "nombre", "non", "Oui"];//french
+//let wordsItalian = ["lei", "Guarda", "tempo", "poteva", "persone", "parte", "lunga/lungo", "fatta/fatto", "spora", "esse/essi", "io", "queste/questi", "disse", "così", "numero", "no", "sì"]; //italian
+//let wordsGerman = ["sie", "aussenhen", "Zeit", "könnten", "Menschen", "Teil", "lange", "tat", "auf", "Sie", "ich", "diese", "sagte", "so", "Nummer", "Nein", "Ja"]; //german
 

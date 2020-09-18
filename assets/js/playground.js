@@ -1,10 +1,29 @@
-// All word banks offered
-let wordsEnglish = ["she", "look", "time", "could", "people", "part", "long", "did", "on", "they", "i", "these", "said", "so", "number", "no", "yes"]; //english
-let wordsSpanish = ["ella", "Mira", "hora", "podría", "personas", "parte", "larga/largo", "hizo", "en", "ellas/ellos", "yo", "estas/estos", "dijo", "entonces", "número", "No", "si"]; //spanish
-let wordsPortuguese = ["ela", "Veja", "Tempo", "poderia", "pessoas", "parte", "longa/longo", "fez", "em", "eles", "Eu", "estes", "disse", "tão", "número", "não", "sim"]; //portuguese
-let wordsFrench = ["elle", "Regardez", "temps", "pourrait", "gens", "partie", "longue/long", "fait", "sur", "elles/ils", "je", "celles-ci/ceux-ci", "m'a dit", "alors", "nombre", "non", "Oui"];//french
-let wordsItalian = ["lei", "Guarda", "tempo", "poteva", "persone", "parte", "lunga/lungo", "fatta/fatto", "spora", "esse/essi", "io", "queste/questi", "disse", "così", "numero", "no", "sì"]; //italian
-let wordsGerman = ["sie", "aussenhen", "Zeit", "könnten", "Menschen", "Teil", "lange", "tat", "auf", "Sie", "ich", "diese", "sagte", "so", "Nummer", "Nein", "Ja"]; //german
+// All word banks offered in a function that randomizes word order in list
+function ransomizeWordLists() {
+let words1 = ["she", "look", "time", "could", "people", "part", "long", "did", "on", "they", "i", "these", "said", "so", "number", "no", "yes"]; //english
+let words2 = ["ella", "Mira", "hora", "podría", "personas", "parte", "larga/largo", "hizo", "en", "ellas/ellos", "yo", "estas/estos", "dijo", "entonces", "número", "No", "si"]; //spanish
+let words3 = ["ela", "Veja", "Tempo", "poderia", "pessoas", "parte", "longa/longo", "fez", "em", "eles", "Eu", "estes", "disse", "tão", "número", "não", "sim"]; //portuguese
+let words4 = ["elle", "Regardez", "temps", "pourrait", "gens", "partie", "longue/long", "fait", "sur", "elles/ils", "je", "celles-ci/ceux-ci", "m'a dit", "alors", "nombre", "non", "Oui"];//french
+let words5 = ["lei", "Guarda", "tempo", "poteva", "persone", "parte", "lunga/lungo", "fatta/fatto", "spora", "esse/essi", "io", "queste/questi", "disse", "così", "numero", "no", "sì"]; //italian
+let words6 = ["sie", "aussenhen", "Zeit", "könnten", "Menschen", "Teil", "lange", "tat", "auf", "Sie", "ich", "diese", "sagte", "so", "Nummer", "Nein", "Ja"]; //german
+var  nRNG = [];
+wordsEnglish = [];
+wordsSpanish = [];
+wordsPortuguese = [];
+wordsFrench = [];
+wordsItalian = [];
+wordsGerman = [];
+// random number generator that creates randoms in decending order
+    for(i=17; i>0; i-- ){
+        nRNG = (Math.floor(Math.random()*i));
+        wordsEnglish.push(words1.splice(nRNG, 1));
+        wordsSpanish.push(words2.splice(nRNG, 1));
+        wordsPortuguese.push(words3.splice(nRNG, 1));
+        wordsFrench.push(words4.splice(nRNG, 1));
+        wordsItalian.push(words5.splice(nRNG, 1));
+        wordsGerman.push(words6.splice(nRNG, 1));
+    }
+}
 
 // Object constructor for foreign word (fLanguage) calling
 function Language(english, spanish, portuguese, french, italian, german) {  
@@ -30,7 +49,7 @@ document.getElementById("playing-board").style.minHeight = fullScreenHeight + "p
 
 //global variables and object callers
 let importCardStyle = new CardStyle (cardIndex, cardFun)        // builds card face and back for calling
-let fLanguage = new Language(wordsEnglish, wordsSpanish, wordsPortuguese, wordsFrench, wordsItalian, wordsGerman);   //builds foreign language object for string calling
+let fLanguage = new Language(wordsEnglish, wordsSpanish, wordsPortuguese, wordsFrench, wordsItalian, wordsGerman);      // Sets Global variable and sets foundation for foreign language object for string calling later in code
 var clickRecord = [];       // up to two cards player currently selected
 var rNG = [];               // first half is indexes that need to be used -- second half is randomized index list to pull first half with  
 var playerPoints = 0;       //  total matched pairs by player
@@ -40,6 +59,12 @@ var globalDifficulty;       // user selection for difficulty
 var globalLanguage0;        //user selection for langauge
 var globalLanguage1;        //user selection for langauge
 var globalCardType;         //user selection for card type
+var wordsEnglish = [];      //sets global array for english
+var wordsSpanish = [];      //sets global array for spanish
+var wordsPortuguese = [];   //sets global array for portuguese
+var wordsFrench = [];       //sets global array for french
+var wordsItalian = [];      //sets global array for italian
+var wordsGerman = [];       //sets global array for german
 
 //removed correctly paired cards from gameboard and displays current player matched pairs (points)
 function removingCorrectPair(clickRecord){  
@@ -48,6 +73,7 @@ function removingCorrectPair(clickRecord){
         document.getElementById(clickRecord[1]).parentElement.classList.add("cardRemove");
     },1500);
 
+    //adds a point to player score and updates in game point display
     playerPoints++;
     document.getElementById("timer-frame").getElementsByTagName("p")[1].textContent = "Player has " + playerPoints + " points";
 }
@@ -61,8 +87,8 @@ function unflipWrongPair(clickRecord) {
 }
 
 // generates total indexes needed for appropriate pairing and a random list to index with
-function createRNG(cardNumber){     
-    for(i=((cardNumber*2)); i>0; i-- ){
+function createRNG(cardNumber, multiplier = 2){     
+    for(i=(cardNumber*multiplier); i>0; i-- ){
         rNG.push(Math.floor((Math.random()*i))); //adds random number at end of array     
         rNG.unshift(i-1);                        //adds index list at beginning of array
     }
@@ -71,10 +97,10 @@ function createRNG(cardNumber){
 // gives cards functionality by adding index numbers, words, and makes card flipable
 function makeCardFunctional(index, cardNumber, target){     
         var rngIndex = null;
-        createParagraph = document.createElement("p");              //creates text node
-        rngIndex = rNG.splice((rNG[index + (cardNumber*2)]), 1);    // uses random index call to splice out availiable card index and places it in variable
+        createParagraph = document.createElement("p");              //creates text node        
+        rngIndex = rNG.splice(rNG[index + (cardNumber*2)], 1);    // uses random index call to splice out availiable card index and places it in variable
 
-    // makes a unique card id, a random matching pair, and creates word for text node
+    // makes a unique card and random matching pair tandum id(cardId- 'unique id' - 'pair id'), and creates word for text node
     if (rngIndex < cardNumber){ 
         target.firstChild.id = "cardId-" + index + "-" + rngIndex;
         ParagraphNode = document.createTextNode(fLanguage[globalLanguage0][rngIndex]);
@@ -112,15 +138,16 @@ function constructCard (cardNumber, classValues, className = null, cardType = nu
 
         //adds div elements for cardRotate container that holds both the card face and card back cardFace and cardBack
         cardInternal.appendChild(document.createElement("div")).setAttributeNode(setClasses) 
-        if (cardType !== null && isCardFace){
+        
+        //places card face on card
+        if (isCardFace){
             cardInternal.lastChild.classList.add(importCardStyle[globalCardType][0]);
         }
 
-        //calls word adding function
+        //calls word adding function a nd adds card back on card
         if (isCardBack){        
             makeCardFunctional(index, cardNumber, cardInternal);
             cardInternal.lastChild.classList.add(importCardStyle[globalCardType][1]);
-            cardInternal.lastChild.classList.add(importCardStyle[globalCardType][2]);
         }
     }
 }
@@ -160,7 +187,8 @@ document.onclick = function() {
 } 
 
 //allows game to start by clicking start button
-document.getElementById("play").onclick = function() {  
+document.getElementById("play").onclick = function() { 
+    ransomizeWordLists(); 
     startGame();
 }
 
@@ -183,7 +211,8 @@ function startGame() {
 }
 
  //creates game for play by processing previously gathered user selections
-function populateGame(difficulty, numberOfCards, time, language0, language1, cardType) {      
+function populateGame(difficulty, numberOfCards, time, language0, language1, cardType) {  
+    fLanguage = new Language(wordsEnglish, wordsSpanish, wordsPortuguese, wordsFrench, wordsItalian, wordsGerman);   //builds foreign language object for string calling    
     globalLanguage0 = language0;        //passing base language to global variable
     globalLanguage1 = language1;        //passing pairing to language to global variable
     globalDifficulty = difficulty;      //passes difficulty to global variable
