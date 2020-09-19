@@ -45,7 +45,7 @@ function CardStyle(index, fun) {
 
 // ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height
 fullScreenHeight = document.documentElement.scrollHeight;       // makes background take up entire screen
-document.getElementById("playing-board").style.minHeight = fullScreenHeight + "px";
+document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px";
 
 //global variables and object callers
 let importCardStyle = new CardStyle (cardIndex, cardFun)        // builds card face and back for calling
