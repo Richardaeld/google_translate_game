@@ -28,7 +28,7 @@ body {
 
 @media (max-width: 575.98px) {
     .card-frame {
-        top: 2rem;
+        top: 10rem;
     }
 }
 
@@ -164,6 +164,7 @@ body {
 
 @media (max-width: 575.98px) { 
     #start-screen {
+        top: 12rem;
     }
 }
 
