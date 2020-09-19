@@ -218,8 +218,8 @@ function populateGame(difficulty, numberOfCards, time, language0, language1, car
     globalDifficulty = difficulty;      //passes difficulty to global variable
     globalCardType = cardType;          //passes card type to global variable
     createRNG(numberOfCards);           //random number generator   
-    constructCard(numberOfCards, "col-5 col-md-2 card-frame ml-3");                     //Outer most container
-    constructCard(numberOfCards, "row no-gutters middle cardRotate", "col-5");          //Middle container for cardRotate, that holds both card front and card back
+    constructCard(numberOfCards, "col-6  col-md-4 col-lg-3, col-xl-2 card-frame");                     //Outer most container
+    constructCard(numberOfCards, "row no-gutters middle cardRotate", "col-6");          //Middle container for cardRotate, that holds both card front and card back
     constructCard(numberOfCards, "col-12 card", "middle", cardType, false, true);       //cardFace
     constructCard(numberOfCards, "col-12 card cardBack", "middle", cardType, true);     //cardBack
     MaxPlayerPoints = numberOfCards;    //sets max points till player wins

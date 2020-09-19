@@ -3,7 +3,6 @@
 /*-----------------------------  basic container structure for games most basic appearance*/
 body {
     background-color: #747474;
-    padding: 1rem 1rem;
     color: #010203;
     font-family: "Special Elite", sans-serif;
     text-align: center;
@@ -26,8 +25,18 @@ body {
     transform: scale(.90);
 }
 
+@media (max-width: 767.98px) { 
+    #game {
+        position: relative;
+        margin-top: .5rem;
+        top: 5rem;
+    }
+}
+
 @media (max-width: 575.98px) {
-    .card-frame {
+    #game {
+        position: relative;
+        margin-top: .5rem;
         top: 10rem;
     }
 }
@@ -141,7 +150,7 @@ body {
     color: rgb(0, 255, 21);
     z-index: 1;
     font-size: 1.5rem;
-    padding: 1rem .5rem;
+    padding: 1rem 1.5rem;
 }
 
 #start-screen select {
