@@ -25,6 +25,13 @@ body {
     height: 7rem;
     transform: scale(.90);
 }
+
+@media (max-width: 575.98px) {
+    .card-frame {
+        top: 2rem;
+    }
+}
+
 /*----------------------------- container that holds rotating card faces, front and back */
 .cardRotate {
     height: 100%;
@@ -155,6 +162,11 @@ body {
     text-shadow: .1rem .1rem .09rem rgb(0, 56, 19);
 }
 
+@media (max-width: 575.98px) { 
+    #start-screen {
+    }
+}
+
 /*-----------------------------  allows start screen to have column alignment for name of select/option and its values*/
 .start-screen-description,
 .start-screen-choice {
@@ -173,6 +185,14 @@ body {
     padding-bottom: .5rem;
 }
 
+@media (max-width: 575.98px) { 
+    .start-screen-description,
+    .start-screen-choice {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /*-----------------------------  start button on start screen*/
 .start-button {
     z-index: 1;
@@ -186,4 +206,10 @@ body {
 .start-button:hover {
     background-color: rgba(0, 0, 0, .95);
     color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    .start-button {
+        width:50%;
+    }
 }
