@@ -122,6 +122,13 @@ body {
     } 
 }
 
+@media (max-width: 575.98px) {
+    #start-screen,
+    .card-frame {
+        font-size: .5rem;
+    }
+}
+
 /*-----------------------------  game header, houses, game title, win/lose header, timer, and player points earned*/
 #timer-frame {
     text-shadow: .1rem .1rem .09rem #010203;
@@ -135,6 +142,7 @@ body {
 #timer-frame h1 {
     font-size: 3.5rem;
     font-weight: 400;
+    padding: .5rem 1rem;
 }
 
 /*-----------------------------  hides game header elements*/
