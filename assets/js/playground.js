@@ -1,4 +1,4 @@
-// All word banks offered in a function that randomizes word order in list
+// All word banks offered in a function that randomizes word order and puts in global array
 function ransomizeWordLists() {
 let words1 = ["she", "look", "time", "could", "people", "part", "long", "did", "on", "they", "i", "these", "said", "so", "number", "no", "yes"]; //english
 let words2 = ["ella", "Mira", "hora", "podría", "personas", "parte", "larga/largo", "hizo", "en", "ellas/ellos", "yo", "estas/estos", "dijo", "entonces", "número", "No", "si"]; //spanish
@@ -6,14 +6,14 @@ let words3 = ["ela", "Veja", "Tempo", "poderia", "pessoas", "parte", "longa/long
 let words4 = ["elle", "Regardez", "temps", "pourrait", "gens", "partie", "longue/long", "fait", "sur", "elles/ils", "je", "celles-ci/ceux-ci", "m'a dit", "alors", "nombre", "non", "Oui"];//french
 let words5 = ["lei", "Guarda", "tempo", "poteva", "persone", "parte", "lunga/lungo", "fatta/fatto", "spora", "esse/essi", "io", "queste/questi", "disse", "così", "numero", "no", "sì"]; //italian
 let words6 = ["sie", "aussenhen", "Zeit", "könnten", "Menschen", "Teil", "lange", "tat", "auf", "Sie", "ich", "diese", "sagte", "so", "Nummer", "Nein", "Ja"]; //german
-var  nRNG = [];
-wordsEnglish = [];
-wordsSpanish = [];
-wordsPortuguese = [];
-wordsFrench = [];
-wordsItalian = [];
-wordsGerman = [];
-// random number generator that creates randoms in decending order
+var  nRNG = [];         //for Random number generator to reuse variable
+wordsEnglish = [];      //clears global memory for english words
+wordsSpanish = [];      //clears global memory for spanish words
+wordsPortuguese = [];   //clears global memory for portuguese words
+wordsFrench = [];       //clears global memory for french words
+wordsItalian = [];      //clears global memory for italian words
+wordsGerman = [];       //clears global memory for german words
+// random number generator that creates nRNG in decending order to prevent index call errors and allow following code to splice and push words to global array 
     for(i=17; i>0; i-- ){
         nRNG = (Math.floor(Math.random()*i));
         wordsEnglish.push(words1.splice(nRNG, 1));
