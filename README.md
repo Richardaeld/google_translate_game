@@ -10,11 +10,11 @@ sense of urgency to complete this simple task.
 + GitHub houses the master branch.
 
 # Wireframe 
-![wireframe of the playing screen with div description](assets/images/readme/WF_game_5_pair-large.png "wireframe of the playing screen with div description")
-[Click here to view all wireframes associated to this project.](assets/images/readme "location of wireframes")
+![wireframe of the playing screen with div description](assets/readme/WF_game_5_pair-large.png "wireframe of the playing screen with div description")
+[Click here to view all wireframes associated to this project.](assets/readme "location of wireframes")
 
 # UX Choices 
-![Responsiveness across devices](assets/images/readme/responsiveness.jpg "Looks great across all devices!")
+![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
 
 ### Game Start Screen
 + Large font with a dark text shadow is used to help the title stand out
@@ -28,7 +28,7 @@ paired with a bright text font to give the illusion of home made flash cards.
 + Selectable card backgrounds were added to give repeated users something different to look at. 
 
 ### add tinyfy or load timer
-![Load time with clean code](assets/images/readme/pingdom.jpg "Average load time from LA")
+![Load time with clean code](assets/readme/pingdom.jpg "Average load time from LA")
 # Brand Identity
 + Type text with headers ***
 + Index card
