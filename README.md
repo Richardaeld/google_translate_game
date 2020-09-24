@@ -13,7 +13,7 @@ sense of urgency to complete this simple task.
 + add picture of Wireframe
 
 # UX Choices 
-![Responsiveness across devices](assets/finishing/responsiveness.jpg "Looks great across all devices!")
+![Responsiveness across devices](assets/images/readme/responsiveness.jpg "Looks great across all devices!")
 
 ### Game Start Screen
 + Large font with a dark text shadow is used to help the title stand out
@@ -27,7 +27,7 @@ paired with a bright text font to give the illusion of home made flash cards.
 + Selectable card backgrounds were added to give repeated users something different to look at. 
 
 ### add tinyfy or load timer
-![Load time with clean code](assets/finishing/pingdom.jpg "Average load time from LA")
+![Load time with clean code](assets/images/readme/pingdom.jpg "Average load time from LA")
 # Brand Identity
 + Type text with headers ***
 + Index card
