@@ -10,7 +10,8 @@ sense of urgency to complete this simple task.
 + GitHub houses the master branch.
 
 # Wireframe 
-+ add picture of Wireframe
+![wireframe of the playing screen with div description](assets/images/readme/WF_game_5_pair-large.png "wireframe of the playing screen with div description")
+[Click here to view all wireframes associated to this project.](assets/images/readme "location of wireframes")
 
 # UX Choices 
 ![Responsiveness across devices](assets/images/readme/responsiveness.jpg "Looks great across all devices!")
