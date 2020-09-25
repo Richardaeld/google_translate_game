@@ -9,6 +9,8 @@ sense of urgency to complete this simple task.
 + GitHub's IDE GitPod was used for the entire construction and planning process.
 + GitHub houses the master branch.
 
+
+
 # Wireframe 
 ![wireframe of the playing screen with div description](assets/readme/wireframe/WF_game_5_pair-large.png "wireframe of the playing screen with div description")
 [Click here to view all wireframes associated to this project.](assets/readme/wireframe "location of wireframes")
@@ -133,11 +135,10 @@ structure of githubs deployment information as the basis of the readme's deploym
 + [maxnyla's deployment section from her readme](https://github.com/maxnyla/Pawsome) - the idea was taking githubs deployment section 
 and adding it to the readme's deployment section 
 
-# Technologies
-## Languages
-+ HTML
-+ CSS
-+ JavaScript
+# Technologies (langauges) used
++ HTML - Is the basic construction (foundation) of webpage
++ CSS - Makes basic construction of webpage more visually appealing 
++ JavaScript - Allow users to interact with webpage without having to reload or load multiple pages
 
 # Acknowledgements
 + Felipe Souza Alarcon for his honest guidence, foresight, and providing stellar hints to questions I hadnt asked yet. 
