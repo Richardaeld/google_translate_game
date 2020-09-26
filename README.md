@@ -48,8 +48,11 @@ text within to stand out despite being smaller
 paired with a bright text font to give the illusion of home made flash cards.
 + Selectable card backgrounds were added to give repeated users something different to look at. 
 
-### add tinyfy or load timer
+### Page Performance
++ Code kept simple, clean, and elegant for quicker loadtimes
++ All images have been "tinyfied" by [tinyPNG](https://tinypng.com/)
 ![Load time with clean code](assets/readme/pingdom.jpg "Average load time from LA")
+
 # Brand Identity
 + Type text with headers ***
 + Index card
