@@ -15,11 +15,11 @@ sense of urgency to complete this simple task.
 + Select Settings (Circled in red in picture below)
 ![Where select is located](assets/readme/select_settings.png "Where select is located")
 + Go down in settings page until you find the heading "GitHub Pages" (underlined in red in picture below)
-+ Click "None" under the Source subheading (circled in red)
++ Click "None" under the Source subheading (circled in red in picture below)
 + Select the branch you with to publish
-+ In this example we chose to select master (circled in red)
++ In this example we chose to select master (circled in red in picture below)
 ![Where Github Pages, branch selection, and branches are located](assets/readme/select_branch.png "Where Github Pages, branch selection, and branches are located")
-+ Click save (underlined in red)
++ Click save (underlined in red in picture below)
 ![Where save is located](assets/readme/select_save.png "Where save is located")
 + Reload page and you will see the layout under Github Pages will change and tell you the page is ready to be published
 ![What about to be published screen looks like](assets/readme/see_ready.png "What about to be published screen looks like")
