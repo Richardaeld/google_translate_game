@@ -30,7 +30,7 @@ sense of urgency to complete this simple task.
 
 # Wireframe 
 ![wireframe of the playing screen with div description](assets/readme/wireframe/WF_game_5_pair-large.png "wireframe of the playing screen with div description")
-+ Wireframes were make for all predetermined size variations of the webpage
++ Wireframes were made for all predetermined size variations of the webpage
 + Each wireframe that contains cards was given a pointing arrow and a description because of the complexity of the card design
 + [Click here to view all wireframes associated to this project.](assets/readme/wireframe "location of wireframes")
 
