@@ -50,8 +50,10 @@ paired with a bright text font to give the illusion of home made flash cards.
 
 ### Page Performance
 + Code kept simple, clean, and elegant for quicker loadtimes
-+ All images have been "tinyfied" by [tinyPNG](https://tinypng.com/)
-![Load time with clean code](assets/readme/pingdom.jpg "Average load time from LA")
++ Loadtime checked by [Pingdom](https://tools.pingdom.com/)
+![Load time with clean code and image compression according to pingdom](assets/readme/pingdom.jpg "Average load time from LA according to Pingdom")
++ All images have been compresssd by [tinyPNG](https://tinypng.com/)
+![Image compressions average](assets/readme/tinyfi.png "Image compressions average")
 
 # Brand Identity
 + Type text with headers ***
