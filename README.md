@@ -159,9 +159,9 @@ structure of githubs deployment information as the basis of the readme's deploym
 + [maxnyla's deployment section from her readme](https://github.com/maxnyla/Pawsome) - the idea was using githubs literal deployment process in the readme's deployment section 
 
 # Technologies (langauges) used
-+ HTML - Is the basic construction (foundation) of webpage
-+ CSS - Makes basic construction of webpage more visually appealing 
-+ JavaScript - Allow users to interact with webpage without having to reload or load multiple pages
++ HTML - Is the basic construction (foundation) of this webpage
++ CSS - Makes the basic construction of this webpage more visually appealing 
++ JavaScript - Allow users to interact with webpage without having to reload page or load multiple pages
 
 # Acknowledgements
 + Felipe Souza Alarcon for his honest guidence, foresight, and providing stellar hints to questions I hadnt asked yet. 
