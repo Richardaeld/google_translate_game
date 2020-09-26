@@ -17,7 +17,7 @@ sense of urgency to complete this simple task.
 + Go down in settings page until you find the heading "GitHub Pages" (underlined in red in picture below)
 + Click "None" under the Source subheading (circled in red)
 + Select the branch you with to publish
-    + In this example we choose to select master (circled in red)
++ In this example we chose to select master (circled in red)
 ![Where Github Pages, branch selection, and branches are located](assets/readme/select_branch.png "Where Github Pages, branch selection, and branches are located")
 + Click save (underlined in red)
 ![Where save is located](assets/readme/select_save.png "Where save is located")
