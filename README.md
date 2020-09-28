@@ -56,8 +56,11 @@ paired with a bright text font to give the illusion of home made flash cards.
 ![Image compressions average](assets/readme/tinyfi.png "Image compressions average")
 
 # Brand Identity
-+ Type text with headers ***
-+ Index card
+This game should give the feeling of studying at home or in school for an exam and is accomplished though:
++ The use of a background that resembles a desk or dining room table
++ The default cards are ment to resemble index cards that would be used like 'flash cards' to help someone study
++ The font used on the cards was ment to resemble hand writting to give the feeling of a hand made card
++ A bright color was used to give users the feeling of personality from someone that might use a highlighter to make studying more fun 
 
 # Client Stories and Experience Provided
 ## Client Stories
