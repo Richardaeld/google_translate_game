@@ -84,24 +84,24 @@ This game should give the feeling of studying at home or in school for an exam a
 1. Header items are easily visible, disappear when not in use, always display correct values.
 
 #### Assumption(s):
-1. User will NOT reload browser between play throughs.
-1. User knows game header consists of win/lost condition, game title, player points, and time remaining.
+1. Tester will ***not*** reload browser between play throughs.
+1. Tester knows content of game's active play header.
 
 #### Testing Step(s):
 1. Start a game with default settings. 
-1. Let it run out, check for game header to change to lose condition and let game reset.
+1. Let it run out, check for game header to change to lose title and let game reset.
 1. Select next level of time and start the game.
-1. Let it run out, check for game header to change to lose condition and let game reset.
-1. Repeat steps 3 and 4 until all times have been selected.
-1. Start another game, win this round, and check game for win title.
-1. Change card count and repeat step 6.
-1. Change language and repeat step 6.
-1. Change difficulty and repeat step 6. 
+1. Repeat steps 2 and 3 until all times have been selected.
+1. Start another game, win this round, and check game for win title and let game reset.
+1. Change Number of Pairs and repeat step 5.
+1. Change Base Language and repeat step 5.
+1. Change Difficulty (increase time on clock if needed) and repeat step 5. 
 
 #### Document Result(s):
-1. document any incidences of incorrect title presentation.
-1. document any failure of timer to lose game.
-1. document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
+1. Document any incidences of incorrect title presentation.
+1. Document any failure of timer
+1. Document any incorrect win/lose title.
+1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
 ------------------------------------------------------
 
 ## Checking Language Pairings
