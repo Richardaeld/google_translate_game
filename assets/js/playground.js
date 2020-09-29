@@ -50,15 +50,15 @@ document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 5
 //global variables and object callers
 let importCardStyle = new CardStyle (cardIndex, cardFun)        // builds card face and back for calling
 let fLanguage = new Language(wordsEnglish, wordsSpanish, wordsPortuguese, wordsFrench, wordsItalian, wordsGerman);      // Sets Global variable and sets foundation for foreign language object for string calling later in code
-var clickRecord = [];       // up to two cards player currently selected
-var rNG = [];               // first half is indexes that need to be used -- second half is randomized index list to pull first half with  
-var playerPoints = 0;       //  total matched pairs by player
-var MaxPlayerPoints = 0;    // total allowed pairs for winning game
-var timeDelay = null;       // for difficulty adjustment -- addes a click delay between card selection
-var globalDifficulty;       // user selection for difficulty
-var globalLanguage0;        //user selection for langauge
-var globalLanguage1;        //user selection for langauge
-var globalCardType;         //user selection for card type
+var clickRecord = [];       //holds up to two cards player has selected
+var rNG = [];               //first half is indexes that need to be used -- second half is randomized index list to pull first half with  
+var playerPoints = 0;       //total matched pairs by player
+var MaxPlayerPoints = 0;    //total allowed pairs for winning game
+var timeDelay = null;       //for difficulty adjustment -- addes a click delay between card selection
+var globalDifficulty;       //user global selection for difficulty
+var globalLanguage0;        //user global selection for base langauge
+var globalLanguage1;        //user global selection for pairing langauge
+var globalCardType;         //user global selection for card type
 var wordsEnglish = [];      //sets global array for english
 var wordsSpanish = [];      //sets global array for spanish
 var wordsPortuguese = [];   //sets global array for portuguese
@@ -136,15 +136,15 @@ function constructCard (cardNumber, classValues, className = null, cardType = nu
             continue;
         }
 
-        //adds div elements for cardRotate container that holds both the card face and card back cardFace and cardBack
+        //adds div elements for cardRotate container that holds both the card faces (.card and .cardBack)
         cardInternal.appendChild(document.createElement("div")).setAttributeNode(setClasses) 
         
-        //places card face on card
+        //places card face on card (.card)
         if (isCardFace){
             cardInternal.lastChild.classList.add(importCardStyle[globalCardType][0]);
         }
 
-        //calls word adding function a nd adds card back on card
+        //calls word adding function and adds card back on card
         if (isCardBack){        
             makeCardFunctional(index, cardNumber, cardInternal);
             cardInternal.lastChild.classList.add(importCardStyle[globalCardType][1]);
@@ -214,16 +214,16 @@ function startGame() {
 function populateGame(difficulty, numberOfCards, time, language0, language1, cardType) {  
     fLanguage = new Language(wordsEnglish, wordsSpanish, wordsPortuguese, wordsFrench, wordsItalian, wordsGerman);   //builds foreign language object for string calling    
     globalLanguage0 = language0;        //passing base language to global variable
-    globalLanguage1 = language1;        //passing pairing to language to global variable
+    globalLanguage1 = language1;        //passing pairing language to global variable
     globalDifficulty = difficulty;      //passes difficulty to global variable
     globalCardType = cardType;          //passes card type to global variable
     createRNG(numberOfCards);           //random number generator   
-    constructCard(numberOfCards, "col-6  col-md-4 col-lg-3, col-xl-2 card-frame");                     //Outer most container
-    constructCard(numberOfCards, "row no-gutters middle cardRotate", "col-6");          //Middle container for cardRotate, that holds both card front and card back
-    constructCard(numberOfCards, "col-12 card", "middle", cardType, false, true);       //cardFace
-    constructCard(numberOfCards, "col-12 card cardBack", "middle", cardType, true);     //cardBack
-    MaxPlayerPoints = numberOfCards;    //sets max points till player wins
-    gameHeader(2);                      //changer header to game play option
+    constructCard(numberOfCards, "col-6  col-md-4 col-lg-3, col-xl-2 card-frame");      //Outer most container
+    constructCard(numberOfCards, "row no-gutters middle cardRotate", "col-6");          //Middle container for cardRotate, that holds both card faces (.card and .cardback)
+    constructCard(numberOfCards, "col-12 card", "middle", cardType, false, true);       //card face (.card)
+    constructCard(numberOfCards, "col-12 card cardBack", "middle", cardType, true);     //card back (.card and .cardBack)
+    MaxPlayerPoints = numberOfCards;    //sets max points for player win condition
+    gameHeader(2);                      //changes header to game play option
     timer((time*60000)+1000);           //change time into minutes and add 1 second so user sees full time minute value
 }
 
@@ -244,7 +244,7 @@ function timer(time) {
             gameHeader(4);
             return;
         }
-        //a loop to allow the timer to continue replaying its function ever second
+        //a loop to allow the timer to continue replaying its function every second
         timer(time);
     },1000)
 }
@@ -274,13 +274,13 @@ function restartGame() {
         gameHeader(1);
     }, 4000);
 }
-// Changes the visibiilty of the game header according to the screen the user is currently on and flashes game RNG and user card selection for multiple games
+// Changes the visibiilty of the game header according to the screen the user is currently on, flashes game RNG, and flashes user card selection for multiple games
 function gameHeader (condition) {       // 1-gamestartscreen ----- 2-gameplayscreen ------ 3-game win ------- 4-game lose //-----changes header and game start visibility
     var targetP = document.getElementById("timer-frame").getElementsByTagName("p");
     var targetH1 = document.getElementById("timer-frame").getElementsByTagName("h1")[0];
     var targetStart = document.getElementById("start-screen")
     rNG = [];                           // flashes RNG (random number generator) memory
-    clickRecord = [];                   // flashes user selection
+    clickRecord = [];                   // flashes user card selection
 
     if(condition === 1){                                //game start screen
         hideTimer(targetP, targetH1);
