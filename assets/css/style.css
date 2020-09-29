@@ -22,6 +22,7 @@ body {
 
 .card-frame {
     margin-top: 1rem;
+    font-size: 1.5rem;
     height: 7rem;
     transform: scale(.90);
 }
@@ -63,6 +64,7 @@ body {
 .cardBack {
     font-family: "Architects Daughter", sans-serif;
     letter-spacing: 2px;
+    /*font-size: 2.5rem;*/
     font-weight: 700;
     text-shadow: .1rem .1rem .09rem #010203;
     transform: rotateX(180deg);
@@ -114,13 +116,14 @@ body {
     opacity: 0;
 }
 
-/*----------------------------- Text size and  modification for screen responsiveness*/
 .card-frame p {
-    font-size: 1.75vw;
+    font-size: 1.5rem;
 }
 
+/*-----------------------------  modification for screen size*/
 @media (max-width: 991.98px) { 
-    #start-screen {
+    #start-screen/*,
+    .card-frame */{
         font-size: .75rem;
     } 
     .card-frame p {
@@ -128,8 +131,15 @@ body {
     }
 }
 
+@media (max-width: 767.98px) { 
+    .card-frame p {
+        font-size: 4vw;
+    }
+}
+
 @media (max-width: 575.98px) {
-    #start-screen {
+    #start-screen/*,
+    .card-frame*/ {
         font-size: .5rem;
     }
     .card-frame p{
