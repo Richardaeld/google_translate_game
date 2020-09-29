@@ -67,14 +67,14 @@ This game should give the feeling of studying at home or in school for an exam a
 
 # Client Stories and Experience Provided
 ## Client Stories
-+ As a user, I'd like an enjoyable way to waste my free time.
++ As a user, I'd like an enjoyable way to spend my free time.
 + As a user, I'd like a game that forces me to use my mental retaining ability.
 + As a user, I'd like to learn some basic words of a different language.
 
 ## Experience Provided
-+ The game has adjustable difficulty, timer, and total card pairs for a enjoyable was to spend time.
-+ The games adjustable difficulty can be used to provide an experience that will cause the user to lose if they only hunt and peck.
-+ The game has several different languages to pick from to pair with their comparable English or othe language counterpart.
++ The game has adjustable difficulty, timer, languages and total card pairs to give a user an enjoyable way to spend time with plenty of replay value.
++ The game has adjustable difficulty that can be used to provide an experience that will cause the user to lose if they only hunt and peck.
++ The game currently has six different languages to pick from and they are pairable in any way the user chooses.
 
 # Testing
 ## Checking Languages and Pairings
