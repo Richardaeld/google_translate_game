@@ -147,27 +147,29 @@ lines but now they retain a good visual experience.
 ## Tools
 + [Bootstrap](https://getbootstrap.com/) - Used as framework
 + [GitHub](https://github.com/) - Deployment of demo(prototype) website
-+ [GitPod](https://www.gitpod.io/) - Integrated development environment
-+ [Google Fonts](https://fonts.google.com/) - Used font families from here
++ [GitPod](https://www.gitpod.io/) - Integrated development environment used
++ [Google Fonts](https://fonts.google.com/) - Used font families found from here 
 + [Jigsaw (Validation Service)](https://jigsaw.w3.org/css-validator/) - Used to identify errors in CSS
-+ [Pingdom](https://tools.pingdom.com/) - Checked for page load time
++ [Pingdom](https://tools.pingdom.com/) - Used to check for load time
 + [Techsini](https://techsini.com/multi-mockup/) - Used for their viewable responsiveness PNG
-+ [TinyPNG](https://tinypng.com/) - Minimizing KB load per image
++ [TinyPNG](https://tinypng.com/) - Used to Minimize KB load per image
 + [W3C Validator](https://validator.w3.org/) - Used to identify errors in markup
 
-## References and Code Used
-+ [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Invaluable source of information about JavaScript
+## References, Ideas Code Used
++ [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Invaluable source of information about JavaScript, HTML, and CSS
     + Used a piece of code to allow background to travel entire length of page
     + Used code and idea to help with rotating the cards on the board
+    + Used to help understand how 'backface-visability: hidden' and "transform-style:preserve-3d" work together
+    + The idea used was a container that rotates 180 degrees with the aid of 'backface-visability: hidden' and "transform-style:preserve-3d"
 + [Stack Overflow](https://stackoverflow.com/) - Helped with understands importance of loops in JavaScript
 + [TestLodge](https://blog.testlodge.com/how-to-write-test-cases-for-software-with-sample/) - Used for test case examples
-+ [W3Schools](https://www.w3schools.com/) - A wonderful resource of element, attribute, and event selection
-    + Used code and idea to help with rotating the cards on the board
++ [W3Schools](https://www.w3schools.com/) - A wonderful resource of element, attribute, and event selection for JavaScript
+    + Used code and idea's to help with rotating the cards on the game board
 + [Bootstrap](https://getbootstrap.com/) - Framework used to help speed up development and add a better UX:
 + [github](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-a-publishing-source-for-github-pages) - Using the style and 
 structure of githubs deployment information as the basis of the readme's deployment section
-
-## idea(s) used
++ [Arjun Khara](https://www.youtube.com/watch?v=OV8MVmtgmoY) - Use a single box to contain all moving objects and faces of a card or 3D object.
+    + Used idea's from his code to help understand how and were to place items like 'backface-visability' and 'transform-style' to create desired effect.
 + [maxnyla's deployment section from her readme](https://github.com/maxnyla/Pawsome) - the idea was using githubs literal deployment process in the readme's deployment section 
 
 # Technologies (langauges) used
