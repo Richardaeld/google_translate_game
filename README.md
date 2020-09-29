@@ -4,13 +4,20 @@ The purpose of this webpage is to illustrate how a simple game can help with lea
 users improve their memory retention ability. This games premise is the flash card strategy students use to help learn new material. The user picks two languages before the
 game starts and then must pair the same word in both languages. The game also adds a timer and point system to give users a goal and sense of urgency to complete the game.
 
-# Live demo with deployment information
+# Wireframe and Live Demo
+#### Wireframe 
+![wireframe of the playing screen with div description](assets/readme/wireframe/WF_game_5_pair-large.png "wireframe of the playing screen with div description")
++ Wireframes were made for all predetermined size variations of the webpage
++ Each wireframe that contains cards was given a pointing arrow and a description because of the complexity of the card design
++ [Click here to view all wireframes associated to this project.](assets/readme/wireframe "location of wireframes")
+
 #### Live Demo
 + A fully functioning demo can be found on GitHub, [here](https://richardaeld.github.io/google_translate_game/ "deplayment location")
 + GitHub's IDE GitPod was used for the entire construction and planning process.
 + GitHub houses the master branch.
 
-#### Deployment information
+
+# Deployment information
 + Go to the location of the respository in GitHub (ex. https://github.com/Richardaeld/google_translate_game)
 + Select Settings (Circled in red in picture below)
 ![Where select is located](assets/readme/select_settings.png "Where select is located")
@@ -28,11 +35,6 @@ game starts and then must pair the same word in both languages. The game also ad
 
 
 
-# Wireframe 
-![wireframe of the playing screen with div description](assets/readme/wireframe/WF_game_5_pair-large.png "wireframe of the playing screen with div description")
-+ Wireframes were made for all predetermined size variations of the webpage
-+ Each wireframe that contains cards was given a pointing arrow and a description because of the complexity of the card design
-+ [Click here to view all wireframes associated to this project.](assets/readme/wireframe "location of wireframes")
 
 # UX Choices 
 ![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
