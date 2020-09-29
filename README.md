@@ -6,7 +6,7 @@ game starts and then must pair the same word in both languages. The game also ad
 
 # Wireframe and Live Demo
 #### Wireframe 
-![wireframe of the playing screen with div description](assets/readme/wireframe/WF_game_5_pair-large.png "wireframe of the playing screen with div description")
+![wireframe of the playing screen with div description](assets/readme/wireframe/wf_game_5_pair-large.png "wireframe of the playing screen with div description")
 + Wireframes were made for all predetermined size variations of the webpage
 + Each wireframe that contains cards was given a pointing arrow and a description because of the complexity of the card design
 + [Click here to view all wireframes associated to this project.](assets/readme/wireframe "location of wireframes")
