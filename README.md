@@ -42,9 +42,8 @@ game starts and then must pair the same word in both languages. The game also ad
 ![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
 
 ### Game Start Screen
-+ Large font with a dark text shadow is used to help the title stand out.
-+ A bright font color was used with a slightly opaque transparancy to allow for the
-text within to stand out despite being smaller.
++ The game title stands out because of the use of a large font with a dark text shadow
++ The text descriptions/choices are placed over a dark background with a bright font color to help them stand out and draw the eye
 
 ### Game Board and Game Play
 + A dark background was used to help the cards stand out.
