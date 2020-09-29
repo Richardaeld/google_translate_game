@@ -7,8 +7,8 @@ game starts and then must pair the same word in both languages. The game also ad
 # Wireframe and Live Demo
 #### Wireframe 
 ![wireframe of the playing screen with div description](assets/readme/wireframe/wf_game_5_pair-large.png "wireframe of the playing screen with div description")
-+ Wireframes were made for all predetermined size variations of the webpage
-+ Each wireframe that contains cards was given a pointing arrow and a description because of the complexity of the card design
++ Wireframes were made for all predetermined size variations of the webpage.
++ Each wireframe that contains cards was given a pointing arrow and a description because of the complexity of the card design.
 + [Click here to view all wireframes associated to this project.](assets/readme/wireframe "location of wireframes")
 
 #### Live Demo
@@ -19,21 +19,21 @@ game starts and then must pair the same word in both languages. The game also ad
 
 
 # Deployment information
-+ Go to the location of the respository in GitHub (ex. https://github.com/Richardaeld/google_translate_game)
-+ Select Settings (Circled in red in picture below)
++ Go to the location of the respository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
++ Select Settings (Circled in red in picture below).
 ![Where select is located](assets/readme/select_settings.png "Where select is located")
-+ Go down in settings page until you find the heading "GitHub Pages" (underlined in red in picture below)
-+ Click "None" under the Source subheading (circled in red in picture below)
-+ Select the branch you wish to publish
-+ In this example we chose to select master (circled in red in picture below)
++ Go down in settings page until you find the heading "GitHub Pages" (underlined in red in picture below).
++ Click "None" under the Source subheading (circled in red in picture below).
++ Select the branch you wish to publish.
++ In this example we chose to select master (circled in red in picture below).
 ![Where Github Pages, branch selection, and branches are located](assets/readme/select_branch.png "Where Github Pages, branch selection, and branches are located")
-+ Click save (underlined in red in picture below)
++ Click save (underlined in red in picture below).
 ![Where save is located](assets/readme/select_save.png "Where save is located")
-+ Reload page and you will see the layout under Github Pages will change and tell you the page is ready to be published
++ Reload page and you will see the layout under Github Pages will change and tell you the page is ready to be published.
 ![What queued to be published screen looks like](assets/readme/see_ready.png "What queued to be published screen looks like")
-+ Once the page has fully published the layout will change once more and tell you the site has published
++ Once the page has fully published the layout will change once more and tell you the site has published.
 ![What published screen looks like](assets/readme/see_published.png "What published screen looks like")
-+ Now the page is fully viewable at the provided HTTP address
++ Now the page is fully viewable at the provided HTTP address.
 
 
 
@@ -42,48 +42,48 @@ game starts and then must pair the same word in both languages. The game also ad
 ![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
 
 ### Game Start Screen
-+ Large font with a dark text shadow is used to help the title stand out
++ Large font with a dark text shadow is used to help the title stand out.
 + A bright font color was used with a slightly opaque transparancy to allow for the
-text within to stand out despite being smaller
+text within to stand out despite being smaller.
 
 ### Game Board and Game Play
-+ A dark background was used to help the cards stand out
++ A dark background was used to help the cards stand out.
 + The font family chosen for the cards was ment to resemble hand writting and was
 paired with a bright text font to give the illusion of home made flash cards.
 + Selectable card backgrounds were added to give repeated users something different to look at. 
 
 ### Page Performance
-+ Code kept simple, clean, and elegant for quicker loadtimes
-+ Loadtime checked by [Pingdom](https://tools.pingdom.com/)
++ Code kept simple, clean, and elegant for quicker loadtimes.
++ Loadtime checked by [Pingdom](https://tools.pingdom.com/).
 ![Load time with clean code and image compression according to pingdom](assets/readme/pingdom.jpg "Average load time from LA according to Pingdom")
-+ All images have been compresssd by [tinyPNG](https://tinypng.com/)
++ All images have been compresssd by [tinyPNG](https://tinypng.com/).
 ![Image compressions average](assets/readme/tinyfi.png "Image compressions average")
 
 # Brand Identity
 This game should give the feeling of studying at home or in school for an exam and is accomplished though:
-+ The use of a background that resembles a desk or dining room table
-+ The default cards are ment to resemble index cards that would be used like 'flash cards' to help someone study
-+ The font used on the cards was ment to resemble hand writting to give the feeling of a hand made card
-+ A bright color was used to give users the feeling of personality from someone that might use a highlighter to make studying more fun 
++ The use of a background that resembles a desk or dining room table.
++ The default cards are ment to resemble index cards that would be used like 'flash cards' to help someone study.
++ The font used on the cards was ment to resemble hand writting to give the feeling of a hand made card.
++ A bright color was used to give users the feeling of personality from someone that might use a highlighter to make studying more fun.
 
 # Client Stories and Experience Provided
 ## Client Stories
 + As a user, I'd like an enjoyable way to waste my free time.
-+ As a user, I'd like a game that forces me to use my mental retaining ability
-+ As a user, I'd like to learn some basic words of a different language
++ As a user, I'd like a game that forces me to use my mental retaining ability.
++ As a user, I'd like to learn some basic words of a different language.
 
 ## Experience Provided
-+ The game has adjustable difficulty, timer, and total card pairs for a enjoyable was to spend time
-+ The games adjustable difficulty can be used to provide an experience that will cause the user to lose if they only hunt and peck
-+ The game has several different languages to pick from to pair with their comparable English or othe language counterpart 
++ The game has adjustable difficulty, timer, and total card pairs for a enjoyable was to spend time.
++ The games adjustable difficulty can be used to provide an experience that will cause the user to lose if they only hunt and peck.
++ The game has several different languages to pick from to pair with their comparable English or othe language counterpart.
 
 # Testing
 ## Checking Languages and Pairings
 #### Expectation(s):
-1. The game always has the correct pair of words up to match
+1. The game always has the correct pair of words up to match.
 
 #### Assumption(s):
-1. A basic understanding of foreign languages used or a cheat sheet of correct word pairs
+1. A basic understanding of foreign languages used or a cheat sheet of correct word pairs.
 1. User will NOT reload browser between play throughs.
 
 #### Testing Step(s):
@@ -105,7 +105,7 @@ This game should give the feeling of studying at home or in school for an exam a
 #### Expectation(s):
 1. Menues disappear when not in use.
 1. Game tells user when they have won or lost.
-1. Header items are easily visible, disappear when not in use, always display correct values
+1. Header items are easily visible, disappear when not in use, always display correct values.
 
 #### Assumption(s):
 1. User will NOT reload browser between play throughs.
@@ -123,9 +123,9 @@ This game should give the feeling of studying at home or in school for an exam a
 1. Change difficulty and repeat step 6. 
 
 #### Document Result(s):
-1. document any incidences of incorrect title presentation
-1. document any failure of timer to lose game 
-1. document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...)
+1. document any incidences of incorrect title presentation.
+1. document any failure of timer to lose game.
+1. document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
 ------------------------------------------------------
 
 ## Previous and Current bugs
@@ -138,9 +138,9 @@ lines but now they retain a good visual experience.
 + A screen pixel width below 320 or above 4000 begin to quickly lose a good visual experience. 
 
 ## Scaleability
-+ Add an api that would read out the 'pairing langauge' word of a matched card
++ Add an api that would read out the 'pairing langauge' word of a matched card.
 + Add a greater selection of different card backgrounds to give the user a different visual experience according to their preference.
-+ Add a game board background selector for a different visual experience for returning users
++ Add a game board background selector for a different visual experience for returning users.
 
 # Tools, References, Code, and idea(s) used
 ## Tools
