@@ -146,7 +146,7 @@ lines but now they retain a good visual experience.
 # Tools, References, Code, and idea(s) used
 ## Tools
 + [Bootstrap](https://getbootstrap.com/) - Used as framework
-+ [GitHub](https://github.com/) - Deployment of prototype website
++ [GitHub](https://github.com/) - Deployment of demo(prototype) website
 + [GitPod](https://www.gitpod.io/) - Integrated development environment
 + [Google Fonts](https://fonts.google.com/) - Used font families from here
 + [Jigsaw (Validation Service)](https://jigsaw.w3.org/css-validator/) - Used to identify errors in CSS
