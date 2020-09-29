@@ -43,12 +43,12 @@ game starts and then must pair the same word in both languages. The game also ad
 
 ### Game Start Screen
 + The game title stands out because of the use of a large font with a dark text shadow
-+ The text descriptions/choices are placed over a dark background with a bright font color to help them stand out and draw the eye
++ The text descriptions/choices are placed over a dark background with a bright text color to help them stand out and draw the eye
 
 ### Game Board and Game Play
-+ A dark background was used to help the cards stand out.
-+ The font family chosen for the cards was ment to resemble hand writting and was
-paired with a bright text font to give the illusion of home made flash cards.
++ A dark picture background was used to help the cards stand out.
++ The background image of the game cards resembles that of flash cards that school students would use.
++ The font family chosen for the cards resembles hand writting and was paired with a bright text color to give the feeling of home made flash cards.
 + Selectable card backgrounds were added to give repeated users something different to look at. 
 
 ### Page Performance
