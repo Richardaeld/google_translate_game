@@ -12,6 +12,7 @@ game starts and then must pair the same word in both languages. The game also ad
 + [Click here to view all wireframes associated to this project.](assets/readme/wireframe "location of wireframes")
 
 #### Live Demo
+![finished demo of the playing screen](assets/readme/finished_game_5_pair-large.png "finished demo of the playing screen")
 + A fully functioning demo can be found on GitHub, [here](https://richardaeld.github.io/google_translate_game/ "deplayment location")
 + GitHub's IDE GitPod was used for the entire construction and planning process.
 + GitHub houses the master branch.
