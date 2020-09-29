@@ -24,15 +24,16 @@ game starts and then must pair the same word in both languages. The game also ad
 ![Where select is located](assets/readme/select_settings.png "Where select is located")
 + Go down in settings page until you find the heading "GitHub Pages" (underlined in red in picture below)
 + Click "None" under the Source subheading (circled in red in picture below)
-+ Select the branch you with to publish
++ Select the branch you wish to publish
 + In this example we chose to select master (circled in red in picture below)
 ![Where Github Pages, branch selection, and branches are located](assets/readme/select_branch.png "Where Github Pages, branch selection, and branches are located")
 + Click save (underlined in red in picture below)
 ![Where save is located](assets/readme/select_save.png "Where save is located")
 + Reload page and you will see the layout under Github Pages will change and tell you the page is ready to be published
-![What about to be published screen looks like](assets/readme/see_ready.png "What about to be published screen looks like")
+![What queued to be published screen looks like](assets/readme/see_ready.png "What queued to be published screen looks like")
 + Once the page has fully published the layout will change once more and tell you the site has published
 ![What published screen looks like](assets/readme/see_published.png "What published screen looks like")
++ Now the page is fully viewable at the provided HTTP address
 
 
 
