@@ -77,29 +77,6 @@ This game should give the feeling of studying at home or in school for an exam a
 + The game currently has six different languages to pick from and they are pairable in any way the user chooses.
 
 # Testing
-## Checking Language Pairings
-#### Expectation(s):
-1. The game always has the correct pair of words up to match.
-
-#### Assumption(s):
-1. A basic understanding of foreign languages used or a cheat sheet of correct word pairs.
-1. Tester will ***not*** reload browser between play throughs.
-
-#### Testing Step(s):
-1. Start the game on its default setting or add more time to timer if needed.
-1. Complete the game.
-1. Wait for game to restart.
-1. Select the next amount of card pairs and repeat steps 2 and 3.
-1. repeat steps 4, 2, and then 3.
-1. Select the next language (of Pairing Language), reset cards to start with 5 pairs, and start game.
-1. Repeat steps 2, 3, 4, 5, and 6 until all Pairing Languages have been cycled through.
-
-#### Document Result(s):
-1. Document any incidences of incorrect, game accepted or not accepted word pairings.
-1. Document any incidences of cards left on the table when they should have disappeared.
-
---------------------------------
-
 ## Checking Menues, Lose/Win Conditions, Header items, and Multiple Round Playability
 #### Expectation(s):
 1. Menues disappear when not in use.
@@ -126,6 +103,31 @@ This game should give the feeling of studying at home or in school for an exam a
 1. document any failure of timer to lose game.
 1. document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
 ------------------------------------------------------
+
+## Checking Language Pairings
+#### Expectation(s):
+1. The game always has the correct pair of words up to match.
+
+#### Assumption(s):
+1. A basic understanding of foreign languages used or a cheat sheet of correct word pairs.
+1. Tester will ***not*** reload browser between play throughs.
+
+#### Testing Step(s):
+1. Start the game on its default setting or add more time to timer if needed.
+1. Complete the game.
+1. Wait for game to restart.
+1. Select the next amount of card pairs and repeat steps 2 and 3.
+1. repeat steps 4, 2, and then 3.
+1. Select the next language (of Pairing Language), reset cards to start with 5 pairs, and start game.
+1. Repeat steps 2, 3, 4, 5, and 6 until all Pairing Languages have been cycled through.
+
+#### Document Result(s):
+1. Document any incidences of incorrect, game accepted or not accepted word pairings.
+1. Document any incidences of cards left on the table when they should have disappeared.
+
+--------------------------------
+
+
 
 ## Previous and Current bugs
 #### Previous Bug(s)
