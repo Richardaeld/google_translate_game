@@ -1,8 +1,9 @@
 # ![Romancing The Cards](favicon-32x32.png "Romancing The Cards")omancing The Cards
 
 The purpose of this webpage is to illustrate how a simple game can help with learning/memorizing words in a different language. It also has the added bonus of helping repeated
-users improve their memory retention ability. This games premise is the flash card strategy students use to help learn new material. The user picks two languages before the
-game starts and then must pair the same word in both languages. The game also adds a timer and point system to give users a goal and sense of urgency to complete the game.
+users improve their memory retention ability. This game's premise is the flash card strategy students use to help learn new material. The user picks two languages before the
+game starts and then must pair the same word from both user selected languages. The game also adds a timer and point system to give users a goal and sense of urgency to complete 
+the game.
 
 # Wireframe and Live Demo
 #### Wireframe 
