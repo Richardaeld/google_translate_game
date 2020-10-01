@@ -19,16 +19,16 @@ the game.
 + GitHub houses the master branch.
 
 
-# Deployment information
+# Deployment Information
 + Go to the location of the respository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
-+ Select Settings (Circled in red in picture below).
++ Select Settings at the top of the page (Circled in red in picture below).
 ![Where select is located](assets/readme/select_settings.png "Where select is located")
-+ Go down in settings page until you find the heading "GitHub Pages" (underlined in red in picture below).
++ Go down in settings page until you find the heading "GitHub Pages" (underlined in red in the picture below).
 + Click "None" under the Source subheading (circled in red in picture below).
 + Select the branch you wish to publish.
-+ In this example we chose to select master (circled in red in picture below).
++ In this example we chose to select master (circled in red in the picture below).
 ![Where Github Pages, branch selection, and branches are located](assets/readme/select_branch.png "Where Github Pages, branch selection, and branches are located")
-+ Click save (underlined in red in picture below).
++ Click save (underlined in red in the picture below).
 ![Where save is located](assets/readme/select_save.png "Where save is located")
 + Reload page and you will see the layout under Github Pages will change and tell you the page is ready to be published.
 ![What queued to be published screen looks like](assets/readme/see_ready.png "What queued to be published screen looks like")
