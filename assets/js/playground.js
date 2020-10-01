@@ -122,7 +122,7 @@ function makeCardFunctional(index, cardNumber, target){
     }
 }
 
-//Creates the div structure of cards from outer most layer in by multiple calls
+//Creates the div/class (adds text) structure of cards from outer most layer in by multiple calls 
 function constructCard (cardNumber, classValues, className = null, cardType = null, isCardBack = false, isCardFace = false){         
     for (index = 0; index < cardNumber*2; index++){
         var CardContainer = document.getElementById("game");
