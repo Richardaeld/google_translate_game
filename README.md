@@ -53,8 +53,8 @@ the game.
 + Selectable card backgrounds were added to give repeated users something different to look at. 
 
 ### Page Performance
-+ Code kept simple, clean, and elegant for quicker loadtimes.
-+ Loadtime checked by [Pingdom](https://tools.pingdom.com/).
++ Code kept simple, clean, and elegant for quicker load times.
++ Load time checked by [Pingdom](https://tools.pingdom.com/).
 ![Load time with clean code and image compression according to pingdom](assets/readme/pingdom.jpg "Average load time from LA according to Pingdom")
 + All images have been compresssd by [tinyPNG](https://tinypng.com/).
 ![Image compressions average](assets/readme/tinyfi.png "Image compressions average")
