@@ -78,30 +78,31 @@ This game should give the feeling of studying at home or in school for an exam a
 + The game currently has six different languages to pick from and they are pairable in any way the user chooses.
 
 # Testing
-## Checking Menues, Lose/Win Conditions, Header items, and Multiple Round Playability
+## Header items, Lose/Win Conditions, and Multiple Round Playability
 #### Expectation(s):
 1. Menues disappear when not in use.
 1. Game tells user when they have won or lost.
 1. Header items are easily visible, disappear when not in use, always display correct values.
+1. The game never needs to be reloaded to function properly.
 
 #### Assumption(s):
 1. Tester will ***not*** reload browser between play throughs.
-1. Tester knows content of game's active play header.
+1. Tester knows the correct content of game's header and when it should be visible.
 
 #### Testing Step(s):
-1. Start a game with default settings. 
-1. Let it run out, check for game header to change to lose title and let game reset.
-1. Select next level of time and start the game.
+1. Start a game with **default settings**. 
+1. Let time run out, watch the game header to change to "You Lose!" and let game reset.
+1. Select next level of **Time on Clock** and start the game.
 1. Repeat steps 2 and 3 until all times have been selected.
-1. Start another game, win this round, and check game for win title and let game reset.
-1. Change Number of Pairs and repeat step 5.
-1. Change Base Language and repeat step 5.
-1. Change Difficulty (increase time on clock if needed) and repeat step 5. 
+1. Start another game, win this round, and watch game header to change to "You Win!" and let game reset.
+1. Change **Number of Pairs** and repeat step 5.
+1. Change **Base Language** and repeat step 5.
+1. Change **Difficulty** (increase **time on clock** if needed) and repeat step 5. 
 
 #### Document Result(s):
-1. Document any incidences of incorrect title presentation.
-1. Document any failure of timer
-1. Document any incorrect win/lose title.
+1. Document any incidences of incorrect header presentation.
+1. Document any failure of timer.
+1. Document any incorrect win/lose conditions.
 1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
 ------------------------------------------------------
 
@@ -114,12 +115,12 @@ This game should give the feeling of studying at home or in school for an exam a
 1. Tester will ***not*** reload browser between play throughs.
 
 #### Testing Step(s):
-1. Start the game on its default setting or add more time to timer if needed.
+1. Start the game on its **default setting** (add more time to **Time on Clock** if needed).
 1. Complete the game.
 1. Wait for game to restart.
-1. Select the next amount of card pairs and repeat steps 2 and 3.
-1. repeat steps 4, 2, and then 3.
-1. Select the next language (of Pairing Language), reset cards to start with 5 pairs, and start game.
+1. Select the next amount of **Number of Pairs** and repeat steps 2 and 3.
+1. repeat steps 4, 2, and then 3 in that order until all **Number of Pairs** have been used.
+1. Select the next language of **Pairing Language**, reset **Number of Pairs** to 5 pairs, and start game.
 1. Repeat steps 2, 3, 4, 5, and 6 until all Pairing Languages have been cycled through.
 
 #### Document Result(s):
