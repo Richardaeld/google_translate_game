@@ -124,7 +124,9 @@ body {
 
 /*-----------------------------  adjusts font size of cards for screen responsiveness*/
 .card-frame p {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    
+    /*font-size: 1.5rem;*/
 }
 
 @media (max-width: 991.98px) { 
