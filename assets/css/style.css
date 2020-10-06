@@ -18,6 +18,8 @@ body {
 }
 
 /*----------------------------- outer most container of individual cards  */
+/*----------------------------- Structure and implementation of rotating card taken from three different sources all are detailed in README.md  */
+/*----------------------------- Arjun Khara, MDN web docs, W3Schools*/
 .card-frame {
     margin-top: 1rem;
     font-size: 1.5rem;
@@ -42,6 +44,8 @@ body {
 }
 
 /*----------------------------- container that rotates card faces (front and back) */
+/*----------------------------- Structure and implementation of rotating card taken from three different sources all are detailed in README.md  */
+/*----------------------------- Arjun Khara, MDN web docs, W3Schools*/
 .cardRotate {
     height: 100%;
     width: 100%;
@@ -51,6 +55,8 @@ body {
 }
 
 /*-----------------------------  card faces (front and back) structure*/
+/*----------------------------- Structure and implementation of rotating card taken from three different sources all are detailed in README.md  */
+/*----------------------------- Arjun Khara, MDN web docs, W3Schools*/
 .card {
     backface-visibility: hidden;
     height:100%;
