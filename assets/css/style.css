@@ -19,7 +19,7 @@ body {
 
 /*----------------------------- outer most container of individual cards  */
 /*----------------------------- Structure and implementation of rotating card taken from three different sources all are detailed in README.md  */
-/*----------------------------- Arjun Khara, MDN web docs, W3Schools*/
+/*----------------------------- Arjun Khara(https://www.youtube.com/watch?v=OV8MVmtgmoY), MDN web docs(https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility), W3Schools(https://www.w3schools.com/howto/howto_css_flip_box.asp)*/
 .card-frame {
     margin-top: 1rem;
     font-size: 1.5rem;
@@ -45,7 +45,7 @@ body {
 
 /*----------------------------- container that rotates card faces (front and back) */
 /*----------------------------- Structure and implementation of rotating card taken from three different sources all are detailed in README.md  */
-/*----------------------------- Arjun Khara, MDN web docs, W3Schools*/
+/*----------------------------- Arjun Khara(https://www.youtube.com/watch?v=OV8MVmtgmoY), MDN web docs(https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility), W3Schools(https://www.w3schools.com/howto/howto_css_flip_box.asp)*/
 .cardRotate {
     height: 100%;
     width: 100%;
@@ -56,7 +56,7 @@ body {
 
 /*-----------------------------  card faces (front and back) structure*/
 /*----------------------------- Structure and implementation of rotating card taken from three different sources all are detailed in README.md  */
-/*----------------------------- Arjun Khara, MDN web docs, W3Schools*/
+/*----------------------------- Arjun Khara(https://www.youtube.com/watch?v=OV8MVmtgmoY), MDN web docs(https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility), W3Schools(https://www.w3schools.com/howto/howto_css_flip_box.asp)*/
 .card {
     backface-visibility: hidden;
     height:100%;
