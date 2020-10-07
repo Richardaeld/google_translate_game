@@ -165,7 +165,7 @@ lines but now they retain a good visual experience.
 + [Arjun Khara](https://www.youtube.com/watch?v=OV8MVmtgmoY) - First discovered idea of rotating 3d object here
     + Used idea of a single box to contain all moving objects and faces of a card or 3D object.
     + Used idea's from his code to help understand how and were to place items like 'backface-visability' and 'transform-style' to create desired effect.
-+ [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Invaluable source of information about JavaScript, HTML, and CSS
++ [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Invaluable source of information about JavaScript, HTML, and CSS
     + Used a piece of code to allow background to travel entire vertical length of page.
     + The idea used was a container that rotates 180 degrees with the aid of 'backface-visability: hidden' and 'transform-style:preserve-3d'.
     + Used code placement (ex where to place 'backface-visability') and ideas to help with rotating the cards on the board.
@@ -175,9 +175,8 @@ lines but now they retain a good visual experience.
 + [Stack Overflow](https://stackoverflow.com/) - Helped with understands importance of loops in JavaScript
 + [TestLodge](https://blog.testlodge.com/how-to-write-test-cases-for-software-with-sample/) - Used for test case examples
 + [Bootstrap](https://getbootstrap.com/) - Framework used to help speed up development and add a better UX
-+ [maxnyla's deployment section from her readme](https://github.com/maxnyla/Pawsome) - the idea was using githubs literal deployment process in the readme's deployment section 
-+ [github](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-a-publishing-source-for-github-pages) - Using the style and 
-structure of githubs deployment information as the basis of the readme's deployment section
++ [Maxnyla's Deployment Section from Her Readme](https://github.com/maxnyla/Pawsome) - The idea was using githubs literal deployment process in the readme's deployment section 
++ [GitHub](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-a-publishing-source-for-github-pages) - Using the structure of githubs deployment information as the basis for this readme's deployment section
     + [location of deployment structure provided my github docs](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
 # Technologies (Langauges) Used
