@@ -18,7 +18,6 @@ the game.
 + GitHub's IDE GitPod was used for the entire construction and planning process.
 + GitHub houses the master branch.
 
-
 # Deployment Information
 + Go to the location of the respository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
 + Select Settings at the top of the page (Circled in red in picture below).
@@ -35,9 +34,6 @@ the game.
 + Once the page has fully published the layout will change once more and tell you the site has published.
 ![What published screen looks like](assets/readme/see_published.png "What published screen looks like")
 + Now the page is fully viewable at the provided HTTP address.
-
-
-
 
 # UX Choices 
 ![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
@@ -128,8 +124,6 @@ This game should give the feeling of studying at home or in school for an exam a
 1. Document any incidences of cards left on the table when they should have disappeared.
 
 --------------------------------
-
-
 
 ## Previous and Current Bug(s)
 #### Previous Bug(s)
