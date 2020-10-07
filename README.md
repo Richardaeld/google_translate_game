@@ -20,7 +20,6 @@ the game.
 
 
 # Deployment Information
-
 + Go to the location of the respository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
 + Select Settings at the top of the page (Circled in red in picture below).
 ![Where select is located](assets/readme/select_settings.png "Where select is located")
