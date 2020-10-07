@@ -20,6 +20,7 @@ the game.
 
 
 # Deployment Information
+
 + Go to the location of the respository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
 + Select Settings at the top of the page (Circled in red in picture below).
 ![Where select is located](assets/readme/select_settings.png "Where select is located")
@@ -177,6 +178,7 @@ lines but now they retain a good visual experience.
 + [maxnyla's deployment section from her readme](https://github.com/maxnyla/Pawsome) - the idea was using githubs literal deployment process in the readme's deployment section 
 + [github](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-a-publishing-source-for-github-pages) - Using the style and 
 structure of githubs deployment information as the basis of the readme's deployment section
+    + [location of deployment structure provided my github docs](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
 # Technologies (Langauges) Used
 + HTML - Is the basic construction (foundation) of this webpage
