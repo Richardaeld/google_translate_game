@@ -39,8 +39,8 @@ This game should give the feeling of studying at home or in school and is accomp
 + As a user, I'd like to learn some basic words of a different language.
 
 ## Experience Provided
-+ The game has adjustable difficulty, timer, languages and total card pairs to give a user an enjoyable way to spend time with plenty of replay value.
-+ The game has adjustable difficulty that can be used to provide an experience that will cause the user to lose if they only hunt and peck.
++ The game has a selectable difficulty, timer, languages and total card pairs to give a user an enjoyable way to spend time with plenty of replay value.
++ The game has an adjustable difficulty that can be used to provide an experience that will cause the user to lose if they only hunt and peck.
 + The game currently has six different languages to pick from and they are pairable in any way the user chooses.
 
 # Wireframe and Live Demo
