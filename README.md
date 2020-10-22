@@ -30,7 +30,7 @@ This game should give the feeling of studying at home or in school for an exam a
 + The use of a background that resembles a desk or dining room table.
 + The default cards are ment to resemble index cards that would be used like flash cards to help someone study.
 + The font used on the cards was ment to resemble hand writting. This gives the impression of hand made cards.
-+ A bright color was used to give users the feeling of personality from someone that might use a highlighter to make studying more fun.
++ A bright font color was used to give personality to the cards and make them more fun to look at.
 
 # Client Stories and Experience Provided
 ## Client Stories
