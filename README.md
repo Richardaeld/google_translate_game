@@ -5,36 +5,6 @@ users improve their memory retention ability. This game's premise is the flash c
 game starts and then must pair the same word from both user selected languages. The game also adds a timer and point system to give users a goal and sense of urgency to complete 
 the game.
 
-# Wireframe and Live Demo
-#### Wireframe 
-![wireframe of the playing screen with div description](assets/readme/wireframe/wf_game_5_pair-large.png "wireframe of the playing screen with div description")
-+ Wireframes were made for all predetermined size variations of the webpage.
-+ Each wireframe that contains cards was given a pointing arrow and a description because of the complexity of the card design.
-+ [Click here to view all wireframes associated to this project.](assets/readme/wireframe "location of wireframes")
-
-#### Live Demo
-![finished demo of the playing screen](assets/readme/finished_game_5_pair-large.png "finished demo of the playing screen")
-+ A fully functioning demo can be found on GitHub, [here](https://richardaeld.github.io/google_translate_game/ "deplayment location")
-+ GitHub's IDE GitPod was used for the entire construction and planning process.
-+ GitHub houses the master branch.
-
-# Deployment Information
-+ Go to the location of the respository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
-+ Select Settings at the top of the page (Circled in red in picture below).
-![Where select is located](assets/readme/select_settings.png "Where select is located")
-+ Go down in settings page until you find the heading "GitHub Pages" (underlined in red in the picture below).
-+ Click "None" under the Source subheading (circled in red in picture below).
-+ Select the branch you wish to publish.
-+ In this example we chose to select master (circled in red in the picture below).
-![Where Github Pages, branch selection, and branches are located](assets/readme/select_branch.png "Where Github Pages, branch selection, and branches are located")
-+ Click save (underlined in red in the picture below).
-![Where save is located](assets/readme/select_save.png "Where save is located")
-+ Reload page and you will see the layout under Github Pages will change and tell you the page is ready to be published.
-![What queued to be published screen looks like](assets/readme/see_ready.png "What queued to be published screen looks like")
-+ Once the page has fully published the layout will change once more and tell you the site has published.
-![What published screen looks like](assets/readme/see_published.png "What published screen looks like")
-+ Now the page is fully viewable at the provided HTTP address.
-
 # UX Choices 
 ![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
 
@@ -72,6 +42,19 @@ This game should give the feeling of studying at home or in school for an exam a
 + The game has adjustable difficulty, timer, languages and total card pairs to give a user an enjoyable way to spend time with plenty of replay value.
 + The game has adjustable difficulty that can be used to provide an experience that will cause the user to lose if they only hunt and peck.
 + The game currently has six different languages to pick from and they are pairable in any way the user chooses.
+
+# Wireframe and Live Demo
+#### Wireframe 
+![wireframe of the playing screen with div description](assets/readme/wireframe/wf_game_5_pair-large.png "wireframe of the playing screen with div description")
++ Wireframes were made for all predetermined size variations of the webpage.
++ Each wireframe that contains cards was given a pointing arrow and a description because of the complexity of the card design.
++ [Click here to view all wireframes associated to this project.](assets/readme/wireframe "location of wireframes")
+
+#### Live Demo
+![finished demo of the playing screen](assets/readme/finished_game_5_pair-large.png "finished demo of the playing screen")
++ A fully functioning demo can be found on GitHub, [here](https://richardaeld.github.io/google_translate_game/ "deplayment location")
++ GitHub's IDE GitPod was used for the entire construction and planning process.
++ GitHub houses the master branch. 
 
 # Testing
 ## Header items, Lose/Win Conditions, and Multiple Round Playability
@@ -141,6 +124,23 @@ lines but now they retain a good visual experience.
 + Add an api that would read out the 'pairing langauge' word of a matched card.
 + Add a greater selection of different card backgrounds to give the user a different visual experience according to their preference.
 + Add a game board background selector for a different visual experience for returning users.
+
+# Deployment Information
++ Go to the location of the respository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
++ Select Settings at the top of the page (Circled in red in picture below).
+![Where select is located](assets/readme/select_settings.png "Where select is located")
++ Go down in settings page until you find the heading "GitHub Pages" (underlined in red in the picture below).
++ Click "None" under the Source subheading (circled in red in picture below).
++ Select the branch you wish to publish.
++ In this example we chose to select master (circled in red in the picture below).
+![Where Github Pages, branch selection, and branches are located](assets/readme/select_branch.png "Where Github Pages, branch selection, and branches are located")
++ Click save (underlined in red in the picture below).
+![Where save is located](assets/readme/select_save.png "Where save is located")
++ Reload page and you will see the layout under Github Pages will change and tell you the page is ready to be published.
+![What queued to be published screen looks like](assets/readme/see_ready.png "What queued to be published screen looks like")
++ Once the page has fully published the layout will change once more and tell you the site has published.
+![What published screen looks like](assets/readme/see_published.png "What published screen looks like")
++ Now the page is fully viewable at the provided HTTP address.
 
 # Tools, References, Code, and Idea(s) Used
 ## Tools
