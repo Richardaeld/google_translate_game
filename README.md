@@ -180,4 +180,4 @@ lines but now they retain a good visual experience.
 
 # Acknowledgements
 + Felipe Souza Alarcon for his honest guidence, foresight, and providing stellar hints to questions I hadnt asked yet. 
-+ Emily Grooms for help in revising this README document.
++ Emily Eldridge for help with revising the grammar and flow of this README document.
