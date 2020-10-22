@@ -26,11 +26,11 @@ the game.
 ![Image compressions average](assets/readme/tinyfi.png "Image compressions average")
 
 # Brand Identity
-This game should give the feeling of studying at home or in school for an exam and is accomplished though:
+This game should give the feeling of studying at home or in school and is accomplished though:
 + The use of a background that resembles a desk or dining room table.
-+ The default cards are ment to resemble index cards that would be used like flash cards to help someone study.
++ The default card backgrounds are ment to resemble index cards or flash cards that students use to study.
 + The font used on the cards was ment to resemble hand writting. This gives the impression of hand made cards.
-+ A bright font color was used to give personality to the cards and make them more fun to look at.
++ A bright font color was used to give personality to the cards and make them more engaging to look at.
 
 # Client Stories and Experience Provided
 ## Client Stories
