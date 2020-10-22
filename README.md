@@ -79,7 +79,7 @@ This game should give the feeling of studying at home or in school and is accomp
 1. Let time run out, watch the game header to change to "You Lose!" and let game reset.
 1. Select next level of **Time on Clock** and start the game.
 1. Repeat steps 2 and 3 until all times have been selected.
-1. Start another game, win this round, and watch game header to change to "You Win!" and let game reset.
+1. Start another game, win this round, and watch game header change to "You Win!" and let game reset.
 1. Change **Number of Pairs** and repeat step 5.
 1. Change **Base Language** and repeat step 5.
 1. Change **Difficulty** (increase **time on clock** if needed) and repeat step 5. 
