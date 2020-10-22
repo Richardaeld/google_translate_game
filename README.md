@@ -46,6 +46,7 @@ This game should give the feeling of studying at home or in school and is accomp
 # Wireframe and Live Demo
 #### Wireframe 
 ![wireframe of the playing screen with div description](assets/readme/wireframe/wf_game_5_pair-large.png "wireframe of the playing screen with div description")
++ [Balsamiq](https://balsamiq.com/) was used for the planning process.
 + Wireframes were made for all predetermined size variations of the webpage.
 + Each wireframe that contains cards was given a pointing arrow and a description because of the complexity of the card design.
 + [Click here to view all wireframes associated to this project.](assets/readme/wireframe "location of wireframes")
@@ -53,7 +54,7 @@ This game should give the feeling of studying at home or in school and is accomp
 #### Live Demo
 ![finished demo of the playing screen](assets/readme/finished_game_5_pair-large.png "finished demo of the playing screen")
 + A fully functioning demo can be found on GitHub, [here](https://richardaeld.github.io/google_translate_game/ "deplayment location")
-+ GitHub's IDE GitPod was used for the entire construction and planning process.
++ [GitHub's](https://github.com/) IDE [GitPod](https://www.gitpod.io/) was used for the construction process.
 + GitHub houses the master branch. 
 
 # Technologies (Langauges) Used
