@@ -151,7 +151,7 @@ lines but now they retain a good visual experience.
 
 # Tools, References, Code, and Idea(s) Used
 ## Tools
-+ [Balsamiq](https://balsamiq.com/) - Used to produce wireframe
++ [Balsamiq](https://balsamiq.com/) - Used to produce the wireframes
 + [Bootstrap](https://getbootstrap.com/) - Used as framework
 + [GitHub](https://github.com/) - Deployment of demo(prototype) website
 + [GitPod](https://www.gitpod.io/) - Integrated development environment used
