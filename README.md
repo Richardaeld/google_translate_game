@@ -127,8 +127,9 @@ lines but now they retain a good visual experience.
 + **Jigsaw (Validation Service)** throws an error on .cardFaceTypeIndex and .cardBackTypeIndex because of the length of linear-gradient used to create the index card design.
 
 ## Scaleability
++ Increase the number of usable words in each language.
 + Add an api that would read out the 'pairing langauge' word of a matched card.
-+ Add a greater selection of different card backgrounds to give the user a different visual experience according to their preference.
++ Add a greater selection of card backgrounds to give the user a different visual experience according to their preference.
 + Add a game board background selector for a different visual experience for returning users.
 
 # Deployment Information
