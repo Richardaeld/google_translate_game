@@ -15,7 +15,7 @@ the game.
 ### Game Board and Game Play
 + A dark picture background was used to help the cards stand out.
 + The default background image of the game's cards resemble that of flash cards that school students would use.
-+ The font family chosen for the cards resembles hand writting and was paired with a bright text color to give the feeling of home made flash cards.
++ The font family chosen for the cards mimics a hand written font and was paired with a bright text color to give the feeling of home made flash cards.
 + Selectable card backgrounds were added to give repeated users something different to look at. 
 
 ### Page Performance
