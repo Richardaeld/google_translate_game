@@ -56,6 +56,11 @@ This game should give the feeling of studying at home or in school for an exam a
 + GitHub's IDE GitPod was used for the entire construction and planning process.
 + GitHub houses the master branch. 
 
+# Technologies (Langauges) Used
++ HTML - Is the basic construction (foundation) of this webpage
++ CSS - Makes the basic construction of this webpage more visually appealing 
++ JavaScript - Allow users to interact with webpage without having to reload page or load multiple pages
+
 # Testing
 ## Header items, Lose/Win Conditions, and Multiple Round Playability
 #### Expectation(s):
@@ -171,11 +176,6 @@ lines but now they retain a good visual experience.
 + [Maxnyla's Deployment Section from Her Readme](https://github.com/maxnyla/Pawsome) - The idea was using githubs literal deployment process in the readme's deployment section 
 + [GitHub](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-a-publishing-source-for-github-pages) - Using the structure of githubs deployment information as the basis for this readme's deployment section
     + [location of deployment structure provided my github docs](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-
-# Technologies (Langauges) Used
-+ HTML - Is the basic construction (foundation) of this webpage
-+ CSS - Makes the basic construction of this webpage more visually appealing 
-+ JavaScript - Allow users to interact with webpage without having to reload page or load multiple pages
 
 # Acknowledgements
 + Felipe Souza Alarcon for his honest guidence, foresight, and providing stellar hints to questions I hadnt asked yet. 
