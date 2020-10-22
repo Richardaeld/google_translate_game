@@ -160,6 +160,7 @@ lines but now they retain a good visual experience.
 + [W3C Validator](https://validator.w3.org/) - Used to identify errors in markup
 
 ## References, Idea(s) Code Used
++ Felipe Souza Alarcon - Idea to use objects for words in various languages
 + [Arjun Khara](https://www.youtube.com/watch?v=OV8MVmtgmoY) - First discovered idea of rotating 3d object here
     + Used idea of a single box to contain all moving objects and faces of a card or 3D object.
     + Used idea's from his code to help understand how and were to place items like 'backface-visability' and 'transform-style' to create desired effect.
