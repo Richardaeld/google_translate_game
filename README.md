@@ -1,46 +1,46 @@
 # ![Romancing The Cards](favicon-32x32.png "Romancing The Cards")omancing The Cards
 
-The purpose of this webpage is to illustrate how a simple game can help with learning/memorizing words in a different language. It also has the added bonus of helping repeated
-users improve their memory retention ability. This game's premise is the flash card strategy students use to help learn new material. The user picks two languages before the
-game starts and then must pair the same word from both user selected languages. The game also adds a timer and point system to give users a goal and sense of urgency to complete 
+The purpose of this webpage is to illustrate how a simple game can help with learning/memorizing words in a different language. It also has the added bonus to improve memory
+retention ability through the use of virtual flash cards. The user picks two languages before the game starts and then must pair the same word from both of the selected languages
+of helping repeated users improve their memory retention ability. The game also adds a timer and point system to give users a challenge and sense of urgency to complete 
 the game.
 
 # UX Choices 
 ![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
 
 ### Game Start Screen
-+ The game title stands out because of the use of a large font with a dark text shadow
-+ The text descriptions/choices are placed over a dark background with a bright text color to help them stand out and draw the eye
++ The game title stands out due to the use of a large font with a dark text shadow.
++ The text descriptions/choices are placed over a dark background with a bright text color to help them stand out and draw the eye.
 
 ### Game Board and Game Play
 + A dark picture background was used to help the cards stand out.
-+ The default background image of the game's cards resemble that of flash cards that school students would use.
-+ The font family chosen for the cards mimics a hand written font and was paired with a bright text color to give the feeling of home made flash cards.
++ The default background image of the game cards resemble that of flash cards that school students would use.
++ The font family chosen for the cards mimics a hand-written font and was paired with a bright text color which gives a home-made flash card appearance.
 + Selectable card backgrounds were added to give repeated users something different to look at. 
 
 ### Page Performance
 + Code kept simple, clean, and elegant for quicker load times.
 + Load time checked by [Pingdom](https://tools.pingdom.com/).
 ![Load time with clean code and image compression according to pingdom](assets/readme/pingdom.jpg "Average load time from LA according to Pingdom")
-+ All images have been compresssd by [tinyPNG](https://tinypng.com/).
++ All images have been compresssed by [tinyPNG](https://tinypng.com/).
 ![Image compressions average](assets/readme/tinyfi.png "Image compressions average")
 
 # Brand Identity
-This game should give the feeling of studying at home or in school and is accomplished though:
-+ The use of a background that resembles a desk or dining room table.
-+ The default card backgrounds are ment to resemble index cards or flash cards that students use to study.
-+ The font used on the cards was ment to resemble hand writting. This gives the impression of hand made cards.
+This game has a similar appearance to studying at home or in school by flashcards. This is accomplished though:
++ A background that resembles a desk or dining room table.
++ The default card backgrounds which are ment to resemble index cards or flash cards that students use to study.
++ The font used on the cards looks like hand writting and gives the impression of hand-made cards. 
 + A bright font color was used to give personality to the cards and make them more engaging to look at.
 
 # Client Stories and Experience Provided
 ## Client Stories
 + As a user, I'd like an enjoyable way to spend my free time.
-+ As a user, I'd like a game that forces me to use my mental retaining ability.
++ As a user, I'd like a game that helps with memory retention skills.
 + As a user, I'd like to learn some basic words of a different language.
 
 ## Experience Provided
-+ The game has a selectable difficulty, timer, languages and total card pairs to give a user an enjoyable way to spend time with plenty of replay value.
-+ The game has an adjustable difficulty that can be used to provide an experience that will cause the user to lose if they only hunt and peck.
++ The game has different settings, such as: selectable difficulty, timer, languages, and total number of card pairs to give a user an enjoyable way to spend time with plenty of replay value.
++ The game has an adjustable difficulty that can be used to provide an experience that will help with memory retention skills.
 + The game currently has six different languages to pick from and they are pairable in any way the user chooses.
 
 # Wireframe and Live Demo
@@ -57,15 +57,15 @@ This game should give the feeling of studying at home or in school and is accomp
 + [GitHub's](https://github.com/) IDE [GitPod](https://www.gitpod.io/) was used for the construction process.
 + GitHub houses the master branch. 
 
-# Technologies (Langauges) Used
+# Technologies (Languages) Used
 + HTML - Is the basic construction (foundation) of this webpage
-+ CSS - Makes the basic construction of this webpage more visually appealing 
-+ JavaScript - Allow users to interact with webpage without having to reload page or load multiple pagesg
++ CSS - Used to make the basic construction of this webpage more visually appealing 
++ JavaScript - Allow users to interact with webpage without having to reload page or load multiple pages
 
 # Testing
 ## Header items, Lose/Win Conditions, and Multiple Round Playability
 #### Expectation(s):
-1. Menues disappear when not in use.
+1. Menus disappear when not in use.
 1. Game tells user when they have won or lost.
 1. Header items are easily visible, disappear when not in use, always display correct values.
 1. The game never needs to be reloaded to function properly.
@@ -86,7 +86,7 @@ This game should give the feeling of studying at home or in school and is accomp
 
 #### Document Result(s):
 1. Document any incidences of incorrect header presentation.
-1. Document any failure of timer.
+1. Document any failure of the timer.
 1. Document any incorrect win/lose conditions.
 1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
 ------------------------------------------------------
@@ -109,7 +109,7 @@ This game should give the feeling of studying at home or in school and is accomp
 1. Repeat steps 2, 3, 4, 5, and 6 until all Pairing Languages have been cycled through.
 
 #### Document Result(s):
-1. Document any incidences of incorrect, game accepted or not accepted word pairings.
+1. Document any incidences of incorrectly accepted/unaccepted word pairings.
 1. Document any incidences of cards left on the table when they should have disappeared.
 
 --------------------------------
@@ -119,21 +119,21 @@ This game should give the feeling of studying at home or in school and is accomp
 + Occasionally a matching pair of cards will leave a single card on the table, sometimes making the game unwinnable.  This card can be either face up or face down. This bug was
 generated by not flashing the "clickRecord" when a user lost the game.
 + Some words with masculine and feminine forms (ex. celles-ci/ceux-ci) excede the character limit of line space and drop to the line below. This was creating an unappealing 
-visual appearance. This bug was fixed by a change to font-size unites from rem to a combination of rem and vw. However a pixel width roughly between 1200 and 1166 can still use two 
-lines but now they retain a good visual experience.
+visual appearance. This bug was fixed by a change to font-size units from rem to a combination of rem and vw. However, a pixel width roughly between 1200 and 1166 can still use two 
+lines but now they provide a good visual experience.
 
 #### Current Bug(s)
-+ A screen pixel width below 320px or above 4000px quickly lose a good visual experience. 
-+ **Jigsaw (Validation Service)** throws an error on .cardFaceTypeIndex and .cardBackTypeIndex because of the length of linear-gradient used to create the index card design.
++ A screen pixel width below 320px or above 4000px quickly lose a good UX. 
++ **Jigsaw (Validation Service)** throws an error on ".cardFaceTypeIndex" and ".cardBackTypeIndex" because of the length of the linear-gradient used to create the index card design.
 
-## Scaleability
+## Scalability
 + Increase the number of usable words in each language.
-+ Add an api that would read out the 'pairing langauge' word of a matched card.
++ Add an API that would read out the "pairing langauge" word of a matched card.
 + Add a greater selection of card backgrounds to give the user a different visual experience according to their preference.
 + Add a game board background selector for a different visual experience for returning users.
 
 # Deployment Information
-+ Go to the location of the respository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
++ Go to the location of the repository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
 + Select Settings at the top of the page (Circled in red in picture below).
 ![Where select is located](assets/readme/select_settings.png "Where select is located")
 + Go down in settings page until you find the heading "GitHub Pages" (underlined in red in the picture below).
@@ -145,7 +145,7 @@ lines but now they retain a good visual experience.
 ![Where save is located](assets/readme/select_save.png "Where save is located")
 + Reload page and you will see the layout under Github Pages will change and tell you the page is ready to be published.
 ![What queued to be published screen looks like](assets/readme/see_ready.png "What queued to be published screen looks like")
-+ Once the page has fully published the layout will change once more and tell you the site has published.
++ Once the page is fully published, the layout will change once more and tell you the site has been published.
 ![What published screen looks like](assets/readme/see_published.png "What published screen looks like")
 + Now the page is fully viewable at the provided HTTP address.
 
@@ -155,7 +155,7 @@ lines but now they retain a good visual experience.
 + [Bootstrap](https://getbootstrap.com/) - Used as framework
 + [GitHub](https://github.com/) - Deployment of demo(prototype) website
 + [GitPod](https://www.gitpod.io/) - Integrated development environment used
-+ [Google Fonts](https://fonts.google.com/) - Used font families found from here 
++ [Google Fonts](https://fonts.google.com/) - Imported font families from here 
 + [Jigsaw (Validation Service)](https://jigsaw.w3.org/css-validator/) - Used to identify errors in CSS
 + [Pingdom](https://tools.pingdom.com/) - Used to check for load time
 + [Techsini](https://techsini.com/multi-mockup/) - Used for their viewable responsiveness PNG
@@ -166,21 +166,21 @@ lines but now they retain a good visual experience.
 + Felipe Souza Alarcon - Idea to use objects for words in various languages
 + [Arjun Khara](https://www.youtube.com/watch?v=OV8MVmtgmoY) - First discovered idea of rotating 3d object here
     + Used idea of a single box to contain all moving objects and faces of a card or 3D object.
-    + Used idea's from his code to help understand how and were to place items like 'backface-visability' and 'transform-style' to create desired effect.
+    + Used ideas from his code to help understand how and where to place items, such as: "backface-visability" and "transform-style" to create desired effect.
 + [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Invaluable source of information about JavaScript, HTML, and CSS
-    + Used a piece of code to allow background to travel entire vertical length of page.
-    + The idea used was a container that rotates 180 degrees with the aid of 'backface-visability: hidden' and 'transform-style:preserve-3d'.
-    + Used code placement (ex where to place 'backface-visability') and ideas to help with rotating the cards on the board.
-    + Used to help understand how 'backface-visability: hidden' and 'transform-style:preserve-3d' work together in desired effect.
-+ [W3Schools](https://www.w3schools.com/) - A wonderful resource of element, attribute, and event selection for JavaScript
-    + Used code and idea's to help with rotating the cards on the game board.
-+ [Stack Overflow](https://stackoverflow.com/) - Helped with understands importance of loops in JavaScript
+    + Used a piece of code which allowed the background to travel entire vertical length of page.
+    + An idea that was used was a container that rotates 180 degrees with the aid of "backface-visability: hidden" and "transform-style:preserve-3d".
+    + Used code placement (ex: where to place "backface-visability") and ideas to help with rotating the cards on the board.
+    + Used to help understand how "backface-visability: hidden" and "transform-style:preserve-3d" work together to produce the desired effect.
++ [W3Schools](https://www.w3schools.com/) - A wonderful resource for element, attribute, and event selection for JavaScript
+    + Used code and ideas to help with rotating the cards on the game board.
++ [Stack Overflow](https://stackoverflow.com/) - Helped in understanding the importance of loops in JavaScript
 + [TestLodge](https://blog.testlodge.com/how-to-write-test-cases-for-software-with-sample/) - Used for test case examples
 + [Bootstrap](https://getbootstrap.com/) - Framework used to help speed up development and add a better UX
-+ [Maxnyla's Deployment Section from Her Readme](https://github.com/maxnyla/Pawsome) - The idea was using githubs literal deployment process in the readme's deployment section 
-+ [GitHub](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-a-publishing-source-for-github-pages) - Using the structure of githubs deployment information as the basis for this readme's deployment section
-    + [location of deployment structure provided my github docs](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
++ [Maxnyla's Deployment Section from Her Readme](https://github.com/maxnyla/Pawsome) - The idea to use GitHub's literal deployment process was found [here](https://github.com/maxnyla/Pawsome). 
++ [GitHub](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-a-publishing-source-for-github-pages) - Used the structure of GitHub's deployment information as the basis for this readme's deployment section
+    + [location of deployment structure provided my GitHub docs](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
 # Acknowledgements
-+ Felipe Souza Alarcon for his honest guidence, foresight, and providing stellar hints to questions I hadnt asked yet. 
++ Felipe Souza Alarcon for his honest guidance, foresight, and helping lead me into directions I did not know I could go with this project. 
 + Emily Eldridge for help with revising the grammar and flow of this README document.
