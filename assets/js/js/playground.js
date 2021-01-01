@@ -303,32 +303,25 @@ function gameHeader (condition) {       //-----changes header and game start scr
     }
 }
 
-// Allows aria labels to add added and changed to select/options of games start menu
-var findUserInputSelects = document.querySelectorAll(".start-screen-choice")
-findUserInputSelects.forEach(makeAriaLabel)
-function makeAriaLabel(selectable, selectableIndex){
-console.log(selectable)
-console.log(selectable.id)
-console.log(document.getElementById(selectable.id).selectedIndex)
+// Add listener to switch 'selected' status
+document.getElementById("difficulty").addEventListener('change', function () {
+    // Finds active index value
+    var findIndexValue 
+    findIndexValue = document.getElementById("difficulty").selectedIndex
 
-    selectable.addEventListener('change', function() {
-        // Finds active index value
-//        var findIndexValue
-//        findIndexValue = selectable.selectedIndex
+    // Finds total number of indexes
+    document.getElementById("difficulty").options[findIndexValue].textContent
+    var totalOptions = document.getElementById("difficulty").options
 
-        // Finds total number of indexes
-//        selectable.options[findIndexValue].textContent   //Dont know purpse
-        var totalOptions = selectable.options
+    for (i=0; i<totalOptions.length; i++){
 
-        // Sets selected option to aria seleceted true --Sets rest to false
-        for (i=0; i<totalOptions.length; i++){
-            if (selectable.options[i].selected){
-                selectable.options[i].setAttribute('aria-selected', 'true')
-            } else {
-                selectable.options[i].setAttribute('aria-selected', 'false')
-            }
-
+        if (document.getElementById("difficulty").options[i].selected){
+            console.log(document.getElementById("difficulty").options[i].selected)
+            document.getElementById("difficulty").options[i].selected = false
         }
-    })
 
-}
+    }
+
+    console.log(document.getElementById("difficulty").options[findIndexValue].textContent, "this is a index value")
+    console.log(totalOptions.length, "this is the total options" )
+})

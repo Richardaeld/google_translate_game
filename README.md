@@ -174,6 +174,8 @@ lines but now they provide a good visual experience.
     + Used to help understand how "backface-visability: hidden" and "transform-style:preserve-3d" work together to produce the desired effect.
 + [W3Schools](https://www.w3schools.com/) - A wonderful resource for element, attribute, and event selection for JavaScript
     + Used code and ideas to help with rotating the cards on the game board.
++ [World Wide Web Consortium (W3C)](https://www.w3.org/) - for understanding ARIA content and industry standard use
+    + Multiple standardizations were used from specifically: [aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/GL/wiki/Using_aria-labelledby_to_provide_a_name_for_user_interface_controls) and [ARIA labeling with a dropdown listbox](https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-collapsible.html)
 + [Stack Overflow](https://stackoverflow.com/) - Helped in understanding the importance of loops in JavaScript
 + [TestLodge](https://blog.testlodge.com/how-to-write-test-cases-for-software-with-sample/) - Used for test case examples
 + [Bootstrap](https://getbootstrap.com/) - Framework used to help speed up development and add a better UX

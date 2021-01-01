@@ -23,29 +23,29 @@
             </header>
             <!--  Creates game start screen where user inputs game options  -->
             <aside id="start-screen">
-                <p class="start-screen-description">Difficulty *Matching Delay</p>
-                <select name="difficulty" id="difficulty" class="start-screen-choice">
+                <label class="start-screen-description" id="difficulty-label" for="difficulty">Difficulty *Matching Delay</label>
+                <select name="difficulty" id="difficulty" class="start-screen-choice" aria-labelledby="difficulty-label difficulty">
                     <option value="500" selected="selected">Easy</option>
                     <option value="2000">Medium</option>
                     <option value="4000">Hard</option>
                     <option value="8000">Unforgiving</option>
                 </select>
-                <p class="start-screen-description">Number Of Pairs</p>
-                <select name="Number-of-cards" id="Number-of-cards" class="start-screen-choice">
+                <label class="start-screen-description" id="Number-of-cards-label" for="Number-of-cards">Number Of Pairs</label>
+                <select name="Number-of-cards" id="Number-of-cards" class="start-screen-choice" aria-labelledby="Number-of-cards-label Number-of-cards">
                     <option value="5" selected="selected">5 Pair</option>
                     <option value="10">10 Pair</option>
                     <option value="15">15 Pair</option>
                 </select>
-                <p class="start-screen-description">Time on Clock</p>
-                <select name="time-on-clock" id="time-on-clock" class="start-screen-choice">
+                <label class="start-screen-description" id="time-on-clock-label" for="time-on-clock">Time on Clock</label>
+                <select name="time-on-clock" id="time-on-clock" class="start-screen-choice" aria-labelledby="time-on-clock-label time-on-clock">
                     <option value="1" selected="selected">1 Minute</option>
                     <option value="2">2 Minutes</option>
                     <option value="3">3 Minutes</option>
                     <option value="4">4 Minutes</option>
                     <option value="5">5 Minutes</option>
                 </select>
-                <p class="start-screen-description">Base Language</p>
-                <select name="language" id="language0" class="start-screen-choice">
+                <label class="start-screen-description" id="language0-label" for="language0">Base Language</label>
+                <select name="language0" id="language0" class="start-screen-choice" aria-labelledby="language0-label language0">
                     <option value="english" selected="selected">English</option>
                     <option value="spanish">Spanish</option>
                     <option value="portuguese">Portuguese</option>
@@ -53,8 +53,8 @@
                     <option value="italian">Italian</option>
                     <option value="german">German</option>
                 </select>
-                <p class="start-screen-description">Pairing Language</p>
-                <select name="language" id="language1" class="start-screen-choice">
+                <label class="start-screen-description" id="language1-label" for="language1">Pairing Language</label>
+                <select name="language1" id="language1" class="start-screen-choice" aria-labelledby="language1-label language1">
                     <option value="english" selected="selected">English</option>
                     <option value="spanish">Spanish</option>
                     <option value="portuguese">Portuguese</option>
@@ -62,8 +62,8 @@
                     <option value="italian">Italian</option>
                     <option value="german">German</option>
                 </select>
-                <p class="start-screen-description">Card Type</p>
-                <select name="card-type" id="card-type" class="start-screen-choice">
+                <label class="start-screen-description" id="card-type-label" for="card-type">Card Type</label>
+                <select name="card-type" id="card-type" class="start-screen-choice" aria-labelledby="card-type-label card-type">
                     <option value="index" selected="selected">Index card</option>
                     <option value="fun">Playing Card</option>
                 </select>
