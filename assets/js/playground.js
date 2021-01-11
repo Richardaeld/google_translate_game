@@ -44,8 +44,8 @@ function CardStyle(index, fun) {
     this.fun = fun;
 }
 
-// ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height
-fullScreenHeight = document.documentElement.scrollHeight;       // Makes background take up entire screen
+// ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height (The next 2 lines below taken directly from MDN)
+fullScreenHeight = document.documentElement.scrollHeight;       // Makes background take up entire screen 
 document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px";
 
 // Global variables and object callers
@@ -134,6 +134,7 @@ function constructCard (cardNumber, classValues, className = null, cardType = nu
         // Creates outer most card container
         if (className === null){ 
             CardContainer.appendChild(document.createElement("div")).setAttributeNode(setClasses);
+            CardContainer.lastChild.setAttribute("aria-label", "card " + (index + 1));
             continue;
         }
 
@@ -303,32 +304,22 @@ function gameHeader (condition) {       //-----changes header and game start scr
     }
 }
 
-// Allows aria labels to add added and changed to select/options of games start menu
-var findUserInputSelects = document.querySelectorAll(".start-screen-choice")
-findUserInputSelects.forEach(makeAriaLabel)
+// Allows aria labels to be added/changed/removed to select/options of games start menu
+var findUserInputSelects = document.querySelectorAll(".start-screen-choice");
+findUserInputSelects.forEach(makeAriaLabel);
 function makeAriaLabel(selectable, selectableIndex){
-console.log(selectable)
-console.log(selectable.id)
-console.log(document.getElementById(selectable.id).selectedIndex)
 
     selectable.addEventListener('change', function() {
-        // Finds active index value
-//        var findIndexValue
-//        findIndexValue = selectable.selectedIndex
-
-        // Finds total number of indexes
-//        selectable.options[findIndexValue].textContent   //Dont know purpse
-        var totalOptions = selectable.options
-
+        // Groups all options from each select
+        var totalOptions = selectable.options;
         // Sets selected option to aria seleceted true --Sets rest to false
         for (i=0; i<totalOptions.length; i++){
             if (selectable.options[i].selected){
-                selectable.options[i].setAttribute('aria-selected', 'true')
-            } else {
-                selectable.options[i].setAttribute('aria-selected', 'false')
+                selectable.options[i].setAttribute('aria-selected', 'true');
+                selectable.blur();
+            } else if (selectable.options[i].hasAttribute('aria-selected')) {
+                selectable.options[i].removeAttribute('aria-selected');
             }
-
         }
     })
-
 }
