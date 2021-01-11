@@ -317,8 +317,8 @@ function makeAriaLabel(selectable, selectableIndex){
             if (selectable.options[i].selected){
                 selectable.options[i].setAttribute('aria-selected', 'true');
                 selectable.blur();
-            } else if (selectable.options[i].hasAttribute('aria-selected')) {
-                selectable.options[i].removeAttribute('aria-selected');
+            } else {
+                selectable.options[i].setAttribute('aria-selected', 'false');
             }
         }
     })
