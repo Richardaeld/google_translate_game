@@ -1,49 +1,71 @@
 # ![Romancing The Cards](favicon-32x32.png "Romancing The Cards")omancing The Cards
 
-The purpose of this webpage is to illustrate how a simple game can help with learning/memorizing words in a different language. It also has the added bonus to improve memory
-retention ability through the use of virtual flash cards. The user picks two languages before the game starts and then must pair the same word from both of the selected languages
-of helping repeated users improve their memory retention ability. The game also adds a timer and point system to give users a challenge and sense of urgency to complete 
-the game.
+The purpose of this webpage is to illustrate how a simple, entertaining game can help with learning/memorizing words in a different language. It also has the added bonus to 
+improve memory retention ability through the use of virtual flash cards. The user picks two languages before the game starts and then must pair the same word from both of the 
+selected languages. The game also adds a timer and point system to give users a challenge and sense of urgency to complete the game.
 
-# UX Choices 
+# UX
+## Goals
+### User Goals
++ I want to learn basic words of a new language.
++ I want to be entertained by a game on my browser or cell phone during my free time.
++ I want to work on my memory retention ability.
+
+### Developer Goals 
+Showcase "Vanilla" JavaScript ability:
++ Have a game that is "vanilla" JavaScript powered and takes multiple user inputs.
++ Have user input that can dramatically change the way JavaScript builds the game (Ex. number of cards, language, appearance of cards, etc...)
++ All cards for game are dynamically added and removed with the start and end of each game round.
++ Game is capable of multiple play throughs without a page refreash.
++ The game timer is a continuously running JavaScript function.
++ The card pair positions are random every time
++ The words chosen for each game are randomly pulled from selected language library.
+
+## Client Stories and Experience Provided
+### Client Stories
++ As a user, I'd like an enjoyable way to spend my free time.
++ As a user, I'd like a game that helps with memory retention skills.
++ As a user, I'd like to learn some basic words of a different language.
+
+### Experience Provided
++ The game has different settings, such as: selectable difficulty, timer, languages, and total number of card pairs to give a user an enjoyable way to spend time with plenty of replay value.
++ The game has an adjustable difficulty that can be used to provide an experience that will help with memory retention skills.
++ The game currently has six different languages to pick from and they are pairable in any way the user chooses.
+
+## Design Choices
 ![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
++ This program is responsive across all devices
 
 ### Game Start Screen
 + The game title stands out due to the use of a large font with a dark text shadow.
 + The text descriptions/choices are placed over a dark background with a bright text color to help them stand out and draw the eye.
++ Multiple user inputs given for returning and new users alike. 
 
-### Game Board and Game Play
+### Game Board
 + A dark picture background was used to help the cards stand out.
++ Background chosen resembles that of a desk.
+
+### Game Play
++ Intuitive click to play style game.
++ A clearly visible timer and total acquired points are provided to the user in a easily readable header.
++ The cards are dynamically added and removed, with JavaScript, as the game starts and ends.
++ The game allows multiple playthroughs without having to refresh browser.
++ A click limiter was installed to keep users from spam clicking to win the game. This duration can be increased by increasing the game's difficulty setting.
+
+### Game Cards
 + The default background image of the game cards resemble that of flash cards that school students would use.
 + The font family chosen for the cards mimics a hand-written font and was paired with a bright text color which gives a home-made flash card appearance.
-+ Selectable card backgrounds were added to give repeated users something different to look at. 
++ A CSS effect is applied to the game cards to give them a flipping animation.
 
 ### Page Performance
 + Code kept simple, clean, and elegant for quicker load times.
++ "Vanilla" JavaScript used over jQuery because of its better performance.
 + Load time checked by [Pingdom](https://tools.pingdom.com/).
 ![Load time with clean code and image compression according to pingdom](assets/readme/pingdom.jpg "Average load time from LA according to Pingdom")
 + All images have been compresssed by [tinyPNG](https://tinypng.com/).
 ![Image compressions average](assets/readme/tinyfi.png "Image compressions average")
 
-# Brand Identity
-This game has a similar appearance to studying at home or in school by flashcards. This is accomplished though:
-+ A background that resembles a desk or dining room table.
-+ The default card backgrounds which are ment to resemble index cards or flash cards that students use to study.
-+ The font used on the cards looks like hand writting and gives the impression of hand-made cards. 
-+ A bright font color was used to give personality to the cards and make them more engaging to look at.
-
-# Client Stories and Experience Provided
-## Client Stories
-+ As a user, I'd like an enjoyable way to spend my free time.
-+ As a user, I'd like a game that helps with memory retention skills.
-+ As a user, I'd like to learn some basic words of a different language.
-
-## Experience Provided
-+ The game has different settings, such as: selectable difficulty, timer, languages, and total number of card pairs to give a user an enjoyable way to spend time with plenty of replay value.
-+ The game has an adjustable difficulty that can be used to provide an experience that will help with memory retention skills.
-+ The game currently has six different languages to pick from and they are pairable in any way the user chooses.
-
-# Wireframe and Live Demo
+## Wireframe and Live Demo
 #### Wireframe 
 ![wireframe of the playing screen with div description](assets/readme/wireframe/wf_game_5_pair-large.png "wireframe of the playing screen with div description")
 + [Balsamiq](https://balsamiq.com/) was used for the planning process.
@@ -57,13 +79,31 @@ This game has a similar appearance to studying at home or in school by flashcard
 + [GitHub's](https://github.com/) IDE [GitPod](https://www.gitpod.io/) was used for the construction process.
 + GitHub houses the master branch. 
 
+# Brand Identity
+This game has a similar appearance to studying at home or in school by flashcards. This is accomplished though:
++ A background that resembles a desk or dining room table.
++ The default card backgrounds which are ment to resemble index cards or flash cards that students use to study.
++ The font used on the cards looks like hand writting and gives the impression of hand-made cards. 
++ A bright font color was used to give personality to the cards and make them more engaging to look at.
+
 # Technologies (Languages) Used
 + HTML - Is the basic construction (foundation) of this webpage
 + CSS - Used to make the basic construction of this webpage more visually appealing 
 + JavaScript - Allow users to interact with webpage without having to reload page or load multiple pages
 
 # Testing
-## Header items, Lose/Win Conditions, and Multiple Round Playability
+## Program Tested Systems 
+### BrowserStack
++ Windows 10 (edge 18, chrome 71)
++ OS X Big Sur (Chrome 71, Safari 14)
++ Google Nexus 5 (Portrait)
+
+## Developer Tested Systems
+ + Windows 10 (Chrome 87, Edge 87, Firefox 84)
+ + G8 ThinQ (Chrome 87)
+
+## Developer Testing method(s)
+### Header items, Lose/Win Conditions, and Multiple Round Playability
 #### Expectation(s):
 1. Menus disappear when not in use.
 1. Game tells user when they have won or lost.
@@ -91,7 +131,7 @@ This game has a similar appearance to studying at home or in school by flashcard
 1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
 ------------------------------------------------------
 
-## Checking Language Pairings
+### Checking Language Pairings
 #### Expectation(s):
 1. The game always has the correct pair of words up to match.
 
@@ -121,16 +161,24 @@ generated by not flashing the "clickRecord" when a user lost the game.
 + Some words with masculine and feminine forms (ex. celles-ci/ceux-ci) excede the character limit of line space and drop to the line below. This was creating an unappealing 
 visual appearance. This bug was fixed by a change to font-size units from rem to a combination of rem and vw. However, a pixel width roughly between 1200 and 1166 can still use two 
 lines but now they provide a good visual experience.
++ The "aria-expanded" state remains while the select/option boxlist isn't expanded. This occurs beacuse of the limitations of select/option. This bug could be triggered when a user 
+focuses on the select/option listbox by not directly clicking on the select/option listbox its self. This focus bug can also be triggered by tabing through the content of the page 
+or clicking on the label for the select/option listbox. This bug could also be triggered when a user selects the same option from a select/option listbox that is currently selected. 
+This bug wasnt able to be fixed so the "aria-expanded" state was removed entirly. A solution to add it back in could be with a future update that changes the select/option listbox 
+to a ul/li JavaScript powered listbox. With the appropiate JavaScript this will make the listbox more customizable, capable of a better UX, and more friendly towards ARIA states.
 
 #### Current Bug(s)
-+ A screen pixel width below 320px or above 4000px quickly lose a good UX. 
++ A screen pixel width below 320px or above 4000px will quickly lose a good UX. 
 + **Jigsaw (Validation Service)** throws an error on ".cardFaceTypeIndex" and ".cardBackTypeIndex" because of the length of the linear-gradient used to create the index card design.
+
 
 ## Scalability
 + Increase the number of usable words in each language.
-+ Add an API that would read out the "pairing langauge" word of a matched card.
++ Add an API that would read out the "pairing langauge" word of a matched card pair.
 + Add a greater selection of card backgrounds to give the user a different visual experience according to their preference.
 + Add a game board background selector for a different visual experience for returning users.
++ Change the games select/option listboxes to ul/li JavaScript powered Listboxes.  This would allow for greater customization and full support of ARIA.
++ Increase words provided for each language.
 
 # Deployment Information
 + Go to the location of the repository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
@@ -161,19 +209,24 @@ lines but now they provide a good visual experience.
 + [Techsini](https://techsini.com/multi-mockup/) - Used for their viewable responsiveness PNG
 + [TinyPNG](https://tinypng.com/) - Used to Minimize KB load per image
 + [W3C Validator](https://validator.w3.org/) - Used to identify errors in markup
++ [BrowserStack](https://www.browserstack.com/) - used to check for compatibility errors
 
 ## References, Idea(s) Code Used
-+ Felipe Souza Alarcon - Idea to use objects for words in various languages
-+ [Arjun Khara](https://www.youtube.com/watch?v=OV8MVmtgmoY) - First discovered idea of rotating 3d object here
++ Felipe Souza Alarcon - Idea to use JavaScript objects for words in various languages
++ Css card flip animation - This animation's code originated from three different locations. With great effort these code pieces were melded into something unique to this project but 
+still deserves accurate documentation. This code has been cited in the CSS where the three main structures of the card's CSS exist(Outside, rotating portion, and faces).
+A citing was also added to the HTML above the dynamically added content section. The three places where code originated from are: Arjun Khara, MDN Web Docs, and
+W3Schools.  All these are documented in detail below. 
++ [Arjun Khara](https://www.youtube.com/watch?v=OV8MVmtgmoY) - First discovered idea of rotating 3d objects using CSS here.
     + Used idea of a single box to contain all moving objects and faces of a card or 3D object.
     + Used ideas from his code to help understand how and where to place items, such as: "backface-visability" and "transform-style" to create desired effect.
 + [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Invaluable source of information about JavaScript, HTML, and CSS
-    + Used a piece of code which allowed the background to travel entire vertical length of page.
+    + Used two pieces of code which allowed the background to travel entire vertical length of page (documented in JavaScript).
     + An idea that was used was a container that rotates 180 degrees with the aid of "backface-visability: hidden" and "transform-style:preserve-3d".
-    + Used code placement (ex: where to place "backface-visability") and ideas to help with rotating the cards on the board.
-    + Used to help understand how "backface-visability: hidden" and "transform-style:preserve-3d" work together to produce the desired effect.
+    + Used code placement (ex: where to place "backface-visability") and ideas to help with rotating the cards on the board. The exact location for this is [here](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility).
+    + Used to help understand how "backface-visability: hidden" and "transform-style:preserve-3d" work together to produce the desired effect. The exact location for this is [here](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility).
 + [W3Schools](https://www.w3schools.com/) - A wonderful resource for element, attribute, and event selection for JavaScript
-    + Used code and ideas to help with rotating the cards on the game board.
+    + Used code and ideas to help with rotating the cards on the game board. The exact location for this is [here](https://www.w3schools.com/howto/howto_css_flip_box.asp).
 + [World Wide Web Consortium (W3C)](https://www.w3.org/) - for understanding ARIA content and industry standard use
     + Multiple standardizations were used from specifically: [aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/GL/wiki/Using_aria-labelledby_to_provide_a_name_for_user_interface_controls) and [ARIA labeling with a dropdown listbox](https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-collapsible.html)
 + [Stack Overflow](https://stackoverflow.com/) - Helped in understanding the importance of loops in JavaScript
@@ -182,6 +235,7 @@ lines but now they provide a good visual experience.
 + [Maxnyla's Deployment Section from Her Readme](https://github.com/maxnyla/Pawsome) - The idea to use GitHub's literal deployment process was found [here](https://github.com/maxnyla/Pawsome). 
 + [GitHub](https://docs.github.com/en/enterprise/2.14/user/articles/configuring-a-publishing-source-for-github-pages) - Used the structure of GitHub's deployment information as the basis for this readme's deployment section
     + [location of deployment structure provided my GitHub docs](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+
 
 # Acknowledgements
 + Felipe Souza Alarcon for his honest guidance, foresight, and helping lead me into directions I did not know I could go with this project. 
