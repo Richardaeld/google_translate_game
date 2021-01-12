@@ -15,7 +15,7 @@ function ransomizeWordLists() {
     wordsItalian = [];      // Clears global memory for italian words
     wordsGerman = [];       // Clears global memory for german words
     // Random number generator (RNG) that creates nRNG in decending order to prevent index call errors and allow following code to splice and push words to global array 
-    for(i=17; i>0; i-- ){
+    for(let i = 17; i > 0; i-- ){
         nRNG = (Math.floor(Math.random()*i));
         wordsEnglish.push(words1.splice(nRNG, 1));
         wordsSpanish.push(words2.splice(nRNG, 1));
@@ -37,15 +37,15 @@ function Language(english, spanish, portuguese, french, italian, german) {
 }
 
 // Object for applying background to face and back of card
-let cardIndex = ["cardFaceTypeIndex", "cardBackTypeIndex"]
-let cardFun = ["cardFaceTypeFun", "cardBackTypeFun"]
+let cardIndex = ["cardFaceTypeIndex", "cardBackTypeIndex"];
+let cardFun = ["cardFaceTypeFun", "cardBackTypeFun"];
 function CardStyle(index, fun) {
     this.index = index;
     this.fun = fun;
 }
 
 // ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height (The next 2 lines below taken directly from MDN)
-fullScreenHeight = document.documentElement.scrollHeight;       // Makes background take up entire screen 
+let fullScreenHeight = document.documentElement.scrollHeight;       // Makes background take up entire screen 
 document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px";
 
 // Global variables and object callers
@@ -88,8 +88,8 @@ function unflipWrongPair(clickRecord) {
 }
 
 // Generates total indexes needed for appropriate pairing and a random list to index with
-function createRNG(cardNumber, multiplier = 2){     
-    for(i = (cardNumber * multiplier); i > 0; i-- ){
+function createRNG(cardNumber, multiplier = 2){    
+    for(let i = (cardNumber * multiplier); i > 0; i-- ){
         rNG.push(Math.floor((Math.random() * i))); // Adds random number at end of array     
         rNG.unshift(i - 1);                        // Adds index list at beginning of array
     }
@@ -97,8 +97,9 @@ function createRNG(cardNumber, multiplier = 2){
 
 // Gives cards functionality by adding index numbers, words, and makes card flipable
 function makeCardFunctional(index, cardNumber, target){     
+        let ParagraphNode;
         var rngIndex = null;
-        createParagraph = document.createElement("p");            // Creates text node        
+        let createParagraph = document.createElement("p");            // Creates text node        
         rngIndex = rNG.splice(rNG[index + (cardNumber * 2)], 1);    // Uses random index call to splice out availiable card index and places it in variable
 
     // Makes a unique card and random matching pair tandum id(cardId- 'unique id' - 'pair id'), and creates word for text node
@@ -120,12 +121,12 @@ function makeCardFunctional(index, cardNumber, target){
             this.parentElement.classList.add("flipCard");
             clickRecord.push(this.id);
         }
-    }
+    };
 }
 
 // Creates the div/class (adds text) structure of cards from outer most layer in by multiple calls 
 function constructCard (cardNumber, classValues, className = null, cardType = null, isCardBack = false, isCardFace = false){         
-    for (index = 0; index < cardNumber * 2; index++){
+    for (let index = 0; index < cardNumber * 2; index++){
         var CardContainer = document.getElementById("game");
         var cardInternal = document.getElementsByClassName(className)[index];
         var setClasses = document.createAttribute("class");
@@ -139,7 +140,7 @@ function constructCard (cardNumber, classValues, className = null, cardType = nu
         }
 
         // Adds div elements for cardRotate container that holds both the card faces (.card and .cardBack)
-        cardInternal.appendChild(document.createElement("div")).setAttributeNode(setClasses) 
+        cardInternal.appendChild(document.createElement("div")).setAttributeNode(setClasses); 
         
         // Places card face on card (.card)
         if (isCardFace){
@@ -167,13 +168,13 @@ function checkCardPair() {
         }, globalDifficulty);
 
         // Splits out card id for matching comparison
-        for (i = 0; i < 2; i++){    
+        for (let i = 0; i < 2; i++){    
             match = parseInt((clickRecord[i]).split("-")[2]);
             selectedCardIds.unshift(match);
         }
         
         // Removes correctly matched cards and unflips wrong pairs
-        if (selectedCardIds[0] === selectedCardIds[1]){
+        if (selectedCardIds[0] === selectedCardIds[1] && clickRecord[0] != clickRecord[1]){
             removingCorrectPair(clickRecord);
             clickRecord = [];
         } else {
@@ -186,21 +187,21 @@ function checkCardPair() {
 // Allows game to track user clicks for selecting cards
 document.onclick = function() {         
    checkCardPair(); 
-} 
+};
 
 // Allows game to start by clicking start button
 document.getElementById("play").onclick = function() { 
     ransomizeWordLists(); 
     startGame();
-}
+};
 
 // Collects user selected information and passes it to a game populating function
 function startGame() {      
-    startButton = document.getElementById("start-screen").getElementsByTagName("option");
+    let startButton = document.getElementById("start-screen").getElementsByTagName("option");
     var userSelection = [];
     
     // Gets user selection and changes it into an int value or passes string value through 
-    for(i = 0; i < startButton.length; i++){ 
+    for(let i = 0; i < startButton.length; i++){ 
         if(startButton[i].selected && userSelection.length >= 3){
             userSelection.push(startButton[i].value);               // Pull selected string
         } else if( startButton[i].selected) {
@@ -265,7 +266,7 @@ function restartGame() {
     
     // Removes entire card structure so multiple games can be played
     setTimeout(function(){
-        for (i=0; i < totalLength; i++){
+        for (let i = 0; i < totalLength; i++){
             targetGame[0].remove();
         }
 
@@ -313,7 +314,7 @@ function makeAriaLabel(selectable, selectableIndex){
         // Groups all options from each select
         var totalOptions = selectable.options;
         // Sets selected option to aria seleceted true --Sets rest to false
-        for (i=0; i<totalOptions.length; i++){
+        for (let i = 0; i < totalOptions.length; i++){
             if (selectable.options[i].selected){
                 selectable.options[i].setAttribute('aria-selected', 'true');
                 selectable.blur();
@@ -321,5 +322,5 @@ function makeAriaLabel(selectable, selectableIndex){
                 selectable.options[i].setAttribute('aria-selected', 'false');
             }
         }
-    })
+    });
 }

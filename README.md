@@ -19,7 +19,7 @@ Showcase "Vanilla" JavaScript ability:
 + Game is capable of multiple play throughs without a page refreash.
 + The game timer is a continuously running JavaScript function.
 + The card pair positions are random every time
-+ The words chosen for each game are randomly pulled from selected language library.
++ The words chosen for each game are randomly pulled from user selected, language library.
 
 ## Client Stories and Experience Provided
 ### Client Stories
@@ -38,24 +38,24 @@ Showcase "Vanilla" JavaScript ability:
 
 ### Game Start Screen
 + The game title stands out due to the use of a large font with a dark text shadow.
-+ The text descriptions/choices are placed over a dark background with a bright text color to help them stand out and draw the eye.
++ The text descriptions (select/options) are placed over a dark background with a bright text color to help them stand out and draw the eye.
 + Multiple user inputs given for returning and new users alike. 
 
 ### Game Board
-+ A dark picture background was used to help the cards stand out.
-+ Background chosen resembles that of a desk.
++ A dark image background was used to help the cards stand out.
++ The background chosen because it resembles a desk or table.
 
-### Game Play
-+ Intuitive click to play style game.
-+ A clearly visible timer and total acquired points are provided to the user in a easily readable header.
-+ The cards are dynamically added and removed, with JavaScript, as the game starts and ends.
+### Gameplay
++ The gameplay is kept intuitive and simple so users can focus on recognizing foreign words or word placement.
++ The game header contains a timer and points calculator in a easily read format.
++ The cards are dynamically added and removed, with JavaScript, when the game starts and ends.
 + The game allows multiple playthroughs without having to refresh browser.
-+ A click limiter was installed to keep users from spam clicking to win the game. This duration can be increased by increasing the game's difficulty setting.
++ A click limiter was installed to keep users from spam clicking to win the game. This duration can be changed by selecting a different game difficulty setting.
 
 ### Game Cards
 + The default background image of the game cards resemble that of flash cards that school students would use.
-+ The font family chosen for the cards mimics a hand-written font and was paired with a bright text color which gives a home-made flash card appearance.
-+ A CSS effect is applied to the game cards to give them a flipping animation.
++ The font family chosen for the cards mimics a hand-written font and was paired with a bright text color. This combination gives a home-made flash card appearance.
++ A CSS effect is applied to the game cards to give them a flipping animation. Which helps give this simple game a wow factor.
 
 ### Page Performance
 + Code kept simple, clean, and elegant for quicker load times.
@@ -79,7 +79,7 @@ Showcase "Vanilla" JavaScript ability:
 + [GitHub's](https://github.com/) IDE [GitPod](https://www.gitpod.io/) was used for the construction process.
 + GitHub houses the master branch. 
 
-# Brand Identity
+## Brand Identity
 This game has a similar appearance to studying at home or in school by flashcards. This is accomplished though:
 + A background that resembles a desk or dining room table.
 + The default card backgrounds which are ment to resemble index cards or flash cards that students use to study.
@@ -166,6 +166,9 @@ focuses on the select/option listbox by not directly clicking on the select/opti
 or clicking on the label for the select/option listbox. This bug could also be triggered when a user selects the same option from a select/option listbox that is currently selected. 
 This bug wasnt able to be fixed so the "aria-expanded" state was removed entirly. A solution to add it back in could be with a future update that changes the select/option listbox 
 to a ul/li JavaScript powered listbox. With the appropiate JavaScript this will make the listbox more customizable, capable of a better UX, and more friendly towards ARIA states.
++ A single card of a matched pair would occasionally be removed from the game, a user was awarded a point, and the pair was considered matched.  This was because if a user 
+clicked fast enough the programs initial anti spam click logic wouldnt work. So a second layer of defensive logic was added. This code checks to be sure any pairs are not the 
+same card and automatically fails the "pairing" if they are the same card ID.  
 
 #### Current Bug(s)
 + A screen pixel width below 320px or above 4000px will quickly lose a good UX. 
@@ -175,10 +178,9 @@ to a ul/li JavaScript powered listbox. With the appropiate JavaScript this will 
 ## Scalability
 + Increase the number of usable words in each language.
 + Add an API that would read out the "pairing langauge" word of a matched card pair.
-+ Add a greater selection of card backgrounds to give the user a different visual experience according to their preference.
++ Add a greater selection of card backgrounds to give users a different visual experience according to their preference.
 + Add a game board background selector for a different visual experience for returning users.
 + Change the games select/option listboxes to ul/li JavaScript powered Listboxes.  This would allow for greater customization and full support of ARIA.
-+ Increase words provided for each language.
 
 # Deployment Information
 + Go to the location of the repository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
@@ -213,7 +215,7 @@ to a ul/li JavaScript powered listbox. With the appropiate JavaScript this will 
 
 ## References, Idea(s) Code Used
 + Felipe Souza Alarcon - Idea to use JavaScript objects for words in various languages
-+ Css card flip animation - This animation's code originated from three different locations. With great effort these code pieces were melded into something unique to this project but 
++ Css card flip animation - This animation's code originated from three different locations. With great effort, these code pieces were melded into something unique to this project but 
 still deserves accurate documentation. This code has been cited in the CSS where the three main structures of the card's CSS exist(Outside, rotating portion, and faces).
 A citing was also added to the HTML above the dynamically added content section. The three places where code originated from are: Arjun Khara, MDN Web Docs, and
 W3Schools.  All these are documented in detail below. 
