@@ -49,7 +49,7 @@ fullScreenHeight = document.documentElement.scrollHeight;       // Makes backgro
 document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px";
 
 // Global variables and object callers
-let importCardStyle = new CardStyle (cardIndex, cardFun)        // Builds card face and back for calling
+let importCardStyle = new CardStyle (cardIndex, cardFun);        // Builds card face and back for calling
 let fLanguage = new Language(wordsEnglish, wordsSpanish, wordsPortuguese, wordsFrench, wordsItalian, wordsGerman);      // Sets Global variable and sets foundation for foreign language object for string calling later in code
 var clickRecord = [];       // Holds up to two cards player has selected
 var rNG = [];               // First half is indexes that need to be used -- second half is randomized index list to pull first half with  
@@ -89,9 +89,9 @@ function unflipWrongPair(clickRecord) {
 
 // Generates total indexes needed for appropriate pairing and a random list to index with
 function createRNG(cardNumber, multiplier = 2){     
-    for(i=(cardNumber*multiplier); i>0; i-- ){
-        rNG.push(Math.floor((Math.random()*i))); // Adds random number at end of array     
-        rNG.unshift(i-1);                        // Adds index list at beginning of array
+    for(i = (cardNumber * multiplier); i > 0; i-- ){
+        rNG.push(Math.floor((Math.random() * i))); // Adds random number at end of array     
+        rNG.unshift(i - 1);                        // Adds index list at beginning of array
     }
 }
 
@@ -99,7 +99,7 @@ function createRNG(cardNumber, multiplier = 2){
 function makeCardFunctional(index, cardNumber, target){     
         var rngIndex = null;
         createParagraph = document.createElement("p");            // Creates text node        
-        rngIndex = rNG.splice(rNG[index + (cardNumber*2)], 1);    // Uses random index call to splice out availiable card index and places it in variable
+        rngIndex = rNG.splice(rNG[index + (cardNumber * 2)], 1);    // Uses random index call to splice out availiable card index and places it in variable
 
     // Makes a unique card and random matching pair tandum id(cardId- 'unique id' - 'pair id'), and creates word for text node
     if (rngIndex < cardNumber){ 
@@ -125,7 +125,7 @@ function makeCardFunctional(index, cardNumber, target){
 
 // Creates the div/class (adds text) structure of cards from outer most layer in by multiple calls 
 function constructCard (cardNumber, classValues, className = null, cardType = null, isCardBack = false, isCardFace = false){         
-    for (index = 0; index < cardNumber*2; index++){
+    for (index = 0; index < cardNumber * 2; index++){
         var CardContainer = document.getElementById("game");
         var cardInternal = document.getElementsByClassName(className)[index];
         var setClasses = document.createAttribute("class");
@@ -167,7 +167,7 @@ function checkCardPair() {
         }, globalDifficulty);
 
         // Splits out card id for matching comparison
-        for (i=0; i<2; i++){    
+        for (i = 0; i < 2; i++){    
             match = parseInt((clickRecord[i]).split("-")[2]);
             selectedCardIds.unshift(match);
         }
@@ -200,7 +200,7 @@ function startGame() {
     var userSelection = [];
     
     // Gets user selection and changes it into an int value or passes string value through 
-    for(i=0; i<((startButton.length)); i++){ 
+    for(i = 0; i < startButton.length; i++){ 
         if(startButton[i].selected && userSelection.length >= 3){
             userSelection.push(startButton[i].value);               // Pull selected string
         } else if( startButton[i].selected) {
@@ -209,7 +209,7 @@ function startGame() {
     }
 
     // Passes user selections to a function for processing
-    populateGame(userSelection[0],userSelection[1],userSelection[2],userSelection[3],userSelection[4], userSelection[5])
+    populateGame(userSelection[0],userSelection[1],userSelection[2],userSelection[3],userSelection[4], userSelection[5]);
 }
 
  // Creates game for play by processing previously gathered user selections
@@ -226,7 +226,7 @@ function populateGame(difficulty, numberOfCards, time, language0, language1, car
     constructCard(numberOfCards, "col-12 card cardBack", "middle", cardType, true);     // Card back (.card and .cardBack)
     MaxPlayerPoints = numberOfCards;    // Sets max points for player win condition
     gameHeader(2);                      // Changes header to game play option
-    timer((time*60000)+1000);           // Change time into minutes and add 1 second so user sees full time minute value
+    timer((time * 60000) + 1000);           // Change time into minutes and add 1 second so user sees full time minute value
 }
 
 // In game round timer that tracks win/lose conditions and changes game header accordingly 
@@ -240,7 +240,7 @@ function timer(time) {
         
         // Win and lose condition tracking and changes the display of the header accordingly
         if(MaxPlayerPoints === playerPoints) { 
-            gameHeader(3)
+            gameHeader(3);
             return;
         } else if(time === 0 ){ 
             gameHeader(4);
@@ -248,7 +248,7 @@ function timer(time) {
         }
         // A loop to allow the timer to continue replaying its function every second
         timer(time);
-    },1000)
+    },1000);
 }
 
 // Hides timer and allows header to be seen
@@ -280,7 +280,7 @@ function restartGame() {
 function gameHeader (condition) {       //-----changes header and game start screen visibility  ----- 1-gamestartscreen ----- 2-gameplayscreen ------ 3-game win ------- 4-game lose 
     var targetP = document.getElementById("timer-frame").getElementsByTagName("p");
     var targetH1 = document.getElementById("timer-frame").getElementsByTagName("h1")[0];
-    var targetStart = document.getElementById("start-screen")
+    var targetStart = document.getElementById("start-screen");
     rNG = [];                           // Flashes RNG (random number generator) memory
     clickRecord = [];                   // Flashes user card selection
 
