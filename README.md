@@ -1,8 +1,10 @@
 # ![Romancing The Cards](favicon-32x32.png "Romancing The Cards")omancing The Cards
 
-The purpose of this webpage is to illustrate how a simple, entertaining game can help with learning/memorizing words in a different language. It also has the added bonus to 
-improve memory retention ability through the use of virtual flash cards. The user picks two languages before the game starts and then must pair the same word from both of the 
-selected languages. The game also adds a timer and point system to give users a challenge and sense of urgency to complete the game.
+The purpose of this, JavaScript powered, game is to illustrate how a simple game can entertain and help with learning/memorizing words in a different language. It also has the hidden 
+benefit to help improve memory retention by rewarding users that remember where a specific word was located on the board. To help this game be applicable to a wide audience it has 
+six selectable languages which the user can choose any combination of. These user selected languages will pull random word pairs from their language banks to keep the user interested
+for multiple playthroughs. Other user selectable options are provided to adjust the difficulty of the game for maximum user enjoyment. These options are: the delay between selecting 
+cards, time to complete each round, and the number of cards to pair.
 
 # UX
 ## Goals
@@ -14,12 +16,12 @@ selected languages. The game also adds a timer and point system to give users a 
 ### Developer Goals 
 Showcase "Vanilla" JavaScript ability:
 + Have a game that is "vanilla" JavaScript powered and takes multiple user inputs.
-+ Have user input that can dramatically change the way JavaScript builds the game (Ex. number of cards, language, appearance of cards, etc...)
++ Have user inputs that can change the way JavaScript builds the game (Ex. number of cards, multiple languages, background (appearance) of cards, etc...)
 + All cards for game are dynamically added and removed with the start and end of each game round.
 + Game is capable of multiple play throughs without a page refreash.
 + The game timer is a continuously running JavaScript function.
 + The card pair positions are random every time
-+ The words chosen for each game are randomly pulled from user selected, language library.
++ The words chosen for each game are randomly pulled from the word bank of the user selected language.
 
 ## Client Stories and Experience Provided
 ### Client Stories
@@ -38,24 +40,25 @@ Showcase "Vanilla" JavaScript ability:
 
 ### Game Start Screen
 + The game title stands out due to the use of a large font with a dark text shadow.
-+ The text descriptions (select/options) are placed over a dark background with a bright text color to help them stand out and draw the eye.
++ The text descriptions, for select/options, are placed over a dark background with a bright text color to help them stand out and draw the eye.
 + Multiple user inputs given for returning and new users alike. 
 
 ### Game Board
 + A dark image background was used to help the cards stand out.
-+ The background chosen because it resembles a desk or table.
++ The background used was chosen because it resembles a desk or table. 
 
 ### Gameplay
-+ The gameplay is kept intuitive and simple so users can focus on recognizing foreign words or word placement.
-+ The game header contains a timer and points calculator in a easily read format.
++ The gameplay is kept intuitive and simple so users can focus on recognizing foreign words or remembering where words were placed.
++ The game header contains a timer and points calculator in an easily read format.
 + The cards are dynamically added and removed, with JavaScript, when the game starts and ends.
 + The game allows multiple playthroughs without having to refresh browser.
 + A click limiter was installed to keep users from spam clicking to win the game. This duration can be changed by selecting a different game difficulty setting.
++ The game pulls random word pairing from its language bank for each round.
 
 ### Game Cards
 + The default background image of the game cards resemble that of flash cards that school students would use.
 + The font family chosen for the cards mimics a hand-written font and was paired with a bright text color. This combination gives a home-made flash card appearance.
-+ A CSS effect is applied to the game cards to give them a flipping animation. Which helps give this simple game a wow factor.
++ A CSS effect is applied to the game cards to give them a flipping animation. This gives the game a simple but memorable wow factor.
 
 ### Page Performance
 + Code kept simple, clean, and elegant for quicker load times.
@@ -157,30 +160,30 @@ This game has a similar appearance to studying at home or in school by flashcard
 ## Previous and Current Bug(s)
 #### Previous Bug(s)
 + Occasionally a matching pair of cards will leave a single card on the table, sometimes making the game unwinnable.  This card can be either face up or face down. This bug was
-generated by not flashing the "clickRecord" when a user lost the game.
+generated by not flashing the "clickRecord" when a user lost the game. **update(This was a two part bug detailed in the following bug)
++ A single card of a matched pair would occasionally be removed from the game, a user was awarded a point, and the pair was considered matched.  This was because if a user 
+clicked fast enough the programs initial defensive anti-spam click logic wouldnt work. So an additional layer of defensive logic was added. This code checks to be sure any pairs 
+are not the same card and automatically fails the "pairing" if they are an identical card ID.  
 + Some words with masculine and feminine forms (ex. celles-ci/ceux-ci) excede the character limit of line space and drop to the line below. This was creating an unappealing 
 visual appearance. This bug was fixed by a change to font-size units from rem to a combination of rem and vw. However, a pixel width roughly between 1200 and 1166 can still use two 
 lines but now they provide a good visual experience.
 + The "aria-expanded" state remains while the select/option boxlist isn't expanded. This occurs beacuse of the limitations of select/option. This bug could be triggered when a user 
-focuses on the select/option listbox by not directly clicking on the select/option listbox its self. This focus bug can also be triggered by tabing through the content of the page 
-or clicking on the label for the select/option listbox. This bug could also be triggered when a user selects the same option from a select/option listbox that is currently selected. 
-This bug wasnt able to be fixed so the "aria-expanded" state was removed entirly. A solution to add it back in could be with a future update that changes the select/option listbox 
-to a ul/li JavaScript powered listbox. With the appropiate JavaScript this will make the listbox more customizable, capable of a better UX, and more friendly towards ARIA states.
-+ A single card of a matched pair would occasionally be removed from the game, a user was awarded a point, and the pair was considered matched.  This was because if a user 
-clicked fast enough the programs initial anti spam click logic wouldnt work. So a second layer of defensive logic was added. This code checks to be sure any pairs are not the 
-same card and automatically fails the "pairing" if they are the same card ID.  
+focuses on the select/option listbox by not directly clicking on the select/option listbox itself. This focus bug could also be triggered by tabing through the content of the page 
+or clicking on the label for the select/option listbox. Another trigger of this bug was when a user selects the same option from a select/option listbox that is currently selected. 
+This bug wasnt able to be fixed so the "aria-expanded" state was removed entirly along with its JavaScript code. A solution to add it back in could be with a future update that changes 
+the select/option listbox to a ul/li JavaScript powered listbox. With the appropiate JavaScript this will make the listbox more customizable, capable of a better UX, and more 
+friendly towards ARIA states.
 
 #### Current Bug(s)
 + A screen pixel width below 320px or above 4000px will quickly lose a good UX. 
 + **Jigsaw (Validation Service)** throws an error on ".cardFaceTypeIndex" and ".cardBackTypeIndex" because of the length of the linear-gradient used to create the index card design.
 
-
 ## Scalability
-+ Increase the number of usable words in each language.
++ Increase the number of usable words in each language word bank.
 + Add an API that would read out the "pairing langauge" word of a matched card pair.
 + Add a greater selection of card backgrounds to give users a different visual experience according to their preference.
 + Add a game board background selector for a different visual experience for returning users.
-+ Change the games select/option listboxes to ul/li JavaScript powered Listboxes.  This would allow for greater customization and full support of ARIA.
++ Change the games select/option listboxes to ul/li JavaScript powered Listboxes. This would allow for greater customization and full support of ARIA.
 
 # Deployment Information
 + Go to the location of the repository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
@@ -212,6 +215,7 @@ same card and automatically fails the "pairing" if they are the same card ID.
 + [TinyPNG](https://tinypng.com/) - Used to Minimize KB load per image
 + [W3C Validator](https://validator.w3.org/) - Used to identify errors in markup
 + [BrowserStack](https://www.browserstack.com/) - used to check for compatibility errors
++ [JSHint](https://jshint.com/) - used as a JavaScript validator  
 
 ## References, Idea(s) Code Used
 + Felipe Souza Alarcon - Idea to use JavaScript objects for words in various languages
