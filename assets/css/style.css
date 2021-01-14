@@ -58,6 +58,7 @@ body {
 /*----------------------------- Ideas for structure (HTML) and implementation (CSS) of rotating card taken from three different sources all are detailed in README.md  */
 /*----------------------------- Arjun Khara(https://www.youtube.com/watch?v=OV8MVmtgmoY), MDN web docs(https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility), W3Schools(https://www.w3schools.com/howto/howto_css_flip_box.asp)*/
 .card {
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     height:100%;
     width:100%;
