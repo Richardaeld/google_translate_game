@@ -30,7 +30,7 @@ body {
 @media (max-width: 767.98px) { 
     #game {
         position: relative;
-        margin-top: .5rem;
+        margin-top: .75rem;
         top: 5rem;
     }
 }
@@ -38,7 +38,7 @@ body {
 @media (max-width: 575.98px) {
     #game {
         position: relative;
-        margin-top: .5rem;
+        margin-top: .75rem;
         top: 10rem;
     }
 }
