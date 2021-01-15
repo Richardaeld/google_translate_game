@@ -29,19 +29,17 @@ body {
 
 @media (max-width: 767.98px) { 
     #game {
-        top: .5rem;
         position: relative;
         margin-top: .5rem;
-        top: 5rem;
+        top: 6.5rem;
     }
 }
 
 @media (max-width: 575.98px) {
     #game {
-        top: .5rem;
         position: relative;
         margin-top: .5rem;
-        top: 10rem;
+        top: 14rem;
     }
 }
 
