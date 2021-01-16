@@ -97,10 +97,10 @@ function createRNG(cardNumber, multiplier = 2){
 
 // Gives cards functionality by adding index numbers, words, and makes card flipable
 function makeCardFunctional(index, cardNumber, target){     
-        let ParagraphNode;
-        var rngIndex = null;
-        let createParagraph = document.createElement("p");            // Creates text node        
-        rngIndex = rNG.splice(rNG[index + (cardNumber * 2)], 1);    // Uses random index call to splice out availiable card index and places it in variable
+    let ParagraphNode;
+    var rngIndex = null;
+    let createParagraph = document.createElement("p");            // Creates text node        
+    rngIndex = rNG.splice(rNG[index + (cardNumber * 2)], 1);    // Uses random index call to splice out availiable card index and places it in variable
 
     // Makes a unique card and random matching pair tandum id(cardId- 'unique id' - 'pair id'), and creates word for text node
     if (rngIndex < cardNumber){ 
@@ -212,7 +212,7 @@ function startGame() {
         if(startButton[i].selected && userSelection.length >= 3){
             userSelection.push(startButton[i].value);               // Pull selected string
         } else if( startButton[i].selected) {
-           userSelection.push(parseInt(startButton[i].value));      // Pull selected number(int)
+            userSelection.push(parseInt(startButton[i].value));      // Pull selected number(int)
         }
     }
 
@@ -282,8 +282,8 @@ function restartGame() {
 
         // Flashes player points and in game header so multiple games can be played
         playerPoints = 0;
-            document.getElementById("timer-frame").getElementsByTagName("p")[0].textContent = "Timer will start shortly";
-            document.getElementById("timer-frame").getElementsByTagName("p")[1].textContent = "Player has 0 points";
+        document.getElementById("timer-frame").getElementsByTagName("p")[0].textContent = "Timer will start shortly";
+        document.getElementById("timer-frame").getElementsByTagName("p")[1].textContent = "Player has 0 points";
         gameHeader(1);
     }, 4000);
 }
