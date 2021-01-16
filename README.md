@@ -171,8 +171,12 @@ lines but now they provide a good visual experience.
 focuses on the select/option listbox by not directly clicking on the select/option listbox itself. This focus bug could also be triggered by tabing through the content of the page 
 or clicking on the label for the select/option listbox. Another trigger of this bug was when a user selects the same option from a select/option listbox that is currently selected. 
 This bug wasnt able to be fixed so the "aria-expanded" state was removed entirly along with its JavaScript code. A solution to add it back in could be with a future update that changes 
-the select/option listbox to a ul/li JavaScript powered listbox. With the appropiate JavaScript this will make the listbox more customizable, capable of a better UX, and more 
+the select/option listbox to a ul/li JavaScript powered listbox. With the appropriate JavaScript this will make the listbox more customizable, capable of a better UX, and more 
 friendly towards ARIA states.
++ The background image would not always extend the entire length of the screen on smaller devices. Code from MDN was used to find the appropriate length to set "min-height" to. This 
+variable was created at the global and local levels. The global variable was used to set the height of the background when the program starts and to "reset" its height after winning 
+or losing conditions of the game were met. The local variable was created to set the background after the cards have been created to be sure the background extends appropriately. 
+Having these two different scoped variables ensures the program switches appropriately between the different needed screen heights on all devices.
 
 #### Current Bug(s)
 + A screen pixel width below 320px or above 4000px will quickly lose a good UX. 
