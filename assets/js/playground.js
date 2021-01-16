@@ -127,15 +127,15 @@ function makeCardFunctional(index, cardNumber, target){
 // Creates the div/class (adds text) structure of cards from outer most layer in by multiple calls 
 function constructCard (cardNumber, classValues, className = null, cardType = null, isCardBack = false, isCardFace = false){         
     for (let index = 0; index < cardNumber * 2; index++){
-        var CardContainer = document.getElementById("game");
-        var cardInternal = document.getElementsByClassName(className)[index];
-        var setClasses = document.createAttribute("class");
+        let CardContainer = document.getElementById("game");
+        let cardInternal = document.getElementsByClassName(className)[index];
+        let setClasses = document.createAttribute("class");
         setClasses.value = classValues;
 
         // Creates outer most card container
         if (className === null){ 
             CardContainer.appendChild(document.createElement("div")).setAttributeNode(setClasses);
-            CardContainer.lastChild.setAttribute("aria-label", "card " + (index + 1));
+            CardContainer.lastChild.setAttribute("aria-label", "card " + (index + 1)); // Adds number label for ARIA users
             continue;
         }
 
@@ -152,6 +152,14 @@ function constructCard (cardNumber, classValues, className = null, cardType = nu
             makeCardFunctional(index, cardNumber, cardInternal);
             cardInternal.lastChild.classList.add(importCardStyle[globalCardType][1]);
         }
+
+        // makes sure background extends entire length of visible screen
+        if ( index == (cardNumber * 2)-1) { 
+            // ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height (The line below taken directly from MDN)
+            let fullScreenHeight = document.documentElement.scrollHeight;       // Sets variable that measures entire available screen real estate  
+            document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px"; // Sets background size to take up entire screen real estate
+        }
+
     }
 }
 
