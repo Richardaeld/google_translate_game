@@ -44,9 +44,15 @@ function CardStyle(index, fun) {
     this.fun = fun;
 }
 
-// ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height (The line below taken directly from MDN)
-let fullScreenHeight = document.documentElement.scrollHeight;       // Sets variable that measures entire available screen real estate  
-document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px"; // Sets background size to take up entire screen real estate
+// Sets the background height 
+function setBackgroundHeight() {
+    // ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height (The line below taken directly from MDN)
+    let fullScreenHeight = document.documentElement.scrollHeight;       // Sets variable that measures entire available screen real estate  
+    document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px"; // Sets background size to take up entire screen real estate
+}
+
+// Sets initial background height
+setBackgroundHeight();
 
 // Global variables and object callers
 let importCardStyle = new CardStyle (cardIndex, cardFun);        // Builds card face and back for calling
@@ -155,9 +161,7 @@ function constructCard (cardNumber, classValues, className = null, cardType = nu
 
         // makes sure background extends entire length of visible screen
         if ( index == (cardNumber * 2)-1) { 
-            // ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height (The line below taken directly from MDN)
-            let fullScreenHeight = document.documentElement.scrollHeight;       // Sets variable that measures entire available screen real estate  
-            document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px"; // Sets background size to take up entire screen real estate
+            setBackgroundHeight();
         }
 
     }
@@ -277,6 +281,9 @@ function restartGame() {
         for (let i = 0; i < totalLength; i++){
             targetGame[0].remove();
         }
+
+        // Resets background height for start menu
+        setBackgroundHeight();
 
         // Flashes player points and in game header so multiple games can be played
         playerPoints = 0;
