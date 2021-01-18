@@ -216,6 +216,7 @@ Having these two different scoped variables ensures the program switches appropr
 ![Where the https address is](assets/readme/deployment/clone_code_button_expanded.jpg "Where the https address is")
 + Create a blank or boiler plate GitPod and open this new GitPod project
 + Go to the Bash and type, "git clone " and paste the https address found in GitHub page
+![Command to type in](assets/readme/deployment/clone_gitclone.jpg)
 + Press enter
 + The clone will be created within a folder, titled "google_translate_game" (The original name of the project)
 ![Where the root folder is](assets/readme/deployment/clone_cloned_folder.jpg "Where the root folder is")
