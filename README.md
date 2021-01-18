@@ -104,6 +104,7 @@ This game has a similar appearance to studying at home or in school by flashcard
 ## Developer Tested Systems
  + Windows 10 (Chrome 87, Edge 87, Firefox 84)
  + G8 ThinQ (Chrome 87)
+ + ipad, 5th gen 13.3(safari 13) 
 
 ## Developer Testing method(s)
 ### Header items, Lose/Win Conditions, and Multiple Round Playability
@@ -190,21 +191,32 @@ Having these two different scoped variables ensures the program switches appropr
 + Change the games select/option listboxes to ul/li JavaScript powered Listboxes. This would allow for greater customization and full support of ARIA.
 
 # Deployment Information
-+ Go to the location of the repository in GitHub (ex. https://github.com/Richardaeld/google_translate_game).
+## Current GitHub Deployment
++ Go to the location of the repository in GitHub, [https://github.com/Richardaeld/google_translate_game](https://github.com/Richardaeld/google_translate_game).
 + Select Settings at the top of the page (Circled in red in picture below).
-![Where select is located](assets/readme/select_settings.png "Where select is located")
+![Where select is located](assets/readme/deployment/current_select_settings.png "Where select is located")
 + Go down in settings page until you find the heading "GitHub Pages" (underlined in red in the picture below).
 + Click "None" under the Source subheading (circled in red in picture below).
 + Select the branch you wish to publish.
 + In this example we chose to select master (circled in red in the picture below).
-![Where Github Pages, branch selection, and branches are located](assets/readme/select_branch.png "Where Github Pages, branch selection, and branches are located")
+![Where Github Pages, branch selection, and branches are located](assets/readme/deployment/current_select_branch.png "Where Github Pages, branch selection, and branches are located")
 + Click save (underlined in red in the picture below).
-![Where save is located](assets/readme/select_save.png "Where save is located")
+![Where save is located](assets/readme/deployment/current_select_save.png "Where save is located")
 + Reload page and you will see the layout under Github Pages will change and tell you the page is ready to be published.
-![What queued to be published screen looks like](assets/readme/see_ready.png "What queued to be published screen looks like")
+![What queued to be published screen looks like](assets/readme/deployment/current_see_ready.png "What queued to be published screen looks like")
 + Once the page is fully published, the layout will change once more and tell you the site has been published.
-![What published screen looks like](assets/readme/see_published.png "What published screen looks like")
+![What published screen looks like](assets/readme/deployment/current_see_published.png "What published screen looks like")
 + Now the page is fully viewable at the provided HTTP address.
+
+## Deploy clone from GitHub
++ Go to the location of the repository in GitHub, [https://github.com/Richardaeld/google_translate_game](https://github.com/Richardaeld/google_translate_game).
++ Click code button to get the drop down Menus
++ Copy https address provided
++ Create a blank or boiler plate GitPod and open this new GitPod project
++ Go to the Bash and type, "git clone " and paste the https address found in GitHub page
++ Press enter
++ The clone will be created within a folder, titled "google_translate_game" (The original name of the project)
++ Remove everything from this folder and the project will be fully functional.
 
 # Tools, References, Code, and Idea(s) Used
 ## Tools
