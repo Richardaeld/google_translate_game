@@ -89,12 +89,12 @@ body {
 /*-----------------------------  card faces (front and back) backgrounds*/
 .cardFaceTypeIndex {
     background-image: repeating-linear-gradient( #fff,  #fff 1% 10%, rgba(49, 113, 187, 0.5) 10% 11%),
-                      linear-gradient(rgba(0,0,0,0) 10%, #F015A7 10% 12%, rgba(0,0,0,0) 12% 100%);      
+                      linear-gradient(rgba(0, 0, 0, 0) 10%, #F015A7 10% 12%, rgba(0, 0, 0, 0) 12% 100%);      
 }
 
 .cardBackTypeIndex {
     background-image: repeating-linear-gradient(to top, #fff,  #fff 1% 10%, rgba(49, 113, 187, 0.5) 10% 11%),
-                      linear-gradient(rgba(0,0,0,0) 87%, #F015A7 88% 90%, rgba(0,0,0,0) 84% 100%);
+                      linear-gradient(rgba(0, 0, 0, 0) 87%, #F015A7 88% 90%, rgba(0, 0, 0, 0) 84% 100%);
     color: #FF00EA;
 }
 
