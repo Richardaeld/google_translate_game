@@ -103,9 +103,10 @@ body {
 }
 
 .cardFaceTypeFun {
-    background-image: url("../images/card-back-BW.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0) 44%, rgba(0, 0, 0, 1) 45% 55%, rgba(255, 255, 255, 0) 56% 100%),
+                linear-gradient(135deg, rgba(255, 255, 255, 0) 44%, rgba(0, 0, 0, 1) 45% 55%, rgba(255, 255, 255, 0) 56% 100%);
+    background-color: #474747; 
+    background-size: 1.25rem 1.25rem;
 }
 
 .cardBackTypeFun  {
