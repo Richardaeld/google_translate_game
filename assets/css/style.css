@@ -88,11 +88,13 @@ body {
 
 /*-----------------------------  card faces (front and back) backgrounds*/
 .cardFaceTypeIndex {
-    background-image: linear-gradient(#fff 10%, #F015A7 10% 12%, #fff 12% 22%, #3172BB 22% 24%, #fff 24% 34%, #3172BB 34% 36%, #fff 36% 46%, #3172BB 46% 48%, #fff 48% 58%, #3172BB 58% 60%, #fff 60% 70%, #3172BB 70% 72%, #fff 72% 82%, #3172BB 82% 84%, #fff 84% 94%, #3172BB 94% 96%, #fff 96% 100%);
+    background-image: repeating-linear-gradient( #fff,  #fff 1% 10%, rgba(49, 113, 187, 0.5) 10% 11%),
+                      linear-gradient(rgba(0,0,0,0) 10%, #F015A7 10% 12%, rgba(0,0,0,0) 12% 100%);      
 }
 
 .cardBackTypeIndex {
-    background-image: linear-gradient(#fff 4%, #3172BB 4% 6%, #fff 6% 16%, #3172BB 16% 18%, #fff 18% 28%, #3172BB 28% 30%, #fff 30% 40%, #3172BB 40% 42%, #fff 42% 52%, #3172BB 52% 54%, #fff 54% 64%, #3172BB 64% 66%, #fff 66% 76%, #3172BB 76% 78%, #fff 78% 88%, #F015A7 88% 90%, #fff 90% 100%);
+    background-image: repeating-linear-gradient(to top, #fff,  #fff 1% 10%, rgba(49, 113, 187, 0.5) 10% 11%),
+                      linear-gradient(rgba(0,0,0,0) 87%, #F015A7 88% 90%, rgba(0,0,0,0) 84% 100%);
     color: #FF00EA;
 }
 
