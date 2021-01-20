@@ -345,8 +345,7 @@ W3Schools.  All these are documented in detail below.
 basis for this project's readme deployment section.
     + [Clone Information](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) - Used the structure of GitHub's "Cloning a repository" information as the
 basis for this project's readme deployment section 
-+ The games main background image was taken from [here](https://www.pinterest.com/pin/386254105541431948/).
-    + The original picture was taken directly from google, however because of a lack of documentation this above location is provided.  This is an exact duplicate of the image.
++ The game's main background image was taken by the developer, Richard Eldridge.
 
 # Acknowledgements
 + Felipe Souza Alarcon for his honest guidance, foresight, and helping lead me into directions I did not know I could go with this project. 
