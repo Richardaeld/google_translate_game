@@ -1,3 +1,51 @@
+# Contents
+[Romancing The Cards - Introduction](#omancing-the-cards)
+
+[UX](#ux)
++ [Goals](#goals)
+    + [User Goals](#user-goals)
+    + [Developer Goals](#developer-goals)
++ [Client Stories and Experience Provided](#client-stories-and-experience-provided)
+    + [Client Stories](#client-stories)
+    + [Experience Provided](#experience-provided)
++ [Design Choices](#design-choices)
+    + [Game Start Screen](#game-start-screen)
+    + [Game Board](#game-board)
+    + [Gameplay](#gameplay)
+    + [Game Cards](#game-cards)
+    + [Page Performance](#page-performance)
++ [Wireframe and Live Demo](#wireframe-and-live-demo)
+    + [Wireframe](#wireframe)
+    + [Live Demo](#live-demo)
++ [Scalability](#scalability)
+
+[Technologies (Languages)](#technologies-(languages))
+
+[Testing](#testing)
++ [Program Testing Systems](#program-testing-systems)
+    + [BrowserStack](#browserstack)
+    + [Developer](#developer)
++ [Developer Tests](#developer-tests)
+    + [Testing Header Items and Game Ending Conditions and Multiple Round Playability](#testing-header-items-and-game-ending-conditions-and-multiple-round-playability)
+    + [Checking Language Pairings](#checking-language-pairings)
+
+[Bugs and Other Problems](#bugs-and-other-problems)
++ [Previous Bugs](#previous-bugs)
++ [Current Bugs](#current-bugs)
++ [Other Problems](#other-problems)
+
+[Deployment Information](#deployment-information)
++ [Current GitHub Deployment](#current-github-deployment)
++ [Deploy Clone from GitHub](#deploy-clone-from-github)
+
+[Tools and Citations](#tools-and-citations)
++ [Tools](#tools)
++ [References and Ideas and Code Citations](#references-and-ideas-and-code-citations)
+
+[Acknowledgements](#acknowledgements)
+
+----
+
 # ![Romancing The Cards](favicon-32x32.png "Romancing The Cards")omancing The Cards
 
 The purpose of this, JavaScript powered, game is to illustrate how a simple game can entertain and help with learning/memorizing words in a different language. It also has the hidden 
@@ -6,24 +54,32 @@ six selectable languages which the user can choose any combination of. These use
 for multiple playthroughs. Other user selectable options are provided to adjust the difficulty of the game for maximum user enjoyment. These options are: the delay between selecting 
 cards, time to complete each round, and the number of cards to pair.
 
+
+
 # UX
 ## Goals
+
+---
+
 ### User Goals
 + I want to learn basic words of a new language.
 + I want to be entertained by a game on my browser or cell phone during my free time.
 + I want to work on my memory retention ability.
 
 ### Developer Goals 
-Showcase "Vanilla" JavaScript ability:
-+ Have a game that is "Vanilla" JavaScript powered and takes multiple user inputs.
-+ Have user inputs that can change the way JavaScript builds the game (Ex. number of cards, multiple languages, background (appearance) of cards, etc...).
-+ All cards in game are dynamically added and removed with the start and end of each game round.
-+ Game is capable of multiple play throughs without a page refreash.
-+ The game timer is a continuously running JavaScript function.
-+ The card pair positions are random every time.
-+ The words chosen for each game are randomly pulled from the word bank of the user's selected language.
++ Showcase "Vanilla" JavaScript ability:
+    + Have a game that is "Vanilla" JavaScript powered and takes multiple user inputs.
+    + Have user inputs that can change the way JavaScript builds the game (Ex. number of cards, multiple languages, background (appearance) of cards, etc...).
+    + All cards in game are dynamically added and removed with the start and end of each game round.
+    + Game is capable of multiple play throughs without a page refreash.
+    + The game timer is a continuously running JavaScript function.
+    + The card pair positions are random every time.
+    + The words chosen for each game are randomly pulled from the word bank of the user's selected language.
 
 ## Client Stories and Experience Provided
+
+---
+
 ### Client Stories
 + As a user, I'd like an enjoyable way to spend my free time.
 + As a user, I'd like a game that helps with memory retention skills.
@@ -36,8 +92,12 @@ time with plenty of replay value.
 + The game currently has six different languages to pick from and they are pairable in any way the user chooses.
 
 ## Design Choices
+
+---
+
 ![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
 + This program is responsive across all devices
+
 
 ### Game Start Screen
 + The game title stands out due to the use of a large font with a dark text shadow.
@@ -70,38 +130,61 @@ time with plenty of replay value.
 ![Image compressions average](assets/readme/tinyfi.png "Image compressions average")
 
 ## Wireframe and Live Demo
-#### Wireframe 
+
+---
+
+### Wireframe 
 ![Wireframe of the playing screen with div description](assets/readme/wireframe/wf_game_5_pair-large.png "Wireframe of the playing screen with div description")
 + [Balsamiq](https://balsamiq.com/) was used for the planning process.
 + Wireframes were made for all predetermined size variations of the webpage.
 + Each wireframe that contains cards was given a pointing arrow and a description because of the complexity of the card design.
 + [Click here to view all wireframes associated to this project.](assets/readme/wireframe "Location of wireframes")
 
-#### Live Demo
+### Live Demo
 ![Finished demo of the playing screen](assets/readme/finished_game_5_pair-large.png "Finished demo of the playing screen")
 + A fully functioning demo can be found on GitHub, [here](https://richardaeld.github.io/google_translate_game/ "Deplayment location")
 + [GitHub's](https://github.com/) IDE [GitPod](https://www.gitpod.io/) was used for the construction process.
 + GitHub houses the master branch. 
 
-# Technologies (Languages) Used
+## Scalability
+
+---
+
++ Increase the number of usable words in each language word bank.
++ Add an API that would read out the "pairing langauge" word of a matched card pair.
++ Add a greater selection of card backgrounds to give users a different visual experience according to their preference.
++ Add a game board background selector for a different visual experience for returning users.
++ Change the games select/option listboxes to ul/li JavaScript powered Listboxes. This would allow for greater customization and full support of ARIA.
+
+
+# Technologies (Languages)
 + HTML - Is the basic construction (foundation) of this webpage.
 + CSS - Used to make the basic construction of this webpage more visually appealing.
 + JavaScript - Allow users to interact with webpage without having to reload page or load multiple pages.
 
 # Testing
-## Program Tested Systems 
+## Program Testing Systems 
+
+---
+
 ### BrowserStack
 + Windows 10 (edge 18, chrome 71)
 + OS X Big Sur (Chrome 71, Safari 14)
 + Google Nexus 5 (Portrait)
 
-## Developer Tested Systems
+### Developer
  + Windows 10 (Chrome 87, Edge 87, Firefox 84)
  + G8 ThinQ (Chrome 87)
  + iPad, 5th gen 13.3(safari 13) 
 
-## Developer Testing method(s)
-### Header items, Lose/Win Conditions, and Multiple Round Playability
+## Developer Tests
+
+---
+
+### **Testing Header Items and Game Ending Conditions and Multiple Round Playability**
+
+---
+
 #### Expectation(s):
 1. Menus disappear when not in use.
 1. Game tells user when they have won or lost.
@@ -127,9 +210,13 @@ time with plenty of replay value.
 1. Document any failure of the timer.
 1. Document any incorrect win/lose conditions.
 1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
-------------------------------------------------------
 
-### Checking Language Pairings
+---
+
+### **Checking Language Pairings**
+
+---
+
 #### Expectation(s):
 1. The game always has the correct pair of words up to match.
 
@@ -150,10 +237,10 @@ time with plenty of replay value.
 1. Document any incidences of incorrectly accepted/unaccepted word pairings.
 1. Document any incidences of cards left on the table when they should have disappeared.
 
---------------------------------
+---
 
-## Previous Bug(s), Current Bug(s), Other Problem(s)
-#### Previous Bug(s)
+# Bugs and Other Problems
+### Previous Bugs
 + Occasionally a matching pair of cards will leave a single card on the table, sometimes making the game unwinnable.  This card can be either face up or face down. This bug was
 generated by not flashing the "clickRecord" when a user lost the game. **update(This was a two-part bug detailed in the following bug)
 + A single card of a matched pair would occasionally be removed from the game. The user would be awarded a point and the pair would be considered matched. If a user 
@@ -167,10 +254,10 @@ variable was created at the global and local levels. The global variable was use
 or losing conditions of the game were met. The local variable was created to set the background after the cards have been created to be sure the background extended appropriately. 
 Having these two different scoped variables ensures the program switches appropriately between the different screen heights on all devices.
 
-#### Current Bug(s)
+### Current Bugs
 + A screen pixel width below 320px or above 4000px will quickly lose a good UX. 
 
-#### Other Problem(s)
+### Other Problems
 + **Jigsaw (Validation Service)** throws an error on ".cardFaceTypeIndex", ".cardBackTypeIndex", and ".cardFaceTypeFun". Despite this error, several browser OS combinations were tested 
 (detailed in **Developer Tested Systems**) and none of them had problems with this code. It's very possible that this error is similar to how World Wide Web Consortium validators throw 
 errors when a vendor extension is used.
@@ -181,15 +268,8 @@ This bug wasnt able to be fixed so the "aria-expanded" state was removed entirel
 the select/option listbox to a ul/li JavaScript powered listbox. With the appropriate JavaScript, this will make the listbox more customizable, capable of a better UX, and more 
 friendly towards ARIA states.
 
-## Scalability
-+ Increase the number of usable words in each language word bank.
-+ Add an API that would read out the "pairing langauge" word of a matched card pair.
-+ Add a greater selection of card backgrounds to give users a different visual experience according to their preference.
-+ Add a game board background selector for a different visual experience for returning users.
-+ Change the games select/option listboxes to ul/li JavaScript powered Listboxes. This would allow for greater customization and full support of ARIA.
-
 # Deployment Information
-## Current GitHub Deployment
+### Current GitHub Deployment
 + Go to the location of the repository in GitHub, [https://github.com/Richardaeld/google_translate_game](https://github.com/Richardaeld/google_translate_game).
 + Select Settings at the top of the page (Circled in red in picture below).
 ![Where select is located](assets/readme/deployment/current_select_settings.png "Where select is located")
@@ -206,13 +286,13 @@ friendly towards ARIA states.
 ![What published screen looks like](assets/readme/deployment/current_see_published.png "What published screen looks like")
 + Now the page is fully viewable at the provided HTTP address.
 
-## Deploy clone from GitHub
+### Deploy Clone from GitHub
 + Go to the location of the repository in GitHub, [https://github.com/Richardaeld/google_translate_game](https://github.com/Richardaeld/google_translate_game).
 + Click code button to get the drop down menu (underlined in red).
 ![Where the code button is](assets/readme/deployment/clone_code_button.jpg "where the code button is")
 + Copy the https address provided (underlined in red).
 ![Where the https address is](assets/readme/deployment/clone_code_button_expanded.jpg "Where the https address is")
-+ Create a blank or boiler plate GitPod and open this new GitPod project.
++ Create a blank or boiler plate GitPod project and open this new GitPod project.
 + Go to the Bash and type, "git clone " and paste the https address found in GitHub page.
 ![Command to type in](assets/readme/deployment/clone_gitclone.jpg)
 + Press enter.
@@ -220,8 +300,8 @@ friendly towards ARIA states.
 ![Where the root folder is](assets/readme/deployment/clone_cloned_folder.jpg "Where the root folder is")
 + Unpack everything from this folder to the root of the GitPod project tree and the project will be fully functional.
 
-# Tools, References, Code, and Idea(s) Used
-## Tools
+# Tools and Citations
+### Tools
 + [Balsamiq](https://balsamiq.com/) - Used to produce the wireframes.
 + [Bootstrap](https://getbootstrap.com/) - Used as framework.
 + [GitHub](https://github.com/) - Used for version control and deployment of demo (prototype) website.
@@ -235,7 +315,7 @@ friendly towards ARIA states.
 + [BrowserStack](https://www.browserstack.com/) - Used to check for compatibility errors.
 + [JSHint](https://jshint.com/) - Used to identify errors in JavaScript.
 
-## References, Idea(s) Code Used
+### References and Ideas and Code Citations
 + Felipe Souza Alarcon - Used idea to place words in JavaScript object(s) for languages banks.
 + Css card flip animation - This animation's code originated from three different locations. With great effort, these code pieces were melded into something unique to this project but 
 still deserves accurate documentation/citation. This code has numerous citations in the CSS where the three main structures of the card's CSS exist (outside, rotating portion, and faces).
