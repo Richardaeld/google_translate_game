@@ -222,21 +222,21 @@ friendly towards ARIA states.
 
 # Tools, References, Code, and Idea(s) Used
 ## Tools
-+ [Balsamiq](https://balsamiq.com/) - Used to produce the wireframes
-+ [Bootstrap](https://getbootstrap.com/) - Used as framework
-+ [GitHub](https://github.com/) - Deployment of demo (prototype) website
-+ [GitPod](https://www.gitpod.io/) - Integrated development environment used
-+ [Google Fonts](https://fonts.google.com/) - Imported font families from here 
-+ [Jigsaw (Validation Service)](https://jigsaw.w3.org/css-validator/) - Used to identify errors in CSS
-+ [Pingdom](https://tools.pingdom.com/) - Used to check for load time
-+ [Techsini](https://techsini.com/multi-mockup/) - Used for their viewable responsiveness PNG
-+ [TinyPNG](https://tinypng.com/) - Used to Minimize KB load per image
-+ [W3C Validator](https://validator.w3.org/) - Used to identify errors in markup
-+ [BrowserStack](https://www.browserstack.com/) - used to check for compatibility errors
-+ [JSHint](https://jshint.com/) - used to identify errors in JavaScript   
++ [Balsamiq](https://balsamiq.com/) - Used to produce the wireframes.
++ [Bootstrap](https://getbootstrap.com/) - Used as framework.
++ [GitHub](https://github.com/) - Used for version control and deployment of demo (prototype) website.
++ [GitPod](https://www.gitpod.io/) - Integrated development environment used.
++ [Google Fonts](https://fonts.google.com/) - Imported font families from here. 
++ [Jigsaw (Validation Service)](https://jigsaw.w3.org/css-validator/) - Used to identify errors in CSS.
++ [Pingdom](https://tools.pingdom.com/) - Used to check load time.
++ [Techsini](https://techsini.com/multi-mockup/) - Used for their viewable responsiveness PNG.
++ [TinyPNG](https://tinypng.com/) - Used to Minimize KB load per image.
++ [W3C Validator](https://validator.w3.org/) - Used to identify errors in markup.
++ [BrowserStack](https://www.browserstack.com/) - Used to check for compatibility errors.
++ [JSHint](https://jshint.com/) - Used to identify errors in JavaScript.
 
 ## References, Idea(s) Code Used
-+ Felipe Souza Alarcon - Idea to use JavaScript objects for words in various languages
++ Felipe Souza Alarcon - Used idea to place words in JavaScript object(s) for languages banks.
 + Css card flip animation - This animation's code originated from three different locations. With great effort, these code pieces were melded into something unique to this project but 
 still deserves accurate documentation/citation. This code has numerous citations in the CSS where the three main structures of the card's CSS exist (outside, rotating portion, and faces).
 A citation was also added to the HTML above the dynamically added content section. The three places where code originated from are: Arjun Khara, MDN Web Docs, and
@@ -244,28 +244,28 @@ W3Schools.  All these are documented in detail below.
 + [Arjun Khara](https://www.youtube.com/watch?v=OV8MVmtgmoY) - First discovered idea of rotating 3d objects using CSS here.
     + Used idea of a single box to contain all moving objects and faces of a card or 3D object.
     + Used ideas from his code to help understand how and where to place items, such as: "backface-visability" and "transform-style" to create desired effect.
-+ [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Invaluable source of information about JavaScript, HTML, and CSS
++ [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Invaluable source of information about JavaScript, HTML, and CSS.
     + Used piece of code which allowed the background to travel entire vertical length of page (documented in JavaScript).
     + An idea that was used was a container that rotates 180 degrees with the aid of "backface-visability: hidden" and "transform-style:preserve-3d".
     + Used code placement (ex: where to place "backface-visability") and ideas to help with rotating the cards on the board. The exact location for this is 
     [here](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility).
     + Used to help understand how "backface-visability: hidden" and "transform-style:preserve-3d" work together to produce the desired effect. The exact location for this is 
     [here](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility).
-+ [W3Schools](https://www.w3schools.com/) - A wonderful resource for element, attribute, and event selection for JavaScript
++ [W3Schools](https://www.w3schools.com/) - A wonderful resource for element, attribute, and event selection for JavaScript.
     + Used code and ideas to help with rotating the cards on the game board. The exact location for this is [here](https://www.w3schools.com/howto/howto_css_flip_box.asp).
-+ [World Wide Web Consortium (W3C)](https://www.w3.org/) - for understanding ARIA content and industry standard use
++ [World Wide Web Consortium (W3C)](https://www.w3.org/) - Used for understanding ARIA content and industry standard use.
     + Multiple standardizations were used from specifically: 
     [aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/GL/wiki/Using_aria-labelledby_to_provide_a_name_for_user_interface_controls) and 
-    [ARIA labeling with a dropdown listbox](https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-collapsible.html)
-+ [Stack Overflow](https://stackoverflow.com/) - Helped in understanding the importance of loops in JavaScript
-+ [TestLodge](https://blog.testlodge.com/how-to-write-test-cases-for-software-with-sample/) - Used for test case examples
-+ [Bootstrap](https://getbootstrap.com/) - Framework used to help speed up development and add a better UX
-+ [GitHub](https://github.com/) - Used their documentation as this project's deployment basis
+    [ARIA labeling with a dropdown listbox](https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-collapsible.html).
++ [Stack Overflow](https://stackoverflow.com/) - Helped in understanding the importance of loops in JavaScript.
++ [TestLodge](https://blog.testlodge.com/how-to-write-test-cases-for-software-with-sample/) - Used for test case examples.
++ [Bootstrap](https://getbootstrap.com/) - Framework used to help speed up development and add a better UX.
++ [GitHub](https://github.com/) - Used their documentation as this project's deployment basis.
     + [Deployment Information](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) - Used the structure of GitHub's deployment information as the 
 basis for this project's readme deployment section.
     + [Clone Information](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) - Used the structure of GitHub's "Cloning a repository" information as the
 basis for this project's readme deployment section 
-+ The games main background image was taken from [here](https://www.pinterest.com/pin/386254105541431948/)
++ The games main background image was taken from [here](https://www.pinterest.com/pin/386254105541431948/).
     + The original picture was taken directly from google, however because of a lack of documentation this above location is provided.  This is an exact duplicate of the image.
 
 # Acknowledgements
