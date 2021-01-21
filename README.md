@@ -246,35 +246,35 @@ friendly towards ARIA states.
 
 # Clone and Deployment Information
 ### Deploy Clone from GitHub
-+ Go to the location of the repository in GitHub, [https://github.com/Richardaeld/google_translate_game](https://github.com/Richardaeld/google_translate_game).
-+ Click code button to get the drop down menu (underlined in red).
+1. Go to the location of the repository in GitHub, [https://github.com/Richardaeld/google_translate_game](https://github.com/Richardaeld/google_translate_game).
+1. Click code button to get the drop down menu (underlined in red).
 ![Where the code button is](assets/readme/deployment/clone_code_button.jpg "where the code button is")
-+ Copy the https address provided (underlined in red).
+1. Copy the https address provided (underlined in red).
 ![Where the https address is](assets/readme/deployment/clone_code_button_expanded.jpg "Where the https address is")
-+ Create a blank or boiler plate GitPod project and open this new GitPod project.
-+ Go to the Bash and type, "git clone " and paste the https address found in GitHub page.
+1. Create a blank or boiler plate GitPod project and open this new GitPod project.
+1. Go to the Bash and type, "git clone " and paste the https address found in GitHub page.
 ![Command to type in](assets/readme/deployment/clone_gitclone.jpg)
-+ Press enter.
-+ The clone will be created within a folder, titled "google_translate_game" (The original name of the project).
+1. Press enter.
+1. The clone will be created within a folder, titled "google_translate_game" (The original name of the project).
 ![Where the root folder is](assets/readme/deployment/clone_cloned_folder.jpg "Where the root folder is")
-+ Unpack everything from this folder to the root of the GitPod project tree and the project will be fully functional.
+1. Unpack everything from this folder to the root of the GitPod project tree and the project will be fully functional.
 
 ### GitHub Deployment
-+ Go to the location of the cloned or deployment repository in GitHub.
-+ Select Settings at the top of the page (Circled in red in picture below).
+1. Go to the location of the cloned or deployment repository in GitHub.
+1. Select Settings at the top of the page (Circled in red in picture below).
 ![Where select is located](assets/readme/deployment/current_select_settings.png "Where select is located")
-+ Go down in settings page until you find the heading "GitHub Pages" (underlined in red in the picture below).
-+ Click "None" under the Source subheading (circled in red in picture below).
-+ Select the branch you wish to publish.
-+ In this example we chose to select master (circled in red in the picture below).
+1. Go down in settings page until you find the heading "GitHub Pages" (underlined in red in the picture below).
+1. Click "None" under the Source subheading (circled in red in picture below).
+1. Select the branch you wish to publish.
+1. In this example we chose to select master (circled in red in the picture below).
 ![Where Github Pages, branch selection, and branches are located](assets/readme/deployment/current_select_branch.png "Where Github Pages, branch selection, and branches are located")
-+ Click save (underlined in red in the picture below).
+1. Click save (underlined in red in the picture below).
 ![Where save is located](assets/readme/deployment/current_select_save.png "Where save is located")
-+ Reload page and you will see the layout under Github Pages will change and tell you the page is ready to be published.
+1. Reload page and you will see the layout under Github Pages will change and tell you the page is ready to be published.
 ![What queued to be published screen looks like](assets/readme/deployment/current_see_ready.png "What queued to be published screen looks like")
-+ Once the page is fully published, the layout will change once more and tell you the site has been published.
+1. Once the page is fully published, the layout will change once more and tell you the site has been published.
 ![What published screen looks like](assets/readme/deployment/current_see_published.png "What published screen looks like")
-+ Now the page is fully viewable at the provided HTTP address.
+1. Now the page is fully viewable at the provided HTTP address.
 
 # Tools and Citations
 ### Tools
