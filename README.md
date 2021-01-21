@@ -19,7 +19,7 @@
     + [Live Demo](#live-demo)
 + [Scalability](#scalability)
 
-[Technologies (Languages)](#technologies-(languages))
+[Technology Languages](#technology-languages)
 
 [Testing](#testing)
 + [Program Testing Systems](#program-testing-systems)
@@ -34,9 +34,9 @@
 + [Current Bugs](#current-bugs)
 + [Other Problems](#other-problems)
 
-[Deployment Information](#deployment-information)
-+ [Current GitHub Deployment](#current-github-deployment)
+[Clone and Deployment Information](#clone-and-deployment-information)
 + [Deploy Clone from GitHub](#deploy-clone-from-github)
++ [GitHub Deployment](#github-deployment)
 
 [Tools and Citations](#tools-and-citations)
 + [Tools](#tools)
@@ -58,9 +58,6 @@ cards, time to complete each round, and the number of cards to pair.
 
 # UX
 ## Goals
-
----
-
 ### User Goals
 + I want to learn basic words of a new language.
 + I want to be entertained by a game on my browser or cell phone during my free time.
@@ -77,9 +74,6 @@ cards, time to complete each round, and the number of cards to pair.
     + The words chosen for each game are randomly pulled from the word bank of the user's selected language.
 
 ## Client Stories and Experience Provided
-
----
-
 ### Client Stories
 + As a user, I'd like an enjoyable way to spend my free time.
 + As a user, I'd like a game that helps with memory retention skills.
@@ -92,9 +86,6 @@ time with plenty of replay value.
 + The game currently has six different languages to pick from and they are pairable in any way the user chooses.
 
 ## Design Choices
-
----
-
 ![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
 + This program is responsive across all devices
 
@@ -130,9 +121,6 @@ time with plenty of replay value.
 ![Image compressions average](assets/readme/tinyfi.png "Image compressions average")
 
 ## Wireframe and Live Demo
-
----
-
 ### Wireframe 
 ![Wireframe of the playing screen with div description](assets/readme/wireframe/wf_game_5_pair-large.png "Wireframe of the playing screen with div description")
 + [Balsamiq](https://balsamiq.com/) was used for the planning process.
@@ -147,9 +135,6 @@ time with plenty of replay value.
 + GitHub houses the master branch. 
 
 ## Scalability
-
----
-
 + Increase the number of usable words in each language word bank.
 + Add an API that would read out the "pairing langauge" word of a matched card pair.
 + Add a greater selection of card backgrounds to give users a different visual experience according to their preference.
@@ -157,16 +142,13 @@ time with plenty of replay value.
 + Change the games select/option listboxes to ul/li JavaScript powered Listboxes. This would allow for greater customization and full support of ARIA.
 
 
-# Technologies (Languages)
+# Technology Languages
 + HTML - Is the basic construction (foundation) of this webpage.
 + CSS - Used to make the basic construction of this webpage more visually appealing.
 + JavaScript - Allow users to interact with webpage without having to reload page or load multiple pages.
 
 # Testing
-## Program Testing Systems 
-
----
-
+## Program Testing Systems
 ### BrowserStack
 + [Windows 10 (edge 18)](assets/readme/browserstack/win10_edge_18.0.jpg)
 + [OS X Big Sur (Safari 14)](assets/readme/browserstack/macbsr_safari_14.0.jpg)
@@ -179,9 +161,6 @@ time with plenty of replay value.
  + iPad, 5th gen 13.3(safari 13) 
 
 ## Developer Tests
-
----
-
 ### **Testing Header Items and Game Ending Conditions and Multiple Round Playability**
 
 ---
@@ -212,8 +191,6 @@ time with plenty of replay value.
 1. Document any incorrect win/lose conditions.
 1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
 
----
-
 ### **Checking Language Pairings**
 
 ---
@@ -237,8 +214,6 @@ time with plenty of replay value.
 #### Document Result(s):
 1. Document any incidences of incorrectly accepted/unaccepted word pairings.
 1. Document any incidences of cards left on the table when they should have disappeared.
-
----
 
 # Bugs and Other Problems
 ### Previous Bugs
@@ -269,9 +244,23 @@ This bug wasnt able to be fixed so the "aria-expanded" state was removed entirel
 the select/option listbox to a ul/li JavaScript powered listbox. With the appropriate JavaScript, this will make the listbox more customizable, capable of a better UX, and more 
 friendly towards ARIA states.
 
-# Deployment Information
-### Current GitHub Deployment
+# Clone and Deployment Information
+### Deploy Clone from GitHub
 + Go to the location of the repository in GitHub, [https://github.com/Richardaeld/google_translate_game](https://github.com/Richardaeld/google_translate_game).
++ Click code button to get the drop down menu (underlined in red).
+![Where the code button is](assets/readme/deployment/clone_code_button.jpg "where the code button is")
++ Copy the https address provided (underlined in red).
+![Where the https address is](assets/readme/deployment/clone_code_button_expanded.jpg "Where the https address is")
++ Create a blank or boiler plate GitPod project and open this new GitPod project.
++ Go to the Bash and type, "git clone " and paste the https address found in GitHub page.
+![Command to type in](assets/readme/deployment/clone_gitclone.jpg)
++ Press enter.
++ The clone will be created within a folder, titled "google_translate_game" (The original name of the project).
+![Where the root folder is](assets/readme/deployment/clone_cloned_folder.jpg "Where the root folder is")
++ Unpack everything from this folder to the root of the GitPod project tree and the project will be fully functional.
+
+### GitHub Deployment
++ Go to the location of the cloned or deployment repository in GitHub.
 + Select Settings at the top of the page (Circled in red in picture below).
 ![Where select is located](assets/readme/deployment/current_select_settings.png "Where select is located")
 + Go down in settings page until you find the heading "GitHub Pages" (underlined in red in the picture below).
@@ -286,20 +275,6 @@ friendly towards ARIA states.
 + Once the page is fully published, the layout will change once more and tell you the site has been published.
 ![What published screen looks like](assets/readme/deployment/current_see_published.png "What published screen looks like")
 + Now the page is fully viewable at the provided HTTP address.
-
-### Deploy Clone from GitHub
-+ Go to the location of the repository in GitHub, [https://github.com/Richardaeld/google_translate_game](https://github.com/Richardaeld/google_translate_game).
-+ Click code button to get the drop down menu (underlined in red).
-![Where the code button is](assets/readme/deployment/clone_code_button.jpg "where the code button is")
-+ Copy the https address provided (underlined in red).
-![Where the https address is](assets/readme/deployment/clone_code_button_expanded.jpg "Where the https address is")
-+ Create a blank or boiler plate GitPod project and open this new GitPod project.
-+ Go to the Bash and type, "git clone " and paste the https address found in GitHub page.
-![Command to type in](assets/readme/deployment/clone_gitclone.jpg)
-+ Press enter.
-+ The clone will be created within a folder, titled "google_translate_game" (The original name of the project).
-![Where the root folder is](assets/readme/deployment/clone_cloned_folder.jpg "Where the root folder is")
-+ Unpack everything from this folder to the root of the GitPod project tree and the project will be fully functional.
 
 # Tools and Citations
 ### Tools
