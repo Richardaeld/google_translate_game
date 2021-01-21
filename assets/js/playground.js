@@ -16,7 +16,7 @@ function ransomizeWordLists() {
     wordsGerman = [];       // Clears global memory for german words
     // Random number generator (RNG) that creates nRNG in decending order to prevent index call errors and allow following code to splice and push words to global array 
     for(let i = 17; i > 0; i-- ){
-        nRNG = (Math.floor(Math.random()*i));
+        nRNG = (Math.floor(Math.random()*i)); // Used math.floor/random code format from w3schools: https://www.w3schools.com/js/js_random.asp
         wordsEnglish.push(words1.splice(nRNG, 1));
         wordsSpanish.push(words2.splice(nRNG, 1));
         wordsPortuguese.push(words3.splice(nRNG, 1));
@@ -90,7 +90,7 @@ function unflipWrongPair(clickRecord) {
 // Generates total indexes needed for appropriate pairing and a random list to index with
 function createRNG(cardNumber, multiplier = 2){    
     for(let i = (cardNumber * multiplier); i > 0; i-- ){
-        rNG.push(Math.floor((Math.random() * i))); // Adds random number at end of array     
+        rNG.push(Math.floor((Math.random() * i))); // Adds random number at end of array -- Used math.floor/random code format from w3schools: https://www.w3schools.com/js/js_random.asp 
         rNG.unshift(i - 1);                        // Adds index list at beginning of array
     }
 }

@@ -309,6 +309,8 @@ W3Schools.  All these are documented in detail below.
     [here](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility).
 + [W3Schools](https://www.w3schools.com/) - A wonderful resource for element, attribute, and event selection for JavaScript.
     + Used code and ideas to help with rotating the cards on the game board. The exact location for this is [here](https://www.w3schools.com/howto/howto_css_flip_box.asp).
+    + Used code format (**Math.floor(Math.random() * number)**) to understand how random works and used version that incorporates a variable for this projects random number generator. 
+    The code format is found [here](https://www.w3schools.com/js/js_random.asp).
 + [World Wide Web Consortium (W3C)](https://www.w3.org/) - Used for understanding ARIA content and industry standard use.
     + Multiple standardizations were used from specifically: 
     [aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/GL/wiki/Using_aria-labelledby_to_provide_a_name_for_user_interface_controls) and 
