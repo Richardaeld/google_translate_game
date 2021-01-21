@@ -24,7 +24,7 @@
 [Testing](#testing)
 + [Program Testing Systems](#program-testing-systems)
     + [BrowserStack](#browserstack)
-    + [Developer](#developer)
+    + [Developer Tested Systems](#developer-tested-systems)
 + [Developer Tests](#developer-tests)
     + [Testing Header Items and Game Ending Conditions and Multiple Round Playability](#testing-header-items-and-game-ending-conditions-and-multiple-round-playability)
     + [Checking Language Pairings](#checking-language-pairings)
@@ -168,11 +168,12 @@ time with plenty of replay value.
 ---
 
 ### BrowserStack
-+ Windows 10 (edge 18, chrome 71)
-+ OS X Big Sur (Chrome 71, Safari 14)
-+ Google Nexus 5 (Portrait)
++ [Windows 10 (edge 18)](assets/readme/browserstack/win10_edge_18.0.jpg)
++ [OS X Big Sur (Safari 14)](assets/readme/browserstack/macbsr_safari_14.0.jpg)
++ [OS X Big Sur (Chrome 71)](assets/readme/browserstack/macbsr_chrome_71.0.jpg)
++ [Google Nexus 5 (Portrait)](assets/readme/browserstack/4.4_Google-Nexus-5_portrait_real-mobile.jpg)
 
-### Developer
+### Developer Tested Systems
  + Windows 10 (Chrome 87, Edge 87, Firefox 84)
  + G8 ThinQ (Chrome 87)
  + iPad, 5th gen 13.3(safari 13) 
