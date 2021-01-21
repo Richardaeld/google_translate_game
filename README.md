@@ -141,7 +141,7 @@ time with plenty of replay value.
 + [Click here to view all wireframes associated to this project.](assets/readme/wireframe "Location of wireframes")
 
 ### Live Demo
-![Finished demo of the playing screen](assets/readme/finished_game_5_pair-large.png "Finished demo of the playing screen")
+![Finished demo of the playing screen](assets/readme/finished_game_5_pair-large.jpg "Finished demo of the playing screen")
 + A fully functioning demo can be found on GitHub, [here](https://richardaeld.github.io/google_translate_game/ "Deplayment location")
 + [GitHub's](https://github.com/) IDE [GitPod](https://www.gitpod.io/) was used for the construction process.
 + GitHub houses the master branch. 
@@ -324,7 +324,7 @@ W3Schools.  All these are documented in detail below.
 + [Arjun Khara](https://www.youtube.com/watch?v=OV8MVmtgmoY) - First discovered idea of rotating 3d objects using CSS here.
     + Used idea of a single box to contain all moving objects and faces of a card or 3D object.
     + Used ideas from his code to help understand how and where to place items, such as: "backface-visability" and "transform-style" to create desired effect.
-+ [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Invaluable source of information about JavaScript, HTML, and CSS.
++ [MDN Web Docs](https://developer.mozilla.org/en-US/) - Invaluable source of information about JavaScript, HTML, and CSS.
     + Used piece of code which allowed the background to travel entire vertical length of page (documented in JavaScript).
     + An idea that was used was a container that rotates 180 degrees with the aid of "backface-visability: hidden" and "transform-style:preserve-3d".
     + Used code placement (ex: where to place "backface-visability") and ideas to help with rotating the cards on the board. The exact location for this is 
@@ -345,7 +345,7 @@ W3Schools.  All these are documented in detail below.
 basis for this project's readme deployment section.
     + [Clone Information](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) - Used the structure of GitHub's "Cloning a repository" information as the
 basis for this project's readme deployment section 
-+ The game's main background image was taken by the developer, Richard Eldridge.
++ The game's main background image and icon were made by the developer, Richard Eldridge.
 
 # Acknowledgements
 + Felipe Souza Alarcon for his honest guidance, foresight, and helping lead me into directions I did not know I could go with this project. 
