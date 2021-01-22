@@ -42,9 +42,9 @@
 + [Deploy Clone from GitHub](#deploy-clone-from-github)
 + [GitHub Deployment](#github-deployment)
 
-[Tools and Citations](#tools-and-citations)
+[Tools and Credits](#tools-and-credits)
 + [Tools](#tools)
-+ [References and Ideas and Code Citations](#references-and-ideas-and-code-citations)
++ [Credits](#credits)
 
 [Acknowledgements](#acknowledgements)
 
@@ -292,7 +292,7 @@ friendly towards ARIA states.
 ![What published screen looks like](assets/readme/deployment/current_see_published.png "What published screen looks like")
 1. Now the page is fully viewable at the provided HTTP address.
 
-# Tools and Citations
+# Tools and Credits
 ## Tools
 + [Balsamiq](https://balsamiq.com/) - Used to produce the wireframes.
 + [Bootstrap](https://getbootstrap.com/) - Used as framework.
@@ -308,7 +308,7 @@ friendly towards ARIA states.
 + [JSHint](https://jshint.com/) - Used to identify errors in JavaScript.
 + [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Checks for performance, accessibility, best practices, and SEO.
 
-## References and Ideas and Code Citations
+## Credits
 + Felipe Souza Alarcon - Used idea to place words in JavaScript object(s) for languages banks.
 + Css card flip animation - This animation's code originated from three different locations. With great effort, these code pieces were melded into something unique to this project but 
 still deserves accurate documentation/citation. This code has numerous citations in the CSS where the three main structures of the card's CSS exist (outside, rotating portion, and faces).
