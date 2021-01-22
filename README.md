@@ -178,7 +178,9 @@ time with plenty of replay value.
         + Tested in portrait, which is tablet responsiveness level.
 
 ### Developer Testing Methods
-+ Every **Developer Test** was preformed on the above listed systems at specified screen style and size.
++ Every **Developer Test** was preformed on the above listed systems at specified screen orientation.
++ Between Landscape and portrait tests, the application was not refreshed.
++ After completion of **Developer Tests** on each system, the system was tested again with random moments of spam clicking and switching between landscape/tablet.
 
 ## Developer Tests
 ### **Testing Header Items and Game Ending Conditions and Multiple Round Playability**
@@ -200,11 +202,12 @@ time with plenty of replay value.
 1. Start a game with **default settings**. 
 1. Let timer run out and watch the game header change to "You Lose!". Let the game reset.
 1. Select next level of **Time on Clock** and start the game.
-1. Repeat steps 2 and 3 until all times have been selected.
+1. Repeat steps 2 and 3 until all times have been selected. (Be careful not to miss the 1 minute setting.)
 1. Start another game and win this round. Then, watch game header change to "You Win!". Let the game reset.
 1. Change **Number of Pairs** and repeat step 5. (Repeat this step until you've selected and won on all these options.)
 1. Change **Base Language** and repeat step 5. (Repeat this step until you've selected and won on all these options.)
 1. Change **Difficulty** (increase **time on clock** if needed) and repeat step 5. (Repeat this step until you've selected and won on all these options.)
+(This can make the game extremely difficult. If required, the card's face div has an ID and the last number of this ID is used to pair the cards.)
 
 #### Document Result(s):
 1. Document any incidences of incorrect header presentation.
@@ -237,6 +240,27 @@ time with plenty of replay value.
 #### Document Result(s):
 1. Document any incidences of incorrectly accepted/unaccepted word pairings.
 1. Document any incidences of cards left on the table when they should have disappeared.
+
+### **Checking Card Type**
+
+---
+
+#### Expectation(s):
+1. The game plays the same regardless of card skin chosen. 
+
+#### Assumption(s):
+1. Tester will ***not*** reload browser between play throughs.
+1. Tester will run all mentioned tests in their entirety 
+
+#### Testing Step(s):
+1. Select **Playing Card** under **Card Type**
+1. Run **Developer Test** **Testing Header Items and Game Ending Conditions and Multiple Round Playability** from start to end
+1. Run **Developer Test** **Checking Language Pairings**
+
+#### Document Result(s):
+1. Any aforementioned **document Results** from the **Developer Tests**
+1. Any card graphical bugs seen during tests. (Ex. misalignment, fading errors, etc...)
+
 
 ## Program Tests
 ### BrowserStack
