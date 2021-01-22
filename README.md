@@ -28,6 +28,7 @@
 + [Developer Tests](#developer-tests)
     + [Testing Header Items and Game Ending Conditions and Multiple Round Playability](#testing-header-items-and-game-ending-conditions-and-multiple-round-playability)
     + [Checking Language Pairings](#checking-language-pairings)
+    + [Lighthouse](#lighthouse)
 
 [Bugs and Other Problems](#bugs-and-other-problems)
 + [Previous Bugs](#previous-bugs)
@@ -214,6 +215,9 @@ time with plenty of replay value.
 #### Document Result(s):
 1. Document any incidences of incorrectly accepted/unaccepted word pairings.
 1. Document any incidences of cards left on the table when they should have disappeared.
+
+### Lighthouse
+![Lighthouse test](assets/readme/lighthouse.jpg)
 
 # Bugs and Other Problems
 ### Previous Bugs
