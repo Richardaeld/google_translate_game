@@ -22,13 +22,16 @@
 [Technology Languages](#technology-languages)
 
 [Testing](#testing)
-+ [Program Testing Systems](#program-testing-systems)
-    + [BrowserStack](#browserstack)
-    + [Developer Tested Systems](#developer-tested-systems)
++ [Developer Tested Systems](#developer-tested-systems)
 + [Developer Tests](#developer-tests)
     + [Testing Header Items and Game Ending Conditions and Multiple Round Playability](#testing-header-items-and-game-ending-conditions-and-multiple-round-playability)
     + [Checking Language Pairings](#checking-language-pairings)
++ [Program Tests](#program-tests)
+    + [BrowserStack](#browserstack)
     + [Lighthouse](#lighthouse)
+    + [JigSaw](#jigSaw)
+    + [W3C Validaror](#w3c-validaror)
+    + [JSHint](#jshint)
 
 [Bugs and Other Problems](#bugs-and-other-problems)
 + [Previous Bugs](#previous-bugs)
@@ -90,7 +93,6 @@ time with plenty of replay value.
 ![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
 + This program is responsive across all devices
 
-
 ### Game Start Screen
 + The game title stands out due to the use of a large font with a dark text shadow.
 + The text descriptions for select/options are placed over a dark background with a bright text color to help them stand out and draw the eye.
@@ -142,21 +144,13 @@ time with plenty of replay value.
 + Add a game board background selector for a different visual experience for returning users.
 + Change the games select/option listboxes to ul/li JavaScript powered Listboxes. This would allow for greater customization and full support of ARIA.
 
-
 # Technology Languages
 + HTML - Is the basic construction (foundation) of this webpage.
 + CSS - Used to make the basic construction of this webpage more visually appealing.
 + JavaScript - Allow users to interact with webpage without having to reload page or load multiple pages.
 
 # Testing
-## Program Testing Systems
-### BrowserStack
-+ [Windows 10 (edge 18)](assets/readme/browserstack/win10_edge_18.0.jpg)
-+ [OS X Big Sur (Safari 14)](assets/readme/browserstack/macbsr_safari_14.0.jpg)
-+ [OS X Big Sur (Chrome 71)](assets/readme/browserstack/macbsr_chrome_71.0.jpg)
-+ [Google Nexus 5 (Portrait)](assets/readme/browserstack/4.4_Google-Nexus-5_portrait_real-mobile.jpg)
-
-### Developer Tested Systems
+## Developer Tested Systems
  + Windows 10 (Chrome 87, Edge 87, Firefox 84)
  + G8 ThinQ (Chrome 87)
  + iPad, 5th gen 13.3(safari 13) 
@@ -216,8 +210,25 @@ time with plenty of replay value.
 1. Document any incidences of incorrectly accepted/unaccepted word pairings.
 1. Document any incidences of cards left on the table when they should have disappeared.
 
+## Program Tests
+### BrowserStack
++ [Windows 10 (edge 18)](assets/readme/browserstack/win10_edge_18.0.jpg)
++ [OS X Big Sur (Safari 14)](assets/readme/browserstack/macbsr_safari_14.0.jpg)
++ [OS X Big Sur (Chrome 71)](assets/readme/browserstack/macbsr_chrome_71.0.jpg)
++ [Google Nexus 5 (Portrait)](assets/readme/browserstack/4.4_Google-Nexus-5_portrait_real-mobile.jpg)
+
 ### Lighthouse
 ![Lighthouse test](assets/readme/lighthouse.jpg)
+
+### JigSaw
++ Identifies three errors that are documented in [Other Problems](#other-problems).
++ Identifies one warning. This warning is a vender extension that's required for safari to render text on the cards in the game.
+
+### W3C Validaror
++ Identifies one warning that does not require action.
+
+### JSHint
++ Helped find occurrences of missing semicolons and unidentified variables.
 
 # Bugs and Other Problems
 ### Previous Bugs
