@@ -229,7 +229,6 @@ time with plenty of replay value.
 
 ### JSHint
 + Helped find occurrences of missing semicolons and unidentified variables.
-+ 
 
 # Bugs and Other Problems
 ## Previous Bugs
