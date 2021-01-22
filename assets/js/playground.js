@@ -44,9 +44,18 @@ function CardStyle(index, fun) {
     this.fun = fun;
 }
 
+// Sets background height when function is called
+function changeBackgroundHeight(){
 // ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height (The line below taken directly from MDN)
-var fullScreenHeight = document.documentElement.scrollHeight;       // Sets variable that measures entire available screen real estate  
+let fullScreenHeight = document.documentElement.scrollHeight;       // Sets variable that measures entire available screen real estate  
 document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px"; // Sets background size to take up entire screen real estate
+}
+
+// Listens for a screen reseize to call a function
+window.onresize = changeBackgroundHeight();
+
+// Sets background height when game starts
+changeBackgroundHeight();
 
 // Global variables and object callers
 let importCardStyle = new CardStyle (cardIndex, cardFun);        // Builds card face and back for calling
@@ -153,11 +162,9 @@ function constructCard (cardNumber, classValues, className = null, cardType = nu
             cardInternal.lastChild.classList.add(importCardStyle[globalCardType][1]);
         }
 
-        // makes sure background extends entire length of visible screen
+        // Called once all card are placed and makes sure background extends entire length of visible screen
         if ( index == (cardNumber * 2)-1) { 
-            // ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height (The line below taken directly from MDN)
-            let fullScreenHeight = document.documentElement.scrollHeight;       // Sets variable that measures entire available screen real estate  
-            document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px"; // Sets background size to take up entire screen real estate        }
+            changeBackgroundHeight();
         }
     }
 }
@@ -277,8 +284,8 @@ function restartGame() {
             targetGame[0].remove();
         }
         
-        // Sets background size to original size before extended for cards
-        document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px"; 
+        // Sets background size 
+        changeBackgroundHeight();
 
         // Flashes player points and in game header so multiple games can be played
         playerPoints = 0;
