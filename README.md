@@ -22,7 +22,9 @@
 [Technology Languages](#technology-languages)
 
 [Testing](#testing)
-+ [Developer Tested Systems](#developer-tested-systems)
++ [Developer Testing Specifications](#developer-testing-specifications)
+    + [Developer Tested Systems](#developer-tested-systems)
+    + [Developer Testing Methods](#developer-testing-methods)
 + [Developer Tests](#developer-tests)
     + [Testing Header Items and Game Ending Conditions and Multiple Round Playability](#testing-header-items-and-game-ending-conditions-and-multiple-round-playability)
     + [Checking Language Pairings](#checking-language-pairings)
@@ -45,6 +47,8 @@
 [Tools and Credits](#tools-and-credits)
 + [Tools](#tools)
 + [Credits](#credits)
+    + [Code Citations](#code-citations)
+    + [References and Ideas](#references-and-ideas)
 
 [Acknowledgements](#acknowledgements)
 
@@ -133,7 +137,7 @@ time with plenty of replay value.
 
 ### Live Demo
 ![Finished demo of the playing screen](assets/readme/finished_game_5_pair-large.jpg "Finished demo of the playing screen")
-+ A fully functioning demo can be found on GitHub, [here](https://richardaeld.github.io/google_translate_game/ "Deplayment location")
++ A fully functioning demo can be found on GitHub, [here](https://richardaeld.github.io/google_translate_game/ "Deplayment location").
 + [GitHub's](https://github.com/) IDE [GitPod](https://www.gitpod.io/) was used for the construction process.
 + GitHub houses the master branch. 
 
@@ -150,10 +154,31 @@ time with plenty of replay value.
 + JavaScript - Allow users to interact with webpage without having to reload page or load multiple pages.
 
 # Testing
-## Developer Tested Systems
- + Windows 10 (Chrome 87, Edge 87, Firefox 84)
- + G8 ThinQ (Chrome 87)
- + iPad, 5th gen 13.3(safari 13) 
+## Developer Testing Specifications
+### Developer Tested Systems
++ Windows 10 (Chrome 87, Edge 87, Firefox 84)
+    + Chrome  
+        + Developed in Chrome.
+        + Initially tested in every bootstrap breakpoint during development.
+        + Tested in landscape, which is desktop responsiveness level. 
+        + Tested in portrait, which is tablet responsiveness level.
+    + Edge
+        + Tested in landscape, which is desktop responsiveness level.
+        + Tested in portrait, which is tablet responsiveness level.
+    + Firefox
+        + Tested in landscape, which is desktop responsiveness level.
+        + Tested in portrait, which is tablet responsiveness level.
++ G8 ThinQ (Chrome 87)
+    + Chrome
+        + Tested in landscape, which is tablet responsiveness level.
+        + Tested in portrait, which is mobile responsiveness level.
++ iPad, 5th gen 13.3(Safari 13) 
+    + Safari
+        + Tested in landscape, which is tablet responsiveness level.
+        + Tested in portrait, which is tablet responsiveness level.
+
+### Developer Testing Methods
++ Every **Developer Test** was preformed on the above listed systems at specified screen style and size.
 
 ## Developer Tests
 ### **Testing Header Items and Game Ending Conditions and Multiple Round Playability**
@@ -167,6 +192,7 @@ time with plenty of replay value.
 1. The game never needs to be reloaded to function properly.
 
 #### Assumption(s):
+1. Tester realizes that this is the **most** critical testing group because all these parts interact directly in the code and cannot be sensically tested independently. 
 1. Tester will ***not*** reload browser between play throughs.
 1. Tester knows the correct content of game's header and when it should be visible.
 
@@ -203,8 +229,10 @@ time with plenty of replay value.
 1. Wait for game to restart.
 1. Select the next amount of **Number of Pairs** and repeat steps 2 and 3.
 1. repeat steps 4, 2, and then 3 in that order until all **Number of Pairs** have been used.
-1. Select the next language of **Pairing Language**, reset **Number of Pairs** to 5 pairs, and start game.
-1. Repeat steps 2, 3, 4, 5, and 6 until all Pairing Languages have been cycled through.
+1. Select the next language of **Pairing Language**, set **Number of Pairs** to 5 pairs, and start game.
+1. Repeat steps 2, 3, 4, 5, and 6 until all **Pairing Languages** have been cycled through.
+1. Select the next language of **Base Language**, set **Number of Pairs** to 5 pairs, and start the game.
+1. Repeat steps 2, 3, 4, 5, 6, and 7 until all **Base Languages** have been cycled through.
 
 #### Document Result(s):
 1. Document any incidences of incorrectly accepted/unaccepted word pairings.
@@ -224,7 +252,7 @@ time with plenty of replay value.
 + Identifies three errors that are documented in [Other Problems](#other-problems).
 + Identifies one warning. This warning is a vender extension that's required for safari to render text on the cards in the game.
 
-### W3C Validaror
+### W3C Validator
 + Identifies one warning that does not require action.
 
 ### JSHint
@@ -243,7 +271,16 @@ lines, but now they provide a good visual experience.
 + The background image would not always extend the entire length of the screen on smaller devices. Code from MDN (documented below) was used to find the appropriate length to set "min-height" to. This 
 variable was created at the global and local levels. The global variable was used to set the height of the background when the program starts and to "reset" its height after winning 
 or losing conditions of the game were met. The local variable was created to set the background after the cards have been created to be sure the background extended appropriately. 
-Having these two different scoped variables ensures the program switches appropriately between the different screen heights on all devices.
+Having these two different scoped variables ensures the program switches appropriately between the different screen heights on all devices. **update(This fix was proven insufficient and made obsolete with 
+the fix detailed below)
++ During testing on a mobile device it was discovered that switching from landscape to portrait could leave the background image shorter than the screen height. This bug was later 
+found on a desktop device when switching from landscape to portrait. With the initial fix (detailed above) being insufficient the code was refactored into a function to be called on 
+the local level in all of the same places as it was before. An additional "resize" event listener was added. This code would not run at the proper time so an additional piece of code 
+was used from MDN (detailed in credits). This new code sets the screen height whenever a resize is detected.  
+ 
+piece of code was added from MDN to call the function whenever there was a screen resize. 
++ https://developer.mozilla.org/en-US/docs/Web/Events
++ https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event
 
 ## Current Bugs
 + A screen pixel width below 320px or above 4000px will quickly lose a good UX. 
@@ -309,25 +346,43 @@ friendly towards ARIA states.
 + [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Checks for performance, accessibility, best practices, and SEO.
 
 ## Credits
-+ Felipe Souza Alarcon - Used idea to place words in JavaScript object(s) for languages banks.
-+ Css card flip animation - This animation's code originated from three different locations. With great effort, these code pieces were melded into something unique to this project but 
+### Code Citations
+#### CSS Card Flip Animation
++ This animation's code originated from three different locations. With great effort, these code pieces were melded into something unique to this project but 
 still deserves accurate documentation/citation. This code has numerous citations in the CSS where the three main structures of the card's CSS exist (outside, rotating portion, and faces).
 A citation was also added to the HTML above the dynamically added content section. The three places where code originated from are: Arjun Khara, MDN Web Docs, and
-W3Schools.  All these are documented in detail below. 
-+ [Arjun Khara](https://www.youtube.com/watch?v=OV8MVmtgmoY) - First discovered idea of rotating 3d objects using CSS here.
-    + Used idea of a single box to contain all moving objects and faces of a card or 3D object.
-    + Used ideas from his code to help understand how and where to place items, such as: "backface-visability" and "transform-style" to create desired effect.
+W3Schools.  All these are documented in detail below.
+    + [Arjun Khara](https://www.youtube.com/watch?v=OV8MVmtgmoY)
+        + First discovered idea of rotating 3d objects using only CSS [here](https://www.youtube.com/watch?v=OV8MVmtgmoY).
+        + Used idea of a single box to contain all moving objects and faces of a card or 3D object.
+        + Used ideas from his code to help understand how and where to place items, such as: "backface-visability" and "transform-style" to create desired effect.
+    + [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility) 
+        + Used idea of a container that rotates 180 degrees with the aid of "backface-visability: hidden" and "transform-style:preserve-3d".
+        + Used code placement (ex: where to place "backface-visability" in HTML structure) ideas to help with rotating the cards on the board. This code can be found 
+        [here](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility).
+        + Used to help understand how "backface-visability: hidden" and "transform-style:preserve-3d" work together to produce the desired effect. This code can be found 
+        [here](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility).
+    + [W3Schools](https://www.w3schools.com/howto/howto_css_flip_box.asp)
+        + Used code and ideas to help with rotating the cards on the game board. This code can be found [here](https://www.w3schools.com/howto/howto_css_flip_box.asp).
+
+#### Random number generator 
++ This JavaScript function was discovered at W3Schools and its code was adapted to accept a variable from the loop which it is run from.
+    + [W3Schools](https://www.w3schools.com/js/js_random.asp)
+        + Used code format (**Math.floor(Math.random() * number)**) to understand how random works and used custom version that incorporates a 
+        variable for this projects random number generator. The code format is found [here](https://www.w3schools.com/js/js_random.asp).
+
+#### Extend Background Image to Bottom of Screen
++ Two lines of code from MDN are responsible for the backbone of this codes function. 
+    + [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Document/height)
+        + Used code that allows JavaScript to dynamically read the length of the screen. This code can be found [here](https://developer.mozilla.org/en-US/docs/Web/API/Document/height).
+    + [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event)
+        + Used code that allows JavaScript to dynamically sense when the screen has been resized. This code can be found [here](https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event).
+
+
+### References and Ideas
++ Felipe Souza Alarcon - Used idea to place words in JavaScript object(s) for languages banks.
 + [MDN Web Docs](https://developer.mozilla.org/en-US/) - Invaluable source of information about JavaScript, HTML, and CSS.
-    + Used piece of code which allowed the background to travel entire vertical length of page (documented in JavaScript).
-    + An idea that was used was a container that rotates 180 degrees with the aid of "backface-visability: hidden" and "transform-style:preserve-3d".
-    + Used code placement (ex: where to place "backface-visability") and ideas to help with rotating the cards on the board. The exact location for this is 
-    [here](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility).
-    + Used to help understand how "backface-visability: hidden" and "transform-style:preserve-3d" work together to produce the desired effect. The exact location for this is 
-    [here](https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility).
 + [W3Schools](https://www.w3schools.com/) - A wonderful resource for element, attribute, and event selection for JavaScript.
-    + Used code and ideas to help with rotating the cards on the game board. The exact location for this is [here](https://www.w3schools.com/howto/howto_css_flip_box.asp).
-    + Used code format (**Math.floor(Math.random() * number)**) to understand how random works and used custom version that incorporates a variable for this projects random number generator. 
-    The code format is found [here](https://www.w3schools.com/js/js_random.asp).
 + [World Wide Web Consortium (W3C)](https://www.w3.org/) - Used for understanding ARIA content and industry standard use.
     + Multiple standardizations were used from specifically: 
     [aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/GL/wiki/Using_aria-labelledby_to_provide_a_name_for_user_interface_controls) and 
