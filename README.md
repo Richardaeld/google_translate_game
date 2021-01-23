@@ -184,7 +184,7 @@ time with plenty of replay value.
 
 ### Developer Testing Methods
 + Every **Developer Test** was preformed on the above listed systems at specified screen orientation.
-+ Between Landscape and portrait tests, the application was not refreshed.
++ Between Landscape and portrait tests, the application was not refreshed. This is a critical part of the test! Part of the test is they are **never** refreshed between tests. This is a test for stability.
 + After completion of **Developer Tests** on each system, the system was tested again with random moments of spam clicking and switching between landscape/tablet.
 
 ## Developer Tests
@@ -193,8 +193,11 @@ time with plenty of replay value.
 ---
 
 #### Expectation(s):
+1. Menus and headers disappear and reappear appropriately.
 1. The game's header changes to "You Lose!" when the timer runs out.
 1. The game resets to the user selection screen.
+1. Header items are easily visible, disappear when not in use, always display correct values.
+1. The game never needs to be reloaded to function properly.
 
 #### Assumption(s):
 1. Tester will ***not*** reload browser between play throughs.
@@ -208,24 +211,24 @@ time with plenty of replay value.
 #### Document Result(s):
 1. Document any incidences of incorrect header presentation.
 1. Document any failure of the timer.
-1. Document any incorrect lose conditions.
 1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
 
-### **Testing Header Items and Game Ending Conditions and Multiple Round Playability**
+### **Testing Base Language and Point Calculator**
 
 ---
 
 #### Expectation(s):
-1. Menus disappear when not in use.
+1. Menus and headers disappear and reappear appropriately.
 1. Game tells user when they have won or lost.
 1. Header items are easily visible, disappear when not in use, always display correct values.
 1. The game never needs to be reloaded to function properly.
 
 #### Assumption(s):
-1. Tester realizes that this is the **most** critical testing group because all these parts interact directly in the code and cannot be sensically tested independently. 
 1. Tester will ***not*** reload browser between play throughs.
 1. Tester knows the correct content of game's header and when it should be visible.
-1. Tester will occasionally fail a game round just to be sure the lost condition works outside of optional settings
+1. Tester is watching the point calculator as they are playing the game and making sure it is displaying correctly.
+1. Tester will occasionally fail a game round just to be sure the lost condition works.
+1. Tester always checks for correct word pairings.
 
 #### Testing Step(s):
 1. Start game with **default settings** 
@@ -238,8 +241,10 @@ time with plenty of replay value.
 #### Document Result(s):
 1. Document any incidences of incorrect header presentation.
 1. Document any failure of the timer.
+1. Document any incidences of incorrectly accepted/unaccepted word pairings.
 1. Document any incorrect win/lose conditions.
 1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
+1. Document any incidences of cards left on the table when they should have disappeared.
 
 ### **Checking Difficulty**
 
@@ -247,22 +252,30 @@ time with plenty of replay value.
 
 #### Expectation(s):
 1. The difficulty increases a delay between matching card pairs.
+1. The game will function according to the specifications of the test, **Testing Base Language and Point Calculator**.
 
 #### Assumption(s):
 1. Tester will ***not*** reload browser between play throughs.
 1. The tester knows this can make the game extremely difficult or even unwinnable. 
 1. The tester knows the card's face div has an ID and the last number of this ID is used to pair the cards.
 1. The tester will increase the **time on clock** if needed.
-1. The tester may not be able to complete this test on **hard** or **unforgiving** on a tablet or mobile device and thats acceptable. (Without an inspection mode, on a browser, these settings are extremely difficult especially with 15 pairs of cards in play.)
+1. The tester may not be able to win on **hard** or **unforgiving** on a tablet or mobile device and that's acceptable. (Detailed in the testing steps.)
+1. The tester will intentionally fail a single game on every difficulty level tested. 
 
 #### Testing Step(s):
 1. Increase **difficulty** of the game.
-1. Run the **Testing Header Items and Game Ending Conditions and Multiple Round Playability** test in its entirety.
-1. Repeat step 2 on the **hard** **difficulty**.
+1. Run the **Testing Base Language and Point Calculator** test in its entirety.
+1. Repeat step 2 on the **hard** **difficulty**. (Attempt to win these rounds but losing most of them wont negatively impact testing.)
 1. Repeat step 2 on the **unforgiving** **difficulty**. (Attempt to win these rounds but losing most of them wont negatively impact testing.)
 
 #### Document Result(s):
-
+1. document any incidences of the difficulty not performing properly.
+1. Document any incidences of incorrect header presentation.
+1. Document any failure of the timer.
+1. Document any incidences of incorrectly accepted/unaccepted word pairings.
+1. Document any incorrect win/lose conditions.
+1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
+1. Document any incidences of cards left on the table when they should have disappeared.
 
 ### **Checking Language Pairings**
 
@@ -272,8 +285,9 @@ time with plenty of replay value.
 1. The game always has the correct pair of words up to match.
 
 #### Assumption(s):
-1. A basic understanding of foreign languages used or a cheat sheet of correct word pairs.
 1. Tester will ***not*** reload browser between play throughs.
+1. A basic understanding of foreign languages used, a cheat sheet of correct word pairs, or knows the card's face div has an ID and the last number of this ID is used to pair the cards.
+1. Tester always checks for correct word pairings.
 
 #### Testing Step(s):
 1. Start the game on its **default setting** (add more time to **Time on Clock** if needed).
@@ -299,15 +313,17 @@ time with plenty of replay value.
 
 #### Assumption(s):
 1. Tester will ***not*** reload browser between play throughs.
-1. Tester will run all mentioned tests in their entirety 
+1. Tester will run all mentioned tests in their entirety. 
 
 #### Testing Step(s):
 1. Select **Playing Card** under **Card Type**
-1. Run **Developer Test** **Testing Header Items and Game Ending Conditions and Multiple Round Playability** from start to end
-1. Run **Developer Test** **Checking Language Pairings**
+1. Run **Developer Test** **Testing Timer** from start to end.
+1. Run **Developer Test** **Testing Base Language and Point Calculator**.
+1. Run **Developer Test** **Checking Difficulty**.
+1. Run **Developer Test** **Checking Language Pairings**.
 
 #### Document Result(s):
-1. Any aforementioned **document Results** from the **Developer Tests**
+1. Any aforementioned **document Results** from the **Developer Tests**.
 1. Any card graphical bugs seen during tests. (Ex. misalignment, fading errors, etc...)
 
 
