@@ -26,8 +26,11 @@
     + [Developer Tested Systems](#developer-tested-systems)
     + [Developer Testing Methods](#developer-testing-methods)
 + [Developer Tests](#developer-tests)
+    + [Testing Timer](#testing-timer)
     + [Testing Header Items and Game Ending Conditions and Multiple Round Playability](#testing-header-items-and-game-ending-conditions-and-multiple-round-playability)
+    + [Checking Difficulty](#checking-difficulty)
     + [Checking Language Pairings](#checking-language-pairings)
+    + [Checking Card Type](#checking-card-type)
 + [Program Tests](#program-tests)
     + [BrowserStack](#browserstack)
     + [Lighthouse](#lighthouse)
@@ -86,12 +89,14 @@ cards, time to complete each round, and the number of cards to pair.
 + As a user, I'd like an enjoyable way to spend my free time.
 + As a user, I'd like a game that helps with memory retention skills.
 + As a user, I'd like to learn some basic words of a different language.
++ As a user, I want a game that challenges me.
 
 ### Experience Provided
 + The game has different settings, such as: selectable difficulty, timer length, multiple languages, and total number of card pairs to give a user an enjoyable way to spend 
 time with plenty of replay value.
 + The game has an adjustable difficulty that can be used to provide an experience that will challenge the user's memory retention skills.
 + The game currently has six different languages to pick from and they are pairable in any way the user chooses.
++ The game timer, difficulty, and total number of cards can be combined to give the user a over all difficulty setting of novice to literally unwinnable.  
 
 ## Design Choices
 ![Responsiveness across devices](assets/readme/responsiveness.jpg "Looks great across all devices!")
@@ -183,6 +188,29 @@ time with plenty of replay value.
 + After completion of **Developer Tests** on each system, the system was tested again with random moments of spam clicking and switching between landscape/tablet.
 
 ## Developer Tests
+### **Testing Timer**
+
+---
+
+#### Expectation(s):
+1. The game's header changes to "You Lose!" when the timer runs out.
+1. The game resets to the user selection screen.
+
+#### Assumption(s):
+1. Tester will ***not*** reload browser between play throughs.
+
+#### Testing Step(s):
+1. Start a game with **default settings**. 
+1. Let timer run out and watch the game header change to "You Lose!" and let the game reset.
+1. Select a untested amount of **Time on Clock** and start the game.
+1. Repeat steps 2 and 3 until all times have been selected. (Be careful not to miss the 1 minute setting.)
+
+#### Document Result(s):
+1. Document any incidences of incorrect header presentation.
+1. Document any failure of the timer.
+1. Document any incorrect lose conditions.
+1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
+
 ### **Testing Header Items and Game Ending Conditions and Multiple Round Playability**
 
 ---
@@ -197,23 +225,44 @@ time with plenty of replay value.
 1. Tester realizes that this is the **most** critical testing group because all these parts interact directly in the code and cannot be sensically tested independently. 
 1. Tester will ***not*** reload browser between play throughs.
 1. Tester knows the correct content of game's header and when it should be visible.
+1. Tester will occasionally fail a game round just to be sure the lost condition works outside of optional settings
 
 #### Testing Step(s):
-1. Start a game with **default settings**. 
-1. Let timer run out and watch the game header change to "You Lose!". Let the game reset.
-1. Select next level of **Time on Clock** and start the game.
-1. Repeat steps 2 and 3 until all times have been selected. (Be careful not to miss the 1 minute setting.)
-1. Start another game and win this round. Then, watch game header change to "You Win!". Let the game reset.
-1. Change **Number of Pairs** and repeat step 5. (Repeat this step until you've selected and won on all these options.)
-1. Change **Base Language** and repeat step 5. (Repeat this step until you've selected and won on all these options.)
-1. Change **Difficulty** (increase **time on clock** if needed) and repeat step 5. (Repeat this step until you've selected and won on all these options.)
-(This can make the game extremely difficult. If required, the card's face div has an ID and the last number of this ID is used to pair the cards.)
+1. Start game with **default settings** 
+1. Win this round. Then, watch game header change to "You Win!". Let the game reset.
+1. Change **Number of Pairs** to a untested amount and repeat step 2. 
+1. Repeat steps 3 and 2 in that order until you've selected and won on all these **Number of Pairs** options.
+1. Change **Base Language** and repeat steps 2 ,3 and 4 in that order.
+1. Repeat step 5 until you've selected and won on all these options.
 
 #### Document Result(s):
 1. Document any incidences of incorrect header presentation.
 1. Document any failure of the timer.
 1. Document any incorrect win/lose conditions.
 1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
+
+### **Checking Difficulty**
+
+---
+
+#### Expectation(s):
+1. The difficulty increases a delay between matching card pairs.
+
+#### Assumption(s):
+1. Tester will ***not*** reload browser between play throughs.
+1. The tester knows this can make the game extremely difficult or even unwinnable. 
+1. The tester knows the card's face div has an ID and the last number of this ID is used to pair the cards.
+1. The tester will increase the **time on clock** if needed.
+1. The tester may not be able to complete this test on **hard** or **unforgiving** on a tablet or mobile device and thats acceptable. (Without an inspection mode, on a browser, these settings are extremely difficult especially with 15 pairs of cards in play.)
+
+#### Testing Step(s):
+1. Increase **difficulty** of the game.
+1. Run the **Testing Header Items and Game Ending Conditions and Multiple Round Playability** test in its entirety.
+1. Repeat step 2 on the **hard** **difficulty**.
+1. Repeat step 2 on the **unforgiving** **difficulty**. (Attempt to win these rounds but losing most of them wont negatively impact testing.)
+
+#### Document Result(s):
+
 
 ### **Checking Language Pairings**
 
