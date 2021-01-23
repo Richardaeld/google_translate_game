@@ -53,7 +53,7 @@ document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 5
 
 // Listens for a screen reseize to call a function
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event found at MDN and used to detect screen resizing
-window.onresize = changeBackgroundHeight();
+window.onresize = changeBackgroundHeight;
 
 // Sets background height when game starts
 changeBackgroundHeight();
