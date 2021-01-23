@@ -27,7 +27,7 @@
     + [Developer Testing Methods](#developer-testing-methods)
 + [Developer Tests](#developer-tests)
     + [Testing Timer](#testing-timer)
-    + [Testing Header Items and Game Ending Conditions and Multiple Round Playability](#testing-header-items-and-game-ending-conditions-and-multiple-round-playability)
+    + [Testing Base Language and Point Calculator](#testing-base-language-and-point-calculator)
     + [Checking Difficulty](#checking-difficulty)
     + [Checking Language Pairings](#checking-language-pairings)
     + [Checking Card Type](#checking-card-type)
