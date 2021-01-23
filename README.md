@@ -28,9 +28,9 @@
 + [Developer Tests](#developer-tests)
     + [Testing Timer](#testing-timer)
     + [Testing Base Language and Point Calculator](#testing-base-language-and-point-calculator)
-    + [Checking Difficulty](#checking-difficulty)
-    + [Checking Language Pairings](#checking-language-pairings)
-    + [Checking Card Type](#checking-card-type)
+    + [Testing Difficulty](#testing-difficulty)
+    + [Testing Language Pairings](#testing-language-pairings)
+    + [Testing Card Type](#testing-card-type)
 + [Program Tests](#program-tests)
     + [BrowserStack](#browserstack)
     + [Lighthouse](#lighthouse)
@@ -106,22 +106,26 @@ time with plenty of replay value.
 + The game title stands out due to the use of a large font with a dark text shadow.
 + The text descriptions for select/options are placed over a dark background with a bright text color to help them stand out and draw the eye.
 + Multiple user inputs are given for returning and new users alike. 
++ Multiple user inputs allow users to choose how easy or difficult they want to make the game.
++ A selection of six different languages is given to the user. These languages are pairable in any combination.
++ An adjustable difficulty (matching delay) is provided to users. This force users to use their memory over hunting and pecking.
 
 ### Game Board
 + A dark background image was used to help the cards stand out.
-+ The background was chosen because it resembles a desk or table. 
++ The background was chosen because it resembles a desk or table because this is a typical place to play cards.  
 
 ### Gameplay
 + The gameplay is kept intuitive and simple so users can focus on recognizing foreign words or remembering where words were placed.
-+ The game header contains a timer and points calculator in an easy to read format.
-+ The cards are dynamically added and removed with JavaScript when the game starts and ends.
++ The game header contains a timer and points calculator in an easy to read format. This encourages users to do better each time.
++ The cards are dynamically added/removed and menus disappear/appear with JavaScript when the game starts and ends. This maximizes availiable screen real estate.
 + The game allows multiple playthroughs without having to refresh the browser.
-+ A click limiter was installed to keep users from spam clicking to win the game. This default time delay can be increased by selecting a different game difficulty setting.
-+ The game pulls random word pairings from its language bank for each round.
++ A click limiter was installed to keep users from spam clicking to win or break the game. 
++ The game pulls random word pairings from its language bank for each round. This keeps the game feeling fresh and interesting to returning users.
 
 ### Game Cards
-+ The default background image of the game cards resemble that of flash cards that school students would use.
-+ The font family chosen for the cards mimics a hand-written font and was paired with a bright text color. This combination gives a homemade flash card appearance.
++ The "index card" of the game cards resemble that of flash cards that school students would use.
++ The font family chosen for the cards mimics a hand-written font and was paired with a bright text color. This combination gives a fun homemade flash card appearance.
++ The "playing card" of the game cards resemble playful deck cards. They give a more fun feeling rather than studious.
 + A CSS effect is applied to the game cards to give them a flipping animation. This gives the game a simple but memorable wow factor.
 
 ### Page Performance
@@ -246,7 +250,7 @@ time with plenty of replay value.
 1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
 1. Document any incidences of cards left on the table when they should have disappeared.
 
-### **Checking Difficulty**
+### **Testing Difficulty**
 
 ---
 
@@ -277,7 +281,7 @@ time with plenty of replay value.
 1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
 1. Document any incidences of cards left on the table when they should have disappeared.
 
-### **Checking Language Pairings**
+### **Testing Language Pairings**
 
 ---
 
@@ -304,7 +308,7 @@ time with plenty of replay value.
 1. Document any incidences of incorrectly accepted/unaccepted word pairings.
 1. Document any incidences of cards left on the table when they should have disappeared.
 
-### **Checking Card Type**
+### **Testing Card Type**
 
 ---
 
@@ -365,11 +369,7 @@ the fix detailed below)
 + During testing on a mobile device it was discovered that switching from landscape to portrait could leave the background image shorter than the screen height. This bug was later 
 found on a desktop device when switching from landscape to portrait. With the initial fix (detailed above) being insufficient the code was refactored into a function to be called on 
 the local level in all of the same places as it was before. An additional "resize" event listener was added. This code would not run at the proper time so an additional piece of code 
-was used from MDN (detailed in credits). This new code sets the screen height whenever a resize is detected.  
- 
-piece of code was added from MDN to call the function whenever there was a screen resize. 
-+ https://developer.mozilla.org/en-US/docs/Web/Events
-+ https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event
+was used from MDN (window.onresize = foo). This new code sets the screen height whenever a resize is detected.  
 
 ## Current Bugs
 + A screen pixel width below 320px or above 4000px will quickly lose a good UX. 
@@ -422,17 +422,17 @@ friendly towards ARIA states.
 ## Tools
 + [Balsamiq](https://balsamiq.com/) - Used to produce the wireframes.
 + [Bootstrap](https://getbootstrap.com/) - Used as framework.
++ [BrowserStack](https://www.browserstack.com/) - Used to check for compatibility errors.
 + [GitHub](https://github.com/) - Used for version control and deployment of demo (prototype) website.
 + [GitPod](https://www.gitpod.io/) - Integrated development environment used.
 + [Google Fonts](https://fonts.google.com/) - Imported font families from here. 
 + [Jigsaw (Validation Service)](https://jigsaw.w3.org/css-validator/) - Used to identify errors in CSS.
++ [JSHint](https://jshint.com/) - Used to identify errors in JavaScript.
++ [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Checks for performance, accessibility, best practices, and SEO.
 + [Pingdom](https://tools.pingdom.com/) - Used to check load time.
 + [Techsini](https://techsini.com/multi-mockup/) - Used for their viewable responsiveness PNG.
 + [TinyPNG](https://tinypng.com/) - Used to Minimize KB load per image.
 + [W3C Validator](https://validator.w3.org/) - Used to identify errors in markup.
-+ [BrowserStack](https://www.browserstack.com/) - Used to check for compatibility errors.
-+ [JSHint](https://jshint.com/) - Used to identify errors in JavaScript.
-+ [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Checks for performance, accessibility, best practices, and SEO.
 
 ## Credits
 ### Code Citations
@@ -469,22 +469,34 @@ W3Schools.  All these are documented in detail below.
 
 
 ### References and Ideas
-+ Felipe Souza Alarcon - Used idea to place words in JavaScript object(s) for languages banks.
-+ [MDN Web Docs](https://developer.mozilla.org/en-US/) - Invaluable source of information about JavaScript, HTML, and CSS.
-+ [W3Schools](https://www.w3schools.com/) - A wonderful resource for element, attribute, and event selection for JavaScript.
-+ [World Wide Web Consortium (W3C)](https://www.w3.org/) - Used for understanding ARIA content and industry standard use.
-    + Multiple standardizations were used from specifically: 
-    [aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/GL/wiki/Using_aria-labelledby_to_provide_a_name_for_user_interface_controls) and 
-    [ARIA labeling with a dropdown listbox](https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-collapsible.html).
-+ [Stack Overflow](https://stackoverflow.com/) - Helped in understanding the importance of loops in JavaScript.
-+ [TestLodge](https://blog.testlodge.com/how-to-write-test-cases-for-software-with-sample/) - Used for test case examples.
-+ [Bootstrap](https://getbootstrap.com/) - Framework used to help speed up development and add a better UX.
-+ [GitHub](https://github.com/) - Used their documentation as this project's deployment basis.
++ Felipe Souza Alarcon
+    + Used idea to place words in JavaScript object(s) for languages banks.
++ [MDN Web Docs](https://developer.mozilla.org/en-US/)
+    + Invaluable source of information about JavaScript, HTML, and CSS.
++ [W3Schools](https://www.w3schools.com/)
+    + A wonderful resource for element, attribute, and event selection for JavaScript.
+    + Extremely helpful for explaing base HTML, CSS, and JavaScript principles. 
++ [World Wide Web Consortium (W3C)](https://www.w3.org/)
+    + Used for understanding ARIA content and industry standard use.
+    + Multiple standardizations were used from here.
+    + The aria standardizations that were specifically drawn from are: 
+        + [aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/GL/wiki/Using_aria-labelledby_to_provide_a_name_for_user_interface_controls)
+        + [ARIA labeling with a dropdown listbox](https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-collapsible.html).
++ [Stack Overflow](https://stackoverflow.com/)
+    + Great souce of information for finding a starting place and direction to research.
+    + Helped in understanding the importance of loops in JavaScript.
++ [TestLodge](https://blog.testlodge.com/how-to-write-test-cases-for-software-with-sample/)
+    + Used to help formulate test syntax structure.
++ [Bootstrap](https://getbootstrap.com/)
+    + Framework used to help speed up development and provide a better overall UX.
++ [GitHub](https://github.com/)
+    + Used their documentation as this project's deployment basis.
     + [Deployment Information](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) - Used the structure of GitHub's deployment information as the 
 basis for this project's readme deployment section.
     + [Clone Information](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) - Used the structure of GitHub's "Cloning a repository" information as the
 basis for this project's readme deployment section 
-+ The game's main background image and icon were made by the developer, Richard Eldridge.
++ Richard Eldridge 
+    + Made the game's main background image and icon.
 
 # Acknowledgements
 + Felipe Souza Alarcon for his honest guidance, foresight, and helping lead me into directions I did not know I could go with this project. 
