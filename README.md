@@ -420,19 +420,32 @@ friendly towards ARIA states.
 
 # Tools and Credits
 ## Tools
-+ [Balsamiq](https://balsamiq.com/) - Used to produce the wireframes.
-+ [Bootstrap](https://getbootstrap.com/) - Used as framework.
-+ [BrowserStack](https://www.browserstack.com/) - Used to check for compatibility errors.
-+ [GitHub](https://github.com/) - Used for version control and deployment of demo (prototype) website.
-+ [GitPod](https://www.gitpod.io/) - Integrated development environment used.
-+ [Google Fonts](https://fonts.google.com/) - Imported font families from here. 
-+ [Jigsaw (Validation Service)](https://jigsaw.w3.org/css-validator/) - Used to identify errors in CSS.
-+ [JSHint](https://jshint.com/) - Used to identify errors in JavaScript.
-+ [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Checks for performance, accessibility, best practices, and SEO.
-+ [Pingdom](https://tools.pingdom.com/) - Used to check load time.
-+ [Techsini](https://techsini.com/multi-mockup/) - Used for their viewable responsiveness PNG.
-+ [TinyPNG](https://tinypng.com/) - Used to Minimize KB load per image.
-+ [W3C Validator](https://validator.w3.org/) - Used to identify errors in markup.
++ [Balsamiq](https://balsamiq.com/)
+    + Used to produce the wireframes.
++ [Bootstrap](https://getbootstrap.com/)
+    + Used as framework.
++ [BrowserStack](https://www.browserstack.com/)
+    + Used to check for compatibility errors.
++ [GitHub](https://github.com/)
+    + Used for version control and deployment of demo (prototype) website.
++ [GitPod](https://www.gitpod.io/)
+    + Integrated development environment used.
++ [Google Fonts](https://fonts.google.com/)
+    + Imported font families from here. 
++ [Jigsaw (Validation Service)](https://jigsaw.w3.org/css-validator/)
+    + Used to identify errors in CSS.
++ [JSHint](https://jshint.com/)
+    + Used to identify errors in JavaScript.
++ [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+    + Checks for performance, accessibility, best practices, and SEO.
++ [Pingdom](https://tools.pingdom.com/)
+    + Used to check load time.
++ [Techsini](https://techsini.com/multi-mockup/)
+    + Used for their viewable responsiveness PNG.
++ [TinyPNG](https://tinypng.com/)
+    + Used to Minimize KB load per image.
++ [W3C Validator](https://validator.w3.org/)
+    + Used to identify errors in markup.
 
 ## Credits
 ### Code Citations
