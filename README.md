@@ -77,7 +77,7 @@ cards, time to complete each round, and the number of cards to pair.
 ### Developer Goals 
 + Showcase "Vanilla" JavaScript ability:
     + Have a game that is "Vanilla" JavaScript powered and takes multiple user inputs.
-    + Have user inputs that can change the way JavaScript builds the game (Ex. number of cards, multiple languages, background (appearance) of cards, etc...).
+    + Have user inputs that can change the way JavaScript builds the game (Ex. number of cards, multiple languages, appearance of cards, etc...).
     + All cards in game are dynamically added and removed with the start and end of each game round.
     + Game is capable of multiple play throughs without a page refreash.
     + The game timer is a continuously running JavaScript function.
@@ -92,7 +92,7 @@ cards, time to complete each round, and the number of cards to pair.
 + As a user, I want a game that challenges me.
 
 ### Experience Provided
-+ The game has different settings, such as: selectable difficulty, timer length, multiple languages, and total number of card pairs to give a user an enjoyable way to spend 
++ The game has different settings, such as: selectable difficulty, time on clock, multiple languages, and total number of card pairs to give a user an enjoyable way to spend 
 time with plenty of replay value.
 + The game has an adjustable difficulty that can be used to provide an experience that will challenge the user's memory retention skills.
 + The game currently has six different languages to pick from and they are pairable in any way the user chooses.
@@ -104,20 +104,22 @@ time with plenty of replay value.
 
 ### Game Start Screen
 + The game title stands out due to the use of a large font with a dark text shadow.
-+ The text descriptions for select/options are placed over a dark background with a bright text color to help them stand out and draw the eye.
++ The text descriptions for user input are placed over a dark background with a bright text color to help them stand out and draw the eye. These are also placed in select/option 
+listboxes for a good UX on tablet and mobile users.
 + Multiple user inputs are given for returning and new users alike. 
-+ Multiple user inputs allow users to choose how easy or difficult they want to make the game.
++ Multiple user inputs (timer length, number of cards, and difficulty) allow users to choose how easy or difficult they want to make the game.
 + A selection of six different languages is given to the user. These languages are pairable in any combination.
 + An adjustable difficulty (matching delay) is provided to users. This force users to use their memory over hunting and pecking.
 
 ### Game Board
 + A dark background image was used to help the cards stand out.
-+ The background was chosen because it resembles a desk or table because this is a typical place to play cards.  
++ The background resembles a desk or table because this is a typical place to play cards or study.  
 
 ### Gameplay
 + The gameplay is kept intuitive and simple so users can focus on recognizing foreign words or remembering where words were placed.
 + The game header contains a timer and points calculator in an easy to read format. This encourages users to do better each time.
-+ The cards are dynamically added/removed and menus disappear/appear with JavaScript when the game starts and ends. This maximizes availiable screen real estate.
++ The cards are dynamically added/removed and menus disappear/appear with JavaScript when the game starts and ends. This maximizes availiable screen real estate which is extremely 
+important for tablet and mobile users.
 + The game allows multiple playthroughs without having to refresh the browser.
 + A click limiter was installed to keep users from spam clicking to win or break the game. 
 + The game pulls random word pairings from its language bank for each round. This keeps the game feeling fresh and interesting to returning users.
@@ -187,9 +189,10 @@ time with plenty of replay value.
         + Tested in portrait, which is tablet responsiveness level.
 
 ### Developer Testing Methods
-+ Every **Developer Test** was preformed on the above listed systems at specified screen orientation.
-+ Between Landscape and portrait tests, the application was not refreshed. This is a critical part of the test! Part of the test is they are **never** refreshed between tests. This is a test for stability.
-+ After completion of **Developer Tests** on each system, the system was tested again with random moments of spam clicking and switching between landscape/tablet.
++ Every **Developer Test** was preformed on the above listed systems at the specified screen orientation.
++ Between Landscape and portrait tests, the application was not refreshed. This is a critical part of the test! Part of these tests is they are **never** refreshed between tests. 
+This is a test for stability.
++ After completion of **Developer Tests** on each system, the system was tested again with random moments of spam clicking and switching between landscape/portrait.
 
 ## Developer Tests
 ### **Testing Timer**
@@ -205,10 +208,11 @@ time with plenty of replay value.
 
 #### Assumption(s):
 1. Tester will ***not*** reload browser between play throughs.
+1. Tester knows the correct content of game's header and when it should be visible.
 
 #### Testing Step(s):
 1. Start a game with **default settings**. 
-1. Let timer run out and watch the game header change to "You Lose!" and let the game reset.
+1. Let the timer run out and watch the game header change to "You Lose!" and let the game reset.
 1. Select a untested amount of **Time on Clock** and start the game.
 1. Repeat steps 2 and 3 until all times have been selected. (Be careful not to miss the 1 minute setting.)
 
@@ -255,10 +259,12 @@ time with plenty of replay value.
 ---
 
 #### Expectation(s):
+1. These expectations match the test expectations that are being run. This test has its own expectations in addition to this.
 1. The difficulty increases a delay between matching card pairs.
-1. The game will function according to the specifications of the test, **Testing Base Language and Point Calculator**.
+1. The game never needs to be reloaded to function properly.
 
 #### Assumption(s):
+1. These assumptions match the test assumptions that are being run. This test has its own assumptions in addition to this. 
 1. Tester will ***not*** reload browser between play throughs.
 1. The tester knows this can make the game extremely difficult or even unwinnable. 
 1. The tester knows the card's face div has an ID and the last number of this ID is used to pair the cards.
@@ -287,11 +293,15 @@ time with plenty of replay value.
 
 #### Expectation(s):
 1. The game always has the correct pair of words up to match.
+1. The game never needs to be reloaded to function properly.
+1. Menus and headers disappear and reappear appropriately.
+1. Header items are easily visible, disappear when not in use, always display correct values.
 
 #### Assumption(s):
 1. Tester will ***not*** reload browser between play throughs.
 1. A basic understanding of foreign languages used, a cheat sheet of correct word pairs, or knows the card's face div has an ID and the last number of this ID is used to pair the cards.
 1. Tester always checks for correct word pairings.
+1. Tester is watching the point calculator as they are playing the game and making sure it is displaying correctly.
 
 #### Testing Step(s):
 1. Start the game on its **default setting** (add more time to **Time on Clock** if needed).
@@ -307,15 +317,18 @@ time with plenty of replay value.
 #### Document Result(s):
 1. Document any incidences of incorrectly accepted/unaccepted word pairings.
 1. Document any incidences of cards left on the table when they should have disappeared.
+1. Document any multiple playthrough errors (mismatching cards, incorrect card placement, etc...).
 
 ### **Testing Card Type**
 
 ---
 
 #### Expectation(s):
+1. These expectations match the test expectations that are being run. This test has its own expectations in addition to this.
 1. The game plays the same regardless of card skin chosen. 
 
 #### Assumption(s):
+1. These assumptions match the test assumptions that are being run. This test has its own assumptions in addition to this. 
 1. Tester will ***not*** reload browser between play throughs.
 1. Tester will run all mentioned tests in their entirety. 
 
@@ -323,8 +336,8 @@ time with plenty of replay value.
 1. Select **Playing Card** under **Card Type**
 1. Run **Developer Test** **Testing Timer** from start to end.
 1. Run **Developer Test** **Testing Base Language and Point Calculator**.
-1. Run **Developer Test** **Checking Difficulty**.
-1. Run **Developer Test** **Checking Language Pairings**.
+1. Run **Developer Test** **Testing Difficulty**.
+1. Run **Developer Test** **Testing Language Pairings**.
 
 #### Document Result(s):
 1. Any aforementioned **document Results** from the **Developer Tests**.
@@ -367,9 +380,9 @@ or losing conditions of the game were met. The local variable was created to set
 Having these two different scoped variables ensures the program switches appropriately between the different screen heights on all devices. **update(This fix was proven insufficient and made obsolete with 
 the fix detailed below)
 + During testing on a mobile device it was discovered that switching from landscape to portrait could leave the background image shorter than the screen height. This bug was later 
-found on a desktop device when switching from landscape to portrait. With the initial fix (detailed above) being insufficient the code was refactored into a function to be called on 
-the local level in all of the same places as it was before. An additional "resize" event listener was added. This code would not run at the proper time so an additional piece of code 
-was used from MDN (window.onresize = foo). This new code sets the screen height whenever a resize is detected.  
+found on a desktop device when switching from landscape to portrait. With the initial fix (detailed above) being insufficient the code was refactored into a function. This function was 
+to be called on the local level in all of the same places as it was before. An additional "resize" event listener was added. This code would not run at the proper time so an additional 
+piece of code was used from MDN (window.onresize = foo). This new code accurately detects when a resize occurs and sets the screen to the new height.
 
 ## Current Bugs
 + A screen pixel width below 320px or above 4000px will quickly lose a good UX. 
@@ -488,7 +501,7 @@ W3Schools.  All these are documented in detail below.
     + Invaluable source of information about JavaScript, HTML, and CSS.
 + [W3Schools](https://www.w3schools.com/)
     + A wonderful resource for element, attribute, and event selection for JavaScript.
-    + Extremely helpful for explaing base HTML, CSS, and JavaScript principles. 
+    + Extremely helpful for explaining base HTML, CSS, and JavaScript principles. 
 + [World Wide Web Consortium (W3C)](https://www.w3.org/)
     + Used for understanding ARIA content and industry standard use.
     + Multiple standardizations were used from here.
