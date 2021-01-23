@@ -46,12 +46,13 @@ function CardStyle(index, fun) {
 
 // Sets background height when function is called
 function changeBackgroundHeight(){
-// ----- https://developer.mozilla.org/en-US/docs/Web/API/Document/height MDN height (The line below taken directly from MDN)
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/height found at MDN and used to detect height of screen
 let fullScreenHeight = document.documentElement.scrollHeight;       // Sets variable that measures entire available screen real estate  
 document.getElementById("playing-board").style.minHeight = (fullScreenHeight + 50) + "px"; // Sets background size to take up entire screen real estate
 }
 
 // Listens for a screen reseize to call a function
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event found at MDN and used to detect screen resizing
 window.onresize = changeBackgroundHeight();
 
 // Sets background height when game starts
