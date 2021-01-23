@@ -35,7 +35,7 @@
     + [BrowserStack](#browserstack)
     + [Lighthouse](#lighthouse)
     + [JigSaw](#jigSaw)
-    + [W3C Validaror](#w3c-validaror)
+    + [W3C Validator](#w3c-validator)
     + [JSHint](#jshint)
 
 [Bugs and Other Problems](#bugs-and-other-problems)
