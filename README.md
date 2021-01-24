@@ -452,7 +452,7 @@ friendly towards ARIA states.
 + [JSHint](https://jshint.com/)
     + Used to identify errors in JavaScript.
 + [Lighthouse](https://developers.google.com/web/tools/lighthouse)
-    + Checks for performance, accessibility, best practices, and SEO.
+    + Used to check for performance, accessibility, best practices, and SEO.
 + [Pingdom](https://tools.pingdom.com/)
     + Used to check load time.
 + [Techsini](https://techsini.com/multi-mockup/)
