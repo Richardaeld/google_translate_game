@@ -336,10 +336,10 @@ This helps test for stability.
 
 #### Testing Step(s):
 1. Select **Playing Card** under **Card Type**
-1. Run **Developer Test** **Testing Timer** from start to end.
-1. Run **Developer Test** **Testing Base Language and Point Calculator**.
-1. Run **Developer Test** **Testing Difficulty**.
-1. Run **Developer Test** **Testing Language Pairings**.
+1. Run **Developer Test**, **Testing Timer**.
+1. Run **Developer Test**, **Testing Base Language and Point Calculator**.
+1. Run **Developer Test**, **Testing Difficulty**.
+1. Run **Developer Test**, **Testing Language Pairings**.
 
 #### Document Result(s):
 1. Any aforementioned **document Results** from the **Developer Tests**.
