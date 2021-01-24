@@ -307,7 +307,7 @@ This helps test for stability.
 
 #### Testing Step(s):
 1. Start the game on its **default setting** (add more time to **Time on Clock** if needed).
-1. Complete the game.
+1. Win the game.
 1. Wait for game to restart.
 1. Select the next amount of **Number of Pairs** and repeat steps 2 and 3.
 1. repeat step 4 until all **Number of Pairs** have been used.
