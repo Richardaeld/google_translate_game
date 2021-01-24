@@ -485,8 +485,8 @@ W3Schools.  All these are documented in detail below.
 #### Random number generator 
 + This JavaScript function was discovered at W3Schools and its code was adapted to accept a variable from the loop which it is run from.
     + [W3Schools](https://www.w3schools.com/js/js_random.asp)
-        + Used code format (**Math.floor(Math.random() * number)**) to understand how random works and used custom version that incorporates a 
-        variable for this projects random number generator. The code format is found [here](https://www.w3schools.com/js/js_random.asp).
+        + Used code format (**Math.floor(Math.random() * number)**) to understand how random works and this project uses a custom version that code. 
+        This custom code incorporates a variable for the random number generator. The code format is found [here](https://www.w3schools.com/js/js_random.asp).
 
 #### Extend Background Image to Bottom of Screen
 + Two lines of code from MDN are responsible for the backbone of this codes function. 
