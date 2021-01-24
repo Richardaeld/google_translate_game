@@ -267,7 +267,7 @@ This helps test for stability.
 #### Assumption(s):
 1. These assumptions match the test assumptions that are being run. This test has its own assumptions in addition to this. 
 1. Tester will ***not*** reload browser between play throughs.
-1. Tester knows this can make the game extremely difficult or even unwinnable. 
+1. Tester knows this setting can make the game extremely difficult or even unwinnable. 
 1. Tester knows the card's face div has an ID and the last number of this ID is used to pair the cards.
 1. Tester will increase the **time on clock** if needed.
 1. Tester may not be able to win on **hard** or **unforgiving** on a tablet or mobile device and that's acceptable. (Detailed in the testing steps.)
