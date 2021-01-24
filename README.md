@@ -242,10 +242,10 @@ This helps test for stability.
 #### Testing Step(s):
 1. Start game with **default settings** 
 1. Win this round. Then, watch game header change to "You Win!". Let the game reset.
-1. Change **Number of Pairs** to a untested amount and repeat step 2. 
+1. Change **Number of Pairs** to an untested amount and repeat step 2. 
 1. Repeat step 3 until you've selected and won on all these **Number of Pairs** options.
 1. Change **Base Language** and repeat steps 2 ,3 and 4 in that order.
-1. Repeat step 5 until you've selected and won on all these options.
+1. Repeat step 5 until you've selected and won on all **Base Language** options.
 
 #### Document Result(s):
 1. Document any incidences of incorrect header presentation.
