@@ -236,6 +236,7 @@ This helps test for stability.
 1. Tester knows the correct content of game's header and when it should be visible.
 1. Tester is watching the point calculator as they are playing the game and making sure it is displaying correctly.
 1. Tester will occasionally fail a game round just to be sure the lost condition works.
+1. A basic understanding of foreign languages used or a cheat sheet of correct word pairings. 
 1. Tester always checks for correct word pairings.
 
 #### Testing Step(s):
