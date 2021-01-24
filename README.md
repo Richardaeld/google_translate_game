@@ -190,8 +190,8 @@ important for tablet and mobile users.
 
 ### Developer Testing Methods
 + Every **Developer Test** was preformed on the above listed systems at the specified screen orientation.
-+ Between Landscape and portrait tests, the application was not refreshed. This is a critical part of the test! Part of these tests is they are **never** refreshed between tests. 
-This is a test for stability.
++ Between Landscape and portrait tests, the application was not refreshed. This is a critical part of the test! Part of these tests is the game is **never** refreshed between tests. 
+This helps test for stability.
 + After completion of **Developer Tests** on each system, the system was tested again with random moments of spam clicking and switching between landscape/portrait.
 
 ## Developer Tests
