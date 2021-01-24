@@ -213,8 +213,8 @@ This helps test for stability.
 #### Testing Step(s):
 1. Start a game with **default settings**. 
 1. Let the timer run out and watch the game header change to "You Lose!" and let the game reset.
-1. Select a untested amount of **Time on Clock** and start the game.
-1. Repeat step 2 until all times have been selected. (Be careful not to miss the 1 minute setting.)
+1. Select an untested amount of **Time on Clock** and start the game.
+1. Repeat steps 2 and 3 until all times have been selected. (Be careful not to miss the 1 minute setting.)
 
 #### Document Result(s):
 1. Document any incidences of incorrect header presentation.
