@@ -314,7 +314,7 @@ This helps test for stability.
 1. Select the next language of **Pairing Language**, set **Number of Pairs** to 5 pairs, and start game.
 1. Repeat steps 2, 3, 4, 5, and 6 until all **Pairing Languages** have been cycled through.
 1. Select the next language of **Base Language**, set **Number of Pairs** to 5 pairs, and start the game.
-1. Repeat steps 2, 3, 4, 5, 6, and 7 until all **Base Languages** have been cycled through.
+1. Repeat steps 2, 3, 4, 5, 6, 7, and 8 until all **Base Languages** have been cycled through.
 
 #### Document Result(s):
 1. Document any incidences of incorrectly accepted/unaccepted word pairings.
