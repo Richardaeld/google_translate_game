@@ -214,7 +214,7 @@ This helps test for stability.
 1. Start a game with **default settings**. 
 1. Let the timer run out and watch the game header change to "You Lose!" and let the game reset.
 1. Select a untested amount of **Time on Clock** and start the game.
-1. Repeat steps 2 and 3 until all times have been selected. (Be careful not to miss the 1 minute setting.)
+1. Repeat step 2 until all times have been selected. (Be careful not to miss the 1 minute setting.)
 
 #### Document Result(s):
 1. Document any incidences of incorrect header presentation.
@@ -243,7 +243,7 @@ This helps test for stability.
 1. Start game with **default settings** 
 1. Win this round. Then, watch game header change to "You Win!". Let the game reset.
 1. Change **Number of Pairs** to a untested amount and repeat step 2. 
-1. Repeat steps 3 and 2 in that order until you've selected and won on all these **Number of Pairs** options.
+1. Repeat step 3 until you've selected and won on all these **Number of Pairs** options.
 1. Change **Base Language** and repeat steps 2 ,3 and 4 in that order.
 1. Repeat step 5 until you've selected and won on all these options.
 
@@ -310,7 +310,7 @@ This helps test for stability.
 1. Complete the game.
 1. Wait for game to restart.
 1. Select the next amount of **Number of Pairs** and repeat steps 2 and 3.
-1. repeat steps 4, 2, and then 3 in that order until all **Number of Pairs** have been used.
+1. repeat step 4 until all **Number of Pairs** have been used.
 1. Select the next language of **Pairing Language**, set **Number of Pairs** to 5 pairs, and start game.
 1. Repeat steps 2, 3, 4, 5, and 6 until all **Pairing Languages** have been cycled through.
 1. Select the next language of **Base Language**, set **Number of Pairs** to 5 pairs, and start the game.
