@@ -236,7 +236,7 @@ This helps test for stability.
 1. Tester knows the correct content of game's header and when it should be visible.
 1. Tester is watching the point calculator as they are playing the game and making sure it is displaying correctly.
 1. Tester will occasionally fail a game round just to be sure the lost condition works.
-1. A basic understanding of foreign languages used or a cheat sheet of correct word pairings. 
+1. Tester has a basic understanding of foreign languages used or a cheat sheet of correct word pairings. 
 1. Tester always checks for correct word pairings.
 
 #### Testing Step(s):
@@ -267,11 +267,11 @@ This helps test for stability.
 #### Assumption(s):
 1. These assumptions match the test assumptions that are being run. This test has its own assumptions in addition to this. 
 1. Tester will ***not*** reload browser between play throughs.
-1. The tester knows this can make the game extremely difficult or even unwinnable. 
-1. The tester knows the card's face div has an ID and the last number of this ID is used to pair the cards.
-1. The tester will increase the **time on clock** if needed.
-1. The tester may not be able to win on **hard** or **unforgiving** on a tablet or mobile device and that's acceptable. (Detailed in the testing steps.)
-1. The tester will intentionally fail a single game on every difficulty level tested. 
+1. Tester knows this can make the game extremely difficult or even unwinnable. 
+1. Tester knows the card's face div has an ID and the last number of this ID is used to pair the cards.
+1. Tester will increase the **time on clock** if needed.
+1. Tester may not be able to win on **hard** or **unforgiving** on a tablet or mobile device and that's acceptable. (Detailed in the testing steps.)
+1. Tester will intentionally fail a single game on every difficulty level tested. 
 
 #### Testing Step(s):
 1. Increase **difficulty** of the game.
@@ -280,7 +280,7 @@ This helps test for stability.
 1. Repeat step 2 on the **unforgiving** **difficulty**. (Attempt to win these rounds but losing most of them wont negatively impact testing.)
 
 #### Document Result(s):
-1. document any incidences of the difficulty not performing properly.
+1. Document any incidences of the difficulty not performing properly.
 1. Document any incidences of incorrect header presentation.
 1. Document any failure of the timer.
 1. Document any incidences of incorrectly accepted/unaccepted word pairings.
@@ -300,7 +300,7 @@ This helps test for stability.
 
 #### Assumption(s):
 1. Tester will ***not*** reload browser between play throughs.
-1. A basic understanding of foreign languages used or a cheat sheet of correct word pairings. 
+1. Tester has a basic understanding of foreign languages used or a cheat sheet of correct word pairings. 
 1. Tester knows the card's face div has an ID and the last number of this ID is used to pair the cards.
 1. Tester always checks for correct word pairings.
 1. Tester is watching the point calculator as they are playing the game and making sure it is displaying correctly.
