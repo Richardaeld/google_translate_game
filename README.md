@@ -498,7 +498,7 @@ W3Schools.  All these are documented in detail below.
 
 ### References and Ideas
 + Felipe Souza Alarcon
-    + Used idea to place words in JavaScript object(s) for languages banks.
+    + Used idea to place words in JavaScript object(s) for the language banks.
 + [MDN Web Docs](https://developer.mozilla.org/en-US/)
     + Invaluable source of information about JavaScript, HTML, and CSS.
 + [W3Schools](https://www.w3schools.com/)
@@ -523,8 +523,9 @@ W3Schools.  All these are documented in detail below.
 basis for this project's readme deployment section.
     + [Clone Information](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) - Used the structure of GitHub's "Cloning a repository" information as the
 basis for this project's readme deployment section 
-+ Richard Eldridge 
-    + Made the game's main background image and icon.
++ Richard Eldridge (Project developer)
+    + Designed the game's icon (favicon).
+    + Took the picture for the game's background. 
 
 # Acknowledgements
 + Felipe Souza Alarcon for his honest guidance, foresight, and helping lead me into directions I did not know I could go with this project. 
