@@ -203,7 +203,7 @@ This helps test for stability.
 1. Menus and headers disappear and reappear appropriately.
 1. The game's header changes to "You Lose!" when the timer runs out.
 1. The game resets to the user selection screen.
-1. Header items are easily visible, disappear when not in use, always display correct values.
+1. Header items are easily visible, disappear when not in use, and always display correct values.
 1. The game never needs to be reloaded to function properly.
 
 #### Assumption(s):
@@ -228,7 +228,7 @@ This helps test for stability.
 #### Expectation(s):
 1. Menus and headers disappear and reappear appropriately.
 1. Game tells user when they have won or lost.
-1. Header items are easily visible, disappear when not in use, always display correct values.
+1. Header items are easily visible, disappear when not in use, and always display correct values.
 1. The game never needs to be reloaded to function properly.
 
 #### Assumption(s):
@@ -295,7 +295,7 @@ This helps test for stability.
 1. The game always has the correct pair of words up to match.
 1. The game never needs to be reloaded to function properly.
 1. Menus and headers disappear and reappear appropriately.
-1. Header items are easily visible, disappear when not in use, always display correct values.
+1. Header items are easily visible, disappear when not in use, and always display correct values.
 
 #### Assumption(s):
 1. Tester will ***not*** reload browser between play throughs.
