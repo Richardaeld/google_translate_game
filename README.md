@@ -299,7 +299,7 @@ This helps test for stability.
 
 #### Assumption(s):
 1. Tester will ***not*** reload browser between play throughs.
-1. A basic understanding of foreign languages used or a cheat sheet of correct word pairs. 
+1. A basic understanding of foreign languages used or a cheat sheet of correct word pairings. 
 1. Tester knows the card's face div has an ID and the last number of this ID is used to pair the cards.
 1. Tester always checks for correct word pairings.
 1. Tester is watching the point calculator as they are playing the game and making sure it is displaying correctly.
