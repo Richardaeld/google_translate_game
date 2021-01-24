@@ -403,7 +403,7 @@ friendly towards ARIA states.
 # Clone and Deployment Information
 ## Deploy Clone from GitHub
 1. Go to the location of the repository in GitHub, [https://github.com/Richardaeld/google_translate_game](https://github.com/Richardaeld/google_translate_game).
-1. Click code button to get the drop down menu (underlined in red).
+1. Click the code button to get the drop down menu (underlined in red).
 ![Where the code button is](assets/readme/deployment/clone_code_button.jpg "where the code button is")
 1. Copy the https address provided (underlined in red).
 ![Where the https address is](assets/readme/deployment/clone_code_button_expanded.jpg "Where the https address is")
@@ -411,13 +411,13 @@ friendly towards ARIA states.
 1. Go to the Bash and type, "git clone " and paste the https address found in GitHub page.
 ![Command to type in](assets/readme/deployment/clone_gitclone.jpg)
 1. Press enter.
-1. The clone will be created within a folder, titled "google_translate_game" (The original name of the project).
+1. The clone will be created within the folder, "google_translate_game" (The original name of the project).
 ![Where the root folder is](assets/readme/deployment/clone_cloned_folder.jpg "Where the root folder is")
 1. Unpack everything from this folder to the root of the GitPod project tree and the project will be fully functional within GitPod.
 1. If you wish to deploy outside of GitPod's preview, follow "GitHub Deployment" section below.
 
 ## GitHub Deployment
-1. Go to the location of the cloned or deployment repository in GitHub.
+1. Go to the location of the cloned or deployment repository in GitHub.(ex. [here](https://github.com/Richardaeld/google_translate_game))
 1. Select Settings at the top of the page (Circled in red in picture below).
 ![Where select is located](assets/readme/deployment/current_select_settings.png "Where select is located")
 1. Go down in settings page until you find the heading "GitHub Pages" (underlined in red in the picture below).
