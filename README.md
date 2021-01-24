@@ -421,7 +421,7 @@ friendly towards ARIA states.
 1. Select Settings at the top of the page (circled in red).
 ![Where select is located](assets/readme/deployment/current_select_settings.png "Where select is located")
 1. Go down in settings page until you find the heading "GitHub Pages" (underlined in red).
-1. Click "None" under the Source subheading (circled in red).
+1. Click "None" under the "Source" subheading (circled in red).
 1. Select the branch you wish to publish.
 1. In this example we chose to select master (circled in red).
 ![Where Github Pages, branch selection, and branches are located](assets/readme/deployment/current_select_branch.png "Where Github Pages, branch selection, and branches are located")
