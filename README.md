@@ -403,7 +403,7 @@ friendly towards ARIA states.
 # Clone and Deployment Information
 ## Deploy Clone from GitHub
 1. Go to the location of the repository in GitHub, [https://github.com/Richardaeld/google_translate_game](https://github.com/Richardaeld/google_translate_game).
-1. Click the code button to get the drop down menu (underlined in red).
+1. Click the "Code" button to get the drop down menu (underlined in red).
 ![Where the code button is](assets/readme/deployment/clone_code_button.jpg "where the code button is")
 1. Copy the https address provided (underlined in red).
 ![Where the https address is](assets/readme/deployment/clone_code_button_expanded.jpg "Where the https address is")
@@ -431,7 +431,7 @@ friendly towards ARIA states.
 ![What queued to be published screen looks like](assets/readme/deployment/current_see_ready.png "What queued to be published screen looks like")
 1. Once the page is fully published, the layout will change once more and tell you the site has been published.
 ![What published screen looks like](assets/readme/deployment/current_see_published.png "What published screen looks like")
-1. Now the page is fully viewable at the provided HTTP address.
+1. Now the page is fully viewable at the provided HTTPS address.
 
 # Tools and Credits
 ## Tools
