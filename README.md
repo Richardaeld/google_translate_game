@@ -405,7 +405,7 @@ friendly towards ARIA states.
 1. Go to the location of the repository in GitHub, [https://github.com/Richardaeld/google_translate_game](https://github.com/Richardaeld/google_translate_game).
 1. Click the "Code" button to get the drop down menu (underlined in red).
 ![Where the code button is](assets/readme/deployment/clone_code_button.jpg "where the code button is")
-1. Copy the https address provided (underlined in red).
+1. Copy the HTTPS address provided (underlined in red).
 ![Where the https address is](assets/readme/deployment/clone_code_button_expanded.jpg "Where the https address is")
 1. Create a blank or boiler plate GitPod project and open this new GitPod project.
 1. Go to the Bash and type, "git clone " and paste the https address found in GitHub page.
